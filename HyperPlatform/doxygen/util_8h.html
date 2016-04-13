@@ -97,18 +97,25 @@ Enumerations</h2></td></tr>
  }<tr class="memdesc:a939581b1de686b22b77e05cc403bfefc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates a result of VMX-instructions.  <a href="util_8h.html#a939581b1de686b22b77e05cc403bfefc">More...</a><br /></td></tr>
 <tr class="separator:a939581b1de686b22b77e05cc403bfefc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </td></tr>
+<tr class="memitem:ae3ae82c0801f4d60588b2cb0ca997ca1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8h.html#ae3ae82c0801f4d60588b2cb0ca997ca1">HypercallNumber</a> { <a class="el" href="util_8h.html#ae3ae82c0801f4d60588b2cb0ca997ca1a99067337d21b35c358a44fd437d6d4a4">HypercallNumber::kTerminateVmm</a>
+ }<tr class="memdesc:ae3ae82c0801f4d60588b2cb0ca997ca1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Avaialable command numbers for VMCALL.  <a href="util_8h.html#ae3ae82c0801f4d60588b2cb0ca997ca1">More...</a><br /></td></tr>
+<tr class="separator:ae3ae82c0801f4d60588b2cb0ca997ca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a2d891c866238ad21fd5cba7d10394d40"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="util_8h.html#a939581b1de686b22b77e05cc403bfefc">VmxStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8h.html#a2d891c866238ad21fd5cba7d10394d40">operator|=</a> (_In_ <a class="el" href="util_8h.html#a939581b1de686b22b77e05cc403bfefc">VmxStatus</a> lhs, _In_ <a class="el" href="util_8h.html#a939581b1de686b22b77e05cc403bfefc">VmxStatus</a> rhs)</td></tr>
 <tr class="memdesc:a2d891c866238ad21fd5cba7d10394d40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides |= operator for VmxStatus.  <a href="#a2d891c866238ad21fd5cba7d10394d40">More...</a><br /></td></tr>
 <tr class="separator:a2d891c866238ad21fd5cba7d10394d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a726bcdba2e49ace860d6de5f443f5253"><td class="memItemLeft" align="right" valign="top">NTSTATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8h.html#a726bcdba2e49ace860d6de5f443f5253">UtilInitialization</a> ()</td></tr>
-<tr class="memdesc:a726bcdba2e49ace860d6de5f443f5253"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes the Util functions ready for use.  <a href="#a726bcdba2e49ace860d6de5f443f5253">More...</a><br /></td></tr>
-<tr class="separator:a726bcdba2e49ace860d6de5f443f5253"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d30bda1394c2617baab6c8b9a6f3da0"><td class="memItemLeft" align="right" valign="top">NTSTATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8h.html#a6d30bda1394c2617baab6c8b9a6f3da0">UtilInitialization</a> (_In_ PDRIVER_OBJECT driver_object)</td></tr>
+<tr class="memdesc:a6d30bda1394c2617baab6c8b9a6f3da0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes the Util functions ready for use.  <a href="#a6d30bda1394c2617baab6c8b9a6f3da0">More...</a><br /></td></tr>
+<tr class="separator:a6d30bda1394c2617baab6c8b9a6f3da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9eec12475580085fab5c154f681d59a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8h.html#a9eec12475580085fab5c154f681d59a5">UtilTermination</a> ()</td></tr>
 <tr class="memdesc:a9eec12475580085fab5c154f681d59a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees all resources allocated for the sake of the Util funcions.  <a href="#a9eec12475580085fab5c154f681d59a5">More...</a><br /></td></tr>
 <tr class="separator:a9eec12475580085fab5c154f681d59a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae830bea314f16dbd64ef05a8eb705fa2"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8h.html#ae830bea314f16dbd64ef05a8eb705fa2">UtilPcToFileHeader</a> (_In_ void *address)</td></tr>
+<tr class="memdesc:ae830bea314f16dbd64ef05a8eb705fa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a module base address of <em>address</em>.  <a href="#ae830bea314f16dbd64ef05a8eb705fa2">More...</a><br /></td></tr>
+<tr class="separator:ae830bea314f16dbd64ef05a8eb705fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9689b4a580d88e9e516e6081795de0d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_physical_memory_descriptor.html">PhysicalMemoryDescriptor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8h.html#ab9689b4a580d88e9e516e6081795de0d">UtilGetPhysicalMemoryRanges</a> ()</td></tr>
 <tr class="memdesc:ab9689b4a580d88e9e516e6081795de0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns ranges of physical memory on the system.  <a href="#ab9689b4a580d88e9e516e6081795de0d">More...</a><br /></td></tr>
 <tr class="separator:ab9689b4a580d88e9e516e6081795de0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,9 +161,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a2473b98f948abe5e903993c0ce37ed7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8h.html#a2473b98f948abe5e903993c0ce37ed7e">UtilFreeContiguousMemory</a> (_In_ void *base_address)</td></tr>
 <tr class="memdesc:a2473b98f948abe5e903993c0ce37ed7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees an address allocated by <a class="el" href="util_8h.html#a8bd8f1299edde15aad1cfba8551fc32f" title="Allocates continuous physical memory. ">UtilAllocateContiguousMemory()</a>  <a href="#a2473b98f948abe5e903993c0ce37ed7e">More...</a><br /></td></tr>
 <tr class="separator:a2473b98f948abe5e903993c0ce37ed7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b65dcf2f010be518a04a714117d76b3"><td class="memItemLeft" align="right" valign="top">NTSTATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8h.html#a4b65dcf2f010be518a04a714117d76b3">UtilVmCall</a> (_In_ ULONG_PTR hypercall_number, _In_opt_ void *context)</td></tr>
-<tr class="memdesc:a4b65dcf2f010be518a04a714117d76b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes VMCALL.  <a href="#a4b65dcf2f010be518a04a714117d76b3">More...</a><br /></td></tr>
-<tr class="separator:a4b65dcf2f010be518a04a714117d76b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69d2e5e26e9b9697aeb31cbff7180908"><td class="memItemLeft" align="right" valign="top">NTSTATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8h.html#a69d2e5e26e9b9697aeb31cbff7180908">UtilVmCall</a> (_In_ <a class="el" href="util_8h.html#ae3ae82c0801f4d60588b2cb0ca997ca1">HypercallNumber</a> hypercall_number, _In_opt_ void *context)</td></tr>
+<tr class="memdesc:a69d2e5e26e9b9697aeb31cbff7180908"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes VMCALL.  <a href="#a69d2e5e26e9b9697aeb31cbff7180908">More...</a><br /></td></tr>
+<tr class="separator:a69d2e5e26e9b9697aeb31cbff7180908"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adaef3fe7b88b1a88248877c717dac8ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8h.html#adaef3fe7b88b1a88248877c717dac8ea">UtilDumpGpRegisters</a> (_In_ const <a class="el" href="struct_all_registers.html">AllRegisters</a> *all_regs, _In_ ULONG_PTR stack_pointer)</td></tr>
 <tr class="memdesc:adaef3fe7b88b1a88248877c717dac8ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Debug prints registers.  <a href="#adaef3fe7b88b1a88248877c717dac8ea">More...</a><br /></td></tr>
 <tr class="separator:adaef3fe7b88b1a88248877c717dac8ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -190,6 +197,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a795f2605d926d0ed4a75ca41046a1c21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8h.html#a795f2605d926d0ed4a75ca41046a1c21">UtilLoadPdptes</a> (_In_ ULONG_PTR cr3_value)</td></tr>
 <tr class="memdesc:a795f2605d926d0ed4a75ca41046a1c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the PDPTE registers from CR3 to VMCS.  <a href="#a795f2605d926d0ed4a75ca41046a1c21">More...</a><br /></td></tr>
 <tr class="separator:a795f2605d926d0ed4a75ca41046a1c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5edd77c16c628a4751cd1ff120b565d"><td class="memItemLeft" align="right" valign="top">NTSTATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8h.html#ae5edd77c16c628a4751cd1ff120b565d">UtilForceCopyMemory</a> (_In_ void *destination, _In_ const void *source, _In_ SIZE_T length)</td></tr>
+<tr class="memdesc:ae5edd77c16c628a4751cd1ff120b565d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does RtlCopyMemory safely even if destination is a read only region.  <a href="#ae5edd77c16c628a4751cd1ff120b565d">More...</a><br /></td></tr>
+<tr class="separator:ae5edd77c16c628a4751cd1ff120b565d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a131ab25ba676523d82ffa34bfba7f79d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a131ab25ba676523d82ffa34bfba7f79d"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="util_8h.html#a131ab25ba676523d82ffa34bfba7f79d">UtilIsInBounds</a> (_In_ const T &amp;value, _In_ const T &amp;min, _In_ const T &amp;max)</td></tr>
 <tr class="memdesc:a131ab25ba676523d82ffa34bfba7f79d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests if <em>value</em> is in between <em>min</em> and <em>max</em>.  <a href="#a131ab25ba676523d82ffa34bfba7f79d">More...</a><br /></td></tr>
@@ -200,6 +210,35 @@ Functions</h2></td></tr>
 
 <p>Definition in file <a class="el" href="util_8h_source.html">util.h</a>.</p>
 </div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="ae3ae82c0801f4d60588b2cb0ca997ca1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="util_8h.html#ae3ae82c0801f4d60588b2cb0ca997ca1">HypercallNumber</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Avaialable command numbers for VMCALL. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ae3ae82c0801f4d60588b2cb0ca997ca1a99067337d21b35c358a44fd437d6d4a4"></a>kTerminateVmm&#160;</td><td class="fielddoc">
+<p>Terminates VMM. </p>
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="util_8h_source.html#l00068">68</a> of file <a class="el" href="util_8h_source.html">util.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a939581b1de686b22b77e05cc403bfefc"></a>
 <div class="memitem">
 <div class="memproto">
@@ -328,6 +367,49 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ae5edd77c16c628a4751cd1ff120b565d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NTSTATUS UtilForceCopyMemory </td>
+          <td>(</td>
+          <td class="paramtype">_In_ void *&#160;</td>
+          <td class="paramname"><em>destination</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_In_ const void *&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_In_ SIZE_T&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Does RtlCopyMemory safely even if destination is a read only region. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">destination</td><td>A destination address </td></tr>
+    <tr><td class="paramname">source</td><td>A source address </td></tr>
+    <tr><td class="paramname">length</td><td>A size to copy in bytes </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>STATUS_SUCCESS if successful </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a0aaa003c42756a8d0d878a024157ae61"></a>
 <div class="memitem">
 <div class="memproto">
@@ -403,9 +485,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns ranges of physical memory on the system. </p>
-<dl class="section return"><dt>Returns</dt><dd>Physical memory ranges; never fails. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Physical memory ranges; never fails </dd></dl>
 
-<p>Definition at line <a class="el" href="util_8cpp_source.html#l00247">247</a> of file <a class="el" href="util_8cpp_source.html">util.cpp</a>.</p>
+<p>Definition at line <a class="el" href="util_8cpp_source.html#l00357">357</a> of file <a class="el" href="util_8cpp_source.html">util.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -413,10 +495,8 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="util_8h_ab9689b4a580d88e9e516e6081795de0d_icgraph.png" border="0" usemap="#util_8h_ab9689b4a580d88e9e516e6081795de0d_icgraph" alt=""/></div>
 <map name="util_8h_ab9689b4a580d88e9e516e6081795de0d_icgraph" id="util_8h_ab9689b4a580d88e9e516e6081795de0d_icgraph">
 <area shape="rect" id="node2" href="ept_8h.html#a21bd47144c33a9bec105e47f7d14d696" title="Builds EPT, allocates pre&#45;allocated enties, initializes and returns EptData. " alt="" coords="273,5,383,32"/>
-<area shape="rect" id="node6" href="ept_8cpp.html#ac6d2a4ee32680eee9215d16e92f66751" title="EptpIsDeviceMemory" alt="" coords="256,56,400,83"/>
-<area shape="rect" id="node3" href="vm_8cpp.html#a59a15f91f00f1b51f12580d106d8fd03" title="VmpInitializeSharedData" alt="" coords="448,5,612,32"/>
-<area shape="rect" id="node4" href="vm_8h.html#a147812b07dd4d8cf330b225c912280c7" title="Virtualizes all processors. " alt="" coords="660,5,771,32"/>
-<area shape="rect" id="node5" href="driver_8cpp.html#a7475895c182f826798d611e99cb56494" title="DriverEntry" alt="" coords="819,5,904,32"/>
+<area shape="rect" id="node4" href="ept_8cpp.html#ac6d2a4ee32680eee9215d16e92f66751" title="EptpIsDeviceMemory" alt="" coords="256,56,400,83"/>
+<area shape="rect" id="node3" href="vm_8cpp.html#ac7b4db617eca1589809b0992b56a1ce9" title="VmpInitializeVm" alt="" coords="448,5,564,32"/>
 </map>
 </div>
 </p>
@@ -448,45 +528,28 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="a726bcdba2e49ace860d6de5f443f5253"></a>
+<a class="anchor" id="a6d30bda1394c2617baab6c8b9a6f3da0"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">NTSTATUS UtilInitialization </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">_In_ PDRIVER_OBJECT&#160;</td>
+          <td class="paramname"><em>driver_object</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Makes the Util functions ready for use. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">driver_object</td><td>The current driver's driver object </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>STATUS_SUCCESS on success </dd></dl>
-
-<p>Definition at line <a class="el" href="util_8cpp_source.html#l00145">145</a> of file <a class="el" href="util_8cpp_source.html">util.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="util_8h_a726bcdba2e49ace860d6de5f443f5253_cgraph.png" border="0" usemap="#util_8h_a726bcdba2e49ace860d6de5f443f5253_cgraph" alt=""/></div>
-<map name="util_8h_a726bcdba2e49ace860d6de5f443f5253_cgraph" id="util_8h_a726bcdba2e49ace860d6de5f443f5253_cgraph">
-<area shape="rect" id="node2" href="util_8cpp.html#aa77fccb47a21c49eace9b882dd376b71" title="UtilpInitializePhysicalMemory\lRanges" alt="" coords="163,5,355,47"/>
-<area shape="rect" id="node3" href="util_8cpp.html#a01aa39e4193b223c65cd2c2ab89784e6" title="UtilpBuildPhysicalMemory\lRanges" alt="" coords="403,5,577,47"/>
-<area shape="rect" id="node4" href="util_8cpp.html#a419ff5c4a24e27c03ea0b357b593805e" title="UtilPfnFromPa" alt="" coords="625,13,732,39"/>
-</map>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="util_8h_a726bcdba2e49ace860d6de5f443f5253_icgraph.png" border="0" usemap="#util_8h_a726bcdba2e49ace860d6de5f443f5253_icgraph" alt=""/></div>
-<map name="util_8h_a726bcdba2e49ace860d6de5f443f5253_icgraph" id="util_8h_a726bcdba2e49ace860d6de5f443f5253_icgraph">
-<area shape="rect" id="node2" href="driver_8cpp.html#a7475895c182f826798d611e99cb56494" title="DriverEntry" alt="" coords="163,5,248,32"/>
-</map>
-</div>
-</p>
 
 </div>
 </div>
@@ -506,7 +569,7 @@ Here is the caller graph for this function:</div>
 <p>Executes the INVEPT instruction and invalidates EPT entry cache. </p>
 <dl class="section return"><dt>Returns</dt><dd>A result of the INVEPT instruction </dd></dl>
 
-<p>Definition at line <a class="el" href="util_8cpp_source.html#l00641">641</a> of file <a class="el" href="util_8cpp_source.html">util.cpp</a>.</p>
+<p>Definition at line <a class="el" href="util_8cpp_source.html#l00769">769</a> of file <a class="el" href="util_8cpp_source.html">util.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -525,7 +588,6 @@ Here is the caller graph for this function:</div>
 <map name="util_8h_a26380029ce6cda809af3b6794674debd_icgraph" id="util_8h_a26380029ce6cda809af3b6794674debd_icgraph">
 <area shape="rect" id="node2" href="ept_8cpp.html#a6adf0f9672ecc2605b2e73a3dea55468" title="EptHandleEptViolation" alt="" coords="143,5,295,32"/>
 <area shape="rect" id="node4" href="vm_8cpp.html#aacdcc58a4e7aa6cdbc73c4ad94392ef1" title="VmpEnterVmxMode" alt="" coords="149,56,288,83"/>
-<area shape="rect" id="node5" href="vmm_8cpp.html#aa8b54d75cffd4fdeccdd215427e42e9c" title="VmmpHandleVmCall" alt="" coords="147,107,290,133"/>
 <area shape="rect" id="node3" href="vmm_8cpp.html#a572fdc29d1553bb115a734013c9d8df3" title="VmmpHandleEptViolation" alt="" coords="343,5,513,32"/>
 </map>
 </div>
@@ -601,22 +663,23 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if <em>value</em> is in between <em>min</em> and <em>max</em> </dd></dl>
 
-<p>Definition at line <a class="el" href="util_8h_source.html#l00250">250</a> of file <a class="el" href="util_8h_source.html">util.h</a>.</p>
+<p>Definition at line <a class="el" href="util_8h_source.html#l00272">272</a> of file <a class="el" href="util_8h_source.html">util.h</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="util_8h_a131ab25ba676523d82ffa34bfba7f79d_icgraph.png" border="0" usemap="#util_8h_a131ab25ba676523d82ffa34bfba7f79d_icgraph" alt=""/></div>
 <map name="util_8h_a131ab25ba676523d82ffa34bfba7f79d_icgraph" id="util_8h_a131ab25ba676523d82ffa34bfba7f79d_icgraph">
-<area shape="rect" id="node2" href="ept_8cpp.html#ac6d2a4ee32680eee9215d16e92f66751" title="EptpIsDeviceMemory" alt="" coords="170,5,314,32"/>
-<area shape="rect" id="node3" href="util_8cpp.html#ae5f3bed18bc64deebf3330745f89cd63" title="UtilVmRead64" alt="" coords="189,56,295,83"/>
-<area shape="rect" id="node6" href="util_8cpp.html#ae65d5947062aa3b6e2970a01c9a3474d" title="UtilVmWrite64" alt="" coords="189,107,295,133"/>
-<area shape="rect" id="node10" href="vmm_8cpp.html#a4e2648ac690734fd8b65292b3345fef1" title="VmmpHandleMsrAccess" alt="" coords="159,157,325,184"/>
-<area shape="rect" id="node4" href="ept_8cpp.html#a6adf0f9672ecc2605b2e73a3dea55468" title="EptHandleEptViolation" alt="" coords="373,56,525,83"/>
-<area shape="rect" id="node5" href="vmm_8cpp.html#a572fdc29d1553bb115a734013c9d8df3" title="VmmpHandleEptViolation" alt="" coords="573,56,744,83"/>
-<area shape="rect" id="node7" href="util_8cpp.html#a15f26bbfcd972225444b7a4736cb365c" title="UtilLoadPdptes" alt="" coords="394,157,505,184"/>
-<area shape="rect" id="node8" href="vm_8cpp.html#a52414afdd39151cf7b1e12a37f34abda" title="VmpSetupVMCS" alt="" coords="598,107,719,133"/>
-<area shape="rect" id="node9" href="vmm_8cpp.html#a8fb9289d967c49d8900b22df4dc1911a" title="VmmpHandleCrAccess" alt="" coords="580,157,737,184"/>
+<area shape="rect" id="node2" href="ept_8cpp.html#ac6d2a4ee32680eee9215d16e92f66751" title="EptpIsDeviceMemory" alt="" coords="177,5,321,32"/>
+<area shape="rect" id="node3" href="util_8cpp.html#aafccd090d330229549cc5ba9ba6c392c" title="UtilpUnsafePcToFileHeader" alt="" coords="159,56,339,83"/>
+<area shape="rect" id="node4" href="util_8cpp.html#ae5f3bed18bc64deebf3330745f89cd63" title="UtilVmRead64" alt="" coords="196,107,301,133"/>
+<area shape="rect" id="node7" href="util_8cpp.html#ae65d5947062aa3b6e2970a01c9a3474d" title="UtilVmWrite64" alt="" coords="195,157,302,184"/>
+<area shape="rect" id="node11" href="vmm_8cpp.html#a4e2648ac690734fd8b65292b3345fef1" title="VmmpHandleMsrAccess" alt="" coords="165,208,332,235"/>
+<area shape="rect" id="node5" href="ept_8cpp.html#a6adf0f9672ecc2605b2e73a3dea55468" title="EptHandleEptViolation" alt="" coords="387,107,539,133"/>
+<area shape="rect" id="node6" href="vmm_8cpp.html#a572fdc29d1553bb115a734013c9d8df3" title="VmmpHandleEptViolation" alt="" coords="587,107,757,133"/>
+<area shape="rect" id="node8" href="util_8cpp.html#a15f26bbfcd972225444b7a4736cb365c" title="UtilLoadPdptes" alt="" coords="407,208,518,235"/>
+<area shape="rect" id="node9" href="vm_8cpp.html#a52414afdd39151cf7b1e12a37f34abda" title="VmpSetupVMCS" alt="" coords="611,157,733,184"/>
+<area shape="rect" id="node10" href="vmm_8cpp.html#a8fb9289d967c49d8900b22df4dc1911a" title="VmmpHandleCrAccess" alt="" coords="593,208,751,235"/>
 </map>
 </div>
 </p>
@@ -639,7 +702,7 @@ Here is the caller graph for this function:</div>
 <p>Checks if the system is a PAE-enabled x86 system. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if the system is a PAE-enabled x86 system </dd></dl>
 
-<p>Definition at line <a class="el" href="util_8cpp_source.html#l00313">313</a> of file <a class="el" href="util_8cpp_source.html">util.cpp</a>.</p>
+<p>Definition at line <a class="el" href="util_8cpp_source.html#l00432">432</a> of file <a class="el" href="util_8cpp_source.html">util.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -790,6 +853,31 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="ae830bea314f16dbd64ef05a8eb705fa2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* UtilPcToFileHeader </td>
+          <td>(</td>
+          <td class="paramtype">_In_ void *&#160;</td>
+          <td class="paramname"><em>address</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a module base address of <em>address</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>An address to get a base address </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A base address of a range <em>address</em> belongs to, or nullptr </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a647d0431c628fe6bceb8f14bc94b21b6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -931,7 +1019,7 @@ Here is the caller graph for this function:</div>
 
 <p>Frees all resources allocated for the sake of the Util funcions. </p>
 
-<p>Definition at line <a class="el" href="util_8cpp_source.html#l00157">157</a> of file <a class="el" href="util_8cpp_source.html">util.cpp</a>.</p>
+<p>Definition at line <a class="el" href="util_8cpp_source.html#l00213">213</a> of file <a class="el" href="util_8cpp_source.html">util.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -996,14 +1084,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="a4b65dcf2f010be518a04a714117d76b3"></a>
+<a class="anchor" id="a69d2e5e26e9b9697aeb31cbff7180908"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">NTSTATUS UtilVmCall </td>
           <td>(</td>
-          <td class="paramtype">_In_ ULONG_PTR&#160;</td>
+          <td class="paramtype">_In_ <a class="el" href="util_8h.html#ae3ae82c0801f4d60588b2cb0ca997ca1">HypercallNumber</a>&#160;</td>
           <td class="paramname"><em>hypercall_number</em>, </td>
         </tr>
         <tr>

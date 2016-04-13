@@ -46,6 +46,7 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ept.h File Reference</div>  </div>
@@ -59,6 +60,8 @@
 Include dependency graph for ept.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="ept_8h__incl.png" border="0" usemap="#_hyper_platform_2ept_8h" alt=""/></div>
+<map name="_hyper_platform_2ept_8h" id="_hyper_platform_2ept_8h">
+</map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
@@ -73,6 +76,12 @@ This graph shows which files directly or indirectly include this file:</div>
 </div>
 <p><a href="ept_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="union_ept_common_entry.html">EptCommonEntry</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A structure made up of mutual fields across all EPT entry types.  <a href="union_ept_common_entry.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ae1a710c5e98d60441af5d3cb8349abc7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ept_8h.html#ae1a710c5e98d60441af5d3cb8349abc7">EptIsEptAvailable</a> ()</td></tr>
@@ -90,6 +99,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ae14238d1c633e77e9c6e70f00392877b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ept_8h.html#ae14238d1c633e77e9c6e70f00392877b">EptHandleEptViolation</a> (_In_ <a class="el" href="struct_ept_data.html">EptData</a> *ept_data)</td></tr>
 <tr class="memdesc:ae14238d1c633e77e9c6e70f00392877b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles VM-exit triggered by EPT violation.  <a href="#ae14238d1c633e77e9c6e70f00392877b">More...</a><br /></td></tr>
 <tr class="separator:ae14238d1c633e77e9c6e70f00392877b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a0f8edd591a0d35519bbee73465cacf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="union_ept_common_entry.html">EptCommonEntry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ept_8h.html#a7a0f8edd591a0d35519bbee73465cacf">EptGetEptPtEntry</a> (_In_ <a class="el" href="struct_ept_data.html">EptData</a> *ept_data, _In_ ULONG64 physical_address)</td></tr>
+<tr class="memdesc:a7a0f8edd591a0d35519bbee73465cacf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an EPT entry corresponds to <em>physical_address</em>.  <a href="#a7a0f8edd591a0d35519bbee73465cacf">More...</a><br /></td></tr>
+<tr class="separator:a7a0f8edd591a0d35519bbee73465cacf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Declares interfaces to EPT functions. </p>
@@ -118,6 +130,42 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>An EPT pointer </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7a0f8edd591a0d35519bbee73465cacf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="union_ept_common_entry.html">EptCommonEntry</a>* EptGetEptPtEntry </td>
+          <td>(</td>
+          <td class="paramtype">_In_ <a class="el" href="struct_ept_data.html">EptData</a> *&#160;</td>
+          <td class="paramname"><em>ept_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_In_ ULONG64&#160;</td>
+          <td class="paramname"><em>physical_address</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns an EPT entry corresponds to <em>physical_address</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ept_data</td><td><a class="el" href="struct_ept_data.html">EptData</a> to get an EPT entry </td></tr>
+    <tr><td class="paramname">physical_address</td><td>Physical address to get an EPT entry </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An EPT entry </dd></dl>
 
 </div>
 </div>
@@ -162,7 +210,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>An allocated <a class="el" href="struct_ept_data.html">EptData</a> on success, or nullptr</dd></dl>
 <p>A driver must call <a class="el" href="ept_8h.html#a13f2ccdbd64d50acf1215abb8cc44acc" title="De-allocates ept_data and all resources referenced in it. ">EptTermination()</a> with a returned value when this function succeeded. </p>
 
-<p>Definition at line <a class="el" href="ept_8cpp_source.html#l00188">188</a> of file <a class="el" href="ept_8cpp_source.html">ept.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ept_8cpp_source.html#l00177">177</a> of file <a class="el" href="ept_8cpp_source.html">ept.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -186,9 +234,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="ept_8h_a21bd47144c33a9bec105e47f7d14d696_icgraph.png" border="0" usemap="#ept_8h_a21bd47144c33a9bec105e47f7d14d696_icgraph" alt=""/></div>
 <map name="ept_8h_a21bd47144c33a9bec105e47f7d14d696_icgraph" id="ept_8h_a21bd47144c33a9bec105e47f7d14d696_icgraph">
-<area shape="rect" id="node2" href="vm_8cpp.html#a59a15f91f00f1b51f12580d106d8fd03" title="VmpInitializeSharedData" alt="" coords="164,5,328,32"/>
-<area shape="rect" id="node3" href="vm_8h.html#a147812b07dd4d8cf330b225c912280c7" title="Virtualizes all processors. " alt="" coords="376,5,487,32"/>
-<area shape="rect" id="node4" href="driver_8cpp.html#a7475895c182f826798d611e99cb56494" title="DriverEntry" alt="" coords="535,5,620,32"/>
+<area shape="rect" id="node2" href="vm_8cpp.html#ac7b4db617eca1589809b0992b56a1ce9" title="VmpInitializeVm" alt="" coords="164,5,280,32"/>
 </map>
 </div>
 </p>
@@ -211,7 +257,7 @@ Here is the caller graph for this function:</div>
 <p>Checks if the system supports EPT technology sufficient enough. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if the system supports EPT </dd></dl>
 
-<p>Definition at line <a class="el" href="ept_8cpp_source.html#l00155">155</a> of file <a class="el" href="ept_8cpp_source.html">ept.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ept_8cpp_source.html#l00142">142</a> of file <a class="el" href="ept_8cpp_source.html">ept.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>

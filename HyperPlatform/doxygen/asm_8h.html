@@ -94,9 +94,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a86ff1a064a0b785332cd2b1f8acba89e"><td class="memItemLeft" align="right" valign="top">void __stdcall&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#a86ff1a064a0b785332cd2b1f8acba89e">AsmReadGDT</a> (_Out_ <a class="el" href="ia32__type_8h.html#a35fe3e3ae98d902a639a3b7f7b642dd5">Gdtr</a> *gdtr)</td></tr>
 <tr class="memdesc:a86ff1a064a0b785332cd2b1f8acba89e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads SGDT.  <a href="#a86ff1a064a0b785332cd2b1f8acba89e">More...</a><br /></td></tr>
 <tr class="separator:a86ff1a064a0b785332cd2b1f8acba89e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb11fe2b5757145bdf08980ee1e13d1d"><td class="memItemLeft" align="right" valign="top">void __stdcall&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#abb11fe2b5757145bdf08980ee1e13d1d">AsmWriteLDTR</a> (_In_ USHORT local_segmeng_selector)</td></tr>
-<tr class="memdesc:abb11fe2b5757145bdf08980ee1e13d1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes to LDT.  <a href="#abb11fe2b5757145bdf08980ee1e13d1d">More...</a><br /></td></tr>
-<tr class="separator:abb11fe2b5757145bdf08980ee1e13d1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d5433a97e66d132e9e86e08c269b716"><td class="memItemLeft" align="right" valign="top">USHORT __stdcall&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#a6d5433a97e66d132e9e86e08c269b716">AsmReadLDTR</a> ()</td></tr>
 <tr class="memdesc:a6d5433a97e66d132e9e86e08c269b716"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads SLDT.  <a href="#a6d5433a97e66d132e9e86e08c269b716">More...</a><br /></td></tr>
 <tr class="separator:a6d5433a97e66d132e9e86e08c269b716"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -151,15 +148,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a55f8f0cb783f43b81d084ed8c54b63eb"><td class="memItemLeft" align="right" valign="top">void __stdcall&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#a55f8f0cb783f43b81d084ed8c54b63eb">AsmWriteCR2</a> (_In_ ULONG_PTR cr2_value)</td></tr>
 <tr class="memdesc:a55f8f0cb783f43b81d084ed8c54b63eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes to CR2.  <a href="#a55f8f0cb783f43b81d084ed8c54b63eb">More...</a><br /></td></tr>
 <tr class="separator:a55f8f0cb783f43b81d084ed8c54b63eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af23b5ae36ce1352e2bc5a9a0999e4cb2"><td class="memItemLeft" align="right" valign="top">void __stdcall&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#af23b5ae36ce1352e2bc5a9a0999e4cb2">AsmXsetbv</a> (_In_ ULONG32 index, _In_ ULONG32 high_value, _In_ ULONG32 low_value)</td></tr>
-<tr class="memdesc:af23b5ae36ce1352e2bc5a9a0999e4cb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets extended control register (XCR)  <a href="#af23b5ae36ce1352e2bc5a9a0999e4cb2">More...</a><br /></td></tr>
-<tr class="separator:af23b5ae36ce1352e2bc5a9a0999e4cb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab081966c06c5956b992dc8086e1b1832"><td class="memItemLeft" align="right" valign="top">unsigned char __stdcall&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#ab081966c06c5956b992dc8086e1b1832">AsmInvept</a> (_In_ <a class="el" href="ia32__type_8h.html#abc1def1f7a4001415bb52408454cd02c">InvEptType</a> invept_type, _In_ const <a class="el" href="struct_inv_ept_descriptor.html">InvEptDescriptor</a> *invept_descriptor)</td></tr>
 <tr class="memdesc:ab081966c06c5956b992dc8086e1b1832"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalidates translations derived from EPT.  <a href="#ab081966c06c5956b992dc8086e1b1832">More...</a><br /></td></tr>
 <tr class="separator:ab081966c06c5956b992dc8086e1b1832"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79db6c3a490dc84acfe8ba14268131b8"><td class="memItemLeft" align="right" valign="top">void __stdcall&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#a79db6c3a490dc84acfe8ba14268131b8">AsmInvlpg</a> (_In_ ULONG_PTR virtual_address)</td></tr>
-<tr class="memdesc:a79db6c3a490dc84acfe8ba14268131b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalidates TLB entries.  <a href="#a79db6c3a490dc84acfe8ba14268131b8">More...</a><br /></td></tr>
-<tr class="separator:a79db6c3a490dc84acfe8ba14268131b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a340d164cb0a30ff6bd62f43fec8958bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asm_8h.html#a340d164cb0a30ff6bd62f43fec8958bb">__sgdt</a> (_Out_ void *gdtr)</td></tr>
 <tr class="memdesc:a340d164cb0a30ff6bd62f43fec8958bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes to GDT.  <a href="#a340d164cb0a30ff6bd62f43fec8958bb">More...</a><br /></td></tr>
 <tr class="separator:a340d164cb0a30ff6bd62f43fec8958bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -202,7 +193,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="asm_8h_source.html#l00172">172</a> of file <a class="el" href="asm_8h_source.html">asm.h</a>.</p>
+<p>Definition at line <a class="el" href="asm_8h_source.html#l00157">157</a> of file <a class="el" href="asm_8h_source.html">asm.h</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -256,7 +247,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="asm_8h_source.html#l00168">168</a> of file <a class="el" href="asm_8h_source.html">asm.h</a>.</p>
+<p>Definition at line <a class="el" href="asm_8h_source.html#l00153">153</a> of file <a class="el" href="asm_8h_source.html">asm.h</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -392,45 +383,10 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="asm_8h_ab081966c06c5956b992dc8086e1b1832_icgraph.png" border="0" usemap="#asm_8h_ab081966c06c5956b992dc8086e1b1832_icgraph" alt=""/></div>
 <map name="asm_8h_ab081966c06c5956b992dc8086e1b1832_icgraph" id="asm_8h_ab081966c06c5956b992dc8086e1b1832_icgraph">
-<area shape="rect" id="node2" href="util_8h.html#a26380029ce6cda809af3b6794674debd" title="Executes the INVEPT instruction and invalidates EPT entry cache. " alt="" coords="136,56,225,83"/>
+<area shape="rect" id="node2" href="util_8h.html#a26380029ce6cda809af3b6794674debd" title="Executes the INVEPT instruction and invalidates EPT entry cache. " alt="" coords="136,31,225,57"/>
 <area shape="rect" id="node3" href="ept_8cpp.html#a6adf0f9672ecc2605b2e73a3dea55468" title="EptHandleEptViolation" alt="" coords="273,5,425,32"/>
 <area shape="rect" id="node5" href="vm_8cpp.html#aacdcc58a4e7aa6cdbc73c4ad94392ef1" title="VmpEnterVmxMode" alt="" coords="280,56,419,83"/>
-<area shape="rect" id="node6" href="vmm_8cpp.html#aa8b54d75cffd4fdeccdd215427e42e9c" title="VmmpHandleVmCall" alt="" coords="278,107,421,133"/>
 <area shape="rect" id="node4" href="vmm_8cpp.html#a572fdc29d1553bb115a734013c9d8df3" title="VmmpHandleEptViolation" alt="" coords="473,5,644,32"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a79db6c3a490dc84acfe8ba14268131b8"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void __stdcall AsmInvlpg </td>
-          <td>(</td>
-          <td class="paramtype">_In_ ULONG_PTR&#160;</td>
-          <td class="paramname"><em>virtual_address</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Invalidates TLB entries. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">virtual_address</td><td>An address to invalidate TLB entries </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="asm_8h_a79db6c3a490dc84acfe8ba14268131b8_icgraph.png" border="0" usemap="#asm_8h_a79db6c3a490dc84acfe8ba14268131b8_icgraph" alt=""/></div>
-<map name="asm_8h_a79db6c3a490dc84acfe8ba14268131b8_icgraph" id="asm_8h_a79db6c3a490dc84acfe8ba14268131b8_icgraph">
-<area shape="rect" id="node2" href="vmm_8cpp.html#a78c798583cd8bf076b2b545f57e881cc" title="VmmpHandleInvalidateTLBEntry" alt="" coords="135,5,341,32"/>
 </map>
 </div>
 </p>
@@ -798,7 +754,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="asm_8h_a242cf7f553b78ec66615d191dd2dc429_icgraph.png" border="0" usemap="#asm_8h_a242cf7f553b78ec66615d191dd2dc429_icgraph" alt=""/></div>
 <map name="asm_8h_a242cf7f553b78ec66615d191dd2dc429_icgraph" id="asm_8h_a242cf7f553b78ec66615d191dd2dc429_icgraph">
-<area shape="rect" id="node2" href="util_8cpp.html#aeccc26355bb84db25e0e08fd6ed2cd4a" title="UtilVmCall" alt="" coords="152,5,235,32"/>
+<area shape="rect" id="node2" href="util_8cpp.html#a9b23bcb54e9a8e6f92c33ffd0db0f9db" title="UtilVmCall" alt="" coords="152,5,235,32"/>
 <area shape="rect" id="node3" href="vm_8cpp.html#a389da45e122744ce51237a69334a4aeb" title="VmpStopVM" alt="" coords="283,5,379,32"/>
 </map>
 </div>
@@ -995,30 +951,6 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="abb11fe2b5757145bdf08980ee1e13d1d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void __stdcall AsmWriteLDTR </td>
-          <td>(</td>
-          <td class="paramtype">_In_ USHORT&#160;</td>
-          <td class="paramname"><em>local_segmeng_selector</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Writes to LDT. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">local_segmeng_selector</td><td>A value to write </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a class="anchor" id="a3ef8f1c3c5a8117a1c9fe20d9915e633"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1064,58 +996,6 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a class="anchor" id="af23b5ae36ce1352e2bc5a9a0999e4cb2"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void __stdcall AsmXsetbv </td>
-          <td>(</td>
-          <td class="paramtype">_In_ ULONG32&#160;</td>
-          <td class="paramname"><em>index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">_In_ ULONG32&#160;</td>
-          <td class="paramname"><em>high_value</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">_In_ ULONG32&#160;</td>
-          <td class="paramname"><em>low_value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets extended control register (XCR) </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">index</td><td>An index of XCR </td></tr>
-    <tr><td class="paramname">high_value</td><td>high-order 32 bits to write </td></tr>
-    <tr><td class="paramname">low_value</td><td>low-order 32 bits to write </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="asm_8h_af23b5ae36ce1352e2bc5a9a0999e4cb2_icgraph.png" border="0" usemap="#asm_8h_af23b5ae36ce1352e2bc5a9a0999e4cb2_icgraph" alt=""/></div>
-<map name="asm_8h_af23b5ae36ce1352e2bc5a9a0999e4cb2_icgraph" id="asm_8h_af23b5ae36ce1352e2bc5a9a0999e4cb2_icgraph">
-<area shape="rect" id="node2" href="vmm_8cpp.html#aed97a39f5047e15f4f8845901b0db4cf" title="VmmpHandleXsetbv" alt="" coords="140,5,277,32"/>
-</map>
-</div>
-</p>
 
 </div>
 </div>

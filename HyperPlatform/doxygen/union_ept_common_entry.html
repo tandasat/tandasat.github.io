@@ -49,6 +49,11 @@
 <div class="title">EptCommonEntry Union Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>A structure made up of mutual fields across all EPT entry types.  
+ <a href="union_ept_common_entry.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="ept_8h_source.html">ept.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -56,25 +61,33 @@ Public Attributes</h2></td></tr>
 <tr class="separator:abc7b60612c71341283b7762947e91390"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3940fd59ed106e8af241d2ca729dd612"><td class="memItemLeft" >struct {</td></tr>
 <tr class="memitem:a3df71297fe2bbc86cf0e1a44f071807e"><td class="memItemLeft" >&#160;&#160;&#160;ULONG64&#160;&#160;&#160;<a class="el" href="union_ept_common_entry.html#a8ab55db1ceba7825dbd1d3ebc3567128">read_access</a>: 1</td></tr>
+<tr class="memdesc:a3df71297fe2bbc86cf0e1a44f071807e"><td class="mdescLeft">&#160;</td><td class="mdescRight">[0]  <a href="#a3df71297fe2bbc86cf0e1a44f071807e">More...</a><br /></td></tr>
 <tr class="separator:a3df71297fe2bbc86cf0e1a44f071807e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35e24dca2f6e4a09d488e5be331ea955"><td class="memItemLeft" >&#160;&#160;&#160;ULONG64&#160;&#160;&#160;<a class="el" href="union_ept_common_entry.html#a6e6f79bb781f869b51736c11fad860f5">write_access</a>: 1</td></tr>
+<tr class="memdesc:a35e24dca2f6e4a09d488e5be331ea955"><td class="mdescLeft">&#160;</td><td class="mdescRight">[1]  <a href="#a35e24dca2f6e4a09d488e5be331ea955">More...</a><br /></td></tr>
 <tr class="separator:a35e24dca2f6e4a09d488e5be331ea955"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74f4f22e69afe395b2940bcc3128eb13"><td class="memItemLeft" >&#160;&#160;&#160;ULONG64&#160;&#160;&#160;<a class="el" href="union_ept_common_entry.html#a058961cf0ae82d8d77b5d1addb4b4135">execute_access</a>: 1</td></tr>
+<tr class="memdesc:a74f4f22e69afe395b2940bcc3128eb13"><td class="mdescLeft">&#160;</td><td class="mdescRight">[2]  <a href="#a74f4f22e69afe395b2940bcc3128eb13">More...</a><br /></td></tr>
 <tr class="separator:a74f4f22e69afe395b2940bcc3128eb13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0273166cb47dbc1f741926a8c161b388"><td class="memItemLeft" >&#160;&#160;&#160;ULONG64&#160;&#160;&#160;<a class="el" href="union_ept_common_entry.html#a8190a1e15a971f8abf086672ce435123">memory_type</a>: 3</td></tr>
+<tr class="memdesc:a0273166cb47dbc1f741926a8c161b388"><td class="mdescLeft">&#160;</td><td class="mdescRight">[3:5]  <a href="#a0273166cb47dbc1f741926a8c161b388">More...</a><br /></td></tr>
 <tr class="separator:a0273166cb47dbc1f741926a8c161b388"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48fccb4a049b6ec9eae5160c14791ae2"><td class="memItemLeft" >&#160;&#160;&#160;ULONG64&#160;&#160;&#160;<a class="el" href="union_ept_common_entry.html#ab513df16c7429850fb88eb7228704787">reserved1</a>: 6</td></tr>
+<tr class="memdesc:a48fccb4a049b6ec9eae5160c14791ae2"><td class="mdescLeft">&#160;</td><td class="mdescRight">[6:11]  <a href="#a48fccb4a049b6ec9eae5160c14791ae2">More...</a><br /></td></tr>
 <tr class="separator:a48fccb4a049b6ec9eae5160c14791ae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76a462318b564274283b53eacb882274"><td class="memItemLeft" >&#160;&#160;&#160;ULONG64&#160;&#160;&#160;<a class="el" href="union_ept_common_entry.html#a6d9e1ca328769b845aa952465fdbe97d">physial_address</a>: 36</td></tr>
+<tr class="memdesc:a76a462318b564274283b53eacb882274"><td class="mdescLeft">&#160;</td><td class="mdescRight">[12:48-1]  <a href="#a76a462318b564274283b53eacb882274">More...</a><br /></td></tr>
 <tr class="separator:a76a462318b564274283b53eacb882274"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3359c99434e9c744f06a2cf171b3bd5"><td class="memItemLeft" >&#160;&#160;&#160;ULONG64&#160;&#160;&#160;<a class="el" href="union_ept_common_entry.html#ae4bfeb0fd15237b431b4a9c3af94b9dc">reserved2</a>: 16</td></tr>
+<tr class="memdesc:ad3359c99434e9c744f06a2cf171b3bd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">[48:63]  <a href="#ad3359c99434e9c744f06a2cf171b3bd5">More...</a><br /></td></tr>
 <tr class="separator:ad3359c99434e9c744f06a2cf171b3bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3940fd59ed106e8af241d2ca729dd612"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="union_ept_common_entry.html#a3940fd59ed106e8af241d2ca729dd612">fields</a></td></tr>
 <tr class="separator:a3940fd59ed106e8af241d2ca729dd612"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="ept_8cpp_source.html#l00062">62</a> of file <a class="el" href="ept_8cpp_source.html">ept.cpp</a>.</p>
+<div class="textblock"><p>A structure made up of mutual fields across all EPT entry types. </p>
+
+<p>Definition at line <a class="el" href="ept_8h_source.html#l00032">32</a> of file <a class="el" href="ept_8h_source.html">ept.h</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="abc7b60612c71341283b7762947e91390"></a>
 <div class="memitem">
@@ -86,7 +99,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ept_8cpp_source.html#l00063">63</a> of file <a class="el" href="ept_8cpp_source.html">ept.cpp</a>.</p>
+<p>Definition at line <a class="el" href="ept_8h_source.html#l00033">33</a> of file <a class="el" href="ept_8h_source.html">ept.h</a>.</p>
 
 </div>
 </div>
@@ -100,7 +113,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ept_8cpp_source.html#l00067">67</a> of file <a class="el" href="ept_8cpp_source.html">ept.cpp</a>.</p>
+<p>[2] </p>
+
+<p>Definition at line <a class="el" href="ept_8h_source.html#l00037">37</a> of file <a class="el" href="ept_8h_source.html">ept.h</a>.</p>
 
 </div>
 </div>
@@ -126,7 +141,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ept_8cpp_source.html#l00068">68</a> of file <a class="el" href="ept_8cpp_source.html">ept.cpp</a>.</p>
+<p>[3:5] </p>
+
+<p>Definition at line <a class="el" href="ept_8h_source.html#l00038">38</a> of file <a class="el" href="ept_8h_source.html">ept.h</a>.</p>
 
 </div>
 </div>
@@ -140,7 +157,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ept_8cpp_source.html#l00070">70</a> of file <a class="el" href="ept_8cpp_source.html">ept.cpp</a>.</p>
+<p>[12:48-1] </p>
+
+<p>Definition at line <a class="el" href="ept_8h_source.html#l00040">40</a> of file <a class="el" href="ept_8h_source.html">ept.h</a>.</p>
 
 </div>
 </div>
@@ -154,7 +173,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ept_8cpp_source.html#l00065">65</a> of file <a class="el" href="ept_8cpp_source.html">ept.cpp</a>.</p>
+<p>[0] </p>
+
+<p>Definition at line <a class="el" href="ept_8h_source.html#l00035">35</a> of file <a class="el" href="ept_8h_source.html">ept.h</a>.</p>
 
 </div>
 </div>
@@ -168,7 +189,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ept_8cpp_source.html#l00069">69</a> of file <a class="el" href="ept_8cpp_source.html">ept.cpp</a>.</p>
+<p>[6:11] </p>
+
+<p>Definition at line <a class="el" href="ept_8h_source.html#l00039">39</a> of file <a class="el" href="ept_8h_source.html">ept.h</a>.</p>
 
 </div>
 </div>
@@ -182,7 +205,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ept_8cpp_source.html#l00071">71</a> of file <a class="el" href="ept_8cpp_source.html">ept.cpp</a>.</p>
+<p>[48:63] </p>
+
+<p>Definition at line <a class="el" href="ept_8h_source.html#l00041">41</a> of file <a class="el" href="ept_8h_source.html">ept.h</a>.</p>
 
 </div>
 </div>
@@ -196,12 +221,14 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ept_8cpp_source.html#l00066">66</a> of file <a class="el" href="ept_8cpp_source.html">ept.cpp</a>.</p>
+<p>[1] </p>
+
+<p>Definition at line <a class="el" href="ept_8h_source.html#l00036">36</a> of file <a class="el" href="ept_8h_source.html">ept.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this union was generated from the following file:<ul>
-<li>HyperPlatform/<a class="el" href="ept_8cpp_source.html">ept.cpp</a></li>
+<li>HyperPlatform/<a class="el" href="ept_8h_source.html">ept.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

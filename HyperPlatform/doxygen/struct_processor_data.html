@@ -59,11 +59,11 @@ Collaboration diagram for ProcessorData:</div>
 <div class="dyncontent">
 <div class="center"><img src="struct_processor_data__coll__graph.png" border="0" usemap="#_processor_data_coll__map" alt="Collaboration graph"/></div>
 <map name="_processor_data_coll__map" id="_processor_data_coll__map">
-<area shape="rect" id="node2" href="struct_vm_control_structure.html" title="See: Virtual&#45;Machine Control Structures &amp; FORMAT OF THE VMCS REGION. " alt="" coords="5,199,141,225"/>
-<area shape="rect" id="node3" href="struct_shared_processor_data.html" title="Represents VMM related data shared across all processors. " alt="" coords="165,199,315,225"/>
-<area shape="rect" id="node4" href="struct_ept_data.html" title="EptData" alt="" coords="205,109,275,136"/>
-<area shape="rect" id="node5" href="union_ept_common_entry.html" title="EptCommonEntry" alt="" coords="104,5,229,32"/>
-<area shape="rect" id="node6" href="union_ept_pointer.html" title="See: Extended&#45;Page&#45;Table Pointer (EPTP) " alt="" coords="273,5,356,32"/>
+<area shape="rect" id="node2" href="struct_vm_control_structure.html" title="See: Virtual&#45;Machine Control Structures &amp; FORMAT OF THE VMCS REGION. " alt="" coords="5,109,141,136"/>
+<area shape="rect" id="node3" href="struct_shared_processor_data.html" title="Represents VMM related data shared across all processors. " alt="" coords="165,109,315,136"/>
+<area shape="rect" id="node4" href="struct_ept_data.html" title="EptData" alt="" coords="339,109,408,136"/>
+<area shape="rect" id="node5" href="union_ept_common_entry.html" title="A structure made up of mutual fields across all EPT entry types. " alt="" coords="236,5,361,32"/>
+<area shape="rect" id="node6" href="union_ept_pointer.html" title="See: Extended&#45;Page&#45;Table Pointer (EPTP) " alt="" coords="405,5,488,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -81,12 +81,31 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:aa4833ac4de4466bcb31d46124380f75a"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_vm_control_structure.html">VmControlStructure</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_processor_data.html#aa4833ac4de4466bcb31d46124380f75a">vmcs_region</a></td></tr>
 <tr class="memdesc:aa4833ac4de4466bcb31d46124380f75a"><td class="mdescLeft">&#160;</td><td class="mdescRight">VA of a VMCS region.  <a href="#aa4833ac4de4466bcb31d46124380f75a">More...</a><br /></td></tr>
 <tr class="separator:aa4833ac4de4466bcb31d46124380f75a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a285321a3b4f59ee65dc069b22b455b91"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_ept_data.html">EptData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_processor_data.html#a285321a3b4f59ee65dc069b22b455b91">ept_data</a></td></tr>
+<tr class="memdesc:a285321a3b4f59ee65dc069b22b455b91"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to EPT related data.  <a href="#a285321a3b4f59ee65dc069b22b455b91">More...</a><br /></td></tr>
+<tr class="separator:a285321a3b4f59ee65dc069b22b455b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents VMM related data associated with each processor. </p>
 
-<p>Definition at line <a class="el" href="vmm_8h_source.html#l00039">39</a> of file <a class="el" href="vmm_8h_source.html">vmm.h</a>.</p>
+<p>Definition at line <a class="el" href="vmm_8h_source.html#l00038">38</a> of file <a class="el" href="vmm_8h_source.html">vmm.h</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a285321a3b4f59ee65dc069b22b455b91"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct_ept_data.html">EptData</a>* ProcessorData::ept_data</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A pointer to EPT related data. </p>
+
+<p>Definition at line <a class="el" href="vmm_8h_source.html#l00043">43</a> of file <a class="el" href="vmm_8h_source.html">vmm.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aacd3c5235d2d598f119585f3aa77d68b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -99,7 +118,7 @@ Public Attributes</h2></td></tr>
 
 <p>Shared data. </p>
 
-<p>Definition at line <a class="el" href="vmm_8h_source.html#l00040">40</a> of file <a class="el" href="vmm_8h_source.html">vmm.h</a>.</p>
+<p>Definition at line <a class="el" href="vmm_8h_source.html#l00039">39</a> of file <a class="el" href="vmm_8h_source.html">vmm.h</a>.</p>
 
 </div>
 </div>
@@ -115,7 +134,7 @@ Public Attributes</h2></td></tr>
 
 <p>VA of a VMCS region. </p>
 
-<p>Definition at line <a class="el" href="vmm_8h_source.html#l00043">43</a> of file <a class="el" href="vmm_8h_source.html">vmm.h</a>.</p>
+<p>Definition at line <a class="el" href="vmm_8h_source.html#l00042">42</a> of file <a class="el" href="vmm_8h_source.html">vmm.h</a>.</p>
 
 </div>
 </div>
@@ -131,7 +150,7 @@ Public Attributes</h2></td></tr>
 
 <p>A head of VA for VMM stack. </p>
 
-<p>Definition at line <a class="el" href="vmm_8h_source.html#l00041">41</a> of file <a class="el" href="vmm_8h_source.html">vmm.h</a>.</p>
+<p>Definition at line <a class="el" href="vmm_8h_source.html#l00040">40</a> of file <a class="el" href="vmm_8h_source.html">vmm.h</a>.</p>
 
 </div>
 </div>
@@ -147,7 +166,7 @@ Public Attributes</h2></td></tr>
 
 <p>VA of a VMXON region. </p>
 
-<p>Definition at line <a class="el" href="vmm_8h_source.html#l00042">42</a> of file <a class="el" href="vmm_8h_source.html">vmm.h</a>.</p>
+<p>Definition at line <a class="el" href="vmm_8h_source.html#l00041">41</a> of file <a class="el" href="vmm_8h_source.html">vmm.h</a>.</p>
 
 </div>
 </div>

@@ -96,12 +96,14 @@ Functions</h2></td></tr>
 <tr class="separator:afa74b9279621bc3fc2f47cb51ff5a89d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec194060a655fdc6ade667fe978741af"><td class="memItemLeft" align="right" valign="top">static NTSTATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8cpp.html#aec194060a655fdc6ade667fe978741af">LogpPut</a> (_In_ char *message, _In_ ULONG attribute)</td></tr>
 <tr class="separator:aec194060a655fdc6ade667fe978741af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad60955857599701665a0e356faa0b1c3"><td class="memItemLeft" align="right" valign="top">static NTSTATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8cpp.html#ad60955857599701665a0e356faa0b1c3">LogpWriteLogBufferToFile</a> (_Inout_ <a class="el" href="struct_log_buffer_info.html">LogBufferInfo</a> *info, _In_ bool do_print)</td></tr>
-<tr class="separator:ad60955857599701665a0e356faa0b1c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fdd0ce9f0b08ceeeb8932480a103262"><td class="memItemLeft" align="right" valign="top">static NTSTATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8cpp.html#a6fdd0ce9f0b08ceeeb8932480a103262">LogpFlushLogBuffer</a> (_Inout_ <a class="el" href="struct_log_buffer_info.html">LogBufferInfo</a> *info)</td></tr>
+<tr class="separator:a6fdd0ce9f0b08ceeeb8932480a103262"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e6140a2b3e053b1708e69e91e711c5c"><td class="memItemLeft" align="right" valign="top">static NTSTATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8cpp.html#a1e6140a2b3e053b1708e69e91e711c5c">LogpWriteMessageToFile</a> (_In_ const char *message, _In_ const <a class="el" href="struct_log_buffer_info.html">LogBufferInfo</a> &amp;info)</td></tr>
 <tr class="separator:a1e6140a2b3e053b1708e69e91e711c5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07bf2145ca33bec2222fba83fd02ef5a"><td class="memItemLeft" align="right" valign="top">static NTSTATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8cpp.html#a07bf2145ca33bec2222fba83fd02ef5a">LogpBufferMessage</a> (_In_ const char *message, _Inout_ <a class="el" href="struct_log_buffer_info.html">LogBufferInfo</a> *info)</td></tr>
 <tr class="separator:a07bf2145ca33bec2222fba83fd02ef5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09335c5001a0986eefdeeafa4a8eefa3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8cpp.html#a09335c5001a0986eefdeeafa4a8eefa3">LogpDoDbgPrint</a> (_In_ char *message)</td></tr>
+<tr class="separator:a09335c5001a0986eefdeeafa4a8eefa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fd7eae9e7ff190ffd52818025456000"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8cpp.html#a9fd7eae9e7ff190ffd52818025456000">LogpIsLogFileEnabled</a> (_In_ const <a class="el" href="struct_log_buffer_info.html">LogBufferInfo</a> &amp;info)</td></tr>
 <tr class="separator:a9fd7eae9e7ff190ffd52818025456000"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad77b785034a6129f6796abe93093bb4f"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8cpp.html#ad77b785034a6129f6796abe93093bb4f">LogpIsLogFileActivated</a> (_In_ const <a class="el" href="struct_log_buffer_info.html">LogBufferInfo</a> &amp;info)</td></tr>
@@ -114,6 +116,8 @@ Functions</h2></td></tr>
 <tr class="separator:acbc0ceac6a76b499646aa586dea8a0f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1199f19e8626d06c633e9ff14775faf"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8cpp.html#aa1199f19e8626d06c633e9ff14775faf">LogpIsPrinted</a> (_In_ char *message)</td></tr>
 <tr class="separator:aa1199f19e8626d06c633e9ff14775faf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f6c8da4b9325c15b7cc6762f705341b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8cpp.html#a0f6c8da4b9325c15b7cc6762f705341b">LogpDbgBreak</a> ()</td></tr>
+<tr class="separator:a0f6c8da4b9325c15b7cc6762f705341b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31adb602a5853992527918a920b634a8"><td class="memItemLeft" align="right" valign="top">NTSTATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8cpp.html#a31adb602a5853992527918a920b634a8">LogInitialization</a> (ULONG flag, const wchar_t *log_file_path)</td></tr>
 <tr class="separator:a31adb602a5853992527918a920b634a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7caf9c27ee59b3f60fdd199b54d256d5"><td class="memItemLeft" align="right" valign="top">static NTSTATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8cpp.html#a7caf9c27ee59b3f60fdd199b54d256d5">LogpInitializeBufferInfo</a> (const wchar_t *log_file_path, <a class="el" href="struct_log_buffer_info.html">LogBufferInfo</a> *info)</td></tr>
@@ -140,12 +144,14 @@ Functions</h2></td></tr>
 <tr class="separator:a521e3c5e87b54628df0c0fbd84efb7ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21fc6c0664e814a3fddf042738ede618"><td class="memItemLeft" align="right" valign="top">static NTSTATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8cpp.html#a21fc6c0664e814a3fddf042738ede618">LogpPut</a> (char *message, ULONG attribute)</td></tr>
 <tr class="separator:a21fc6c0664e814a3fddf042738ede618"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff002e4a1ad2892fd96320fac02d07c7"><td class="memItemLeft" align="right" valign="top">static NTSTATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8cpp.html#aff002e4a1ad2892fd96320fac02d07c7">LogpWriteLogBufferToFile</a> (<a class="el" href="struct_log_buffer_info.html">LogBufferInfo</a> *info, bool do_print)</td></tr>
-<tr class="separator:aff002e4a1ad2892fd96320fac02d07c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c305c64e574b630e244c48da8a249c5"><td class="memItemLeft" align="right" valign="top">static NTSTATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8cpp.html#a0c305c64e574b630e244c48da8a249c5">LogpFlushLogBuffer</a> (<a class="el" href="struct_log_buffer_info.html">LogBufferInfo</a> *info)</td></tr>
+<tr class="separator:a0c305c64e574b630e244c48da8a249c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a375b35946b4e55c621dc0cb145504b06"><td class="memItemLeft" align="right" valign="top">static NTSTATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8cpp.html#a375b35946b4e55c621dc0cb145504b06">LogpWriteMessageToFile</a> (const char *message, const <a class="el" href="struct_log_buffer_info.html">LogBufferInfo</a> &amp;info)</td></tr>
 <tr class="separator:a375b35946b4e55c621dc0cb145504b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbcf0bf7ae21bcd03b03d2fa7d498220"><td class="memItemLeft" align="right" valign="top">static NTSTATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8cpp.html#adbcf0bf7ae21bcd03b03d2fa7d498220">LogpBufferMessage</a> (const char *message, <a class="el" href="struct_log_buffer_info.html">LogBufferInfo</a> *info)</td></tr>
 <tr class="separator:adbcf0bf7ae21bcd03b03d2fa7d498220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab607aaf08372cea770872f97fcb4dced"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8cpp.html#ab607aaf08372cea770872f97fcb4dced">LogpDoDbgPrint</a> (char *message)</td></tr>
+<tr class="separator:ab607aaf08372cea770872f97fcb4dced"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9ff2a34fdca80cc538358112e58cad4"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8cpp.html#ac9ff2a34fdca80cc538358112e58cad4">LogpIsLogFileEnabled</a> (const <a class="el" href="struct_log_buffer_info.html">LogBufferInfo</a> &amp;info)</td></tr>
 <tr class="separator:ac9ff2a34fdca80cc538358112e58cad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64549abec678ecf199337f310b0e60e7"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8cpp.html#a64549abec678ecf199337f310b0e60e7">LogpIsLogFileActivated</a> (const <a class="el" href="struct_log_buffer_info.html">LogBufferInfo</a> &amp;info)</td></tr>
@@ -160,8 +166,10 @@ Functions</h2></td></tr>
 <tr class="separator:a819c6ad685e2eebf0c857e7d27b1f852"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f3eda063f53a02d3dd9d8729716b0b6"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8cpp.html#a4f3eda063f53a02d3dd9d8729716b0b6">LogpIsPrinted</a> (char *message)</td></tr>
 <tr class="separator:a4f3eda063f53a02d3dd9d8729716b0b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7f57bf1c062e2d131a3ab9815076f0f"><td class="memItemLeft" align="right" valign="top">int __cdecl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8cpp.html#ae7f57bf1c062e2d131a3ab9815076f0f">__stdio_common_vsprintf</a> (_In_ unsigned __int64 _Options, _Out_writes_z_(_BufferCount) char *_Buffer, _In_ size_t _BufferCount, _In_z_ _Printf_format_string_params_(2) char const *_Format, _In_opt_ _locale_t _Locale, va_list _ArgList)</td></tr>
-<tr class="separator:ae7f57bf1c062e2d131a3ab9815076f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4278c087a0f7eec73791a9cc7527a395"><td class="memItemLeft" align="right" valign="top">_Check_return_opt_ int __cdecl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8cpp.html#a4278c087a0f7eec73791a9cc7527a395">__stdio_common_vsprintf</a> (_In_ unsigned __int64 _Options, _Out_writes_z_(_BufferCount) char *_Buffer, _In_ size_t _BufferCount, _In_z_ _Printf_format_string_params_(2) char const *_Format, _In_opt_ _locale_t _Locale, va_list _ArgList)</td></tr>
+<tr class="separator:a4278c087a0f7eec73791a9cc7527a395"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a232d7480ff65a02de60b2cca41cdb5cc"><td class="memItemLeft" align="right" valign="top">_Check_return_opt_ int __cdecl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8cpp.html#a232d7480ff65a02de60b2cca41cdb5cc">__stdio_common_vswprintf</a> (_In_ unsigned __int64 _Options, _Out_writes_z_(_BufferCount) wchar_t *_Buffer, _In_ size_t _BufferCount, _In_z_ _Printf_format_string_params_(2) wchar_t const *_Format, _In_opt_ _locale_t _Locale, va_list _ArgList)</td></tr>
+<tr class="separator:a232d7480ff65a02de60b2cca41cdb5cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -204,12 +212,12 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ae7f57bf1c062e2d131a3ab9815076f0f"></a>
+<a class="anchor" id="a4278c087a0f7eec73791a9cc7527a395"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int __cdecl __stdio_common_vsprintf </td>
+          <td class="memname">_Check_return_opt_ int __cdecl __stdio_common_vsprintf </td>
           <td>(</td>
           <td class="paramtype">_In_ unsigned __int64&#160;</td>
           <td class="paramname"><em>_Options</em>, </td>
@@ -252,7 +260,59 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="log_8cpp_source.html#l00778">778</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+<p>Definition at line <a class="el" href="log_8cpp_source.html#l00788">788</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a232d7480ff65a02de60b2cca41cdb5cc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">_Check_return_opt_ int __cdecl __stdio_common_vswprintf </td>
+          <td>(</td>
+          <td class="paramtype">_In_ unsigned __int64&#160;</td>
+          <td class="paramname"><em>_Options</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Out_writes_z_(_BufferCount) wchar_t *&#160;</td>
+          <td class="paramname"><em>_Buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_In_ size_t&#160;</td>
+          <td class="paramname"><em>_BufferCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_In_z_ _Printf_format_string_params_(2) wchar_t const *&#160;</td>
+          <td class="paramname"><em>_Format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_In_opt_ _locale_t&#160;</td>
+          <td class="paramname"><em>_Locale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">va_list&#160;</td>
+          <td class="paramname"><em>_ArgList</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="log_8cpp_source.html#l00810">810</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
 
 </div>
 </div>
@@ -280,7 +340,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="log_8cpp_source.html#l00149">149</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+<p>Definition at line <a class="el" href="log_8cpp_source.html#l00153">153</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -320,7 +380,7 @@ Here is the caller graph for this function:</div>
 
 <p>Terminates the log system. Should be called from an IRP_MJ_SHUTDOWN handler. </p>
 
-<p>Definition at line <a class="el" href="log_8cpp_source.html#l00320">320</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+<p>Definition at line <a class="el" href="log_8cpp_source.html#l00324">324</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -356,16 +416,16 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="log_8cpp_source.html#l00728">728</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+<p>Definition at line <a class="el" href="log_8cpp_source.html#l00731">731</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="log_8cpp_a9b57db3b3cac60d3914dcb383f3ae982_cgraph.png" border="0" usemap="#log_8cpp_a9b57db3b3cac60d3914dcb383f3ae982_cgraph" alt=""/></div>
 <map name="log_8cpp_a9b57db3b3cac60d3914dcb383f3ae982_cgraph" id="log_8cpp_a9b57db3b3cac60d3914dcb383f3ae982_cgraph">
-<area shape="rect" id="node2" href="log_8cpp.html#ad77b785034a6129f6796abe93093bb4f" title="LogpIsLogFileActivated" alt="" coords="260,5,415,32"/>
-<area shape="rect" id="node3" href="log_8cpp.html#ad60955857599701665a0e356faa0b1c3" title="LogpWriteLogBufferToFile" alt="" coords="252,56,423,83"/>
-<area shape="rect" id="node4" href="log_8cpp.html#aced14de25b5bcc0e735e1254c697e53b" title="LogpSleep" alt="" coords="296,107,379,133"/>
+<area shape="rect" id="node2" href="log_8cpp.html#ad77b785034a6129f6796abe93093bb4f" title="LogpIsLogFileActivated" alt="" coords="252,5,407,32"/>
+<area shape="rect" id="node3" href="log_8cpp.html#a6fdd0ce9f0b08ceeeb8932480a103262" title="LogpFlushLogBuffer" alt="" coords="261,56,397,83"/>
+<area shape="rect" id="node4" href="log_8cpp.html#aced14de25b5bcc0e735e1254c697e53b" title="LogpSleep" alt="" coords="288,107,371,133"/>
 </map>
 </div>
 </p>
@@ -448,7 +508,105 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="log_8cpp_source.html#l00651">651</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+<p>Definition at line <a class="el" href="log_8cpp_source.html#l00646">646</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0f6c8da4b9325c15b7cc6762f705341b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void LogpDbgBreak </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="log_8cpp_source.html#l00780">780</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="log_8cpp_a0f6c8da4b9325c15b7cc6762f705341b_icgraph.png" border="0" usemap="#log_8cpp_a0f6c8da4b9325c15b7cc6762f705341b_icgraph" alt=""/></div>
+<map name="log_8cpp_a0f6c8da4b9325c15b7cc6762f705341b_icgraph" id="log_8cpp_a0f6c8da4b9325c15b7cc6762f705341b_icgraph">
+<area shape="rect" id="node2" href="log_8cpp.html#a46e04740d9d122fb61c015c6bada7d4b" title="LogpFinalizeBufferInfo" alt="" coords="171,5,319,32"/>
+<area shape="rect" id="node3" href="log_8cpp.html#a0c305c64e574b630e244c48da8a249c5" title="LogpFlushLogBuffer" alt="" coords="177,56,313,83"/>
+<area shape="rect" id="node4" href="log_8cpp.html#a375b35946b4e55c621dc0cb145504b06" title="LogpWriteMessageToFile" alt="" coords="160,107,329,133"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a09335c5001a0986eefdeeafa4a8eefa3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void LogpDoDbgPrint </td>
+          <td>(</td>
+          <td class="paramtype">_In_ char *&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="log_8cpp_a09335c5001a0986eefdeeafa4a8eefa3_icgraph.png" border="0" usemap="#log_8cpp_a09335c5001a0986eefdeeafa4a8eefa3_icgraph" alt=""/></div>
+<map name="log_8cpp_a09335c5001a0986eefdeeafa4a8eefa3_icgraph" id="log_8cpp_a09335c5001a0986eefdeeafa4a8eefa3_icgraph">
+<area shape="rect" id="node2" href="log_8cpp.html#a21fc6c0664e814a3fddf042738ede618" title="LogpPut" alt="" coords="202,5,273,32"/>
+<area shape="rect" id="node3" href="log_8cpp.html#a0c305c64e574b630e244c48da8a249c5" title="LogpFlushLogBuffer" alt="" coords="169,56,305,83"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab607aaf08372cea770872f97fcb4dced"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void LogpDoDbgPrint </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="log_8cpp_source.html#l00688">688</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
 
 </div>
 </div>
@@ -512,7 +670,17 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="log_8cpp_source.html#l00347">347</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+<p>Definition at line <a class="el" href="log_8cpp_source.html#l00351">351</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="log_8cpp_a46e04740d9d122fb61c015c6bada7d4b_cgraph.png" border="0" usemap="#log_8cpp_a46e04740d9d122fb61c015c6bada7d4b_cgraph" alt=""/></div>
+<map name="log_8cpp_a46e04740d9d122fb61c015c6bada7d4b_cgraph" id="log_8cpp_a46e04740d9d122fb61c015c6bada7d4b_cgraph">
+<area shape="rect" id="node2" href="log_8cpp.html#a0f6c8da4b9325c15b7cc6762f705341b" title="LogpDbgBreak" alt="" coords="201,5,308,32"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -572,7 +740,81 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="log_8cpp_source.html#l00509">509</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+<p>Definition at line <a class="el" href="log_8cpp_source.html#l00511">511</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6fdd0ce9f0b08ceeeb8932480a103262"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static NTSTATUS LogpFlushLogBuffer </td>
+          <td>(</td>
+          <td class="paramtype">_Inout_ <a class="el" href="struct_log_buffer_info.html">LogBufferInfo</a> *&#160;</td>
+          <td class="paramname"><em>info</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="log_8cpp_a6fdd0ce9f0b08ceeeb8932480a103262_icgraph.png" border="0" usemap="#log_8cpp_a6fdd0ce9f0b08ceeeb8932480a103262_icgraph" alt=""/></div>
+<map name="log_8cpp_a6fdd0ce9f0b08ceeeb8932480a103262_icgraph" id="log_8cpp_a6fdd0ce9f0b08ceeeb8932480a103262_icgraph">
+<area shape="rect" id="node2" href="log_8cpp.html#a21fc6c0664e814a3fddf042738ede618" title="LogpPut" alt="" coords="253,5,324,32"/>
+<area shape="rect" id="node3" href="log_8cpp.html#a9b57db3b3cac60d3914dcb383f3ae982" title="LogpBufferFlushThreadRoutine" alt="" coords="189,56,388,83"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a0c305c64e574b630e244c48da8a249c5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static NTSTATUS LogpFlushLogBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_log_buffer_info.html">LogBufferInfo</a> *&#160;</td>
+          <td class="paramname"><em>info</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="log_8cpp_source.html#l00569">569</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="log_8cpp_a0c305c64e574b630e244c48da8a249c5_cgraph.png" border="0" usemap="#log_8cpp_a0c305c64e574b630e244c48da8a249c5_cgraph" alt=""/></div>
+<map name="log_8cpp_a0c305c64e574b630e244c48da8a249c5_cgraph" id="log_8cpp_a0c305c64e574b630e244c48da8a249c5_cgraph">
+<area shape="rect" id="node2" href="log_8cpp.html#aa1199f19e8626d06c633e9ff14775faf" title="LogpIsPrinted" alt="" coords="202,5,303,32"/>
+<area shape="rect" id="node3" href="log_8cpp.html#acbc0ceac6a76b499646aa586dea8a0f2" title="LogpSetPrintedBit" alt="" coords="189,56,316,83"/>
+<area shape="rect" id="node4" href="log_8cpp.html#a0f6c8da4b9325c15b7cc6762f705341b" title="LogpDbgBreak" alt="" coords="199,107,306,133"/>
+<area shape="rect" id="node5" href="log_8cpp.html#a09335c5001a0986eefdeeafa4a8eefa3" title="LogpDoDbgPrint" alt="" coords="195,157,311,184"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -653,7 +895,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="log_8cpp_source.html#l00188">188</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+<p>Definition at line <a class="el" href="log_8cpp_source.html#l00192">192</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -725,7 +967,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="log_8cpp_source.html#l00249">249</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+<p>Definition at line <a class="el" href="log_8cpp_source.html#l00253">253</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -796,7 +1038,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="log_8cpp_source.html#l00708">708</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+<p>Definition at line <a class="el" href="log_8cpp_source.html#l00711">711</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
 
 </div>
 </div>
@@ -856,7 +1098,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="log_8cpp_source.html#l00693">693</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+<p>Definition at line <a class="el" href="log_8cpp_source.html#l00696">696</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
 
 </div>
 </div>
@@ -916,7 +1158,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="log_8cpp_source.html#l00722">722</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+<p>Definition at line <a class="el" href="log_8cpp_source.html#l00725">725</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
 
 </div>
 </div>
@@ -947,7 +1189,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="log_8cpp_aa1199f19e8626d06c633e9ff14775faf_icgraph.png" border="0" usemap="#log_8cpp_aa1199f19e8626d06c633e9ff14775faf_icgraph" alt=""/></div>
 <map name="log_8cpp_aa1199f19e8626d06c633e9ff14775faf_icgraph" id="log_8cpp_aa1199f19e8626d06c633e9ff14775faf_icgraph">
-<area shape="rect" id="node2" href="log_8cpp.html#aff002e4a1ad2892fd96320fac02d07c7" title="LogpWriteLogBufferToFile" alt="" coords="155,5,325,32"/>
+<area shape="rect" id="node2" href="log_8cpp.html#a0c305c64e574b630e244c48da8a249c5" title="LogpFlushLogBuffer" alt="" coords="155,5,291,32"/>
 </map>
 </div>
 </p>
@@ -976,7 +1218,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="log_8cpp_source.html#l00772">772</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+<p>Definition at line <a class="el" href="log_8cpp_source.html#l00775">775</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
 
 </div>
 </div>
@@ -1092,7 +1334,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="log_8cpp_source.html#l00425">425</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+<p>Definition at line <a class="el" href="log_8cpp_source.html#l00429">429</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1143,7 +1385,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="log_8cpp_source.html#l00384">384</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+<p>Definition at line <a class="el" href="log_8cpp_source.html#l00388">388</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1235,19 +1477,20 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="log_8cpp_source.html#l00526">526</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+<p>Definition at line <a class="el" href="log_8cpp_source.html#l00528">528</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="log_8cpp_a21fc6c0664e814a3fddf042738ede618_cgraph.png" border="0" usemap="#log_8cpp_a21fc6c0664e814a3fddf042738ede618_cgraph" alt=""/></div>
 <map name="log_8cpp_a21fc6c0664e814a3fddf042738ede618_cgraph" id="log_8cpp_a21fc6c0664e814a3fddf042738ede618_cgraph">
-<area shape="rect" id="node2" href="log_8cpp.html#a9fd7eae9e7ff190ffd52818025456000" title="LogpIsLogFileEnabled" alt="" coords="135,5,284,32"/>
-<area shape="rect" id="node3" href="log_8cpp.html#ad77b785034a6129f6796abe93093bb4f" title="LogpIsLogFileActivated" alt="" coords="132,56,287,83"/>
-<area shape="rect" id="node4" href="log_8cpp.html#ad60955857599701665a0e356faa0b1c3" title="LogpWriteLogBufferToFile" alt="" coords="124,107,295,133"/>
-<area shape="rect" id="node5" href="log_8cpp.html#a1e6140a2b3e053b1708e69e91e711c5c" title="LogpWriteMessageToFile" alt="" coords="125,157,294,184"/>
-<area shape="rect" id="node6" href="log_8cpp.html#acbc0ceac6a76b499646aa586dea8a0f2" title="LogpSetPrintedBit" alt="" coords="146,208,273,235"/>
+<area shape="rect" id="node2" href="log_8cpp.html#a9fd7eae9e7ff190ffd52818025456000" title="LogpIsLogFileEnabled" alt="" coords="134,5,283,32"/>
+<area shape="rect" id="node3" href="log_8cpp.html#ad77b785034a6129f6796abe93093bb4f" title="LogpIsLogFileActivated" alt="" coords="131,56,286,83"/>
+<area shape="rect" id="node4" href="log_8cpp.html#a6fdd0ce9f0b08ceeeb8932480a103262" title="LogpFlushLogBuffer" alt="" coords="141,107,277,133"/>
+<area shape="rect" id="node5" href="log_8cpp.html#a1e6140a2b3e053b1708e69e91e711c5c" title="LogpWriteMessageToFile" alt="" coords="124,157,293,184"/>
+<area shape="rect" id="node6" href="log_8cpp.html#acbc0ceac6a76b499646aa586dea8a0f2" title="LogpSetPrintedBit" alt="" coords="145,208,272,235"/>
 <area shape="rect" id="node7" href="log_8cpp.html#a07bf2145ca33bec2222fba83fd02ef5a" title="LogpBufferMessage" alt="" coords="141,259,277,285"/>
+<area shape="rect" id="node8" href="log_8cpp.html#a09335c5001a0986eefdeeafa4a8eefa3" title="LogpDoDbgPrint" alt="" coords="151,309,267,336"/>
 </map>
 </div>
 </p>
@@ -1292,7 +1535,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="log_8cpp_source.html#l00304">304</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+<p>Definition at line <a class="el" href="log_8cpp_source.html#l00308">308</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1343,8 +1586,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="log_8cpp_acbc0ceac6a76b499646aa586dea8a0f2_icgraph.png" border="0" usemap="#log_8cpp_acbc0ceac6a76b499646aa586dea8a0f2_icgraph" alt=""/></div>
 <map name="log_8cpp_acbc0ceac6a76b499646aa586dea8a0f2_icgraph" id="log_8cpp_acbc0ceac6a76b499646aa586dea8a0f2_icgraph">
-<area shape="rect" id="node2" href="log_8cpp.html#a21fc6c0664e814a3fddf042738ede618" title="LogpPut" alt="" coords="230,5,301,32"/>
-<area shape="rect" id="node3" href="log_8cpp.html#aff002e4a1ad2892fd96320fac02d07c7" title="LogpWriteLogBufferToFile" alt="" coords="180,56,351,83"/>
+<area shape="rect" id="node2" href="log_8cpp.html#a21fc6c0664e814a3fddf042738ede618" title="LogpPut" alt="" coords="213,5,283,32"/>
+<area shape="rect" id="node3" href="log_8cpp.html#a0c305c64e574b630e244c48da8a249c5" title="LogpFlushLogBuffer" alt="" coords="180,56,316,83"/>
 </map>
 </div>
 </p>
@@ -1383,7 +1626,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="log_8cpp_source.html#l00763">763</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+<p>Definition at line <a class="el" href="log_8cpp_source.html#l00766">766</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
 
 </div>
 </div>
@@ -1445,99 +1688,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="log_8cpp_source.html#l00753">753</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad60955857599701665a0e356faa0b1c3"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static NTSTATUS LogpWriteLogBufferToFile </td>
-          <td>(</td>
-          <td class="paramtype">_Inout_ <a class="el" href="struct_log_buffer_info.html">LogBufferInfo</a> *&#160;</td>
-          <td class="paramname"><em>info</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">_In_ bool&#160;</td>
-          <td class="paramname"><em>do_print</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="log_8cpp_ad60955857599701665a0e356faa0b1c3_icgraph.png" border="0" usemap="#log_8cpp_ad60955857599701665a0e356faa0b1c3_icgraph" alt=""/></div>
-<map name="log_8cpp_ad60955857599701665a0e356faa0b1c3_icgraph" id="log_8cpp_ad60955857599701665a0e356faa0b1c3_icgraph">
-<area shape="rect" id="node2" href="log_8cpp.html#a21fc6c0664e814a3fddf042738ede618" title="LogpPut" alt="" coords="288,5,359,32"/>
-<area shape="rect" id="node3" href="log_8cpp.html#a9b57db3b3cac60d3914dcb383f3ae982" title="LogpBufferFlushThreadRoutine" alt="" coords="224,56,423,83"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="aff002e4a1ad2892fd96320fac02d07c7"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static NTSTATUS LogpWriteLogBufferToFile </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_log_buffer_info.html">LogBufferInfo</a> *&#160;</td>
-          <td class="paramname"><em>info</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>do_print</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="log_8cpp_source.html#l00569">569</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="log_8cpp_aff002e4a1ad2892fd96320fac02d07c7_cgraph.png" border="0" usemap="#log_8cpp_aff002e4a1ad2892fd96320fac02d07c7_cgraph" alt=""/></div>
-<map name="log_8cpp_aff002e4a1ad2892fd96320fac02d07c7_cgraph" id="log_8cpp_aff002e4a1ad2892fd96320fac02d07c7_cgraph">
-<area shape="rect" id="node2" href="log_8cpp.html#aa1199f19e8626d06c633e9ff14775faf" title="LogpIsPrinted" alt="" coords="237,5,338,32"/>
-<area shape="rect" id="node3" href="log_8cpp.html#acbc0ceac6a76b499646aa586dea8a0f2" title="LogpSetPrintedBit" alt="" coords="224,56,351,83"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="log_8cpp_source.html#l00756">756</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
 
 </div>
 </div>
@@ -1617,7 +1768,17 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="log_8cpp_source.html#l00631">631</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+<p>Definition at line <a class="el" href="log_8cpp_source.html#l00626">626</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="log_8cpp_a375b35946b4e55c621dc0cb145504b06_cgraph.png" border="0" usemap="#log_8cpp_a375b35946b4e55c621dc0cb145504b06_cgraph" alt=""/></div>
+<map name="log_8cpp_a375b35946b4e55c621dc0cb145504b06_cgraph" id="log_8cpp_a375b35946b4e55c621dc0cb145504b06_cgraph">
+<area shape="rect" id="node2" href="log_8cpp.html#a0f6c8da4b9325c15b7cc6762f705341b" title="LogpDbgBreak" alt="" coords="223,5,329,32"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -1635,7 +1796,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="log_8cpp_source.html#l00295">295</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+<p>Definition at line <a class="el" href="log_8cpp_source.html#l00299">299</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -1664,7 +1825,7 @@ Here is the caller graph for this function:</div>
 
 <p>Terminates the log system. Should be called from a DriverUnload routine. </p>
 
-<p>Definition at line <a class="el" href="log_8cpp_source.html#l00336">336</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+<p>Definition at line <a class="el" href="log_8cpp_source.html#l00340">340</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1734,7 +1895,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="log_8cpp_source.html#l00140">140</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+<p>Definition at line <a class="el" href="log_8cpp_source.html#l00144">144</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
 
 </div>
 </div>
@@ -1756,7 +1917,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="log_8cpp_source.html#l00141">141</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+<p>Definition at line <a class="el" href="log_8cpp_source.html#l00145">145</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
 
 </div>
 </div>
@@ -1888,7 +2049,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="log_8cpp_source.html#l00113">113</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
+<p>Definition at line <a class="el" href="log_8cpp_source.html#l00115">115</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
 
 </div>
 </div>

@@ -54,90 +54,94 @@
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// found in the LICENSE file.</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#ifndef HYPERPLATFORM_COMMON_H_</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#define HYPERPLATFORM_COMMON_H_</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;fltKernel.h&gt;</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">// macro utilities</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#if !defined(HYPERPLATFORM_COMMON_DBG_BREAK)</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="common_8h.html#ab555eaf608d224d2229f6bdd726ab95b">   45</a></span>&#160;<span class="preprocessor">#define HYPERPLATFORM_COMMON_DBG_BREAK() \</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">  if (KD_DEBUGGER_NOT_PRESENT) {         \</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">  } else {                               \</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">    __debugbreak();                      \</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">  }                                      \</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">  reinterpret_cast&lt;void*&gt;(0)</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#if !defined(HYPERPLATFORM_COMMON_BUG_CHECK)</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="common_8h.html#a2fa75a42dd2f34590bed16f1583b2a9c">   59</a></span>&#160;<span class="preprocessor">#define HYPERPLATFORM_COMMON_BUG_CHECK(hp_bug_check_code, param1, param2,    \</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">                                       param3)                               \</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">  HYPERPLATFORM_COMMON_DBG_BREAK();                                          \</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">  const HyperPlatformBugCheck code = (hp_bug_check_code);                    \</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">  KeBugCheckEx(MANUALLY_INITIATED_CRASH, static_cast&lt;ULONG&gt;(code), (param1), \</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">               (param2), (param3))</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">// constants and macros</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="common_8h.html#ac26c792184a216dc0d101a5716f76f7e">   77</a></span>&#160;<span class="preprocessor">#define HYPERPLATFORM_PERFORMANCE_ENABLE_PERFCOUNTER 1</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="common_8h.html#a056e509f4f29f1ce6329cef9dfb25d2e">   80</a></span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> ULONG <a class="code" href="common_8h.html#a056e509f4f29f1ce6329cef9dfb25d2e">kHyperPlatformCommonPoolTag</a> = <span class="stringliteral">&#39;PpyH&#39;</span>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">// types</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="common_8h.html#a025de454ae4eec948d955fd67b2c1a47">   88</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="common_8h.html#a025de454ae4eec948d955fd67b2c1a47">HyperPlatformBugCheck</a> : ULONG {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <a class="code" href="common_8h.html#a025de454ae4eec948d955fd67b2c1a47a25c2dc47991b3df171ed5192bcf70390">kUnknown</a>,                        </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <a class="code" href="common_8h.html#a025de454ae4eec948d955fd67b2c1a47aaab5123b0ff34361100d04874b2846b0">kUnexpectedVmExit</a>,               </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <a class="code" href="common_8h.html#a025de454ae4eec948d955fd67b2c1a47af882ecbdd08f4b410b82ca4894208040">kTripleFaultVmExit</a>,              </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <a class="code" href="common_8h.html#a025de454ae4eec948d955fd67b2c1a47afd966ff6eb68143003244fd06cabbe50">kExhaustedPreallocatedEntries</a>,   </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <a class="code" href="common_8h.html#a025de454ae4eec948d955fd67b2c1a47adb2cba8af01b74b26ce9d8b049122174">kCriticalVmxInstructionFailure</a>,  </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;};</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">// prototypes</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#ifndef HYPERPLATFORM_COMMON_H_</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#define HYPERPLATFORM_COMMON_H_</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;fltKernel.h&gt;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">// macro utilities</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#if !defined(HYPERPLATFORM_COMMON_DBG_BREAK)</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="common_8h.html#ab555eaf608d224d2229f6bdd726ab95b">   46</a></span>&#160;<span class="preprocessor">#define HYPERPLATFORM_COMMON_DBG_BREAK() \</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">  if (KD_DEBUGGER_NOT_PRESENT) {         \</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">  } else {                               \</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">    __debugbreak();                      \</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">  }                                      \</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">  reinterpret_cast&lt;void*&gt;(0)</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#if !defined(HYPERPLATFORM_COMMON_BUG_CHECK)</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="common_8h.html#a2fa75a42dd2f34590bed16f1583b2a9c">   60</a></span>&#160;<span class="preprocessor">#define HYPERPLATFORM_COMMON_BUG_CHECK(hp_bug_check_code, param1, param2,    \</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">                                       param3)                               \</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">  HYPERPLATFORM_COMMON_DBG_BREAK();                                          \</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">  const HyperPlatformBugCheck code = (hp_bug_check_code);                    \</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">  KeBugCheckEx(MANUALLY_INITIATED_CRASH, static_cast&lt;ULONG&gt;(code), (param1), \</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">               (param2), (param3))</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">// constants and macros</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="common_8h.html#ac26c792184a216dc0d101a5716f76f7e">   78</a></span>&#160;<span class="preprocessor">#define HYPERPLATFORM_PERFORMANCE_ENABLE_PERFCOUNTER 1</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="common_8h.html#a056e509f4f29f1ce6329cef9dfb25d2e">   81</a></span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> ULONG <a class="code" href="common_8h.html#a056e509f4f29f1ce6329cef9dfb25d2e">kHyperPlatformCommonPoolTag</a> = <span class="stringliteral">&#39;PpyH&#39;</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">// types</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="common_8h.html#a025de454ae4eec948d955fd67b2c1a47">   89</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="common_8h.html#a025de454ae4eec948d955fd67b2c1a47">HyperPlatformBugCheck</a> : ULONG {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <a class="code" href="common_8h.html#a025de454ae4eec948d955fd67b2c1a47a8536661e94a42d4d95dcb9058b9936b5">kUnspecified</a>,                    </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <a class="code" href="common_8h.html#a025de454ae4eec948d955fd67b2c1a47aaab5123b0ff34361100d04874b2846b0">kUnexpectedVmExit</a>,               </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <a class="code" href="common_8h.html#a025de454ae4eec948d955fd67b2c1a47af882ecbdd08f4b410b82ca4894208040">kTripleFaultVmExit</a>,              </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <a class="code" href="common_8h.html#a025de454ae4eec948d955fd67b2c1a47afd966ff6eb68143003244fd06cabbe50">kExhaustedPreallocatedEntries</a>,   </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <a class="code" href="common_8h.html#a025de454ae4eec948d955fd67b2c1a47adb2cba8af01b74b26ce9d8b049122174">kCriticalVmxInstructionFailure</a>,  </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <a class="code" href="common_8h.html#a025de454ae4eec948d955fd67b2c1a47a1f1b0b59535b652ca3304e78a504e2a8">kEptMisconfigVmExit</a>,             </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <a class="code" href="common_8h.html#a025de454ae4eec948d955fd67b2c1a47a81face1bcd6815291aa25c203fe40065">kCritialPoolAllocationFailure</a>,   </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;};</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">// prototypes</span></div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">// variables</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">// variables</span></div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">// implementations</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="common_8h.html#ae06c86efd7f271e00cb4f501fbca6e1a">  113</a></span>&#160;constexpr <span class="keywordtype">bool</span> <a class="code" href="common_8h.html#ae06c86efd7f271e00cb4f501fbca6e1a">IsX64</a>() {</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#if defined(_AMD64_)</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="common_8h.html#a56951867bea28bcaf6898dbdc82c0216">  123</a></span>&#160;constexpr <span class="keywordtype">bool</span> <a class="code" href="common_8h.html#a56951867bea28bcaf6898dbdc82c0216">IsReleaseBuild</a>() {</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#if defined(DBG)</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;}</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">#endif  // HYPERPLATFORM_COMMON_H_</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">// implementations</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="common_8h.html#ae06c86efd7f271e00cb4f501fbca6e1a">  116</a></span>&#160;constexpr <span class="keywordtype">bool</span> <a class="code" href="common_8h.html#ae06c86efd7f271e00cb4f501fbca6e1a">IsX64</a>() {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#if defined(_AMD64_)</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="common_8h.html#a56951867bea28bcaf6898dbdc82c0216">  126</a></span>&#160;constexpr <span class="keywordtype">bool</span> <a class="code" href="common_8h.html#a56951867bea28bcaf6898dbdc82c0216">IsReleaseBuild</a>() {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor">#if defined(DBG)</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#endif  // HYPERPLATFORM_COMMON_H_</span></div>
 <div class="ttc" id="common_8h_html_a025de454ae4eec948d955fd67b2c1a47af882ecbdd08f4b410b82ca4894208040"><div class="ttname"><a href="common_8h.html#a025de454ae4eec948d955fd67b2c1a47af882ecbdd08f4b410b82ca4894208040">HyperPlatformBugCheck::kTripleFaultVmExit</a></div><div class="ttdoc">A triple fault VM-exit occured. </div></div>
-<div class="ttc" id="common_8h_html_a056e509f4f29f1ce6329cef9dfb25d2e"><div class="ttname"><a href="common_8h.html#a056e509f4f29f1ce6329cef9dfb25d2e">kHyperPlatformCommonPoolTag</a></div><div class="ttdeci">static const ULONG kHyperPlatformCommonPoolTag</div><div class="ttdoc">A pool tag. </div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00080">common.h:80</a></div></div>
-<div class="ttc" id="common_8h_html_ae06c86efd7f271e00cb4f501fbca6e1a"><div class="ttname"><a href="common_8h.html#ae06c86efd7f271e00cb4f501fbca6e1a">IsX64</a></div><div class="ttdeci">constexpr bool IsX64()</div><div class="ttdoc">Checks if a system is x64. </div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00113">common.h:113</a></div></div>
-<div class="ttc" id="common_8h_html_a56951867bea28bcaf6898dbdc82c0216"><div class="ttname"><a href="common_8h.html#a56951867bea28bcaf6898dbdc82c0216">IsReleaseBuild</a></div><div class="ttdeci">constexpr bool IsReleaseBuild()</div><div class="ttdoc">Checks if the project is compiled as Release. </div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00123">common.h:123</a></div></div>
-<div class="ttc" id="common_8h_html_a025de454ae4eec948d955fd67b2c1a47a25c2dc47991b3df171ed5192bcf70390"><div class="ttname"><a href="common_8h.html#a025de454ae4eec948d955fd67b2c1a47a25c2dc47991b3df171ed5192bcf70390">HyperPlatformBugCheck::kUnknown</a></div><div class="ttdoc">An unspecified bug occured. </div></div>
+<div class="ttc" id="common_8h_html_a056e509f4f29f1ce6329cef9dfb25d2e"><div class="ttname"><a href="common_8h.html#a056e509f4f29f1ce6329cef9dfb25d2e">kHyperPlatformCommonPoolTag</a></div><div class="ttdeci">static const ULONG kHyperPlatformCommonPoolTag</div><div class="ttdoc">A pool tag. </div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00081">common.h:81</a></div></div>
+<div class="ttc" id="common_8h_html_ae06c86efd7f271e00cb4f501fbca6e1a"><div class="ttname"><a href="common_8h.html#ae06c86efd7f271e00cb4f501fbca6e1a">IsX64</a></div><div class="ttdeci">constexpr bool IsX64()</div><div class="ttdoc">Checks if a system is x64. </div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00116">common.h:116</a></div></div>
+<div class="ttc" id="common_8h_html_a025de454ae4eec948d955fd67b2c1a47a1f1b0b59535b652ca3304e78a504e2a8"><div class="ttname"><a href="common_8h.html#a025de454ae4eec948d955fd67b2c1a47a1f1b0b59535b652ca3304e78a504e2a8">HyperPlatformBugCheck::kEptMisconfigVmExit</a></div><div class="ttdoc">EPT misconfig VM-exit occured. </div></div>
+<div class="ttc" id="common_8h_html_a025de454ae4eec948d955fd67b2c1a47a8536661e94a42d4d95dcb9058b9936b5"><div class="ttname"><a href="common_8h.html#a025de454ae4eec948d955fd67b2c1a47a8536661e94a42d4d95dcb9058b9936b5">HyperPlatformBugCheck::kUnspecified</a></div><div class="ttdoc">An unspecified bug occured. </div></div>
+<div class="ttc" id="common_8h_html_a56951867bea28bcaf6898dbdc82c0216"><div class="ttname"><a href="common_8h.html#a56951867bea28bcaf6898dbdc82c0216">IsReleaseBuild</a></div><div class="ttdeci">constexpr bool IsReleaseBuild()</div><div class="ttdoc">Checks if the project is compiled as Release. </div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00126">common.h:126</a></div></div>
 <div class="ttc" id="common_8h_html_a025de454ae4eec948d955fd67b2c1a47adb2cba8af01b74b26ce9d8b049122174"><div class="ttname"><a href="common_8h.html#a025de454ae4eec948d955fd67b2c1a47adb2cba8af01b74b26ce9d8b049122174">HyperPlatformBugCheck::kCriticalVmxInstructionFailure</a></div><div class="ttdoc">VMRESUME or VMXOFF has failed. </div></div>
-<div class="ttc" id="common_8h_html_a025de454ae4eec948d955fd67b2c1a47"><div class="ttname"><a href="common_8h.html#a025de454ae4eec948d955fd67b2c1a47">HyperPlatformBugCheck</a></div><div class="ttdeci">HyperPlatformBugCheck</div><div class="ttdoc">BugCheck codes for HYPERPLATFORM_COMMON_BUG_CHECK(). </div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00088">common.h:88</a></div></div>
+<div class="ttc" id="common_8h_html_a025de454ae4eec948d955fd67b2c1a47a81face1bcd6815291aa25c203fe40065"><div class="ttname"><a href="common_8h.html#a025de454ae4eec948d955fd67b2c1a47a81face1bcd6815291aa25c203fe40065">HyperPlatformBugCheck::kCritialPoolAllocationFailure</a></div><div class="ttdoc">Critial pool allocation failed. </div></div>
+<div class="ttc" id="common_8h_html_a025de454ae4eec948d955fd67b2c1a47"><div class="ttname"><a href="common_8h.html#a025de454ae4eec948d955fd67b2c1a47">HyperPlatformBugCheck</a></div><div class="ttdeci">HyperPlatformBugCheck</div><div class="ttdoc">BugCheck codes for HYPERPLATFORM_COMMON_BUG_CHECK(). </div><div class="ttdef"><b>Definition:</b> <a href="common_8h_source.html#l00089">common.h:89</a></div></div>
 <div class="ttc" id="common_8h_html_a025de454ae4eec948d955fd67b2c1a47afd966ff6eb68143003244fd06cabbe50"><div class="ttname"><a href="common_8h.html#a025de454ae4eec948d955fd67b2c1a47afd966ff6eb68143003244fd06cabbe50">HyperPlatformBugCheck::kExhaustedPreallocatedEntries</a></div><div class="ttdoc">All pre-allocated entries are used. </div></div>
 <div class="ttc" id="common_8h_html_a025de454ae4eec948d955fd67b2c1a47aaab5123b0ff34361100d04874b2846b0"><div class="ttname"><a href="common_8h.html#a025de454ae4eec948d955fd67b2c1a47aaab5123b0ff34361100d04874b2846b0">HyperPlatformBugCheck::kUnexpectedVmExit</a></div><div class="ttdoc">An unexpected VM-exit occured. </div></div>
 </div><!-- fragment --></div><!-- contents -->

@@ -50,7 +50,7 @@
 </div><!--header-->
 <div class="contents">
 
-<p>See: VM-ENTRY FAILURES DURING OR AFTER LOADING GUEST STATE.  
+<p>See: Format of Exit Reason in Basic VM-Exit Information.  
  <a href="union_vm_exit_information.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>&gt;</code></p>
@@ -59,23 +59,32 @@
 Public Attributes</h2></td></tr>
 <tr class="memitem:ac7ac99a0205a4a76f9cc0562d994e382"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="union_vm_exit_information.html#ac7ac99a0205a4a76f9cc0562d994e382">all</a></td></tr>
 <tr class="separator:ac7ac99a0205a4a76f9cc0562d994e382"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a8a912813aa7d49a9395e53f56de5a6"><td class="memItemLeft" >struct {</td></tr>
-<tr class="memitem:a28dc6a35d136418214c09ea1098d3da4"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="ia32__type_8h.html#ab6bf098f238abeaea146d16cf6bc3e9e">VmxExitReason</a>&#160;&#160;&#160;<a class="el" href="union_vm_exit_information.html#aca1d0a24280bc09c427263b0f2ae4370">reason</a></td></tr>
-<tr class="memdesc:a28dc6a35d136418214c09ea1098d3da4"><td class="mdescLeft">&#160;</td><td class="mdescRight">[0:15]  <a href="#a28dc6a35d136418214c09ea1098d3da4">More...</a><br /></td></tr>
-<tr class="separator:a28dc6a35d136418214c09ea1098d3da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae83d13dd9dc743c98729c2ae174c3ac"><td class="memItemLeft" >&#160;&#160;&#160;unsigned short&#160;&#160;&#160;<a class="el" href="union_vm_exit_information.html#a48ffd4b0b0d138756903e0a8f13abd8c">reserved</a>: 15</td></tr>
-<tr class="memdesc:aae83d13dd9dc743c98729c2ae174c3ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">[16:30]  <a href="#aae83d13dd9dc743c98729c2ae174c3ac">More...</a><br /></td></tr>
-<tr class="separator:aae83d13dd9dc743c98729c2ae174c3ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44849344d6d4fc8670564c60144e8c77"><td class="memItemLeft" >&#160;&#160;&#160;unsigned short&#160;&#160;&#160;<a class="el" href="union_vm_exit_information.html#a65f2238892d1163b4782ac8a0799386c">vm_entry_failure</a>: 1</td></tr>
-<tr class="memdesc:a44849344d6d4fc8670564c60144e8c77"><td class="mdescLeft">&#160;</td><td class="mdescRight">[31]  <a href="#a44849344d6d4fc8670564c60144e8c77">More...</a><br /></td></tr>
-<tr class="separator:a44849344d6d4fc8670564c60144e8c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a8a912813aa7d49a9395e53f56de5a6"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="union_vm_exit_information.html#a5a8a912813aa7d49a9395e53f56de5a6">fields</a></td></tr>
-<tr class="separator:a5a8a912813aa7d49a9395e53f56de5a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04a0b8ea8507a3895826ab995d89dd98"><td class="memItemLeft" >struct {</td></tr>
+<tr class="memitem:a33ab1948933fbdb1fc5e48d4d23641ac"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="ia32__type_8h.html#ab6bf098f238abeaea146d16cf6bc3e9e">VmxExitReason</a>&#160;&#160;&#160;<a class="el" href="union_vm_exit_information.html#aca1d0a24280bc09c427263b0f2ae4370">reason</a></td></tr>
+<tr class="memdesc:a33ab1948933fbdb1fc5e48d4d23641ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">[0:15]  <a href="#a33ab1948933fbdb1fc5e48d4d23641ac">More...</a><br /></td></tr>
+<tr class="separator:a33ab1948933fbdb1fc5e48d4d23641ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87ee4b2041fa0903a1140cceb82b81b8"><td class="memItemLeft" >&#160;&#160;&#160;unsigned short&#160;&#160;&#160;<a class="el" href="union_vm_exit_information.html#a391304b0458c1c63293c249d57d02484">reserved1</a>: 12</td></tr>
+<tr class="memdesc:a87ee4b2041fa0903a1140cceb82b81b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">[16:30]  <a href="#a87ee4b2041fa0903a1140cceb82b81b8">More...</a><br /></td></tr>
+<tr class="separator:a87ee4b2041fa0903a1140cceb82b81b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab55149469b24b7e0463a3cf991a6f412"><td class="memItemLeft" >&#160;&#160;&#160;unsigned short&#160;&#160;&#160;<a class="el" href="union_vm_exit_information.html#a5c1685b6f44716536ca4ddabc5667eda">pending_mtf_vm_exit</a>: 1</td></tr>
+<tr class="memdesc:ab55149469b24b7e0463a3cf991a6f412"><td class="mdescLeft">&#160;</td><td class="mdescRight">[28]  <a href="#ab55149469b24b7e0463a3cf991a6f412">More...</a><br /></td></tr>
+<tr class="separator:ab55149469b24b7e0463a3cf991a6f412"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad153e53b2803757130a0ad6462d71783"><td class="memItemLeft" >&#160;&#160;&#160;unsigned short&#160;&#160;&#160;<a class="el" href="union_vm_exit_information.html#a44b0e5a36f43ffe09365c1710b8f6504">vm_exit_from_vmx_root</a>: 1</td></tr>
+<tr class="memdesc:ad153e53b2803757130a0ad6462d71783"><td class="mdescLeft">&#160;</td><td class="mdescRight">[29]  <a href="#ad153e53b2803757130a0ad6462d71783">More...</a><br /></td></tr>
+<tr class="separator:ad153e53b2803757130a0ad6462d71783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f862a112e666b071e56c6afd9fe4089"><td class="memItemLeft" >&#160;&#160;&#160;unsigned short&#160;&#160;&#160;<a class="el" href="union_vm_exit_information.html#a980d596f5d283c51d5170514838d50df">reserved2</a>: 1</td></tr>
+<tr class="memdesc:a5f862a112e666b071e56c6afd9fe4089"><td class="mdescLeft">&#160;</td><td class="mdescRight">[30]  <a href="#a5f862a112e666b071e56c6afd9fe4089">More...</a><br /></td></tr>
+<tr class="separator:a5f862a112e666b071e56c6afd9fe4089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82132ef480179b4724f82c1156a4ec4c"><td class="memItemLeft" >&#160;&#160;&#160;unsigned short&#160;&#160;&#160;<a class="el" href="union_vm_exit_information.html#a65f2238892d1163b4782ac8a0799386c">vm_entry_failure</a>: 1</td></tr>
+<tr class="memdesc:a82132ef480179b4724f82c1156a4ec4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">[31]  <a href="#a82132ef480179b4724f82c1156a4ec4c">More...</a><br /></td></tr>
+<tr class="separator:a82132ef480179b4724f82c1156a4ec4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04a0b8ea8507a3895826ab995d89dd98"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="union_vm_exit_information.html#a04a0b8ea8507a3895826ab995d89dd98">fields</a></td></tr>
+<tr class="separator:a04a0b8ea8507a3895826ab995d89dd98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>See: VM-ENTRY FAILURES DURING OR AFTER LOADING GUEST STATE. </p>
+<div class="textblock"><p>See: Format of Exit Reason in Basic VM-Exit Information. </p>
 
-<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01007">1007</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
+<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01036">1036</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="ac7ac99a0205a4a76f9cc0562d994e382"></a>
 <div class="memitem">
@@ -87,11 +96,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01008">1008</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
+<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01037">1037</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a5a8a912813aa7d49a9395e53f56de5a6"></a>
+<a class="anchor" id="a04a0b8ea8507a3895826ab995d89dd98"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -100,6 +109,22 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5c1685b6f44716536ca4ddabc5667eda"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned short VmExitInformation::pending_mtf_vm_exit</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>[28] </p>
+
+<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01041">1041</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
 
 </div>
 </div>
@@ -115,23 +140,39 @@ Public Attributes</h2></td></tr>
 
 <p>[0:15] </p>
 
-<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01010">1010</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
+<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01039">1039</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a48ffd4b0b0d138756903e0a8f13abd8c"></a>
+<a class="anchor" id="a391304b0458c1c63293c249d57d02484"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned short VmExitInformation::reserved</td>
+          <td class="memname">unsigned short VmExitInformation::reserved1</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>[16:30] </p>
 
-<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01011">1011</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
+<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01040">1040</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a980d596f5d283c51d5170514838d50df"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned short VmExitInformation::reserved2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>[30] </p>
+
+<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01043">1043</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
 
 </div>
 </div>
@@ -147,7 +188,23 @@ Public Attributes</h2></td></tr>
 
 <p>[31] </p>
 
-<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01012">1012</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
+<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01044">1044</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a44b0e5a36f43ffe09365c1710b8f6504"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned short VmExitInformation::vm_exit_from_vmx_root</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>[29] </p>
+
+<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01042">1042</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
 
 </div>
 </div>

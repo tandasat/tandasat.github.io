@@ -14,10 +14,11 @@
 <area shape="rect" id="node16" href="$vmm_8cpp.html#a78c798583cd8bf076b2b545f57e881cc" title="VmmpHandleInvalidateTLBEntry" alt="" coords="144,618,351,644"/>
 <area shape="rect" id="node17" href="$vmm_8cpp.html#a902093a32ce5b78000294b7a9bd5d048" title="VmmpHandleEptMisconfig" alt="" coords="160,668,335,695"/>
 <area shape="rect" id="node18" href="$vmm_8cpp.html#a558ceb9b748edc1d0d0a881d98ebc62b" title="VmmpDumpGuestSelectors" alt="" coords="155,719,339,746"/>
-<area shape="rect" id="node21" href="$vmm_8cpp.html#a910314fd25b27826cfa67a298426f0c6" title="VmmpAdjustGuestInstruction\lPointer" alt="" coords="151,770,343,812"/>
-<area shape="rect" id="node22" href="$vmm_8cpp.html#a6ced73bfff78fd28cadca5fc03620d0a" title="VmmVmxFailureHandler" alt="" coords="166,836,329,863"/>
+<area shape="rect" id="node22" href="$vmm_8cpp.html#a910314fd25b27826cfa67a298426f0c6" title="VmmpAdjustGuestInstruction\lPointer" alt="" coords="151,770,343,812"/>
+<area shape="rect" id="node23" href="$vmm_8cpp.html#a6ced73bfff78fd28cadca5fc03620d0a" title="VmmVmxFailureHandler" alt="" coords="166,836,329,863"/>
 <area shape="rect" id="node3" href="$vmm_8cpp.html#a572fdc29d1553bb115a734013c9d8df3" title="VmmpHandleEptViolation" alt="" coords="639,35,809,62"/>
 <area shape="rect" id="node6" href="$vm_8cpp.html#ac7b4db617eca1589809b0992b56a1ce9" title="VmpInitializeVm" alt="" coords="437,111,553,138"/>
-<area shape="rect" id="node19" href="$vmm_8cpp.html#ac526648f9f586d88be838cb842203952" title="VmmpHandleTripleFault" alt="" coords="415,694,575,720"/>
-<area shape="rect" id="node20" href="$vmm_8cpp.html#aea7bf3dfc2e08f551c951186a118bfc5" title="VmmpHandleUnexpectedExit" alt="" coords="399,744,591,771"/>
+<area shape="rect" id="node19" href="$vmm_8cpp.html#ac526648f9f586d88be838cb842203952" title="VmmpHandleTripleFault" alt="" coords="415,668,575,695"/>
+<area shape="rect" id="node20" href="$vmm_8cpp.html#aea7bf3dfc2e08f551c951186a118bfc5" title="VmmpHandleUnexpectedExit" alt="" coords="399,719,591,746"/>
+<area shape="rect" id="node21" href="$vmm_8cpp.html#a9881adab41d9ad1cee62dc834a240d6a" title="VmmpHandleMonitorTrap" alt="" coords="411,770,579,796"/>
 </map>
