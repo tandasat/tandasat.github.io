@@ -4,8 +4,8 @@
 <area shape="rect" id="node6" href="$ept_8h.html#a21bd47144c33a9bec105e47f7d14d696" title="Builds EPT, allocates pre&#45;allocated enties, initializes and returns EptData. " alt="" coords="188,107,299,133"/>
 <area shape="rect" id="node8" href="$vm_8cpp.html#a82633f4d8093d940645af74c7b15b679" title="VmpSetLockBitCallback" alt="" coords="162,157,325,184"/>
 <area shape="rect" id="node9" href="$vm_8cpp.html#aacdcc58a4e7aa6cdbc73c4ad94392ef1" title="VmpEnterVmxMode" alt="" coords="174,208,313,235"/>
-<area shape="rect" id="node10" href="$vm_8cpp.html#a5d39f781896705cbfbac824e15fa16ae" title="VmpInitializeVMCS" alt="" coords="176,259,311,285"/>
-<area shape="rect" id="node11" href="$vm_8cpp.html#a52414afdd39151cf7b1e12a37f34abda" title="VmpSetupVMCS" alt="" coords="183,309,304,336"/>
+<area shape="rect" id="node10" href="$vm_8cpp.html#a19e6fe0e035e2b40b15b06f7f61b729c" title="VmpInitializeVmcs" alt="" coords="178,259,309,285"/>
+<area shape="rect" id="node11" href="$vm_8cpp.html#acd66e87696d65f80aec224fabe8049d4" title="VmpSetupVmcs" alt="" coords="185,309,302,336"/>
 <area shape="rect" id="node12" href="$vm_8cpp.html#ab50f0361b9b8ba75485564f768c506d5" title="VmpAdjustControlValue" alt="" coords="163,360,323,387"/>
 <area shape="rect" id="node13" href="$vmm_8cpp.html#a4e2648ac690734fd8b65292b3345fef1" title="VmmpHandleMsrAccess" alt="" coords="160,411,327,437"/>
 <area shape="rect" id="node4" href="$vm_8h.html#a147812b07dd4d8cf330b225c912280c7" title="Virtualizes all processors. " alt="" coords="560,31,671,57"/>

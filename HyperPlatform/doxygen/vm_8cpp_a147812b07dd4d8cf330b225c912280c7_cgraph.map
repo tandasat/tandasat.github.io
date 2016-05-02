@@ -3,8 +3,8 @@
 <area shape="rect" id="node3" href="$vm_8cpp.html#a358ccb0ced5fd16f4dfadbb7c5382439" title="VmpIsVmxAvailable" alt="" coords="177,107,315,133"/>
 <area shape="rect" id="node5" href="$util_8cpp.html#a498c779c12e188b0ff8d4037ab6591ce" title="UtilForEachProcessor" alt="" coords="383,31,532,57"/>
 <area shape="rect" id="node8" href="$vm_8cpp.html#a59a15f91f00f1b51f12580d106d8fd03" title="VmpInitializeSharedData" alt="" coords="164,157,328,184"/>
-<area shape="rect" id="node10" href="$vm_8cpp.html#abbd82c950db05647f02d4ef9dbbcb3ea" title="VmpStartVM" alt="" coords="197,208,295,235"/>
-<area shape="rect" id="node11" href="$vm_8cpp.html#a0ad701b9459741bd1ba7275f62823376" title="VmpStopVM" alt="" coords="198,259,294,285"/>
+<area shape="rect" id="node10" href="$vm_8cpp.html#a6002bb2760453dcd4a980a233f5f532c" title="VmpStartVm" alt="" coords="197,208,295,235"/>
+<area shape="rect" id="node11" href="$vm_8cpp.html#a6f835c6ea88fb7cb78d0b6baffd128e8" title="VmpStopVm" alt="" coords="198,259,294,285"/>
 <area shape="rect" id="node4" href="$util_8cpp.html#ae031e3644a8ebf1146b50ac00700b7a6" title="UtilReadMsr64" alt="" coords="587,132,693,159"/>
 <area shape="rect" id="node6" href="$vm_8cpp.html#a6324891d7b010dd62553916e5f7bbeb4" title="VmpSetLockBitCallback" alt="" coords="376,132,539,159"/>
 <area shape="rect" id="node7" href="$ept_8cpp.html#ae1a710c5e98d60441af5d3cb8349abc7" title="Checks if the system supports EPT technology sufficient enough. " alt="" coords="396,183,519,209"/>

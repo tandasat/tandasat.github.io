@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>HyperPlatform: HyperPlatform/Arch/x64/x64.asm Source File</title>
+<title>HyperPlatform Programmer&#39;s Reference: HyperPlatform/Arch/x64/x64.asm Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -17,7 +17,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">HyperPlatform
+   <div id="projectname">HyperPlatform Programmer&#39;s Reference
    </div>
   </td>
  </tr>
@@ -155,11 +155,11 @@
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    </div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    mov rax, rcx</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    mov r8, rdx</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    mov rdx, asmResumeVM</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    mov rdx, asmResumeVm</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    mov rcx, rsp</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    sub rsp, 20h</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    call rax            ; vm_initialization_routine(rsp, asmResumeVM, context)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    call rax            ; vm_initialization_routine(rsp, asmResumeVm, context)</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    add rsp, 20h</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    POPAQ</div>
@@ -169,7 +169,7 @@
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    ; This is where the virtualized guest start to execute after successful</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    ; vmlaunch. </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;asmResumeVM:</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;asmResumeVm:</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    nop                 ; keep this nop for ease of debugging</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    POPAQ</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    popfq</div>
@@ -198,13 +198,13 @@
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    add rsp, 20h</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    test al, al</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    jz exitVM               ; if (!vm_continue) jmp exitVM</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    jz exitVm               ; if (!vm_continue) jmp exitVm</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    POPAQ</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    vmresume</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    jmp vmxError</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;exitVM:</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;exitVm:</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    ; Executes vmxoff and ends virtualization</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    ;   rax = Guest&#39;s rflags</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    ;   rdx = Guest&#39;s rsp</div>

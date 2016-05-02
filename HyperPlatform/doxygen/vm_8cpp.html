@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>HyperPlatform: HyperPlatform/vm.cpp File Reference</title>
+<title>HyperPlatform Programmer&#39;s Reference: HyperPlatform/vm.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -17,7 +17,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">HyperPlatform
+   <div id="projectname">HyperPlatform Programmer&#39;s Reference
    </div>
   </td>
  </tr>
@@ -46,8 +46,7 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">vm.cpp File Reference</div>  </div>
 </div><!--header-->
@@ -89,18 +88,18 @@ Functions</h2></td></tr>
 <tr class="separator:a6324891d7b010dd62553916e5f7bbeb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59a15f91f00f1b51f12580d106d8fd03"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_shared_processor_data.html">SharedProcessorData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#a59a15f91f00f1b51f12580d106d8fd03">VmpInitializeSharedData</a> ()</td></tr>
 <tr class="separator:a59a15f91f00f1b51f12580d106d8fd03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbd82c950db05647f02d4ef9dbbcb3ea"><td class="memItemLeft" align="right" valign="top">static NTSTATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#abbd82c950db05647f02d4ef9dbbcb3ea">VmpStartVM</a> (_In_opt_ void *context)</td></tr>
-<tr class="separator:abbd82c950db05647f02d4ef9dbbcb3ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6002bb2760453dcd4a980a233f5f532c"><td class="memItemLeft" align="right" valign="top">static NTSTATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#a6002bb2760453dcd4a980a233f5f532c">VmpStartVm</a> (_In_opt_ void *context)</td></tr>
+<tr class="separator:a6002bb2760453dcd4a980a233f5f532c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1cbc431d2b400dc2c6a6b4a18fc5671"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#aa1cbc431d2b400dc2c6a6b4a18fc5671">VmpInitializeVm</a> (_In_ ULONG_PTR guest_stack_pointer, _In_ ULONG_PTR guest_instruction_pointer, _In_opt_ void *context)</td></tr>
 <tr class="separator:aa1cbc431d2b400dc2c6a6b4a18fc5671"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19b93e0e23802f213312f3f9754863c2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#a19b93e0e23802f213312f3f9754863c2">VmpEnterVmxMode</a> (_Inout_ <a class="el" href="struct_processor_data.html">ProcessorData</a> *processor_data)</td></tr>
 <tr class="separator:a19b93e0e23802f213312f3f9754863c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abef2495abf84486aa76241e8a6d686f2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#abef2495abf84486aa76241e8a6d686f2">VmpInitializeVMCS</a> (_Inout_ <a class="el" href="struct_processor_data.html">ProcessorData</a> *processor_data)</td></tr>
-<tr class="separator:abef2495abf84486aa76241e8a6d686f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cb6e626a09aeab3643c3c43a8e1ed73"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#a2cb6e626a09aeab3643c3c43a8e1ed73">VmpSetupVMCS</a> (_In_ const <a class="el" href="struct_processor_data.html">ProcessorData</a> *processor_data, _In_ ULONG_PTR guest_stack_pointer, _In_ ULONG_PTR guest_instruction_pointer, _In_ ULONG_PTR vmm_stack_pointer)</td></tr>
-<tr class="separator:a2cb6e626a09aeab3643c3c43a8e1ed73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0c85a5f16c835dbb0d65e85e5f4790a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#af0c85a5f16c835dbb0d65e85e5f4790a">VmpLaunchVM</a> ()</td></tr>
-<tr class="separator:af0c85a5f16c835dbb0d65e85e5f4790a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef44991a2a8af4ff74813ffa2f05c986"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#aef44991a2a8af4ff74813ffa2f05c986">VmpInitializeVmcs</a> (_Inout_ <a class="el" href="struct_processor_data.html">ProcessorData</a> *processor_data)</td></tr>
+<tr class="separator:aef44991a2a8af4ff74813ffa2f05c986"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a609b10c99368c7b8d5e5bfc49b696fa1"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#a609b10c99368c7b8d5e5bfc49b696fa1">VmpSetupVmcs</a> (_In_ const <a class="el" href="struct_processor_data.html">ProcessorData</a> *processor_data, _In_ ULONG_PTR guest_stack_pointer, _In_ ULONG_PTR guest_instruction_pointer, _In_ ULONG_PTR vmm_stack_pointer)</td></tr>
+<tr class="separator:a609b10c99368c7b8d5e5bfc49b696fa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa31fc5d240a2a1d74ce0e6369a1ca475"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#aa31fc5d240a2a1d74ce0e6369a1ca475">VmpLaunchVm</a> ()</td></tr>
+<tr class="separator:aa31fc5d240a2a1d74ce0e6369a1ca475"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f2b5dd101a0e00d97cee633d855a553"><td class="memItemLeft" align="right" valign="top">static ULONG&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#a3f2b5dd101a0e00d97cee633d855a553">VmpGetSegmentAccessRight</a> (_In_ USHORT segment_selector)</td></tr>
 <tr class="separator:a3f2b5dd101a0e00d97cee633d855a553"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4dcd03b22c1aa7eaaf5b9e9dae757992"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="union_segment_desctiptor.html">SegmentDesctiptor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#a4dcd03b22c1aa7eaaf5b9e9dae757992">VmpGetSegmentDescriptor</a> (_In_ ULONG_PTR descriptor_table_base, _In_ USHORT segment_selector)</td></tr>
@@ -111,8 +110,8 @@ Functions</h2></td></tr>
 <tr class="separator:a39275677a0ed9d57d33094f185643cf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d7910baedbe80384aa42a80cfc2bde8"><td class="memItemLeft" align="right" valign="top">static ULONG&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#a1d7910baedbe80384aa42a80cfc2bde8">VmpAdjustControlValue</a> (_In_ <a class="el" href="ia32__type_8h.html#a65b496b2a5595032807adc67e57e2e9e">Msr</a> msr, _In_ ULONG requested_value)</td></tr>
 <tr class="separator:a1d7910baedbe80384aa42a80cfc2bde8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ad701b9459741bd1ba7275f62823376"><td class="memItemLeft" align="right" valign="top">static NTSTATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#a0ad701b9459741bd1ba7275f62823376">VmpStopVM</a> (_In_opt_ void *context)</td></tr>
-<tr class="separator:a0ad701b9459741bd1ba7275f62823376"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f835c6ea88fb7cb78d0b6baffd128e8"><td class="memItemLeft" align="right" valign="top">static NTSTATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#a6f835c6ea88fb7cb78d0b6baffd128e8">VmpStopVm</a> (_In_opt_ void *context)</td></tr>
+<tr class="separator:a6f835c6ea88fb7cb78d0b6baffd128e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3389f68a439cd3ced2cbf00cc46edbe8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#a3389f68a439cd3ced2cbf00cc46edbe8">VmpFreeProcessorData</a> (_In_opt_ <a class="el" href="struct_processor_data.html">ProcessorData</a> *processor_data)</td></tr>
 <tr class="separator:a3389f68a439cd3ced2cbf00cc46edbe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ff1bbb93039a4d6f8b8f085a262b502"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#a0ff1bbb93039a4d6f8b8f085a262b502">VmpIsVmmInstalled</a> ()</td></tr>
@@ -124,16 +123,16 @@ Functions</h2></td></tr>
 <tr class="separator:a147812b07dd4d8cf330b225c912280c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82633f4d8093d940645af74c7b15b679"><td class="memItemLeft" align="right" valign="top">static NTSTATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#a82633f4d8093d940645af74c7b15b679">VmpSetLockBitCallback</a> (void *context)</td></tr>
 <tr class="separator:a82633f4d8093d940645af74c7b15b679"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a362f511a51e31585778094e87150d9a9"><td class="memItemLeft" align="right" valign="top">static NTSTATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#a362f511a51e31585778094e87150d9a9">VmpStartVM</a> (void *context)</td></tr>
-<tr class="separator:a362f511a51e31585778094e87150d9a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25f9477e978f5c27ba8e77bc45793168"><td class="memItemLeft" align="right" valign="top">static NTSTATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#a25f9477e978f5c27ba8e77bc45793168">VmpStartVm</a> (void *context)</td></tr>
+<tr class="separator:a25f9477e978f5c27ba8e77bc45793168"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7b4db617eca1589809b0992b56a1ce9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#ac7b4db617eca1589809b0992b56a1ce9">VmpInitializeVm</a> (ULONG_PTR guest_stack_pointer, ULONG_PTR guest_instruction_pointer, void *context)</td></tr>
 <tr class="separator:ac7b4db617eca1589809b0992b56a1ce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacdcc58a4e7aa6cdbc73c4ad94392ef1"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#aacdcc58a4e7aa6cdbc73c4ad94392ef1">VmpEnterVmxMode</a> (<a class="el" href="struct_processor_data.html">ProcessorData</a> *processor_data)</td></tr>
 <tr class="separator:aacdcc58a4e7aa6cdbc73c4ad94392ef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d39f781896705cbfbac824e15fa16ae"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#a5d39f781896705cbfbac824e15fa16ae">VmpInitializeVMCS</a> (<a class="el" href="struct_processor_data.html">ProcessorData</a> *processor_data)</td></tr>
-<tr class="separator:a5d39f781896705cbfbac824e15fa16ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52414afdd39151cf7b1e12a37f34abda"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#a52414afdd39151cf7b1e12a37f34abda">VmpSetupVMCS</a> (const <a class="el" href="struct_processor_data.html">ProcessorData</a> *processor_data, ULONG_PTR guest_stack_pointer, ULONG_PTR guest_instruction_pointer, ULONG_PTR vmm_stack_pointer)</td></tr>
-<tr class="separator:a52414afdd39151cf7b1e12a37f34abda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19e6fe0e035e2b40b15b06f7f61b729c"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#a19e6fe0e035e2b40b15b06f7f61b729c">VmpInitializeVmcs</a> (<a class="el" href="struct_processor_data.html">ProcessorData</a> *processor_data)</td></tr>
+<tr class="separator:a19e6fe0e035e2b40b15b06f7f61b729c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd66e87696d65f80aec224fabe8049d4"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#acd66e87696d65f80aec224fabe8049d4">VmpSetupVmcs</a> (const <a class="el" href="struct_processor_data.html">ProcessorData</a> *processor_data, ULONG_PTR guest_stack_pointer, ULONG_PTR guest_instruction_pointer, ULONG_PTR vmm_stack_pointer)</td></tr>
+<tr class="separator:acd66e87696d65f80aec224fabe8049d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5dda968ea7537094de28263a84961cf"><td class="memItemLeft" align="right" valign="top">static ULONG&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#af5dda968ea7537094de28263a84961cf">VmpGetSegmentAccessRight</a> (USHORT segment_selector)</td></tr>
 <tr class="separator:af5dda968ea7537094de28263a84961cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9faac9089f76982b2df8ed66f2020b96"><td class="memItemLeft" align="right" valign="top">static ULONG_PTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#a9faac9089f76982b2df8ed66f2020b96">VmpGetSegmentBase</a> (ULONG_PTR gdt_base, USHORT segment_selector)</td></tr>
@@ -147,17 +146,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a5361f5cbf7b7d5206f7f34148f36c897"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#a5361f5cbf7b7d5206f7f34148f36c897">VmTermination</a> ()</td></tr>
 <tr class="memdesc:a5361f5cbf7b7d5206f7f34148f36c897"><td class="mdescLeft">&#160;</td><td class="mdescRight">De-virtualize all processors.  <a href="#a5361f5cbf7b7d5206f7f34148f36c897">More...</a><br /></td></tr>
 <tr class="separator:a5361f5cbf7b7d5206f7f34148f36c897"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d50e379775993c1704c6bf1aee7680f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#a2d50e379775993c1704c6bf1aee7680f">VmpVmxOffThreadRoutine</a> (void *start_context)</td></tr>
-<tr class="separator:a2d50e379775993c1704c6bf1aee7680f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a389da45e122744ce51237a69334a4aeb"><td class="memItemLeft" align="right" valign="top">static NTSTATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#a389da45e122744ce51237a69334a4aeb">VmpStopVM</a> (void *context)</td></tr>
-<tr class="separator:a389da45e122744ce51237a69334a4aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5770daf77db1c5e665b3db7fdec413e"><td class="memItemLeft" align="right" valign="top">static NTSTATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#aa5770daf77db1c5e665b3db7fdec413e">VmpStopVm</a> (void *context)</td></tr>
+<tr class="separator:aa5770daf77db1c5e665b3db7fdec413e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6ef522ccd1e92fe8a2651001460ee94"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#ae6ef522ccd1e92fe8a2651001460ee94">VmpFreeProcessorData</a> (<a class="el" href="struct_processor_data.html">ProcessorData</a> *processor_data)</td></tr>
 <tr class="separator:ae6ef522ccd1e92fe8a2651001460ee94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a3ac871ac2984063bd6fff45fec4840b9"><td class="memItemLeft" align="right" valign="top">static KSTART_ROUTINE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vm_8cpp.html#a3ac871ac2984063bd6fff45fec4840b9">VmpVmxOffThreadRoutine</a></td></tr>
-<tr class="separator:a3ac871ac2984063bd6fff45fec4840b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implements VMM initialization functions. </p>
@@ -186,14 +178,14 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00117">117</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00114">114</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="vm_8cpp_ae1b78baf28747579ea16fd978722a7a5_icgraph.png" border="0" usemap="#vm_8cpp_ae1b78baf28747579ea16fd978722a7a5_icgraph" alt=""/></div>
 <map name="vm_8cpp_ae1b78baf28747579ea16fd978722a7a5_icgraph" id="vm_8cpp_ae1b78baf28747579ea16fd978722a7a5_icgraph">
-<area shape="rect" id="node2" href="vm_8cpp.html#a52414afdd39151cf7b1e12a37f34abda" title="VmpSetupVMCS" alt="" coords="176,5,297,32"/>
+<area shape="rect" id="node2" href="vm_8cpp.html#acd66e87696d65f80aec224fabe8049d4" title="VmpSetupVmcs" alt="" coords="176,5,293,32"/>
 </map>
 </div>
 </p>
@@ -217,7 +209,7 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>STATUS_SUCCESS on success</dd></dl>
 <p>Initializes a VMCS region and virtualizes (ie, enters the VMX non-root operation mode) for each processor. Returns non STATUS_SUCCESS value if any of processors failed to do so. In that case, this function de-virtualize already virtualized processors. </p>
 
-<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00123">123</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00120">120</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -228,8 +220,8 @@ Here is the call graph for this function:</div>
 <area shape="rect" id="node3" href="vm_8cpp.html#a358ccb0ced5fd16f4dfadbb7c5382439" title="VmpIsVmxAvailable" alt="" coords="177,107,315,133"/>
 <area shape="rect" id="node5" href="util_8cpp.html#a498c779c12e188b0ff8d4037ab6591ce" title="UtilForEachProcessor" alt="" coords="383,31,532,57"/>
 <area shape="rect" id="node8" href="vm_8cpp.html#a59a15f91f00f1b51f12580d106d8fd03" title="VmpInitializeSharedData" alt="" coords="164,157,328,184"/>
-<area shape="rect" id="node10" href="vm_8cpp.html#abbd82c950db05647f02d4ef9dbbcb3ea" title="VmpStartVM" alt="" coords="197,208,295,235"/>
-<area shape="rect" id="node11" href="vm_8cpp.html#a0ad701b9459741bd1ba7275f62823376" title="VmpStopVM" alt="" coords="198,259,294,285"/>
+<area shape="rect" id="node10" href="vm_8cpp.html#a6002bb2760453dcd4a980a233f5f532c" title="VmpStartVm" alt="" coords="197,208,295,235"/>
+<area shape="rect" id="node11" href="vm_8cpp.html#a6f835c6ea88fb7cb78d0b6baffd128e8" title="VmpStopVm" alt="" coords="198,259,294,285"/>
 <area shape="rect" id="node4" href="util_8cpp.html#ae031e3644a8ebf1146b50ac00700b7a6" title="UtilReadMsr64" alt="" coords="587,132,693,159"/>
 <area shape="rect" id="node6" href="vm_8cpp.html#a6324891d7b010dd62553916e5f7bbeb4" title="VmpSetLockBitCallback" alt="" coords="376,132,539,159"/>
 <area shape="rect" id="node7" href="ept_8cpp.html#ae1a710c5e98d60441af5d3cb8349abc7" title="Checks if the system supports EPT technology sufficient enough. " alt="" coords="396,183,519,209"/>
@@ -287,7 +279,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="vm_8cpp_a1d7910baedbe80384aa42a80cfc2bde8_icgraph.png" border="0" usemap="#vm_8cpp_a1d7910baedbe80384aa42a80cfc2bde8_icgraph" alt=""/></div>
 <map name="vm_8cpp_a1d7910baedbe80384aa42a80cfc2bde8_icgraph" id="vm_8cpp_a1d7910baedbe80384aa42a80cfc2bde8_icgraph">
-<area shape="rect" id="node2" href="vm_8cpp.html#a52414afdd39151cf7b1e12a37f34abda" title="VmpSetupVMCS" alt="" coords="213,5,335,32"/>
+<area shape="rect" id="node2" href="vm_8cpp.html#acd66e87696d65f80aec224fabe8049d4" title="VmpSetupVmcs" alt="" coords="213,5,331,32"/>
 </map>
 </div>
 </p>
@@ -326,7 +318,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00747">747</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00743">743</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -396,7 +388,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00388">388</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00385">385</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -442,7 +434,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="vm_8cpp_a3389f68a439cd3ced2cbf00cc46edbe8_icgraph.png" border="0" usemap="#vm_8cpp_a3389f68a439cd3ced2cbf00cc46edbe8_icgraph" alt=""/></div>
 <map name="vm_8cpp_a3389f68a439cd3ced2cbf00cc46edbe8_icgraph" id="vm_8cpp_a3389f68a439cd3ced2cbf00cc46edbe8_icgraph">
 <area shape="rect" id="node2" href="vm_8cpp.html#ac7b4db617eca1589809b0992b56a1ce9" title="VmpInitializeVm" alt="" coords="215,5,331,32"/>
-<area shape="rect" id="node3" href="vm_8cpp.html#a389da45e122744ce51237a69334a4aeb" title="VmpStopVM" alt="" coords="225,56,321,83"/>
+<area shape="rect" id="node3" href="vm_8cpp.html#aa5770daf77db1c5e665b3db7fdec413e" title="VmpStopVm" alt="" coords="225,56,321,83"/>
 </map>
 </div>
 </p>
@@ -471,7 +463,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00814">814</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00789">789</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -515,7 +507,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="vm_8cpp_a3f2b5dd101a0e00d97cee633d855a553_icgraph.png" border="0" usemap="#vm_8cpp_a3f2b5dd101a0e00d97cee633d855a553_icgraph" alt=""/></div>
 <map name="vm_8cpp_a3f2b5dd101a0e00d97cee633d855a553_icgraph" id="vm_8cpp_a3f2b5dd101a0e00d97cee633d855a553_icgraph">
-<area shape="rect" id="node2" href="vm_8cpp.html#a52414afdd39151cf7b1e12a37f34abda" title="VmpSetupVMCS" alt="" coords="249,5,371,32"/>
+<area shape="rect" id="node2" href="vm_8cpp.html#acd66e87696d65f80aec224fabe8049d4" title="VmpSetupVmcs" alt="" coords="249,5,367,32"/>
 </map>
 </div>
 </p>
@@ -544,7 +536,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00680">680</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00676">676</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -595,7 +587,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="vm_8cpp_a39275677a0ed9d57d33094f185643cf9_icgraph.png" border="0" usemap="#vm_8cpp_a39275677a0ed9d57d33094f185643cf9_icgraph" alt=""/></div>
 <map name="vm_8cpp_a39275677a0ed9d57d33094f185643cf9_icgraph" id="vm_8cpp_a39275677a0ed9d57d33094f185643cf9_icgraph">
-<area shape="rect" id="node2" href="vm_8cpp.html#a52414afdd39151cf7b1e12a37f34abda" title="VmpSetupVMCS" alt="" coords="205,5,327,32"/>
+<area shape="rect" id="node2" href="vm_8cpp.html#acd66e87696d65f80aec224fabe8049d4" title="VmpSetupVmcs" alt="" coords="205,5,323,32"/>
 </map>
 </div>
 </p>
@@ -634,7 +626,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00698">698</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00694">694</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -706,7 +698,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00729">729</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00725">725</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -796,7 +788,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00721">721</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00717">717</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
 
 </div>
 </div>
@@ -821,7 +813,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00212">212</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00209">209</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -889,7 +881,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="vm_8cpp_aa1cbc431d2b400dc2c6a6b4a18fc5671_icgraph.png" border="0" usemap="#vm_8cpp_aa1cbc431d2b400dc2c6a6b4a18fc5671_icgraph" alt=""/></div>
 <map name="vm_8cpp_aa1cbc431d2b400dc2c6a6b4a18fc5671_icgraph" id="vm_8cpp_aa1cbc431d2b400dc2c6a6b4a18fc5671_icgraph">
-<area shape="rect" id="node2" href="vm_8cpp.html#a362f511a51e31585778094e87150d9a9" title="VmpStartVM" alt="" coords="169,5,267,32"/>
+<area shape="rect" id="node2" href="vm_8cpp.html#a25f9477e978f5c27ba8e77bc45793168" title="VmpStartVm" alt="" coords="169,5,267,32"/>
 </map>
 </div>
 </p>
@@ -934,7 +926,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00288">288</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00285">285</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -944,9 +936,9 @@ Here is the call graph for this function:</div>
 <area shape="rect" id="node2" href="ept_8cpp.html#a21bd47144c33a9bec105e47f7d14d696" title="Builds EPT, allocates pre&#45;allocated enties, initializes and returns EptData. " alt="" coords="214,191,325,217"/>
 <area shape="rect" id="node11" href="util_8cpp.html#a758b4d7c75eb00575d351f960a061a69" title="UtilAllocateContiguousMemory" alt="" coords="169,241,369,268"/>
 <area shape="rect" id="node12" href="vm_8cpp.html#a19b93e0e23802f213312f3f9754863c2" title="VmpEnterVmxMode" alt="" coords="200,292,339,319"/>
-<area shape="rect" id="node13" href="vm_8cpp.html#abef2495abf84486aa76241e8a6d686f2" title="VmpInitializeVMCS" alt="" coords="202,343,337,369"/>
-<area shape="rect" id="node14" href="vm_8cpp.html#a2cb6e626a09aeab3643c3c43a8e1ed73" title="VmpSetupVMCS" alt="" coords="209,393,330,420"/>
-<area shape="rect" id="node15" href="vm_8cpp.html#af0c85a5f16c835dbb0d65e85e5f4790a" title="VmpLaunchVM" alt="" coords="214,444,325,471"/>
+<area shape="rect" id="node13" href="vm_8cpp.html#aef44991a2a8af4ff74813ffa2f05c986" title="VmpInitializeVmcs" alt="" coords="204,343,335,369"/>
+<area shape="rect" id="node14" href="vm_8cpp.html#a609b10c99368c7b8d5e5bfc49b696fa1" title="VmpSetupVmcs" alt="" coords="211,393,328,420"/>
+<area shape="rect" id="node15" href="vm_8cpp.html#aa31fc5d240a2a1d74ce0e6369a1ca475" title="VmpLaunchVm" alt="" coords="214,444,325,471"/>
 <area shape="rect" id="node17" href="vm_8cpp.html#a3389f68a439cd3ced2cbf00cc46edbe8" title="VmpFreeProcessorData" alt="" coords="189,495,350,521"/>
 <area shape="rect" id="node3" href="util_8cpp.html#a419ff5c4a24e27c03ea0b357b593805e" title="UtilPfnFromPa" alt="" coords="465,5,572,32"/>
 <area shape="rect" id="node4" href="util_8cpp.html#ae0ab2e6120ff2d3cc2f8ae779e62706a" title="UtilPaFromVa" alt="" coords="467,56,570,83"/>
@@ -963,7 +955,7 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="abef2495abf84486aa76241e8a6d686f2"></a>
+<a class="anchor" id="aef44991a2a8af4ff74813ffa2f05c986"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -971,7 +963,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool VmpInitializeVMCS </td>
+          <td class="memname">static bool VmpInitializeVmcs </td>
           <td>(</td>
           <td class="paramtype">_Inout_ <a class="el" href="struct_processor_data.html">ProcessorData</a> *&#160;</td>
           <td class="paramname"><em>processor_data</em></td><td>)</td>
@@ -988,16 +980,16 @@ Here is the call graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="vm_8cpp_abef2495abf84486aa76241e8a6d686f2_icgraph.png" border="0" usemap="#vm_8cpp_abef2495abf84486aa76241e8a6d686f2_icgraph" alt=""/></div>
-<map name="vm_8cpp_abef2495abf84486aa76241e8a6d686f2_icgraph" id="vm_8cpp_abef2495abf84486aa76241e8a6d686f2_icgraph">
-<area shape="rect" id="node2" href="vm_8cpp.html#ac7b4db617eca1589809b0992b56a1ce9" title="VmpInitializeVm" alt="" coords="188,5,304,32"/>
+<div class="center"><img src="vm_8cpp_aef44991a2a8af4ff74813ffa2f05c986_icgraph.png" border="0" usemap="#vm_8cpp_aef44991a2a8af4ff74813ffa2f05c986_icgraph" alt=""/></div>
+<map name="vm_8cpp_aef44991a2a8af4ff74813ffa2f05c986_icgraph" id="vm_8cpp_aef44991a2a8af4ff74813ffa2f05c986_icgraph">
+<area shape="rect" id="node2" href="vm_8cpp.html#ac7b4db617eca1589809b0992b56a1ce9" title="VmpInitializeVm" alt="" coords="184,5,300,32"/>
 </map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a5d39f781896705cbfbac824e15fa16ae"></a>
+<a class="anchor" id="a19e6fe0e035e2b40b15b06f7f61b729c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1005,7 +997,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool VmpInitializeVMCS </td>
+          <td class="memname">static bool VmpInitializeVmcs </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_processor_data.html">ProcessorData</a> *&#160;</td>
           <td class="paramname"><em>processor_data</em></td><td>)</td>
@@ -1019,15 +1011,15 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00420">420</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00417">417</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="vm_8cpp_a5d39f781896705cbfbac824e15fa16ae_cgraph.png" border="0" usemap="#vm_8cpp_a5d39f781896705cbfbac824e15fa16ae_cgraph" alt=""/></div>
-<map name="vm_8cpp_a5d39f781896705cbfbac824e15fa16ae_cgraph" id="vm_8cpp_a5d39f781896705cbfbac824e15fa16ae_cgraph">
-<area shape="rect" id="node2" href="util_8cpp.html#ae031e3644a8ebf1146b50ac00700b7a6" title="UtilReadMsr64" alt="" coords="188,5,295,32"/>
-<area shape="rect" id="node3" href="util_8cpp.html#ae0ab2e6120ff2d3cc2f8ae779e62706a" title="UtilPaFromVa" alt="" coords="190,56,293,83"/>
+<div class="center"><img src="vm_8cpp_a19e6fe0e035e2b40b15b06f7f61b729c_cgraph.png" border="0" usemap="#vm_8cpp_a19e6fe0e035e2b40b15b06f7f61b729c_cgraph" alt=""/></div>
+<map name="vm_8cpp_a19e6fe0e035e2b40b15b06f7f61b729c_cgraph" id="vm_8cpp_a19e6fe0e035e2b40b15b06f7f61b729c_cgraph">
+<area shape="rect" id="node2" href="util_8cpp.html#ae031e3644a8ebf1146b50ac00700b7a6" title="UtilReadMsr64" alt="" coords="184,5,291,32"/>
+<area shape="rect" id="node3" href="util_8cpp.html#ae0ab2e6120ff2d3cc2f8ae779e62706a" title="UtilPaFromVa" alt="" coords="186,56,289,83"/>
 </map>
 </div>
 </p>
@@ -1055,7 +1047,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00849">849</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00824">824</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -1063,7 +1055,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="vm_8cpp_a0ff1bbb93039a4d6f8b8f085a262b502_icgraph.png" border="0" usemap="#vm_8cpp_a0ff1bbb93039a4d6f8b8f085a262b502_icgraph" alt=""/></div>
 <map name="vm_8cpp_a0ff1bbb93039a4d6f8b8f085a262b502_icgraph" id="vm_8cpp_a0ff1bbb93039a4d6f8b8f085a262b502_icgraph">
 <area shape="rect" id="node2" href="vm_8h.html#a147812b07dd4d8cf330b225c912280c7" title="Virtualizes all processors. " alt="" coords="192,5,303,32"/>
-<area shape="rect" id="node4" href="vm_8cpp.html#a362f511a51e31585778094e87150d9a9" title="VmpStartVM" alt="" coords="199,56,296,83"/>
+<area shape="rect" id="node4" href="vm_8cpp.html#a25f9477e978f5c27ba8e77bc45793168" title="VmpStartVm" alt="" coords="199,56,296,83"/>
 <area shape="rect" id="node5" href="vm_8h.html#a5361f5cbf7b7d5206f7f34148f36c897" title="De&#45;virtualize all processors. " alt="" coords="193,107,302,133"/>
 <area shape="rect" id="node3" href="driver_8cpp.html#a7475895c182f826798d611e99cb56494" title="DriverEntry" alt="" coords="375,5,460,32"/>
 <area shape="rect" id="node6" href="driver_8cpp.html#a601ab246ef7b8990c3aaec46ab1c1c3d" title="DriverpDriverUnload" alt="" coords="351,107,484,133"/>
@@ -1094,7 +1086,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00148">148</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00145">145</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1122,7 +1114,7 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="af0c85a5f16c835dbb0d65e85e5f4790a"></a>
+<a class="anchor" id="aa31fc5d240a2a1d74ce0e6369a1ca475"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1130,7 +1122,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void VmpLaunchVM </td>
+          <td class="memname">static void VmpLaunchVm </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1143,13 +1135,13 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00662">662</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00659">659</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="vm_8cpp_af0c85a5f16c835dbb0d65e85e5f4790a_cgraph.png" border="0" usemap="#vm_8cpp_af0c85a5f16c835dbb0d65e85e5f4790a_cgraph" alt=""/></div>
-<map name="vm_8cpp_af0c85a5f16c835dbb0d65e85e5f4790a_cgraph" id="vm_8cpp_af0c85a5f16c835dbb0d65e85e5f4790a_cgraph">
+<div class="center"><img src="vm_8cpp_aa31fc5d240a2a1d74ce0e6369a1ca475_cgraph.png" border="0" usemap="#vm_8cpp_aa31fc5d240a2a1d74ce0e6369a1ca475_cgraph" alt=""/></div>
+<map name="vm_8cpp_aa31fc5d240a2a1d74ce0e6369a1ca475_cgraph" id="vm_8cpp_aa31fc5d240a2a1d74ce0e6369a1ca475_cgraph">
 <area shape="rect" id="node2" href="util_8cpp.html#a1e0beb2532d7c8ffe16e6733aa96ee66" title="UtilVmRead" alt="" coords="164,5,255,32"/>
 </map>
 </div>
@@ -1158,8 +1150,8 @@ Here is the call graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="vm_8cpp_af0c85a5f16c835dbb0d65e85e5f4790a_icgraph.png" border="0" usemap="#vm_8cpp_af0c85a5f16c835dbb0d65e85e5f4790a_icgraph" alt=""/></div>
-<map name="vm_8cpp_af0c85a5f16c835dbb0d65e85e5f4790a_icgraph" id="vm_8cpp_af0c85a5f16c835dbb0d65e85e5f4790a_icgraph">
+<div class="center"><img src="vm_8cpp_aa31fc5d240a2a1d74ce0e6369a1ca475_icgraph.png" border="0" usemap="#vm_8cpp_aa31fc5d240a2a1d74ce0e6369a1ca475_icgraph" alt=""/></div>
+<map name="vm_8cpp_aa31fc5d240a2a1d74ce0e6369a1ca475_icgraph" id="vm_8cpp_aa31fc5d240a2a1d74ce0e6369a1ca475_icgraph">
 <area shape="rect" id="node2" href="vm_8cpp.html#ac7b4db617eca1589809b0992b56a1ce9" title="VmpInitializeVm" alt="" coords="164,5,280,32"/>
 </map>
 </div>
@@ -1225,7 +1217,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00193">193</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00190">190</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1240,7 +1232,7 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="a2cb6e626a09aeab3643c3c43a8e1ed73"></a>
+<a class="anchor" id="a609b10c99368c7b8d5e5bfc49b696fa1"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1248,7 +1240,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool VmpSetupVMCS </td>
+          <td class="memname">static bool VmpSetupVmcs </td>
           <td>(</td>
           <td class="paramtype">_In_ const <a class="el" href="struct_processor_data.html">ProcessorData</a> *&#160;</td>
           <td class="paramname"><em>processor_data</em>, </td>
@@ -1287,16 +1279,16 @@ Here is the call graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="vm_8cpp_a2cb6e626a09aeab3643c3c43a8e1ed73_icgraph.png" border="0" usemap="#vm_8cpp_a2cb6e626a09aeab3643c3c43a8e1ed73_icgraph" alt=""/></div>
-<map name="vm_8cpp_a2cb6e626a09aeab3643c3c43a8e1ed73_icgraph" id="vm_8cpp_a2cb6e626a09aeab3643c3c43a8e1ed73_icgraph">
-<area shape="rect" id="node2" href="vm_8cpp.html#ac7b4db617eca1589809b0992b56a1ce9" title="VmpInitializeVm" alt="" coords="175,5,291,32"/>
+<div class="center"><img src="vm_8cpp_a609b10c99368c7b8d5e5bfc49b696fa1_icgraph.png" border="0" usemap="#vm_8cpp_a609b10c99368c7b8d5e5bfc49b696fa1_icgraph" alt=""/></div>
+<map name="vm_8cpp_a609b10c99368c7b8d5e5bfc49b696fa1_icgraph" id="vm_8cpp_a609b10c99368c7b8d5e5bfc49b696fa1_icgraph">
+<area shape="rect" id="node2" href="vm_8cpp.html#ac7b4db617eca1589809b0992b56a1ce9" title="VmpInitializeVm" alt="" coords="171,5,287,32"/>
 </map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a52414afdd39151cf7b1e12a37f34abda"></a>
+<a class="anchor" id="acd66e87696d65f80aec224fabe8049d4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1304,7 +1296,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool VmpSetupVMCS </td>
+          <td class="memname">static bool VmpSetupVmcs </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="struct_processor_data.html">ProcessorData</a> *&#160;</td>
           <td class="paramname"><em>processor_data</em>, </td>
@@ -1340,47 +1332,47 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00440">440</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00437">437</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="vm_8cpp_a52414afdd39151cf7b1e12a37f34abda_cgraph.png" border="0" usemap="#vm_8cpp_a52414afdd39151cf7b1e12a37f34abda_cgraph" alt=""/></div>
-<map name="vm_8cpp_a52414afdd39151cf7b1e12a37f34abda_cgraph" id="vm_8cpp_a52414afdd39151cf7b1e12a37f34abda_cgraph">
-<area shape="rect" id="node2" href="asm_8h.html#a340d164cb0a30ff6bd62f43fec8958bb" title="Writes to GDT. " alt="" coords="242,5,303,32"/>
-<area shape="rect" id="node4" href="util_8cpp.html#ae031e3644a8ebf1146b50ac00700b7a6" title="UtilReadMsr64" alt="" coords="219,56,326,83"/>
-<area shape="rect" id="node5" href="common_8h.html#ae06c86efd7f271e00cb4f501fbca6e1a" title="Checks if a system is x64. " alt="" coords="445,132,499,159"/>
-<area shape="rect" id="node6" href="vm_8cpp.html#a1d7910baedbe80384aa42a80cfc2bde8" title="VmpAdjustControlValue" alt="" coords="193,208,353,235"/>
-<area shape="rect" id="node7" href="util_8cpp.html#ad8434ca108fb47650842faded523d9c4" title="Checks if the system is a PAE&#45;enabled x86 system. " alt="" coords="225,157,320,184"/>
-<area shape="rect" id="node8" href="util_8cpp.html#a47aa45a9e2a816d5cf54a0173d4e786f" title="UtilVmWrite" alt="" coords="581,259,673,285"/>
-<area shape="rect" id="node9" href="asm_8h.html#a8c9011b6c668216faf6b6532b3d53b9d" title="Reads ES. " alt="" coords="224,461,321,488"/>
-<area shape="rect" id="node10" href="asm_8h.html#a63abb9e513784c450fcd2d5284601596" title="Reads CS. " alt="" coords="224,512,321,539"/>
-<area shape="rect" id="node11" href="asm_8h.html#a2b7a5af44bddd3d8262baf6635874fd3" title="Reads SS. " alt="" coords="224,563,321,589"/>
-<area shape="rect" id="node12" href="asm_8h.html#a28e7e9d05c6647afa3e9c2488e925fac" title="Reads DS. " alt="" coords="224,613,321,640"/>
-<area shape="rect" id="node13" href="asm_8h.html#ad35278f4bde8409f492dd09653b37a45" title="Reads FS. " alt="" coords="225,664,321,691"/>
-<area shape="rect" id="node14" href="asm_8h.html#abf9f4da30d3ab9f01dbf3932265b5d78" title="Reads GS. " alt="" coords="223,715,322,741"/>
-<area shape="rect" id="node15" href="asm_8h.html#a6d5433a97e66d132e9e86e08c269b716" title="Reads SLDT. " alt="" coords="217,765,328,792"/>
-<area shape="rect" id="node16" href="asm_8h.html#a2d85d13cf2f53bdf64944f8d7ec15f68" title="Reads STR. " alt="" coords="225,816,320,843"/>
-<area shape="rect" id="node17" href="util_8cpp.html#ae65d5947062aa3b6e2970a01c9a3474d" title="UtilVmWrite64" alt="" coords="419,309,525,336"/>
-<area shape="rect" id="node19" href="util_8cpp.html#ae0ab2e6120ff2d3cc2f8ae779e62706a" title="UtilPaFromVa" alt="" coords="575,411,678,437"/>
-<area shape="rect" id="node20" href="ept_8cpp.html#a222b0265fd865da64a6dca5b2e96157c" title="EptGetEptPointer" alt="" coords="211,867,335,893"/>
-<area shape="rect" id="node21" href="util_8cpp.html#a15f26bbfcd972225444b7a4736cb365c" title="UtilLoadPdptes" alt="" coords="217,360,328,387"/>
-<area shape="rect" id="node24" href="vm_8cpp.html#ae1b78baf28747579ea16fd978722a7a5" title="GetSegmentLimit" alt="" coords="211,917,334,944"/>
-<area shape="rect" id="node25" href="vm_8cpp.html#a3f2b5dd101a0e00d97cee633d855a553" title="VmpGetSegmentAccessRight" alt="" coords="175,968,371,995"/>
-<area shape="rect" id="node26" href="util_8cpp.html#abe8e96ad856f42ddc384dcdea1a74000" title="UtilReadMsr" alt="" coords="226,1019,319,1045"/>
-<area shape="rect" id="node27" href="vm_8cpp.html#a39275677a0ed9d57d33094f185643cf9" title="VmpGetSegmentBase" alt="" coords="197,1069,349,1096"/>
-<area shape="rect" id="node28" href="asm_8h.html#ab84c5b4a9dde2831f52ffd566b10ede1" title="An entry point of VMM where gets called whenever VM&#45;exit occurred. " alt="" coords="202,1120,343,1147"/>
-<area shape="rect" id="node3" href="asm_8h.html#a86ff1a064a0b785332cd2b1f8acba89e" title="Reads SGDT. " alt="" coords="419,5,525,32"/>
-<area shape="rect" id="node18" href="util_8h.html#a131ab25ba676523d82ffa34bfba7f79d" title="Tests if value is in between min and max. " alt="" coords="574,309,679,336"/>
-<area shape="rect" id="node22" href="util_8cpp.html#abe14cd7a226fc0626a6b3a45d04cda59" title="UtilPfnFromVa" alt="" coords="419,360,525,387"/>
-<area shape="rect" id="node23" href="util_8cpp.html#a419ff5c4a24e27c03ea0b357b593805e" title="UtilPfnFromPa" alt="" coords="573,360,680,387"/>
+<div class="center"><img src="vm_8cpp_acd66e87696d65f80aec224fabe8049d4_cgraph.png" border="0" usemap="#vm_8cpp_acd66e87696d65f80aec224fabe8049d4_cgraph" alt=""/></div>
+<map name="vm_8cpp_acd66e87696d65f80aec224fabe8049d4_cgraph" id="vm_8cpp_acd66e87696d65f80aec224fabe8049d4_cgraph">
+<area shape="rect" id="node2" href="asm_8h.html#a340d164cb0a30ff6bd62f43fec8958bb" title="Writes to GDT. " alt="" coords="238,5,299,32"/>
+<area shape="rect" id="node4" href="util_8cpp.html#ae031e3644a8ebf1146b50ac00700b7a6" title="UtilReadMsr64" alt="" coords="215,56,322,83"/>
+<area shape="rect" id="node5" href="common_8h.html#ae06c86efd7f271e00cb4f501fbca6e1a" title="Checks if a system is x64. " alt="" coords="441,132,495,159"/>
+<area shape="rect" id="node6" href="vm_8cpp.html#a1d7910baedbe80384aa42a80cfc2bde8" title="VmpAdjustControlValue" alt="" coords="189,208,349,235"/>
+<area shape="rect" id="node7" href="util_8cpp.html#ad8434ca108fb47650842faded523d9c4" title="Checks if the system is a PAE&#45;enabled x86 system. " alt="" coords="221,157,316,184"/>
+<area shape="rect" id="node8" href="util_8cpp.html#a47aa45a9e2a816d5cf54a0173d4e786f" title="UtilVmWrite" alt="" coords="577,259,669,285"/>
+<area shape="rect" id="node9" href="asm_8h.html#a8c9011b6c668216faf6b6532b3d53b9d" title="Reads ES. " alt="" coords="220,461,317,488"/>
+<area shape="rect" id="node10" href="asm_8h.html#a63abb9e513784c450fcd2d5284601596" title="Reads CS. " alt="" coords="220,512,317,539"/>
+<area shape="rect" id="node11" href="asm_8h.html#a2b7a5af44bddd3d8262baf6635874fd3" title="Reads SS. " alt="" coords="220,563,317,589"/>
+<area shape="rect" id="node12" href="asm_8h.html#a28e7e9d05c6647afa3e9c2488e925fac" title="Reads DS. " alt="" coords="220,613,317,640"/>
+<area shape="rect" id="node13" href="asm_8h.html#ad35278f4bde8409f492dd09653b37a45" title="Reads FS. " alt="" coords="221,664,317,691"/>
+<area shape="rect" id="node14" href="asm_8h.html#abf9f4da30d3ab9f01dbf3932265b5d78" title="Reads GS. " alt="" coords="219,715,318,741"/>
+<area shape="rect" id="node15" href="asm_8h.html#a6d5433a97e66d132e9e86e08c269b716" title="Reads SLDT. " alt="" coords="213,765,324,792"/>
+<area shape="rect" id="node16" href="asm_8h.html#a2d85d13cf2f53bdf64944f8d7ec15f68" title="Reads STR. " alt="" coords="221,816,316,843"/>
+<area shape="rect" id="node17" href="util_8cpp.html#ae65d5947062aa3b6e2970a01c9a3474d" title="UtilVmWrite64" alt="" coords="415,309,521,336"/>
+<area shape="rect" id="node19" href="util_8cpp.html#ae0ab2e6120ff2d3cc2f8ae779e62706a" title="UtilPaFromVa" alt="" coords="571,411,674,437"/>
+<area shape="rect" id="node20" href="ept_8cpp.html#a222b0265fd865da64a6dca5b2e96157c" title="EptGetEptPointer" alt="" coords="207,867,331,893"/>
+<area shape="rect" id="node21" href="util_8cpp.html#a15f26bbfcd972225444b7a4736cb365c" title="UtilLoadPdptes" alt="" coords="213,360,324,387"/>
+<area shape="rect" id="node24" href="vm_8cpp.html#ae1b78baf28747579ea16fd978722a7a5" title="GetSegmentLimit" alt="" coords="207,917,330,944"/>
+<area shape="rect" id="node25" href="vm_8cpp.html#a3f2b5dd101a0e00d97cee633d855a553" title="VmpGetSegmentAccessRight" alt="" coords="171,968,367,995"/>
+<area shape="rect" id="node26" href="util_8cpp.html#abe8e96ad856f42ddc384dcdea1a74000" title="UtilReadMsr" alt="" coords="222,1019,315,1045"/>
+<area shape="rect" id="node27" href="vm_8cpp.html#a39275677a0ed9d57d33094f185643cf9" title="VmpGetSegmentBase" alt="" coords="193,1069,345,1096"/>
+<area shape="rect" id="node28" href="asm_8h.html#ab84c5b4a9dde2831f52ffd566b10ede1" title="An entry point of VMM where gets called whenever VM&#45;exit occurred. " alt="" coords="198,1120,339,1147"/>
+<area shape="rect" id="node3" href="asm_8h.html#a86ff1a064a0b785332cd2b1f8acba89e" title="Reads SGDT. " alt="" coords="415,5,521,32"/>
+<area shape="rect" id="node18" href="util_8h.html#a131ab25ba676523d82ffa34bfba7f79d" title="Tests if value is in between min and max. " alt="" coords="570,309,675,336"/>
+<area shape="rect" id="node22" href="util_8cpp.html#abe14cd7a226fc0626a6b3a45d04cda59" title="UtilPfnFromVa" alt="" coords="415,360,521,387"/>
+<area shape="rect" id="node23" href="util_8cpp.html#a419ff5c4a24e27c03ea0b357b593805e" title="UtilPfnFromPa" alt="" coords="569,360,676,387"/>
 </map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="abbd82c950db05647f02d4ef9dbbcb3ea"></a>
+<a class="anchor" id="a6002bb2760453dcd4a980a233f5f532c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1388,7 +1380,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static NTSTATUS VmpStartVM </td>
+          <td class="memname">static NTSTATUS VmpStartVm </td>
           <td>(</td>
           <td class="paramtype">_In_opt_ void *&#160;</td>
           <td class="paramname"><em>context</em></td><td>)</td>
@@ -1405,8 +1397,8 @@ Here is the call graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="vm_8cpp_abbd82c950db05647f02d4ef9dbbcb3ea_icgraph.png" border="0" usemap="#vm_8cpp_abbd82c950db05647f02d4ef9dbbcb3ea_icgraph" alt=""/></div>
-<map name="vm_8cpp_abbd82c950db05647f02d4ef9dbbcb3ea_icgraph" id="vm_8cpp_abbd82c950db05647f02d4ef9dbbcb3ea_icgraph">
+<div class="center"><img src="vm_8cpp_a6002bb2760453dcd4a980a233f5f532c_icgraph.png" border="0" usemap="#vm_8cpp_a6002bb2760453dcd4a980a233f5f532c_icgraph" alt=""/></div>
+<map name="vm_8cpp_a6002bb2760453dcd4a980a233f5f532c_icgraph" id="vm_8cpp_a6002bb2760453dcd4a980a233f5f532c_icgraph">
 <area shape="rect" id="node2" href="vm_8h.html#a147812b07dd4d8cf330b225c912280c7" title="Virtualizes all processors. " alt="" coords="151,5,261,32"/>
 <area shape="rect" id="node3" href="driver_8cpp.html#a7475895c182f826798d611e99cb56494" title="DriverEntry" alt="" coords="309,5,395,32"/>
 </map>
@@ -1415,7 +1407,7 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="a362f511a51e31585778094e87150d9a9"></a>
+<a class="anchor" id="a25f9477e978f5c27ba8e77bc45793168"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1423,7 +1415,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static NTSTATUS VmpStartVM </td>
+          <td class="memname">static NTSTATUS VmpStartVm </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>context</em></td><td>)</td>
@@ -1437,13 +1429,13 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00274">274</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00271">271</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="vm_8cpp_a362f511a51e31585778094e87150d9a9_cgraph.png" border="0" usemap="#vm_8cpp_a362f511a51e31585778094e87150d9a9_cgraph" alt=""/></div>
-<map name="vm_8cpp_a362f511a51e31585778094e87150d9a9_cgraph" id="vm_8cpp_a362f511a51e31585778094e87150d9a9_cgraph">
+<div class="center"><img src="vm_8cpp_a25f9477e978f5c27ba8e77bc45793168_cgraph.png" border="0" usemap="#vm_8cpp_a25f9477e978f5c27ba8e77bc45793168_cgraph" alt=""/></div>
+<map name="vm_8cpp_a25f9477e978f5c27ba8e77bc45793168_cgraph" id="vm_8cpp_a25f9477e978f5c27ba8e77bc45793168_cgraph">
 <area shape="rect" id="node2" href="asm_8h.html#ab03bb7695eee1c29a0cf7fb7ef45ad4c" title="A wrapper for vm_initialization_routine. " alt="" coords="162,5,278,32"/>
 <area shape="rect" id="node3" href="vm_8cpp.html#aa1cbc431d2b400dc2c6a6b4a18fc5671" title="VmpInitializeVm" alt="" coords="162,56,278,83"/>
 <area shape="rect" id="node4" href="vm_8cpp.html#a0ff1bbb93039a4d6f8b8f085a262b502" title="VmpIsVmmInstalled" alt="" coords="151,107,289,133"/>
@@ -1453,7 +1445,7 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="a0ad701b9459741bd1ba7275f62823376"></a>
+<a class="anchor" id="a6f835c6ea88fb7cb78d0b6baffd128e8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1461,7 +1453,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static NTSTATUS VmpStopVM </td>
+          <td class="memname">static NTSTATUS VmpStopVm </td>
           <td>(</td>
           <td class="paramtype">_In_opt_ void *&#160;</td>
           <td class="paramname"><em>context</em></td><td>)</td>
@@ -1478,18 +1470,19 @@ Here is the call graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="vm_8cpp_a0ad701b9459741bd1ba7275f62823376_icgraph.png" border="0" usemap="#vm_8cpp_a0ad701b9459741bd1ba7275f62823376_icgraph" alt=""/></div>
-<map name="vm_8cpp_a0ad701b9459741bd1ba7275f62823376_icgraph" id="vm_8cpp_a0ad701b9459741bd1ba7275f62823376_icgraph">
-<area shape="rect" id="node2" href="vm_8h.html#a147812b07dd4d8cf330b225c912280c7" title="Virtualizes all processors. " alt="" coords="181,5,292,32"/>
-<area shape="rect" id="node4" href="vm_8cpp.html#a2d50e379775993c1704c6bf1aee7680f" title="VmpVmxOffThreadRoutine" alt="" coords="149,56,324,83"/>
-<area shape="rect" id="node3" href="driver_8cpp.html#a7475895c182f826798d611e99cb56494" title="DriverEntry" alt="" coords="372,5,457,32"/>
+<div class="center"><img src="vm_8cpp_a6f835c6ea88fb7cb78d0b6baffd128e8_icgraph.png" border="0" usemap="#vm_8cpp_a6f835c6ea88fb7cb78d0b6baffd128e8_icgraph" alt=""/></div>
+<map name="vm_8cpp_a6f835c6ea88fb7cb78d0b6baffd128e8_icgraph" id="vm_8cpp_a6f835c6ea88fb7cb78d0b6baffd128e8_icgraph">
+<area shape="rect" id="node2" href="vm_8h.html#a147812b07dd4d8cf330b225c912280c7" title="Virtualizes all processors. " alt="" coords="149,5,260,32"/>
+<area shape="rect" id="node4" href="vm_8h.html#a5361f5cbf7b7d5206f7f34148f36c897" title="De&#45;virtualize all processors. " alt="" coords="150,56,259,83"/>
+<area shape="rect" id="node3" href="driver_8cpp.html#a7475895c182f826798d611e99cb56494" title="DriverEntry" alt="" coords="332,5,417,32"/>
+<area shape="rect" id="node5" href="driver_8cpp.html#a601ab246ef7b8990c3aaec46ab1c1c3d" title="DriverpDriverUnload" alt="" coords="308,56,441,83"/>
 </map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a389da45e122744ce51237a69334a4aeb"></a>
+<a class="anchor" id="aa5770daf77db1c5e665b3db7fdec413e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1497,7 +1490,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static NTSTATUS VmpStopVM </td>
+          <td class="memname">static NTSTATUS VmpStopVm </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>context</em></td><td>)</td>
@@ -1511,53 +1504,16 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00796">796</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00771">771</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="vm_8cpp_a389da45e122744ce51237a69334a4aeb_cgraph.png" border="0" usemap="#vm_8cpp_a389da45e122744ce51237a69334a4aeb_cgraph" alt=""/></div>
-<map name="vm_8cpp_a389da45e122744ce51237a69334a4aeb_cgraph" id="vm_8cpp_a389da45e122744ce51237a69334a4aeb_cgraph">
+<div class="center"><img src="vm_8cpp_aa5770daf77db1c5e665b3db7fdec413e_cgraph.png" border="0" usemap="#vm_8cpp_aa5770daf77db1c5e665b3db7fdec413e_cgraph" alt=""/></div>
+<map name="vm_8cpp_aa5770daf77db1c5e665b3db7fdec413e_cgraph" id="vm_8cpp_aa5770daf77db1c5e665b3db7fdec413e_cgraph">
 <area shape="rect" id="node2" href="util_8cpp.html#a9b23bcb54e9a8e6f92c33ffd0db0f9db" title="UtilVmCall" alt="" coords="189,5,271,32"/>
 <area shape="rect" id="node4" href="vm_8cpp.html#a3389f68a439cd3ced2cbf00cc46edbe8" title="VmpFreeProcessorData" alt="" coords="149,56,311,83"/>
 <area shape="rect" id="node3" href="asm_8h.html#a242cf7f553b78ec66615d191dd2dc429" title="Executes VMCALL with the given hypercall number and a context. " alt="" coords="359,5,457,32"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a2d50e379775993c1704c6bf1aee7680f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void VmpVmxOffThreadRoutine </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>start_context</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00781">781</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="vm_8cpp_a2d50e379775993c1704c6bf1aee7680f_cgraph.png" border="0" usemap="#vm_8cpp_a2d50e379775993c1704c6bf1aee7680f_cgraph" alt=""/></div>
-<map name="vm_8cpp_a2d50e379775993c1704c6bf1aee7680f_cgraph" id="vm_8cpp_a2d50e379775993c1704c6bf1aee7680f_cgraph">
-<area shape="rect" id="node2" href="util_8cpp.html#a498c779c12e188b0ff8d4037ab6591ce" title="UtilForEachProcessor" alt="" coords="228,5,377,32"/>
-<area shape="rect" id="node3" href="vm_8cpp.html#a0ad701b9459741bd1ba7275f62823376" title="VmpStopVM" alt="" coords="255,56,351,83"/>
 </map>
 </div>
 </p>
@@ -1579,14 +1535,16 @@ Here is the call graph for this function:</div>
 
 <p>De-virtualize all processors. </p>
 
-<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00761">761</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00757">757</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="vm_8cpp_a5361f5cbf7b7d5206f7f34148f36c897_cgraph.png" border="0" usemap="#vm_8cpp_a5361f5cbf7b7d5206f7f34148f36c897_cgraph" alt=""/></div>
 <map name="vm_8cpp_a5361f5cbf7b7d5206f7f34148f36c897_cgraph" id="vm_8cpp_a5361f5cbf7b7d5206f7f34148f36c897_cgraph">
-<area shape="rect" id="node2" href="vm_8cpp.html#a0ff1bbb93039a4d6f8b8f085a262b502" title="VmpIsVmmInstalled" alt="" coords="163,5,301,32"/>
+<area shape="rect" id="node2" href="util_8cpp.html#a498c779c12e188b0ff8d4037ab6591ce" title="UtilForEachProcessor" alt="" coords="163,5,312,32"/>
+<area shape="rect" id="node3" href="vm_8cpp.html#a6f835c6ea88fb7cb78d0b6baffd128e8" title="VmpStopVm" alt="" coords="189,56,285,83"/>
+<area shape="rect" id="node4" href="vm_8cpp.html#a0ff1bbb93039a4d6f8b8f085a262b502" title="VmpIsVmmInstalled" alt="" coords="168,107,307,133"/>
 </map>
 </div>
 </p>
@@ -1600,29 +1558,6 @@ Here is the caller graph for this function:</div>
 </map>
 </div>
 </p>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a class="anchor" id="a3ac871ac2984063bd6fff45fec4840b9"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">KSTART_ROUTINE VmpVmxOffThreadRoutine</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00079">79</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
 
 </div>
 </div>
