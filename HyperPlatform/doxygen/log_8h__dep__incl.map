@@ -3,7 +3,8 @@
 <area shape="rect" id="node3" href="$ept_8cpp.html" title="Implements EPT functions. " alt="" coords="193,80,343,107"/>
 <area shape="rect" id="node4" href="$log_8cpp.html" title="Implements logging functions. " alt="" coords="367,80,518,107"/>
 <area shape="rect" id="node5" href="$performance_8cpp.html" title="Implements performance measurement functions. " alt="" coords="542,80,746,107"/>
-<area shape="rect" id="node6" href="$util_8cpp.html" title="Implements primitive utility functions. " alt="" coords="770,80,921,107"/>
-<area shape="rect" id="node7" href="$vm_8cpp.html" title="Implements VMM initialization functions. " alt="" coords="945,80,1095,107"/>
-<area shape="rect" id="node8" href="$vmm_8cpp.html" title="Implements VMM functions. " alt="" coords="1119,80,1279,107"/>
+<area shape="rect" id="node6" href="$powercallback_8cpp.html" title="Implements power callback functions. " alt="" coords="770,80,985,107"/>
+<area shape="rect" id="node7" href="$util_8cpp.html" title="Implements primitive utility functions. " alt="" coords="1009,80,1159,107"/>
+<area shape="rect" id="node8" href="$vm_8cpp.html" title="Implements VMM initialization functions. " alt="" coords="1184,80,1333,107"/>
+<area shape="rect" id="node9" href="$vmm_8cpp.html" title="Implements VMM functions. " alt="" coords="1357,80,1517,107"/>
 </map>

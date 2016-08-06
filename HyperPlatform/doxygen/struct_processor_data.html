@@ -84,11 +84,17 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a285321a3b4f59ee65dc069b22b455b91"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_ept_data.html">EptData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_processor_data.html#a285321a3b4f59ee65dc069b22b455b91">ept_data</a></td></tr>
 <tr class="memdesc:a285321a3b4f59ee65dc069b22b455b91"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to EPT related data.  <a href="#a285321a3b4f59ee65dc069b22b455b91">More...</a><br /></td></tr>
 <tr class="separator:a285321a3b4f59ee65dc069b22b455b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64c6e76dad6d86a89a1b1ae88504620a"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_processor_data.html#a64c6e76dad6d86a89a1b1ae88504620a">xsave_area</a></td></tr>
+<tr class="memdesc:a64c6e76dad6d86a89a1b1ae88504620a"><td class="mdescLeft">&#160;</td><td class="mdescRight">VA to store state components.  <a href="#a64c6e76dad6d86a89a1b1ae88504620a">More...</a><br /></td></tr>
+<tr class="separator:a64c6e76dad6d86a89a1b1ae88504620a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81e596902ea22e78a37dba53fa73e0da"><td class="memItemLeft" align="right" valign="top">ULONG64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_processor_data.html#a81e596902ea22e78a37dba53fa73e0da">xsave_inst_mask</a></td></tr>
+<tr class="memdesc:a81e596902ea22e78a37dba53fa73e0da"><td class="mdescLeft">&#160;</td><td class="mdescRight">A mask to save state components.  <a href="#a81e596902ea22e78a37dba53fa73e0da">More...</a><br /></td></tr>
+<tr class="separator:a81e596902ea22e78a37dba53fa73e0da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents VMM related data associated with each processor. </p>
 
-<p>Definition at line <a class="el" href="vmm_8h_source.html#l00038">38</a> of file <a class="el" href="vmm_8h_source.html">vmm.h</a>.</p>
+<p>Definition at line <a class="el" href="vmm_8h_source.html#l00040">40</a> of file <a class="el" href="vmm_8h_source.html">vmm.h</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="a285321a3b4f59ee65dc069b22b455b91"></a>
 <div class="memitem">
@@ -102,7 +108,7 @@ Public Attributes</h2></td></tr>
 
 <p>A pointer to EPT related data. </p>
 
-<p>Definition at line <a class="el" href="vmm_8h_source.html#l00043">43</a> of file <a class="el" href="vmm_8h_source.html">vmm.h</a>.</p>
+<p>Definition at line <a class="el" href="vmm_8h_source.html#l00045">45</a> of file <a class="el" href="vmm_8h_source.html">vmm.h</a>.</p>
 
 </div>
 </div>
@@ -118,7 +124,7 @@ Public Attributes</h2></td></tr>
 
 <p>Shared data. </p>
 
-<p>Definition at line <a class="el" href="vmm_8h_source.html#l00039">39</a> of file <a class="el" href="vmm_8h_source.html">vmm.h</a>.</p>
+<p>Definition at line <a class="el" href="vmm_8h_source.html#l00041">41</a> of file <a class="el" href="vmm_8h_source.html">vmm.h</a>.</p>
 
 </div>
 </div>
@@ -134,7 +140,7 @@ Public Attributes</h2></td></tr>
 
 <p>VA of a VMCS region. </p>
 
-<p>Definition at line <a class="el" href="vmm_8h_source.html#l00042">42</a> of file <a class="el" href="vmm_8h_source.html">vmm.h</a>.</p>
+<p>Definition at line <a class="el" href="vmm_8h_source.html#l00044">44</a> of file <a class="el" href="vmm_8h_source.html">vmm.h</a>.</p>
 
 </div>
 </div>
@@ -150,7 +156,7 @@ Public Attributes</h2></td></tr>
 
 <p>A head of VA for VMM stack. </p>
 
-<p>Definition at line <a class="el" href="vmm_8h_source.html#l00040">40</a> of file <a class="el" href="vmm_8h_source.html">vmm.h</a>.</p>
+<p>Definition at line <a class="el" href="vmm_8h_source.html#l00042">42</a> of file <a class="el" href="vmm_8h_source.html">vmm.h</a>.</p>
 
 </div>
 </div>
@@ -166,7 +172,39 @@ Public Attributes</h2></td></tr>
 
 <p>VA of a VMXON region. </p>
 
-<p>Definition at line <a class="el" href="vmm_8h_source.html#l00041">41</a> of file <a class="el" href="vmm_8h_source.html">vmm.h</a>.</p>
+<p>Definition at line <a class="el" href="vmm_8h_source.html#l00043">43</a> of file <a class="el" href="vmm_8h_source.html">vmm.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a64c6e76dad6d86a89a1b1ae88504620a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* ProcessorData::xsave_area</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>VA to store state components. </p>
+
+<p>Definition at line <a class="el" href="vmm_8h_source.html#l00046">46</a> of file <a class="el" href="vmm_8h_source.html">vmm.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a81e596902ea22e78a37dba53fa73e0da"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ULONG64 ProcessorData::xsave_inst_mask</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A mask to save state components. </p>
+
+<p>Definition at line <a class="el" href="vmm_8h_source.html#l00047">47</a> of file <a class="el" href="vmm_8h_source.html">vmm.h</a>.</p>
 
 </div>
 </div>

@@ -1,3 +1,5 @@
 <map id="VmpInitializeSharedData" name="VmpInitializeSharedData">
-<area shape="rect" id="node2" href="$util_8cpp.html#abe8e96ad856f42ddc384dcdea1a74000" title="UtilReadMsr" alt="" coords="217,5,311,32"/>
+<area shape="rect" id="node2" href="$vm_8cpp.html#a4a40ee6154c1ae46db91d43153405c2c" title="VmpBuildMsrBitmap" alt="" coords="217,5,359,32"/>
+<area shape="rect" id="node4" href="$vm_8cpp.html#a1e1b90fd0d45dad2ceb051698fa50b99" title="VmpBuildIoBitmaps" alt="" coords="220,56,356,83"/>
+<area shape="rect" id="node3" href="$util_8cpp.html#abe8e96ad856f42ddc384dcdea1a74000" title="UtilReadMsr" alt="" coords="407,5,500,32"/>
 </map>

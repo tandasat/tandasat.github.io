@@ -97,7 +97,8 @@ Enumerations</h2></td></tr>
  }<tr class="memdesc:a939581b1de686b22b77e05cc403bfefc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates a result of VMX-instructions.  <a href="util_8h.html#a939581b1de686b22b77e05cc403bfefc">More...</a><br /></td></tr>
 <tr class="separator:a939581b1de686b22b77e05cc403bfefc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </td></tr>
-<tr class="memitem:ae3ae82c0801f4d60588b2cb0ca997ca1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8h.html#ae3ae82c0801f4d60588b2cb0ca997ca1">HypercallNumber</a> { <a class="el" href="util_8h.html#ae3ae82c0801f4d60588b2cb0ca997ca1a99067337d21b35c358a44fd437d6d4a4">HypercallNumber::kTerminateVmm</a>
+<tr class="memitem:ae3ae82c0801f4d60588b2cb0ca997ca1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8h.html#ae3ae82c0801f4d60588b2cb0ca997ca1">HypercallNumber</a> { <a class="el" href="util_8h.html#ae3ae82c0801f4d60588b2cb0ca997ca1a99067337d21b35c358a44fd437d6d4a4">HypercallNumber::kTerminateVmm</a>, 
+<a class="el" href="util_8h.html#ae3ae82c0801f4d60588b2cb0ca997ca1abb6c808b4fbf6cd12561c6b0f3242459">HypercallNumber::kPingVmm</a>
  }<tr class="memdesc:ae3ae82c0801f4d60588b2cb0ca997ca1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Avaialable command numbers for VMCALL.  <a href="util_8h.html#ae3ae82c0801f4d60588b2cb0ca997ca1">More...</a><br /></td></tr>
 <tr class="separator:ae3ae82c0801f4d60588b2cb0ca997ca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </td></tr>
@@ -232,6 +233,9 @@ Functions</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ae3ae82c0801f4d60588b2cb0ca997ca1a99067337d21b35c358a44fd437d6d4a4"></a>kTerminateVmm&#160;</td><td class="fielddoc">
 <p>Terminates VMM. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ae3ae82c0801f4d60588b2cb0ca997ca1abb6c808b4fbf6cd12561c6b0f3242459"></a>kPingVmm&#160;</td><td class="fielddoc">
+<p>Sends ping to the VMM. </p>
 </td></tr>
 </table>
 
@@ -486,7 +490,7 @@ Functions</h2></td></tr>
 <p>Returns ranges of physical memory on the system. </p>
 <dl class="section return"><dt>Returns</dt><dd>Physical memory ranges; never fails </dd></dl>
 
-<p>Definition at line <a class="el" href="util_8cpp_source.html#l00360">360</a> of file <a class="el" href="util_8cpp_source.html">util.cpp</a>.</p>
+<p>Definition at line <a class="el" href="util_8cpp_source.html#l00403">403</a> of file <a class="el" href="util_8cpp_source.html">util.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -568,7 +572,7 @@ Here is the caller graph for this function:</div>
 <p>Executes the INVEPT instruction and invalidates EPT entry cache. </p>
 <dl class="section return"><dt>Returns</dt><dd>A result of the INVEPT instruction </dd></dl>
 
-<p>Definition at line <a class="el" href="util_8cpp_source.html#l00785">785</a> of file <a class="el" href="util_8cpp_source.html">util.cpp</a>.</p>
+<p>Definition at line <a class="el" href="util_8cpp_source.html#l00759">759</a> of file <a class="el" href="util_8cpp_source.html">util.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -662,7 +666,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if <em>value</em> is in between <em>min</em> and <em>max</em> </dd></dl>
 
-<p>Definition at line <a class="el" href="util_8h_source.html#l00270">270</a> of file <a class="el" href="util_8h_source.html">util.h</a>.</p>
+<p>Definition at line <a class="el" href="util_8h_source.html#l00271">271</a> of file <a class="el" href="util_8h_source.html">util.h</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -702,7 +706,7 @@ Here is the caller graph for this function:</div>
 <p>Checks if the system is a PAE-enabled x86 system. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if the system is a PAE-enabled x86 system </dd></dl>
 
-<p>Definition at line <a class="el" href="util_8cpp_source.html#l00435">435</a> of file <a class="el" href="util_8cpp_source.html">util.cpp</a>.</p>
+<p>Definition at line <a class="el" href="util_8cpp_source.html#l00480">480</a> of file <a class="el" href="util_8cpp_source.html">util.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -719,9 +723,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="util_8h_ad8434ca108fb47650842faded523d9c4_icgraph.png" border="0" usemap="#util_8h_ad8434ca108fb47650842faded523d9c4_icgraph" alt=""/></div>
 <map name="util_8h_ad8434ca108fb47650842faded523d9c4_icgraph" id="util_8h_ad8434ca108fb47650842faded523d9c4_icgraph">
-<area shape="rect" id="node2" href="util_8cpp.html#a8674c4ce7bf08bc059b970996d689f25" title="UtilIsAccessibleAddress" alt="" coords="148,5,311,32"/>
-<area shape="rect" id="node3" href="vm_8cpp.html#acd66e87696d65f80aec224fabe8049d4" title="VmpSetupVmcs" alt="" coords="171,56,288,83"/>
-<area shape="rect" id="node4" href="vmm_8cpp.html#a8fb9289d967c49d8900b22df4dc1911a" title="VmmpHandleCrAccess" alt="" coords="151,107,308,133"/>
+<area shape="rect" id="node2" href="vm_8cpp.html#acd66e87696d65f80aec224fabe8049d4" title="VmpSetupVmcs" alt="" coords="168,5,285,32"/>
+<area shape="rect" id="node3" href="vmm_8cpp.html#a8fb9289d967c49d8900b22df4dc1911a" title="VmmpHandleCrAccess" alt="" coords="148,56,305,83"/>
 </map>
 </div>
 </p>
@@ -1019,7 +1022,7 @@ Here is the caller graph for this function:</div>
 
 <p>Frees all resources allocated for the sake of the Util funcions. </p>
 
-<p>Definition at line <a class="el" href="util_8cpp_source.html#l00216">216</a> of file <a class="el" href="util_8cpp_source.html">util.cpp</a>.</p>
+<p>Definition at line <a class="el" href="util_8cpp_source.html#l00170">170</a> of file <a class="el" href="util_8cpp_source.html">util.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>

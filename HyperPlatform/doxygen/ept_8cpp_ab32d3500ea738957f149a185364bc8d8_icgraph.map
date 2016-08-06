@@ -1,5 +1,7 @@
 <map id="EptpGetEptPtEntry" name="EptpGetEptPtEntry">
-<area shape="rect" id="node2" href="$ept_8cpp.html#aeb345687cd430aea36a910ade69fa15d" title="EptGetEptPtEntry" alt="" coords="192,5,319,32"/>
-<area shape="rect" id="node4" href="$ept_8cpp.html#a439d699860845eebf91b556521b187ea" title="EptpGetEptPtEntry" alt="" coords="188,56,323,83"/>
-<area shape="rect" id="node3" href="$vmm_8cpp.html#a902093a32ce5b78000294b7a9bd5d048" title="VmmpHandleEptMisconfig" alt="" coords="371,5,545,32"/>
+<area shape="rect" id="node2" href="$ept_8cpp.html#aeb345687cd430aea36a910ade69fa15d" title="EptGetEptPtEntry" alt="" coords="192,31,319,57"/>
+<area shape="rect" id="node6" href="$ept_8cpp.html#a439d699860845eebf91b556521b187ea" title="EptpGetEptPtEntry" alt="" coords="188,81,323,108"/>
+<area shape="rect" id="node3" href="$ept_8cpp.html#a6adf0f9672ecc2605b2e73a3dea55468" title="EptHandleEptViolation" alt="" coords="382,5,534,32"/>
+<area shape="rect" id="node5" href="$vmm_8cpp.html#a902093a32ce5b78000294b7a9bd5d048" title="VmmpHandleEptMisconfig" alt="" coords="371,56,545,83"/>
+<area shape="rect" id="node4" href="$vmm_8cpp.html#a572fdc29d1553bb115a734013c9d8df3" title="VmmpHandleEptViolation" alt="" coords="593,5,764,32"/>
 </map>

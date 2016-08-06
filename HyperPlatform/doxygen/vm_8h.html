@@ -68,7 +68,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="center"><img src="vm_8h__dep__incl.png" border="0" usemap="#_hyper_platform_2vm_8hdep" alt=""/></div>
 <map name="_hyper_platform_2vm_8hdep" id="_hyper_platform_2vm_8hdep">
 <area shape="rect" id="node2" href="driver_8cpp.html" title="Implements an entry point of the driver. " alt="" coords="5,80,168,107"/>
-<area shape="rect" id="node3" href="vm_8cpp.html" title="Implements VMM initialization functions. " alt="" coords="192,80,341,107"/>
+<area shape="rect" id="node3" href="powercallback_8cpp.html" title="Implements power callback functions. " alt="" coords="193,80,407,107"/>
+<area shape="rect" id="node4" href="vm_8cpp.html" title="Implements VMM initialization functions. " alt="" coords="432,80,581,107"/>
 </map>
 </div>
 </div>
@@ -105,7 +106,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>STATUS_SUCCESS on success</dd></dl>
 <p>Initializes a VMCS region and virtualizes (ie, enters the VMX non-root operation mode) for each processor. Returns non STATUS_SUCCESS value if any of processors failed to do so. In that case, this function de-virtualize already virtualized processors. </p>
 
-<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00120">120</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00142">142</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -114,14 +115,16 @@ Here is the call graph for this function:</div>
 <map name="vm_8h_a147812b07dd4d8cf330b225c912280c7_cgraph" id="vm_8h_a147812b07dd4d8cf330b225c912280c7_cgraph">
 <area shape="rect" id="node2" href="vm_8cpp.html#a0ff1bbb93039a4d6f8b8f085a262b502" title="VmpIsVmmInstalled" alt="" coords="177,5,315,32"/>
 <area shape="rect" id="node3" href="vm_8cpp.html#a358ccb0ced5fd16f4dfadbb7c5382439" title="VmpIsVmxAvailable" alt="" coords="177,107,315,133"/>
-<area shape="rect" id="node5" href="util_8cpp.html#a498c779c12e188b0ff8d4037ab6591ce" title="UtilForEachProcessor" alt="" coords="383,31,532,57"/>
+<area shape="rect" id="node5" href="util_8cpp.html#a498c779c12e188b0ff8d4037ab6591ce" title="UtilForEachProcessor" alt="" coords="383,5,532,32"/>
 <area shape="rect" id="node8" href="vm_8cpp.html#a59a15f91f00f1b51f12580d106d8fd03" title="VmpInitializeSharedData" alt="" coords="164,157,328,184"/>
-<area shape="rect" id="node10" href="vm_8cpp.html#a6002bb2760453dcd4a980a233f5f532c" title="VmpStartVm" alt="" coords="197,208,295,235"/>
-<area shape="rect" id="node11" href="vm_8cpp.html#a6f835c6ea88fb7cb78d0b6baffd128e8" title="VmpStopVm" alt="" coords="198,259,294,285"/>
-<area shape="rect" id="node4" href="util_8cpp.html#ae031e3644a8ebf1146b50ac00700b7a6" title="UtilReadMsr64" alt="" coords="587,132,693,159"/>
-<area shape="rect" id="node6" href="vm_8cpp.html#a6324891d7b010dd62553916e5f7bbeb4" title="VmpSetLockBitCallback" alt="" coords="376,132,539,159"/>
-<area shape="rect" id="node7" href="ept_8cpp.html#ae1a710c5e98d60441af5d3cb8349abc7" title="Checks if the system supports EPT technology sufficient enough. " alt="" coords="396,183,519,209"/>
-<area shape="rect" id="node9" href="util_8cpp.html#abe8e96ad856f42ddc384dcdea1a74000" title="UtilReadMsr" alt="" coords="411,233,504,260"/>
+<area shape="rect" id="node12" href="vm_8cpp.html#a6002bb2760453dcd4a980a233f5f532c" title="VmpStartVm" alt="" coords="197,208,295,235"/>
+<area shape="rect" id="node13" href="vm_8cpp.html#a6f835c6ea88fb7cb78d0b6baffd128e8" title="VmpStopVm" alt="" coords="198,259,294,285"/>
+<area shape="rect" id="node4" href="util_8cpp.html#ae031e3644a8ebf1146b50ac00700b7a6" title="UtilReadMsr64" alt="" coords="587,107,693,133"/>
+<area shape="rect" id="node6" href="vm_8cpp.html#a6324891d7b010dd62553916e5f7bbeb4" title="VmpSetLockBitCallback" alt="" coords="376,107,539,133"/>
+<area shape="rect" id="node7" href="ept_8cpp.html#ae1a710c5e98d60441af5d3cb8349abc7" title="Checks if the system supports EPT technology sufficient enough. " alt="" coords="396,157,519,184"/>
+<area shape="rect" id="node9" href="vm_8cpp.html#a4a40ee6154c1ae46db91d43153405c2c" title="VmpBuildMsrBitmap" alt="" coords="387,208,528,235"/>
+<area shape="rect" id="node11" href="vm_8cpp.html#a1e1b90fd0d45dad2ceb051698fa50b99" title="VmpBuildIoBitmaps" alt="" coords="389,259,525,285"/>
+<area shape="rect" id="node10" href="util_8cpp.html#abe8e96ad856f42ddc384dcdea1a74000" title="UtilReadMsr" alt="" coords="593,208,687,235"/>
 </map>
 </div>
 </p>
@@ -131,7 +134,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="vm_8h_a147812b07dd4d8cf330b225c912280c7_icgraph.png" border="0" usemap="#vm_8h_a147812b07dd4d8cf330b225c912280c7_icgraph" alt=""/></div>
 <map name="vm_8h_a147812b07dd4d8cf330b225c912280c7_icgraph" id="vm_8h_a147812b07dd4d8cf330b225c912280c7_icgraph">
-<area shape="rect" id="node2" href="driver_8cpp.html#a7475895c182f826798d611e99cb56494" title="DriverEntry" alt="" coords="164,5,249,32"/>
+<area shape="rect" id="node2" href="driver_8cpp.html#a7475895c182f826798d611e99cb56494" title="DriverEntry" alt="" coords="226,5,311,32"/>
+<area shape="rect" id="node3" href="powercallback_8cpp.html#acfb8bd6fe4a3254de2760ddbfa0deb48" title="PowerCallbackpCallbackRoutine" alt="" coords="164,56,373,83"/>
 </map>
 </div>
 </p>
@@ -153,7 +157,7 @@ Here is the caller graph for this function:</div>
 
 <p>De-virtualize all processors. </p>
 
-<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00757">757</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
+<p>Definition at line <a class="el" href="vm_8cpp_source.html#l00871">871</a> of file <a class="el" href="vm_8cpp_source.html">vm.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -172,7 +176,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="vm_8h_a5361f5cbf7b7d5206f7f34148f36c897_icgraph.png" border="0" usemap="#vm_8h_a5361f5cbf7b7d5206f7f34148f36c897_icgraph" alt=""/></div>
 <map name="vm_8h_a5361f5cbf7b7d5206f7f34148f36c897_icgraph" id="vm_8h_a5361f5cbf7b7d5206f7f34148f36c897_icgraph">
-<area shape="rect" id="node2" href="driver_8cpp.html#a601ab246ef7b8990c3aaec46ab1c1c3d" title="DriverpDriverUnload" alt="" coords="163,5,296,32"/>
+<area shape="rect" id="node2" href="driver_8cpp.html#a601ab246ef7b8990c3aaec46ab1c1c3d" title="DriverpDriverUnload" alt="" coords="201,5,334,32"/>
+<area shape="rect" id="node3" href="powercallback_8cpp.html#acfb8bd6fe4a3254de2760ddbfa0deb48" title="PowerCallbackpCallbackRoutine" alt="" coords="163,56,372,83"/>
 </map>
 </div>
 </p>

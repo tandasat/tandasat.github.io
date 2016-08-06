@@ -1,6 +1,5 @@
 <map id="VmmpHandleVmCall" name="VmmpHandleVmCall">
-<area shape="rect" id="node2" href="$util_8cpp.html#a1e0beb2532d7c8ffe16e6733aa96ee66" title="UtilVmRead" alt="" coords="214,5,305,32"/>
-<area shape="rect" id="node3" href="$asm_8h.html#a0e87423ee42eebf6a70fc1d75d71d0f5" title="Reads SGDT. " alt="" coords="231,56,288,83"/>
-<area shape="rect" id="node5" href="$vmm_8cpp.html#a7889383e3e67c7507cde12bd68c0edd3" title="VmmpHandleVmx" alt="" coords="196,107,323,133"/>
-<area shape="rect" id="node4" href="$asm_8h.html#a1bf962e43119a733d0461574ccc4f010" title="Writes to GDT. " alt="" coords="371,56,477,83"/>
+<area shape="rect" id="node2" href="$vmm_8cpp.html#a0eca5537d5026d727d1ce4a26cba0d3a" title="VmmpHandleVmCallTermination" alt="" coords="196,5,405,32"/>
+<area shape="rect" id="node3" href="$vmm_8cpp.html#a47b1d102f689c637453404c6267e38ea" title="VmmpIndicateSuccessfulVmcall" alt="" coords="196,56,405,83"/>
+<area shape="rect" id="node4" href="$vmm_8cpp.html#a7889383e3e67c7507cde12bd68c0edd3" title="VmmpHandleVmx" alt="" coords="237,107,364,133"/>
 </map>

@@ -1,4 +1,5 @@
 <map id="VmpInitializeSharedData" name="VmpInitializeSharedData">
-<area shape="rect" id="node2" href="$vm_8h.html#a147812b07dd4d8cf330b225c912280c7" title="Virtualizes all processors. " alt="" coords="217,5,328,32"/>
-<area shape="rect" id="node3" href="$driver_8cpp.html#a7475895c182f826798d611e99cb56494" title="DriverEntry" alt="" coords="376,5,461,32"/>
+<area shape="rect" id="node2" href="$vm_8h.html#a147812b07dd4d8cf330b225c912280c7" title="Virtualizes all processors. " alt="" coords="217,31,328,57"/>
+<area shape="rect" id="node3" href="$driver_8cpp.html#a7475895c182f826798d611e99cb56494" title="DriverEntry" alt="" coords="438,5,523,32"/>
+<area shape="rect" id="node4" href="$powercallback_8cpp.html#acfb8bd6fe4a3254de2760ddbfa0deb48" title="PowerCallbackpCallbackRoutine" alt="" coords="376,56,585,83"/>
 </map>

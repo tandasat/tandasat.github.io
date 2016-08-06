@@ -192,14 +192,23 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="union_vm_exit_information.html">VmExitInformation</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">See: Format of Exit Reason in Basic VM-Exit Information.  <a href="union_vm_exit_information.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="union_gdtr_or_idtr_access_qualification.html">GdtrOrIdtrAccessQualification</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">See: Format of the VM-Exit Instruction-Information Field as Used for LIDT, LGDT, SIDT, or SGDT.  <a href="union_gdtr_or_idtr_access_qualification.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="union_ins_or_outs_inst_information.html">InsOrOutsInstInformation</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">See: Format of the VM-Exit Instruction-Information Field as Used for INS and OUTS.  <a href="union_ins_or_outs_inst_information.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="union_ldtr_or_tr_access_qualification.html">LdtrOrTrAccessQualification</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">See: Format of the VM-Exit Instruction-Information Field as Used for LLDT, LTR, SLDT, and STR.  <a href="union_ldtr_or_tr_access_qualification.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="union_inv_ept_or_pcid_or_vpid_inst_information.html">InvEptOrPcidOrVpidInstInformation</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">See: Format of the VM-Exit Instruction-Information Field as Used for INVEPT, INVPCID, and INVVPID.  <a href="union_inv_ept_or_pcid_or_vpid_inst_information.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="union_gdtr_or_idtr_inst_information.html">GdtrOrIdtrInstInformation</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">See: Format of the VM-Exit Instruction-Information Field as Used for LIDT, LGDT, SIDT, or SGDT.  <a href="union_gdtr_or_idtr_inst_information.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="union_ldtr_or_tr_inst_information.html">LdtrOrTrInstInformation</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">See: Format of the VM-Exit Instruction-Information Field as Used for LLDT, LTR, SLDT, and STR.  <a href="union_ldtr_or_tr_inst_information.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="union_mov_dr_qualification.html">MovDrQualification</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">See: Exit Qualification for MOV DR.  <a href="union_mov_dr_qualification.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="union_io_inst_qualification.html">IoInstQualification</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">See: Exit Qualification for I/O Instructions.  <a href="union_io_inst_qualification.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="union_mov_cr_qualification.html">MovCrQualification</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">See: Exit Qualification for Control-Register Accesses.  <a href="union_mov_cr_qualification.html#details">More...</a><br /></td></tr>
@@ -658,30 +667,30 @@ Enumerations</h2></td></tr>
  }<tr class="memdesc:a76a3313987de36950cb8ff1430c5ed19"><td class="mdescLeft">&#160;</td><td class="mdescRight">See: Memory Types That Can Be Encoded With PAT Memory Types Recommended for VMCS and Related Data Structures.  <a href="ia32__type_8h.html#a76a3313987de36950cb8ff1430c5ed19">More...</a><br /></td></tr>
 <tr class="separator:a76a3313987de36950cb8ff1430c5ed19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </td></tr>
-<tr class="memitem:a555d15179398f3cd5a63b13d997f9cbc"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ia32__type_8h.html#a555d15179398f3cd5a63b13d997f9cbc">GdtrOrIdtrScaling</a> { <a class="el" href="ia32__type_8h.html#a555d15179398f3cd5a63b13d997f9cbcace1c1c284858816e627d1dac60d368c3">GdtrOrIdtrScaling::kNoScaling</a> = 0, 
-<a class="el" href="ia32__type_8h.html#a555d15179398f3cd5a63b13d997f9cbcaaad8e1a6ae2ec4d575688546345b84ca">GdtrOrIdtrScaling::kScaleBy2</a>, 
-<a class="el" href="ia32__type_8h.html#a555d15179398f3cd5a63b13d997f9cbcadaaf08ec8a904bec532e8444ec0597e2">GdtrOrIdtrScaling::kScaleBy4</a>, 
-<a class="el" href="ia32__type_8h.html#a555d15179398f3cd5a63b13d997f9cbca735c8b7ad0a957b6a3a162c379d07e0f">GdtrOrIdtrScaling::kScaleBy8</a>
- }<tr class="memdesc:a555d15179398f3cd5a63b13d997f9cbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">See: Format of the VM-Exit Instruction-Information Field as Used for LIDT, LGDT, SIDT, or SGDT.  <a href="ia32__type_8h.html#a555d15179398f3cd5a63b13d997f9cbc">More...</a><br /></td></tr>
-<tr class="separator:a555d15179398f3cd5a63b13d997f9cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73c156ddbf89e07a3a516ed88be6b9cb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ia32__type_8h.html#a73c156ddbf89e07a3a516ed88be6b9cb">Scaling</a> { <a class="el" href="ia32__type_8h.html#a73c156ddbf89e07a3a516ed88be6b9cbace1c1c284858816e627d1dac60d368c3">Scaling::kNoScaling</a> = 0, 
+<a class="el" href="ia32__type_8h.html#a73c156ddbf89e07a3a516ed88be6b9cbaaad8e1a6ae2ec4d575688546345b84ca">Scaling::kScaleBy2</a>, 
+<a class="el" href="ia32__type_8h.html#a73c156ddbf89e07a3a516ed88be6b9cbadaaf08ec8a904bec532e8444ec0597e2">Scaling::kScaleBy4</a>, 
+<a class="el" href="ia32__type_8h.html#a73c156ddbf89e07a3a516ed88be6b9cba735c8b7ad0a957b6a3a162c379d07e0f">Scaling::kScaleBy8</a>
+ }<tr class="memdesc:a73c156ddbf89e07a3a516ed88be6b9cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">See: Format of the VM-Exit Instruction-Information Field as Used for LIDT, LGDT, SIDT, or SGDT.  <a href="ia32__type_8h.html#a73c156ddbf89e07a3a516ed88be6b9cb">More...</a><br /></td></tr>
+<tr class="separator:a73c156ddbf89e07a3a516ed88be6b9cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </td></tr>
-<tr class="memitem:a22df35a31e9f08c48a653f5571e7e405"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ia32__type_8h.html#a22df35a31e9f08c48a653f5571e7e405">GdtrOrIdtrAaddressSize</a> { <a class="el" href="ia32__type_8h.html#a22df35a31e9f08c48a653f5571e7e405a13f503350a72cede92f69e524897a4b9">GdtrOrIdtrAaddressSize::k16bit</a> = 0, 
-<a class="el" href="ia32__type_8h.html#a22df35a31e9f08c48a653f5571e7e405aacd654b01c62015ead11357300c14b59">GdtrOrIdtrAaddressSize::k32bit</a>, 
-<a class="el" href="ia32__type_8h.html#a22df35a31e9f08c48a653f5571e7e405a3d4b301f8f4e20cd6a4de9d2e1b71889">GdtrOrIdtrAaddressSize::k64bit</a>
- }<tr class="memdesc:a22df35a31e9f08c48a653f5571e7e405"><td class="mdescLeft">&#160;</td><td class="mdescRight">See: Format of the VM-Exit Instruction-Information Field as Used for LIDT, LGDT, SIDT, or SGDT.  <a href="ia32__type_8h.html#a22df35a31e9f08c48a653f5571e7e405">More...</a><br /></td></tr>
-<tr class="separator:a22df35a31e9f08c48a653f5571e7e405"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4edb98486382ac8a2d0f53252830e0c2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ia32__type_8h.html#a4edb98486382ac8a2d0f53252830e0c2">AddressSize</a> { <a class="el" href="ia32__type_8h.html#a4edb98486382ac8a2d0f53252830e0c2a13f503350a72cede92f69e524897a4b9">AddressSize::k16bit</a> = 0, 
+<a class="el" href="ia32__type_8h.html#a4edb98486382ac8a2d0f53252830e0c2aacd654b01c62015ead11357300c14b59">AddressSize::k32bit</a>, 
+<a class="el" href="ia32__type_8h.html#a4edb98486382ac8a2d0f53252830e0c2a3d4b301f8f4e20cd6a4de9d2e1b71889">AddressSize::k64bit</a>
+ }<tr class="memdesc:a4edb98486382ac8a2d0f53252830e0c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">See: Format of the VM-Exit Instruction-Information Field as Used for LIDT, LGDT, SIDT, or SGDT.  <a href="ia32__type_8h.html#a4edb98486382ac8a2d0f53252830e0c2">More...</a><br /></td></tr>
+<tr class="separator:a4edb98486382ac8a2d0f53252830e0c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </td></tr>
-<tr class="memitem:a2aa3b2c5aad52bd87d9030bbf0518911"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ia32__type_8h.html#a2aa3b2c5aad52bd87d9030bbf0518911">GdtrOrIdtrSegmentRegisters</a> { <br />
-&#160;&#160;<a class="el" href="ia32__type_8h.html#a2aa3b2c5aad52bd87d9030bbf0518911a495b1bb22f89dc6df859cc7e80ef2717">GdtrOrIdtrSegmentRegisters::kEs</a> = 0, 
-<a class="el" href="ia32__type_8h.html#a2aa3b2c5aad52bd87d9030bbf0518911a0c7c62b2c3e4cf3b1c132d74343f4cb6">GdtrOrIdtrSegmentRegisters::kCs</a>, 
-<a class="el" href="ia32__type_8h.html#a2aa3b2c5aad52bd87d9030bbf0518911ad7f292ec4cd671bb68c1d009e3c9b75d">GdtrOrIdtrSegmentRegisters::kSs</a>, 
-<a class="el" href="ia32__type_8h.html#a2aa3b2c5aad52bd87d9030bbf0518911a028231b4fd0027c7f4097bb4ab3e8624">GdtrOrIdtrSegmentRegisters::kDs</a>, 
+<tr class="memitem:a5e33768a00d6b94717cc3fdfcfb1bd19"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ia32__type_8h.html#a5e33768a00d6b94717cc3fdfcfb1bd19">SegmentRegisters</a> { <br />
+&#160;&#160;<a class="el" href="ia32__type_8h.html#a5e33768a00d6b94717cc3fdfcfb1bd19a495b1bb22f89dc6df859cc7e80ef2717">SegmentRegisters::kEs</a> = 0, 
+<a class="el" href="ia32__type_8h.html#a5e33768a00d6b94717cc3fdfcfb1bd19a0c7c62b2c3e4cf3b1c132d74343f4cb6">SegmentRegisters::kCs</a>, 
+<a class="el" href="ia32__type_8h.html#a5e33768a00d6b94717cc3fdfcfb1bd19ad7f292ec4cd671bb68c1d009e3c9b75d">SegmentRegisters::kSs</a>, 
+<a class="el" href="ia32__type_8h.html#a5e33768a00d6b94717cc3fdfcfb1bd19a028231b4fd0027c7f4097bb4ab3e8624">SegmentRegisters::kDs</a>, 
 <br />
-&#160;&#160;<a class="el" href="ia32__type_8h.html#a2aa3b2c5aad52bd87d9030bbf0518911addacc4507af7df8ec9f0b7a5a34d0873">GdtrOrIdtrSegmentRegisters::kFs</a>, 
-<a class="el" href="ia32__type_8h.html#a2aa3b2c5aad52bd87d9030bbf0518911a113d0ec081562368a73bef22aa66d3d0">GdtrOrIdtrSegmentRegisters::kGs</a>
+&#160;&#160;<a class="el" href="ia32__type_8h.html#a5e33768a00d6b94717cc3fdfcfb1bd19addacc4507af7df8ec9f0b7a5a34d0873">SegmentRegisters::kFs</a>, 
+<a class="el" href="ia32__type_8h.html#a5e33768a00d6b94717cc3fdfcfb1bd19a113d0ec081562368a73bef22aa66d3d0">SegmentRegisters::kGs</a>
 <br />
- }<tr class="memdesc:a2aa3b2c5aad52bd87d9030bbf0518911"><td class="mdescLeft">&#160;</td><td class="mdescRight">See: Format of the VM-Exit Instruction-Information Field as Used for LIDT, LGDT, SIDT, or SGDT.  <a href="ia32__type_8h.html#a2aa3b2c5aad52bd87d9030bbf0518911">More...</a><br /></td></tr>
-<tr class="separator:a2aa3b2c5aad52bd87d9030bbf0518911"><td class="memSeparator" colspan="2">&#160;</td></tr>
+ }<tr class="memdesc:a5e33768a00d6b94717cc3fdfcfb1bd19"><td class="mdescLeft">&#160;</td><td class="mdescRight">See: Format of the VM-Exit Instruction-Information Field as Used for LIDT, LGDT, SIDT, or SGDT.  <a href="ia32__type_8h.html#a5e33768a00d6b94717cc3fdfcfb1bd19">More...</a><br /></td></tr>
+<tr class="separator:a5e33768a00d6b94717cc3fdfcfb1bd19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </td></tr>
 <tr class="memitem:a4147596d7b12d334d9a2f2a1ada16b3b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ia32__type_8h.html#a4147596d7b12d334d9a2f2a1ada16b3b">GdtrOrIdtrInstructionIdentity</a> { <a class="el" href="ia32__type_8h.html#a4147596d7b12d334d9a2f2a1ada16b3baff0261f43e297819cf727ff32bdc6de8">GdtrOrIdtrInstructionIdentity::kSgdt</a> = 0, 
 <a class="el" href="ia32__type_8h.html#a4147596d7b12d334d9a2f2a1ada16b3ba7c13987389102119cbbdcf55f06dd04d">GdtrOrIdtrInstructionIdentity::kSidt</a>, 
@@ -701,6 +710,12 @@ Enumerations</h2></td></tr>
 <a class="el" href="ia32__type_8h.html#a73982edbee1cbccffb602e32bc1c4f83aa2f4f9c9ca65834f778e825f82304cc2">MovDrDirection::kMoveFromDr</a>
  }<tr class="memdesc:a73982edbee1cbccffb602e32bc1c4f83"><td class="mdescLeft">&#160;</td><td class="mdescRight">See: Exit Qualification for MOV DR.  <a href="ia32__type_8h.html#a73982edbee1cbccffb602e32bc1c4f83">More...</a><br /></td></tr>
 <tr class="separator:a73982edbee1cbccffb602e32bc1c4f83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+<tr class="memitem:a1042165163a2a8747ff61a5d7550f985"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ia32__type_8h.html#a1042165163a2a8747ff61a5d7550f985">IoInstSizeOfAccess</a> { <a class="el" href="ia32__type_8h.html#a1042165163a2a8747ff61a5d7550f985adcaf187a9dea9a9d1bcc75f04b8a72af">IoInstSizeOfAccess::k1Byte</a> = 0, 
+<a class="el" href="ia32__type_8h.html#a1042165163a2a8747ff61a5d7550f985a86018c1ddcb8a66f326ec424a1b0595f">IoInstSizeOfAccess::k2Byte</a> = 1, 
+<a class="el" href="ia32__type_8h.html#a1042165163a2a8747ff61a5d7550f985a5fd0362a52a3c2f449566669829f2d17">IoInstSizeOfAccess::k4Byte</a> = 3
+ }<tr class="memdesc:a1042165163a2a8747ff61a5d7550f985"><td class="mdescLeft">&#160;</td><td class="mdescRight">See: Exit Qualification for I/O Instructions.  <a href="ia32__type_8h.html#a1042165163a2a8747ff61a5d7550f985">More...</a><br /></td></tr>
+<tr class="separator:a1042165163a2a8747ff61a5d7550f985"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </td></tr>
 <tr class="memitem:a66faebb03d006844eb8f9306d9d438fe"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ia32__type_8h.html#a66faebb03d006844eb8f9306d9d438fe">MovCrAccessType</a> { <a class="el" href="ia32__type_8h.html#a66faebb03d006844eb8f9306d9d438feaefa88228d54e52df93a22f69a1affd59">MovCrAccessType::kMoveToCr</a> = 0, 
 <a class="el" href="ia32__type_8h.html#a66faebb03d006844eb8f9306d9d438fea02e3317fda681e9cd1d7514e6d265f93">MovCrAccessType::kMoveFromCr</a>, 
@@ -785,7 +800,7 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
-<a class="anchor" id="a22df35a31e9f08c48a653f5571e7e405"></a>
+<a class="anchor" id="a4edb98486382ac8a2d0f53252830e0c2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -793,7 +808,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="ia32__type_8h.html#a22df35a31e9f08c48a653f5571e7e405">GdtrOrIdtrAaddressSize</a></td>
+          <td class="memname">enum <a class="el" href="ia32__type_8h.html#a4edb98486382ac8a2d0f53252830e0c2">AddressSize</a></td>
         </tr>
       </table>
   </td>
@@ -805,15 +820,15 @@ Variables</h2></td></tr>
 
 <p>See: Format of the VM-Exit Instruction-Information Field as Used for LIDT, LGDT, SIDT, or SGDT. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a22df35a31e9f08c48a653f5571e7e405a13f503350a72cede92f69e524897a4b9"></a>k16bit&#160;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a4edb98486382ac8a2d0f53252830e0c2a13f503350a72cede92f69e524897a4b9"></a>k16bit&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a22df35a31e9f08c48a653f5571e7e405aacd654b01c62015ead11357300c14b59"></a>k32bit&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a4edb98486382ac8a2d0f53252830e0c2aacd654b01c62015ead11357300c14b59"></a>k32bit&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a22df35a31e9f08c48a653f5571e7e405a3d4b301f8f4e20cd6a4de9d2e1b71889"></a>k64bit&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a4edb98486382ac8a2d0f53252830e0c2a3d4b301f8f4e20cd6a4de9d2e1b71889"></a>k64bit&#160;</td><td class="fielddoc">
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01059">1059</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
+<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01113">1113</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
 
 </div>
 </div>
@@ -847,79 +862,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01076">1076</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a555d15179398f3cd5a63b13d997f9cbc"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="ia32__type_8h.html#a555d15179398f3cd5a63b13d997f9cbc">GdtrOrIdtrScaling</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>See: Format of the VM-Exit Instruction-Information Field as Used for LIDT, LGDT, SIDT, or SGDT. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a555d15179398f3cd5a63b13d997f9cbcace1c1c284858816e627d1dac60d368c3"></a>kNoScaling&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a555d15179398f3cd5a63b13d997f9cbcaaad8e1a6ae2ec4d575688546345b84ca"></a>kScaleBy2&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a555d15179398f3cd5a63b13d997f9cbcadaaf08ec8a904bec532e8444ec0597e2"></a>kScaleBy4&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a555d15179398f3cd5a63b13d997f9cbca735c8b7ad0a957b6a3a162c379d07e0f"></a>kScaleBy8&#160;</td><td class="fielddoc">
-</td></tr>
-</table>
-
-<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01051">1051</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a2aa3b2c5aad52bd87d9030bbf0518911"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="ia32__type_8h.html#a2aa3b2c5aad52bd87d9030bbf0518911">GdtrOrIdtrSegmentRegisters</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>See: Format of the VM-Exit Instruction-Information Field as Used for LIDT, LGDT, SIDT, or SGDT. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a2aa3b2c5aad52bd87d9030bbf0518911a495b1bb22f89dc6df859cc7e80ef2717"></a>kEs&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a2aa3b2c5aad52bd87d9030bbf0518911a0c7c62b2c3e4cf3b1c132d74343f4cb6"></a>kCs&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a2aa3b2c5aad52bd87d9030bbf0518911ad7f292ec4cd671bb68c1d009e3c9b75d"></a>kSs&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a2aa3b2c5aad52bd87d9030bbf0518911a028231b4fd0027c7f4097bb4ab3e8624"></a>kDs&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a2aa3b2c5aad52bd87d9030bbf0518911addacc4507af7df8ec9f0b7a5a34d0873"></a>kFs&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a2aa3b2c5aad52bd87d9030bbf0518911a113d0ec081562368a73bef22aa66d3d0"></a>kGs&#160;</td><td class="fielddoc">
-</td></tr>
-</table>
-
-<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01066">1066</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
+<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01130">1130</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
 
 </div>
 </div>
@@ -961,7 +904,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01378">1378</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
+<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01433">1433</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
 
 </div>
 </div>
@@ -993,7 +936,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01390">1390</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
+<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01445">1445</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
 
 </div>
 </div>
@@ -1023,7 +966,39 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01345">1345</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
+<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01400">1400</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1042165163a2a8747ff61a5d7550f985"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="ia32__type_8h.html#a1042165163a2a8747ff61a5d7550f985">IoInstSizeOfAccess</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>See: Exit Qualification for I/O Instructions. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a1042165163a2a8747ff61a5d7550f985adcaf187a9dea9a9d1bcc75f04b8a72af"></a>k1Byte&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1042165163a2a8747ff61a5d7550f985a86018c1ddcb8a66f326ec424a1b0595f"></a>k2Byte&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a1042165163a2a8747ff61a5d7550f985a5fd0362a52a3c2f449566669829f2d17"></a>k4Byte&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01204">1204</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
 
 </div>
 </div>
@@ -1057,7 +1032,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01106">1106</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
+<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01160">1160</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
 
 </div>
 </div>
@@ -1095,7 +1070,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l00778">778</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
+<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l00777">777</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
 
 </div>
 </div>
@@ -1129,7 +1104,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01156">1156</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
+<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01211">1211</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
 
 </div>
 </div>
@@ -1159,7 +1134,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01135">1135</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
+<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01168">1168</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
 
 </div>
 </div>
@@ -1249,7 +1224,79 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l00422">422</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
+<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l00421">421</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a73c156ddbf89e07a3a516ed88be6b9cb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="ia32__type_8h.html#a73c156ddbf89e07a3a516ed88be6b9cb">Scaling</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>See: Format of the VM-Exit Instruction-Information Field as Used for LIDT, LGDT, SIDT, or SGDT. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a73c156ddbf89e07a3a516ed88be6b9cbace1c1c284858816e627d1dac60d368c3"></a>kNoScaling&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a73c156ddbf89e07a3a516ed88be6b9cbaaad8e1a6ae2ec4d575688546345b84ca"></a>kScaleBy2&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a73c156ddbf89e07a3a516ed88be6b9cbadaaf08ec8a904bec532e8444ec0597e2"></a>kScaleBy4&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a73c156ddbf89e07a3a516ed88be6b9cba735c8b7ad0a957b6a3a162c379d07e0f"></a>kScaleBy8&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01105">1105</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5e33768a00d6b94717cc3fdfcfb1bd19"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="ia32__type_8h.html#a5e33768a00d6b94717cc3fdfcfb1bd19">SegmentRegisters</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>See: Format of the VM-Exit Instruction-Information Field as Used for LIDT, LGDT, SIDT, or SGDT. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a5e33768a00d6b94717cc3fdfcfb1bd19a495b1bb22f89dc6df859cc7e80ef2717"></a>kEs&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a5e33768a00d6b94717cc3fdfcfb1bd19a0c7c62b2c3e4cf3b1c132d74343f4cb6"></a>kCs&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a5e33768a00d6b94717cc3fdfcfb1bd19ad7f292ec4cd671bb68c1d009e3c9b75d"></a>kSs&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a5e33768a00d6b94717cc3fdfcfb1bd19a028231b4fd0027c7f4097bb4ab3e8624"></a>kDs&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a5e33768a00d6b94717cc3fdfcfb1bd19addacc4507af7df8ec9f0b7a5a34d0873"></a>kFs&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a5e33768a00d6b94717cc3fdfcfb1bd19a113d0ec081562368a73bef22aa66d3d0"></a>kGs&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01120">1120</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
 
 </div>
 </div>
@@ -1637,7 +1684,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l00478">478</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
+<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l00477">477</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
 
 </div>
 </div>
@@ -1793,7 +1840,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l00678">678</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
+<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l00677">677</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
 
 </div>
 </div>
@@ -1869,7 +1916,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l00748">748</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
+<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l00747">747</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
 
 </div>
 </div>
@@ -1900,7 +1947,7 @@ Variables</h2></td></tr>
 
 <p>Provides &lt;&lt; operator for <a class="el" href="union_vm_entry_interruption_information_field.html" title="See: Format of the VM-Entry Interruption-Information Field. ">VmEntryInterruptionInformationField</a>. </p>
 
-<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01397">1397</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
+<p>Definition at line <a class="el" href="ia32__type_8h_source.html#l01452">1452</a> of file <a class="el" href="ia32__type_8h_source.html">ia32_type.h</a>.</p>
 
 </div>
 </div>

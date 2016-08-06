@@ -1,32 +1,37 @@
 <map id="DriverEntry" name="DriverEntry">
-<area shape="rect" id="node2" href="$common_8h.html#a56951867bea28bcaf6898dbdc82c0216" title="Checks if the project is compiled as Release. " alt="" coords="172,7,280,33"/>
-<area shape="rect" id="node3" href="$log_8cpp.html#a31adb602a5853992527918a920b634a8" title="LogInitialization" alt="" coords="171,57,281,84"/>
-<area shape="rect" id="node6" href="$driver_8cpp.html#a313db23fb6b38797e7b38cd09a276eb4" title="DriverpIsSuppoetedOS" alt="" coords="150,165,302,192"/>
-<area shape="rect" id="node8" href="$log_8cpp.html#a96551bc40e7b6f61102ca34d3ed01132" title="Terminates the log system. Should be called from a DriverUnload routine. " alt="" coords="171,109,281,136"/>
-<area shape="rect" id="node9" href="$performance_8cpp.html#a036322c3c643cf94b929abad4dc6dd28" title="Makes HYPERPLATFORM_PERFORMANCE_MEASURE_THIS_SCOPE() ready for use. " alt="" coords="169,219,283,245"/>
-<area shape="rect" id="node11" href="$util_8cpp.html#a0cd8bac1c07f827ace29a78652e5e2f7" title="UtilInitialization" alt="" coords="171,271,281,297"/>
-<area shape="rect" id="node17" href="$performance_8cpp.html#a42f65af6ec5774ee2ac51c05c9ec89e4" title="Ends performance monitoring and outputs its results. " alt="" coords="170,356,282,383"/>
-<area shape="rect" id="node19" href="$vm_8cpp.html#a147812b07dd4d8cf330b225c912280c7" title="Virtualizes all processors. " alt="" coords="171,492,281,519"/>
-<area shape="rect" id="node30" href="$util_8cpp.html#a9eec12475580085fab5c154f681d59a5" title="Frees all resources allocated for the sake of the Util funcions. " alt="" coords="172,543,280,569"/>
-<area shape="rect" id="node31" href="$log_8cpp.html#ad124568e0b9d49b742fb4d450d1d1d15" title="LogRegisterReinitialization" alt="" coords="139,593,313,620"/>
-<area shape="rect" id="node4" href="$log_8cpp.html#a11024cb105aff62d2aa0762b159af701" title="LogpInitializeBufferInfo" alt="" coords="382,5,533,32"/>
-<area shape="rect" id="node5" href="$log_8cpp.html#ae3c1e8192b36243fbfbccce15748e10a" title="LogpFinalizeBufferInfo" alt="" coords="383,56,531,83"/>
-<area shape="rect" id="node7" href="$common_8h.html#ae06c86efd7f271e00cb4f501fbca6e1a" title="Checks if a system is x64. " alt="" coords="431,107,484,133"/>
-<area shape="rect" id="node10" href="$class_perf_collector.html#aa5d591a531bd0a5d5bd4f6f322eb59cb" title="Constructor; call this only once before any other code in this module runs. " alt="" coords="382,157,533,184"/>
-<area shape="rect" id="node12" href="$util_8cpp.html#a2ac3583d9a9373406c139f200b3ba6de" title="UtilpInitializeRtlPcToFile\lHeader" alt="" coords="376,209,539,250"/>
-<area shape="rect" id="node13" href="$util_8cpp.html#aa77fccb47a21c49eace9b882dd376b71" title="UtilpInitializePhysicalMemory\lRanges" alt="" coords="361,274,553,315"/>
-<area shape="rect" id="node16" href="$util_8cpp.html#ad5d279bc19e76f31e0197bb50271d414" title="UtilGetSystemProcAddress" alt="" coords="366,340,549,367"/>
-<area shape="rect" id="node14" href="$util_8cpp.html#a01aa39e4193b223c65cd2c2ab89784e6" title="UtilpBuildPhysicalMemory\lRanges" alt="" coords="601,274,776,315"/>
-<area shape="rect" id="node15" href="$util_8cpp.html#a419ff5c4a24e27c03ea0b357b593805e" title="UtilPfnFromPa" alt="" coords="824,281,931,308"/>
-<area shape="rect" id="node18" href="$class_perf_collector.html#a51b2e62b26270d56013049142d1230a3" title="Destructor; prints out accumerated performance results. " alt="" coords="377,391,538,417"/>
-<area shape="rect" id="node20" href="$vm_8cpp.html#a0ff1bbb93039a4d6f8b8f085a262b502" title="VmpIsVmmInstalled" alt="" coords="388,441,527,468"/>
-<area shape="rect" id="node21" href="$vm_8cpp.html#a358ccb0ced5fd16f4dfadbb7c5382439" title="VmpIsVmxAvailable" alt="" coords="389,543,526,569"/>
-<area shape="rect" id="node23" href="$util_8cpp.html#a498c779c12e188b0ff8d4037ab6591ce" title="UtilForEachProcessor" alt="" coords="614,467,763,493"/>
-<area shape="rect" id="node26" href="$vm_8cpp.html#a59a15f91f00f1b51f12580d106d8fd03" title="VmpInitializeSharedData" alt="" coords="375,593,539,620"/>
-<area shape="rect" id="node28" href="$vm_8cpp.html#a6002bb2760453dcd4a980a233f5f532c" title="VmpStartVm" alt="" coords="409,644,506,671"/>
-<area shape="rect" id="node29" href="$vm_8cpp.html#a6f835c6ea88fb7cb78d0b6baffd128e8" title="VmpStopVm" alt="" coords="409,695,505,721"/>
-<area shape="rect" id="node22" href="$util_8cpp.html#ae031e3644a8ebf1146b50ac00700b7a6" title="UtilReadMsr64" alt="" coords="824,568,931,595"/>
-<area shape="rect" id="node24" href="$vm_8cpp.html#a6324891d7b010dd62553916e5f7bbeb4" title="VmpSetLockBitCallback" alt="" coords="607,568,770,595"/>
-<area shape="rect" id="node25" href="$ept_8cpp.html#ae1a710c5e98d60441af5d3cb8349abc7" title="Checks if the system supports EPT technology sufficient enough. " alt="" coords="627,619,750,645"/>
-<area shape="rect" id="node27" href="$util_8cpp.html#abe8e96ad856f42ddc384dcdea1a74000" title="UtilReadMsr" alt="" coords="642,669,735,696"/>
+<area shape="rect" id="node2" href="$common_8h.html#a56951867bea28bcaf6898dbdc82c0216" title="Checks if the project is compiled as Release. " alt="" coords="173,7,281,33"/>
+<area shape="rect" id="node3" href="$log_8cpp.html#a31adb602a5853992527918a920b634a8" title="LogInitialization" alt="" coords="171,57,282,84"/>
+<area shape="rect" id="node6" href="$driver_8cpp.html#a313db23fb6b38797e7b38cd09a276eb4" title="DriverpIsSuppoetedOS" alt="" coords="151,172,303,199"/>
+<area shape="rect" id="node8" href="$log_8cpp.html#a96551bc40e7b6f61102ca34d3ed01132" title="Terminates the log system. Should be called from a DriverUnload routine. " alt="" coords="171,111,282,137"/>
+<area shape="rect" id="node9" href="$performance_8cpp.html#a036322c3c643cf94b929abad4dc6dd28" title="Makes HYPERPLATFORM_PERFORMANCE_MEASURE_THIS_SCOPE() ready for use. " alt="" coords="170,228,283,255"/>
+<area shape="rect" id="node11" href="$util_8cpp.html#a0cd8bac1c07f827ace29a78652e5e2f7" title="UtilInitialization" alt="" coords="172,281,281,308"/>
+<area shape="rect" id="node18" href="$performance_8cpp.html#a42f65af6ec5774ee2ac51c05c9ec89e4" title="Ends performance monitoring and outputs its results. " alt="" coords="171,332,283,359"/>
+<area shape="rect" id="node20" href="$powercallback_8cpp.html#af8cae4ecd518e53b18630409246363e8" title="PowerCallbackInitialization" alt="" coords="139,383,315,409"/>
+<area shape="rect" id="node21" href="$util_8cpp.html#a9eec12475580085fab5c154f681d59a5" title="Frees all resources allocated for the sake of the Util funcions. " alt="" coords="173,433,281,460"/>
+<area shape="rect" id="node22" href="$vm_8cpp.html#a147812b07dd4d8cf330b225c912280c7" title="Virtualizes all processors. " alt="" coords="171,557,282,584"/>
+<area shape="rect" id="node35" href="$powercallback_8cpp.html#ad47f9ab60172d5e1be6549ca5cd291ac" title="PowerCallbackTermination" alt="" coords="139,608,314,635"/>
+<area shape="rect" id="node36" href="$log_8cpp.html#ad124568e0b9d49b742fb4d450d1d1d15" title="LogRegisterReinitialization" alt="" coords="139,659,314,685"/>
+<area shape="rect" id="node4" href="$log_8cpp.html#a11024cb105aff62d2aa0762b159af701" title="LogpInitializeBufferInfo" alt="" coords="383,5,534,32"/>
+<area shape="rect" id="node5" href="$log_8cpp.html#ae3c1e8192b36243fbfbccce15748e10a" title="LogpFinalizeBufferInfo" alt="" coords="385,56,533,83"/>
+<area shape="rect" id="node7" href="$common_8h.html#ae06c86efd7f271e00cb4f501fbca6e1a" title="Checks if a system is x64. " alt="" coords="432,107,485,133"/>
+<area shape="rect" id="node10" href="$class_perf_collector.html#aa5d591a531bd0a5d5bd4f6f322eb59cb" title="Constructor; call this only once before any other code in this module runs. " alt="" coords="383,157,534,184"/>
+<area shape="rect" id="node12" href="$util_8cpp.html#ac61ca2caa583774026370331bd0e326e" title="UtilpInitializePageTable\lVariables" alt="" coords="381,209,537,250"/>
+<area shape="rect" id="node13" href="$util_8cpp.html#a2ac3583d9a9373406c139f200b3ba6de" title="UtilpInitializeRtlPcToFile\lHeader" alt="" coords="377,274,540,315"/>
+<area shape="rect" id="node14" href="$util_8cpp.html#aa77fccb47a21c49eace9b882dd376b71" title="UtilpInitializePhysicalMemory\lRanges" alt="" coords="363,339,555,381"/>
+<area shape="rect" id="node17" href="$util_8cpp.html#ad5d279bc19e76f31e0197bb50271d414" title="UtilGetSystemProcAddress" alt="" coords="367,405,550,432"/>
+<area shape="rect" id="node15" href="$util_8cpp.html#a01aa39e4193b223c65cd2c2ab89784e6" title="UtilpBuildPhysicalMemory\lRanges" alt="" coords="603,339,777,381"/>
+<area shape="rect" id="node16" href="$util_8cpp.html#a419ff5c4a24e27c03ea0b357b593805e" title="UtilPfnFromPa" alt="" coords="825,347,932,373"/>
+<area shape="rect" id="node19" href="$class_perf_collector.html#a51b2e62b26270d56013049142d1230a3" title="Destructor; prints out accumerated performance results. " alt="" coords="378,456,539,483"/>
+<area shape="rect" id="node23" href="$vm_8cpp.html#a0ff1bbb93039a4d6f8b8f085a262b502" title="VmpIsVmmInstalled" alt="" coords="389,507,528,533"/>
+<area shape="rect" id="node24" href="$vm_8cpp.html#a358ccb0ced5fd16f4dfadbb7c5382439" title="VmpIsVmxAvailable" alt="" coords="390,608,527,635"/>
+<area shape="rect" id="node26" href="$util_8cpp.html#a498c779c12e188b0ff8d4037ab6591ce" title="UtilForEachProcessor" alt="" coords="615,507,765,533"/>
+<area shape="rect" id="node29" href="$vm_8cpp.html#a59a15f91f00f1b51f12580d106d8fd03" title="VmpInitializeSharedData" alt="" coords="377,659,541,685"/>
+<area shape="rect" id="node33" href="$vm_8cpp.html#a6002bb2760453dcd4a980a233f5f532c" title="VmpStartVm" alt="" coords="410,709,507,736"/>
+<area shape="rect" id="node34" href="$vm_8cpp.html#a6f835c6ea88fb7cb78d0b6baffd128e8" title="VmpStopVm" alt="" coords="411,760,507,787"/>
+<area shape="rect" id="node25" href="$util_8cpp.html#ae031e3644a8ebf1146b50ac00700b7a6" title="UtilReadMsr64" alt="" coords="825,608,932,635"/>
+<area shape="rect" id="node27" href="$vm_8cpp.html#a6324891d7b010dd62553916e5f7bbeb4" title="VmpSetLockBitCallback" alt="" coords="609,608,771,635"/>
+<area shape="rect" id="node28" href="$ept_8cpp.html#ae1a710c5e98d60441af5d3cb8349abc7" title="Checks if the system supports EPT technology sufficient enough. " alt="" coords="629,659,751,685"/>
+<area shape="rect" id="node30" href="$vm_8cpp.html#a4a40ee6154c1ae46db91d43153405c2c" title="VmpBuildMsrBitmap" alt="" coords="619,709,761,736"/>
+<area shape="rect" id="node32" href="$vm_8cpp.html#a1e1b90fd0d45dad2ceb051698fa50b99" title="VmpBuildIoBitmaps" alt="" coords="622,760,758,787"/>
+<area shape="rect" id="node31" href="$util_8cpp.html#abe8e96ad856f42ddc384dcdea1a74000" title="UtilReadMsr" alt="" coords="832,709,925,736"/>
 </map>

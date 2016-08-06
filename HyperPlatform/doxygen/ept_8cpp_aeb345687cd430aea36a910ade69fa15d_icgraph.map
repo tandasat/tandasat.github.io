@@ -1,3 +1,5 @@
 <map id="EptGetEptPtEntry" name="EptGetEptPtEntry">
-<area shape="rect" id="node2" href="$vmm_8cpp.html#a902093a32ce5b78000294b7a9bd5d048" title="VmmpHandleEptMisconfig" alt="" coords="180,5,355,32"/>
+<area shape="rect" id="node2" href="$ept_8cpp.html#a6adf0f9672ecc2605b2e73a3dea55468" title="EptHandleEptViolation" alt="" coords="191,5,343,32"/>
+<area shape="rect" id="node4" href="$vmm_8cpp.html#a902093a32ce5b78000294b7a9bd5d048" title="VmmpHandleEptMisconfig" alt="" coords="180,56,355,83"/>
+<area shape="rect" id="node3" href="$vmm_8cpp.html#a572fdc29d1553bb115a734013c9d8df3" title="VmmpHandleEptViolation" alt="" coords="403,5,573,32"/>
 </map>

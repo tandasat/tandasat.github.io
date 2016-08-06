@@ -1,7 +1,8 @@
 <map id="VmpIsVmmInstalled" name="VmpIsVmmInstalled">
 <area shape="rect" id="node2" href="$vm_8h.html#a147812b07dd4d8cf330b225c912280c7" title="Virtualizes all processors. " alt="" coords="192,5,303,32"/>
-<area shape="rect" id="node4" href="$vm_8cpp.html#a25f9477e978f5c27ba8e77bc45793168" title="VmpStartVm" alt="" coords="199,56,296,83"/>
-<area shape="rect" id="node5" href="$vm_8h.html#a5361f5cbf7b7d5206f7f34148f36c897" title="De&#45;virtualize all processors. " alt="" coords="193,107,302,133"/>
-<area shape="rect" id="node3" href="$driver_8cpp.html#a7475895c182f826798d611e99cb56494" title="DriverEntry" alt="" coords="375,5,460,32"/>
-<area shape="rect" id="node6" href="$driver_8cpp.html#a601ab246ef7b8990c3aaec46ab1c1c3d" title="DriverpDriverUnload" alt="" coords="351,107,484,133"/>
+<area shape="rect" id="node5" href="$vm_8cpp.html#a25f9477e978f5c27ba8e77bc45793168" title="VmpStartVm" alt="" coords="199,56,296,83"/>
+<area shape="rect" id="node6" href="$vm_8h.html#a5361f5cbf7b7d5206f7f34148f36c897" title="De&#45;virtualize all processors. " alt="" coords="193,107,302,133"/>
+<area shape="rect" id="node3" href="$driver_8cpp.html#a7475895c182f826798d611e99cb56494" title="DriverEntry" alt="" coords="413,5,498,32"/>
+<area shape="rect" id="node4" href="$powercallback_8cpp.html#acfb8bd6fe4a3254de2760ddbfa0deb48" title="PowerCallbackpCallbackRoutine" alt="" coords="351,56,560,83"/>
+<area shape="rect" id="node7" href="$driver_8cpp.html#a601ab246ef7b8990c3aaec46ab1c1c3d" title="DriverpDriverUnload" alt="" coords="389,107,522,133"/>
 </map>

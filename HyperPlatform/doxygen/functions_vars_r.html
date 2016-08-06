@@ -140,10 +140,13 @@
 : <a class="el" href="union_ia32_vmx_basic_msr.html#a77c1cf3d7fc649d9aa773624a1868650">Ia32VmxBasicMsr</a>
 </li>
 <li>register1
-: <a class="el" href="union_ldtr_or_tr_access_qualification.html#ac6fa2923a80016ca3ae735c2facdd106">LdtrOrTrAccessQualification</a>
+: <a class="el" href="union_ldtr_or_tr_inst_information.html#a26512b1354445d19fb952a1545c98954">LdtrOrTrInstInformation</a>
 </li>
 <li>register_access
-: <a class="el" href="union_ldtr_or_tr_access_qualification.html#a9e4144507a0ea640d3b1d94146c2ca5c">LdtrOrTrAccessQualification</a>
+: <a class="el" href="union_ldtr_or_tr_inst_information.html#ad1d5a1acbd29cf4fcced431bc278f72f">LdtrOrTrInstInformation</a>
+</li>
+<li>rep_prefixed
+: <a class="el" href="union_io_inst_qualification.html#a6cb7093fdcfc52936c3fb43b1b5aa9aa">IoInstQualification</a>
 </li>
 <li>reserved
 : <a class="el" href="struct_kidt_entry64.html#a1e5e3cb37a9bcf822d595cf38fb5232d">KidtEntry64</a>
@@ -173,7 +176,7 @@
 , <a class="el" href="union_ept_pt_entry.html#a34c77a4a5f1505414ee44beb376e1e9a">EptPtEntry</a>
 , <a class="el" href="union_ept_violation_qualification.html#ae9b3c61ca1d4164e0b9196c7f0f8a24d">EptViolationQualification</a>
 , <a class="el" href="union_flag_register.html#a4ca6592a5599cd67025c11aff1fb201a">FlagRegister</a>
-, <a class="el" href="union_gdtr_or_idtr_access_qualification.html#a44f8f9c9170df8e2ccd0b8492ec0df32">GdtrOrIdtrAccessQualification</a>
+, <a class="el" href="union_gdtr_or_idtr_inst_information.html#ae0a1fcbfc08b34783d31830b33bc4a07">GdtrOrIdtrInstInformation</a>
 , <a class="el" href="struct_hardware_pte_x64.html#a13a24289f09d793af8d475059fad24d0">HardwarePteX64</a>
 , <a class="el" href="struct_hardware_pte_x86_pae.html#aa120d13880337c6b50692ff504dc4f06">HardwarePteX86Pae</a>
 , <a class="el" href="union_ia32_apic_base_msr.html#ae45487053a95b4557fa79026c75ed7b5">Ia32ApicBaseMsr</a>
@@ -182,8 +185,11 @@
 , <a class="el" href="union_ia32_vmx_ept_vpid_cap_msr.html#abbc5bba8596aed9350229ba64a88cf95">Ia32VmxEptVpidCapMsr</a>
 , <a class="el" href="union_ia32_vmx_misc_msr.html#a26cfce705b182c91c73c9353b0926cb6">Ia32VmxMiscMsr</a>
 , <a class="el" href="union_ia32_vmx_vmcs_enum_msr.html#a2b87c4df099a4cde58f83125794c8620">Ia32VmxVmcsEnumMsr</a>
+, <a class="el" href="union_ins_or_outs_inst_information.html#a71646b94a67c7def5f2a064469a3c1d4">InsOrOutsInstInformation</a>
 , <a class="el" href="struct_inv_ept_descriptor.html#a4af28eac0426c7466897f631edfc6115">InvEptDescriptor</a>
-, <a class="el" href="union_ldtr_or_tr_access_qualification.html#ad732dd718c972679fb8c54de70c99bf5">LdtrOrTrAccessQualification</a>
+, <a class="el" href="union_inv_ept_or_pcid_or_vpid_inst_information.html#a8f8a983de6dc618b93f2c22e04a1be6b">InvEptOrPcidOrVpidInstInformation</a>
+, <a class="el" href="union_io_inst_qualification.html#a0038fbef7f5a3d5967a3fd8be9b89811">IoInstQualification</a>
+, <a class="el" href="union_ldtr_or_tr_inst_information.html#ac0eecf91084d475911987441b946934f">LdtrOrTrInstInformation</a>
 , <a class="el" href="union_mov_cr_qualification.html#a4b63e80c95a63defc3e138e8b9bb60bf">MovCrQualification</a>
 , <a class="el" href="union_mov_dr_qualification.html#a5e4e0e6c38dbd078a45aa6febc0c9f86">MovDrQualification</a>
 , <a class="el" href="union_pdptr_register.html#aa06390d707448a9c0e3c1bccf95a6e00">PdptrRegister</a>
@@ -208,14 +214,16 @@
 , <a class="el" href="union_ept_pointer.html#aa5276a68049e5e75dc3dcda717dd2140">EptPointer</a>
 , <a class="el" href="union_ept_violation_qualification.html#af4e9d8aa8b437ae757d029a6b117083f">EptViolationQualification</a>
 , <a class="el" href="union_flag_register.html#a36d958692c5ba2498748a5c7946500e1">FlagRegister</a>
-, <a class="el" href="union_gdtr_or_idtr_access_qualification.html#a388f9ba34928345746f9c4a6227469dd">GdtrOrIdtrAccessQualification</a>
+, <a class="el" href="union_gdtr_or_idtr_inst_information.html#a6cce80499c46238bc02a468f60c9c61c">GdtrOrIdtrInstInformation</a>
 , <a class="el" href="union_ia32_apic_base_msr.html#a451fcb68006a525c1289455c15c43263">Ia32ApicBaseMsr</a>
 , <a class="el" href="union_ia32_feature_control_msr.html#a820b5cce6be9a7b39f642a461fd935f6">Ia32FeatureControlMsr</a>
 , <a class="el" href="union_ia32_vmx_basic_msr.html#a6479bbba7e4ef5bdd61d2f37e8fb1097">Ia32VmxBasicMsr</a>
 , <a class="el" href="union_ia32_vmx_ept_vpid_cap_msr.html#a4a8b0dffef05f132869d232c0ef0cedc">Ia32VmxEptVpidCapMsr</a>
 , <a class="el" href="union_ia32_vmx_misc_msr.html#af99a7294ce3654c7c873810fd2e41614">Ia32VmxMiscMsr</a>
 , <a class="el" href="union_ia32_vmx_vmcs_enum_msr.html#ade7bbb12c5a12a56aafbe32a3125a057">Ia32VmxVmcsEnumMsr</a>
-, <a class="el" href="union_ldtr_or_tr_access_qualification.html#ad644ce4ccd3996a2c275a989db01d379">LdtrOrTrAccessQualification</a>
+, <a class="el" href="union_ins_or_outs_inst_information.html#a5c5ca90f20cfb11c35b01aa44068a397">InsOrOutsInstInformation</a>
+, <a class="el" href="union_inv_ept_or_pcid_or_vpid_inst_information.html#adf1ccbf774be634ca21328837f9ae170">InvEptOrPcidOrVpidInstInformation</a>
+, <a class="el" href="union_ldtr_or_tr_inst_information.html#a37a9a664489c2bf5142cdfdf0785d61b">LdtrOrTrInstInformation</a>
 , <a class="el" href="union_mov_cr_qualification.html#a4e541937021ba1c9cd636670fc5a4ba1">MovCrQualification</a>
 , <a class="el" href="union_mov_dr_qualification.html#a210c1808ada03a01a3c9e3d395f869e2">MovDrQualification</a>
 , <a class="el" href="union_pdptr_register.html#a922384d0c3e9a6e5c275c6799492d8e2">PdptrRegister</a>
@@ -232,12 +240,14 @@
 , <a class="el" href="union_cr0.html#a13277fb9faff1b78e111e1799223bd00">Cr0</a>
 , <a class="el" href="union_cr4.html#a037d2c833ee4981fb8c2f7f11eaba86e">Cr4</a>
 , <a class="el" href="union_flag_register.html#a40e08babd96d7b6a1b82c09302f2a1c6">FlagRegister</a>
-, <a class="el" href="union_gdtr_or_idtr_access_qualification.html#a9db6b52d1bc7f897e179bdf981617395">GdtrOrIdtrAccessQualification</a>
+, <a class="el" href="union_gdtr_or_idtr_inst_information.html#a2fc80098e702986674bc3083f1d9c20f">GdtrOrIdtrInstInformation</a>
 , <a class="el" href="union_ia32_feature_control_msr.html#a6369c7ea5d21ee9f2db0790bd6eb7b1c">Ia32FeatureControlMsr</a>
 , <a class="el" href="union_ia32_vmx_basic_msr.html#a01ae343f9638da392289f2a8961ae43d">Ia32VmxBasicMsr</a>
 , <a class="el" href="union_ia32_vmx_ept_vpid_cap_msr.html#afa10b89ee84be525da556d0d3996a01d">Ia32VmxEptVpidCapMsr</a>
 , <a class="el" href="union_ia32_vmx_misc_msr.html#afa94f9f1e790fe7588bb994d37e17ad1">Ia32VmxMiscMsr</a>
 , <a class="el" href="union_ia32_vmx_vmcs_enum_msr.html#ad5620321431aab42852597caa00dbc71">Ia32VmxVmcsEnumMsr</a>
+, <a class="el" href="union_ins_or_outs_inst_information.html#a6df1dc9a0a114c8d6e3f5f29c74ba56e">InsOrOutsInstInformation</a>
+, <a class="el" href="union_inv_ept_or_pcid_or_vpid_inst_information.html#a6c3c0352e1c1952c584a7fb203b466bb">InvEptOrPcidOrVpidInstInformation</a>
 , <a class="el" href="union_mov_cr_qualification.html#aa306ffffed4e17edb443c24590c0b047">MovCrQualification</a>
 , <a class="el" href="union_mov_dr_qualification.html#a6803d1b849d730a53d9463e0896108e3">MovDrQualification</a>
 , <a class="el" href="union_pdptr_register.html#a4870070cb51500c8594ac7b0a1e10e80">PdptrRegister</a>
@@ -249,9 +259,9 @@
 <li>reserved4
 : <a class="el" href="union_cpu_features_ecx.html#a3af44ea896a6b0e6e7cda1709b45c3c4">CpuFeaturesEcx</a>
 , <a class="el" href="union_flag_register.html#ac4ec0b0f0da32c7787a86899c60b4c3d">FlagRegister</a>
-, <a class="el" href="union_gdtr_or_idtr_access_qualification.html#a5c0f951fa90b6fad2723dc52dad0b696">GdtrOrIdtrAccessQualification</a>
+, <a class="el" href="union_gdtr_or_idtr_inst_information.html#a81c426765763e896955be8044ca8c312">GdtrOrIdtrInstInformation</a>
 , <a class="el" href="union_ia32_vmx_ept_vpid_cap_msr.html#a27c2a5f8bb4b20e8418449880f0b4e8f">Ia32VmxEptVpidCapMsr</a>
-, <a class="el" href="union_ldtr_or_tr_access_qualification.html#a1c8b3d4717bd05cf86c5cf08302c1790">LdtrOrTrAccessQualification</a>
+, <a class="el" href="union_ldtr_or_tr_inst_information.html#aa21d6006fc02dd9061e83f297846b01f">LdtrOrTrInstInformation</a>
 , <a class="el" href="union_mov_dr_qualification.html#ae57db15c1db23fe7fc372509b54b043b">MovDrQualification</a>
 , <a class="el" href="union_vmx_processor_based_controls.html#aa24977dab0d127e3776deafc77b26971">VmxProcessorBasedControls</a>
 , <a class="el" href="union_vmx_secondary_processor_based_controls.html#ad0b1a2306f8b41ccf44261ee73f6dc61">VmxSecondaryProcessorBasedControls</a>

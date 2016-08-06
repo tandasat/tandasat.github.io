@@ -66,6 +66,7 @@
       <li><a href="globals_o.html#index_o"><span>o</span></a></li>
       <li><a href="globals_p.html#index_p"><span>p</span></a></li>
       <li><a href="globals_r.html#index_r"><span>r</span></a></li>
+      <li><a href="globals_s.html#index_s"><span>s</span></a></li>
       <li><a href="globals_u.html#index_u"><span>u</span></a></li>
       <li class="current"><a href="globals_v.html#index_v"><span>v</span></a></li>
     </ul>
@@ -112,8 +113,11 @@
 <li>VmmpHandleInvalidateInternalCaches()
 : <a class="el" href="vmm_8cpp.html#a25ec906723d7f199fc49a820cfcb1e8c">vmm.cpp</a>
 </li>
-<li>VmmpHandleInvalidateTLBEntry()
-: <a class="el" href="vmm_8cpp.html#ad2045ccea55ea3345f22cdb7e2a9a6ba">vmm.cpp</a>
+<li>VmmpHandleInvalidateTlbEntry()
+: <a class="el" href="vmm_8cpp.html#ac3352bb86948e4e5fb133fa85b5b33f4">vmm.cpp</a>
+</li>
+<li>VmmpHandleIoPort()
+: <a class="el" href="vmm_8cpp.html#a85adac5513578bb94315c24165093877">vmm.cpp</a>
 </li>
 <li>VmmpHandleLdtrOrTrAccess()
 : <a class="el" href="vmm_8cpp.html#aa5d99c76ea02860a68441b9f3a584178">vmm.cpp</a>
@@ -122,10 +126,10 @@
 : <a class="el" href="vmm_8cpp.html#a74ac85ceef216bc089f7f9ffbbb0f8f8">vmm.cpp</a>
 </li>
 <li>VmmpHandleMsrAccess()
-: <a class="el" href="vmm_8cpp.html#ae335e24227daf5739435eeb6789142a6">vmm.cpp</a>
+: <a class="el" href="vmm_8cpp.html#a4e2648ac690734fd8b65292b3345fef1">vmm.cpp</a>
 </li>
 <li>VmmpHandleMsrReadAccess()
-: <a class="el" href="vmm_8cpp.html#ad26cf18d5a6b8bed9388d7852543d1ed">vmm.cpp</a>
+: <a class="el" href="vmm_8cpp.html#a076579c5628cc2f15b0713f218cb6bed">vmm.cpp</a>
 </li>
 <li>VmmpHandleMsrWriteAccess()
 : <a class="el" href="vmm_8cpp.html#aca9ba59e93c665bb5b0b0cb82696ad23">vmm.cpp</a>
@@ -145,6 +149,9 @@
 <li>VmmpHandleVmCall()
 : <a class="el" href="vmm_8cpp.html#a0c35206d6bd25f8caa79ab139ff725a5">vmm.cpp</a>
 </li>
+<li>VmmpHandleVmCallTermination()
+: <a class="el" href="vmm_8cpp.html#a0eca5537d5026d727d1ce4a26cba0d3a">vmm.cpp</a>
+</li>
 <li>VmmpHandleVmExit()
 : <a class="el" href="vmm_8cpp.html#a86625e8afcfcba068b8785da1aef74e2">vmm.cpp</a>
 </li>
@@ -154,8 +161,20 @@
 <li>VmmpHandleXsetbv()
 : <a class="el" href="vmm_8cpp.html#aa7cfdb9078ff33633b0a2d00754b121f">vmm.cpp</a>
 </li>
+<li>VmmpIndicateSuccessfulVmcall()
+: <a class="el" href="vmm_8cpp.html#a47b1d102f689c637453404c6267e38ea">vmm.cpp</a>
+</li>
+<li>VmmpIoWrapper()
+: <a class="el" href="vmm_8cpp.html#a186ab17415351e83bc171d7abd6fbc0e">vmm.cpp</a>
+</li>
+<li>VmmpRestoreExtendedProcessorState()
+: <a class="el" href="vmm_8cpp.html#aef10a96ed81fb6a8a7093b0027e9fd85">vmm.cpp</a>
+</li>
+<li>VmmpSaveExtendedProcessorState()
+: <a class="el" href="vmm_8cpp.html#a5c39e8836d4f43baebe50962f10898b2">vmm.cpp</a>
+</li>
 <li>VmmpSelectRegister()
-: <a class="el" href="vmm_8cpp.html#a1c01a0073985999db6eaf5836fdaf56a">vmm.cpp</a>
+: <a class="el" href="vmm_8cpp.html#a48572e228638b1d562a032ef32e12aa4">vmm.cpp</a>
 </li>
 <li>VmmVmExitHandler()
 : <a class="el" href="vmm_8cpp.html#aa596f94adf844e3a4e19d664c07d9968">vmm.cpp</a>
@@ -166,23 +185,32 @@
 <li>VmpAdjustControlValue()
 : <a class="el" href="vm_8cpp.html#a1d7910baedbe80384aa42a80cfc2bde8">vm.cpp</a>
 </li>
+<li>VmpBuildIoBitmaps()
+: <a class="el" href="vm_8cpp.html#a1e1b90fd0d45dad2ceb051698fa50b99">vm.cpp</a>
+</li>
+<li>VmpBuildMsrBitmap()
+: <a class="el" href="vm_8cpp.html#a4a40ee6154c1ae46db91d43153405c2c">vm.cpp</a>
+</li>
 <li>VmpEnterVmxMode()
 : <a class="el" href="vm_8cpp.html#a19b93e0e23802f213312f3f9754863c2">vm.cpp</a>
 </li>
 <li>VmpFreeProcessorData()
-: <a class="el" href="vm_8cpp.html#a3389f68a439cd3ced2cbf00cc46edbe8">vm.cpp</a>
+: <a class="el" href="vm_8cpp.html#ae6ef522ccd1e92fe8a2651001460ee94">vm.cpp</a>
+</li>
+<li>VmpFreeSharedData()
+: <a class="el" href="vm_8cpp.html#a1672b78de3012206131655301838c601">vm.cpp</a>
 </li>
 <li>VmpGetSegmentAccessRight()
 : <a class="el" href="vm_8cpp.html#af5dda968ea7537094de28263a84961cf">vm.cpp</a>
 </li>
 <li>VmpGetSegmentBase()
-: <a class="el" href="vm_8cpp.html#a39275677a0ed9d57d33094f185643cf9">vm.cpp</a>
+: <a class="el" href="vm_8cpp.html#a9faac9089f76982b2df8ed66f2020b96">vm.cpp</a>
 </li>
 <li>VmpGetSegmentBaseByDescriptor()
 : <a class="el" href="vm_8cpp.html#a9f421dc12805a8c2acb0cd21d83cc6d3">vm.cpp</a>
 </li>
 <li>VmpGetSegmentDescriptor()
-: <a class="el" href="vm_8cpp.html#a4dcd03b22c1aa7eaaf5b9e9dae757992">vm.cpp</a>
+: <a class="el" href="vm_8cpp.html#ad80d277dd18241f8ab8ea22b3d8c745a">vm.cpp</a>
 </li>
 <li>VmpInitializeSharedData()
 : <a class="el" href="vm_8cpp.html#a59a15f91f00f1b51f12580d106d8fd03">vm.cpp</a>
@@ -209,7 +237,7 @@
 : <a class="el" href="vm_8cpp.html#acd66e87696d65f80aec224fabe8049d4">vm.cpp</a>
 </li>
 <li>VmpStartVm()
-: <a class="el" href="vm_8cpp.html#a25f9477e978f5c27ba8e77bc45793168">vm.cpp</a>
+: <a class="el" href="vm_8cpp.html#a6002bb2760453dcd4a980a233f5f532c">vm.cpp</a>
 </li>
 <li>VmpStopVm()
 : <a class="el" href="vm_8cpp.html#aa5770daf77db1c5e665b3db7fdec413e">vm.cpp</a>

@@ -99,7 +99,7 @@
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> perf_collector =</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keyword">reinterpret_cast&lt;</span><a class="code" href="class_perf_collector.html">PerfCollector</a>*<span class="keyword">&gt;</span>(ExAllocatePoolWithTag(</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;          NonPagedPoolNx, <span class="keyword">sizeof</span>(<a class="code" href="class_perf_collector.html">PerfCollector</a>), <a class="code" href="common_8h.html#a056e509f4f29f1ce6329cef9dfb25d2e">kHyperPlatformCommonPoolTag</a>));</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;          NonPagedPool, <span class="keyword">sizeof</span>(<a class="code" href="class_perf_collector.html">PerfCollector</a>), <a class="code" href="common_8h.html#a056e509f4f29f1ce6329cef9dfb25d2e">kHyperPlatformCommonPoolTag</a>));</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordflow">if</span> (!perf_collector) {</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">return</span> STATUS_MEMORY_NOT_ALLOCATED;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  }</div>
@@ -132,7 +132,7 @@
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span>* output_context) {</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  UNREFERENCED_PARAMETER(output_context);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <a class="code" href="log_8h.html#a2034bb37809fb8bee28fbed8f3d33b1c">HYPERPLATFORM_LOG_INFO</a>(<span class="stringliteral">&quot;%-45s,%-20s,%-20s&quot;</span>, <span class="stringliteral">&quot;FunctionName(Line)&quot;</span>,</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                          <span class="stringliteral">&quot;Execution Count&quot;</span>, <span class="stringliteral">&quot;Elapsed Time&quot;</span>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                         <span class="stringliteral">&quot;Execution Count&quot;</span>, <span class="stringliteral">&quot;Elapsed Time&quot;</span>);</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
 <div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="performance_8cpp.html#a7bb6b9729b3c406cdb2f06c19a466716">   95</a></span>&#160;_Use_decl_annotations_ <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="performance_8cpp.html#ad12d47642a694e21ea15a5e32aa60b9d">PerfpOutputRoutine</a>(</div>
@@ -140,7 +140,7 @@
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    ULONG64 total_elapsed_time, <span class="keywordtype">void</span>* output_context) {</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  UNREFERENCED_PARAMETER(output_context);</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <a class="code" href="log_8h.html#a2034bb37809fb8bee28fbed8f3d33b1c">HYPERPLATFORM_LOG_INFO</a>(<span class="stringliteral">&quot;%-45s,%20I64u,%20I64u,&quot;</span>, location_name,</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                          total_execution_count, total_elapsed_time);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                         total_execution_count, total_elapsed_time);</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
 <div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="performance_8cpp.html#ad985dd702c182e576f0650d9f0fed820">  103</a></span>&#160;_Use_decl_annotations_ <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="performance_8cpp.html#a88dfae5b0d9a56de84a66d27568610a7">PerfpFinalOutputRoutine</a>(</div>

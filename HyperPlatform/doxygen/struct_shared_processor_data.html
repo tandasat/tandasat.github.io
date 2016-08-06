@@ -61,14 +61,52 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:abeff29f9d27137bb1a96ce3ff8929b4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of processors sharing this data.  <a href="#abeff29f9d27137bb1a96ce3ff8929b4b">More...</a><br /></td></tr>
 <tr class="separator:abeff29f9d27137bb1a96ce3ff8929b4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbbb0f58666f5bb1bfbcb8516ab229f7"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_shared_processor_data.html#acbbb0f58666f5bb1bfbcb8516ab229f7">msr_bitmap</a></td></tr>
-<tr class="memdesc:acbbb0f58666f5bb1bfbcb8516ab229f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">A bitmap to suppress MSR I/O VM-exit.  <a href="#acbbb0f58666f5bb1bfbcb8516ab229f7">More...</a><br /></td></tr>
+<tr class="memdesc:acbbb0f58666f5bb1bfbcb8516ab229f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitmap to activate MSR I/O VM-exit.  <a href="#acbbb0f58666f5bb1bfbcb8516ab229f7">More...</a><br /></td></tr>
 <tr class="separator:acbbb0f58666f5bb1bfbcb8516ab229f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75b5896084a1a9e99a807a08aaeb1e9d"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_shared_processor_data.html#a75b5896084a1a9e99a807a08aaeb1e9d">io_bitmap_a</a></td></tr>
+<tr class="memdesc:a75b5896084a1a9e99a807a08aaeb1e9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitmap to activate IO VM-exit (~ 0x7FFF)  <a href="#a75b5896084a1a9e99a807a08aaeb1e9d">More...</a><br /></td></tr>
+<tr class="separator:a75b5896084a1a9e99a807a08aaeb1e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dc0eb2f3c969fbc895a277e3f983271"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_shared_processor_data.html#a1dc0eb2f3c969fbc895a277e3f983271">io_bitmap_b</a></td></tr>
+<tr class="memdesc:a1dc0eb2f3c969fbc895a277e3f983271"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitmap to activate IO VM-exit (~ 0xffff)  <a href="#a1dc0eb2f3c969fbc895a277e3f983271">More...</a><br /></td></tr>
+<tr class="separator:a1dc0eb2f3c969fbc895a277e3f983271"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents VMM related data shared across all processors. </p>
 
 <p>Definition at line <a class="el" href="vmm_8h_source.html#l00032">32</a> of file <a class="el" href="vmm_8h_source.html">vmm.h</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a75b5896084a1a9e99a807a08aaeb1e9d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* SharedProcessorData::io_bitmap_a</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Bitmap to activate IO VM-exit (~ 0x7FFF) </p>
+
+<p>Definition at line <a class="el" href="vmm_8h_source.html#l00035">35</a> of file <a class="el" href="vmm_8h_source.html">vmm.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1dc0eb2f3c969fbc895a277e3f983271"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* SharedProcessorData::io_bitmap_b</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Bitmap to activate IO VM-exit (~ 0xffff) </p>
+
+<p>Definition at line <a class="el" href="vmm_8h_source.html#l00036">36</a> of file <a class="el" href="vmm_8h_source.html">vmm.h</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="acbbb0f58666f5bb1bfbcb8516ab229f7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -79,7 +117,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>A bitmap to suppress MSR I/O VM-exit. </p>
+<p>Bitmap to activate MSR I/O VM-exit. </p>
 
 <p>Definition at line <a class="el" href="vmm_8h_source.html#l00034">34</a> of file <a class="el" href="vmm_8h_source.html">vmm.h</a>.</p>
 

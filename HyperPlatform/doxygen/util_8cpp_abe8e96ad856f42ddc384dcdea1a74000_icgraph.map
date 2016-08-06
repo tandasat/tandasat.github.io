@@ -1,7 +1,9 @@
 <map id="UtilReadMsr" name="UtilReadMsr">
-<area shape="rect" id="node2" href="$vm_8cpp.html#a59a15f91f00f1b51f12580d106d8fd03" title="VmpInitializeSharedData" alt="" coords="147,5,311,32"/>
-<area shape="rect" id="node5" href="$vm_8cpp.html#aacdcc58a4e7aa6cdbc73c4ad94392ef1" title="VmpEnterVmxMode" alt="" coords="159,56,298,83"/>
-<area shape="rect" id="node6" href="$vm_8cpp.html#acd66e87696d65f80aec224fabe8049d4" title="VmpSetupVmcs" alt="" coords="170,107,287,133"/>
-<area shape="rect" id="node3" href="$vm_8h.html#a147812b07dd4d8cf330b225c912280c7" title="Virtualizes all processors. " alt="" coords="359,5,469,32"/>
-<area shape="rect" id="node4" href="$driver_8cpp.html#a7475895c182f826798d611e99cb56494" title="DriverEntry" alt="" coords="517,5,603,32"/>
+<area shape="rect" id="node2" href="$vm_8cpp.html#a4a40ee6154c1ae46db91d43153405c2c" title="VmpBuildMsrBitmap" alt="" coords="147,31,288,57"/>
+<area shape="rect" id="node7" href="$vm_8cpp.html#aacdcc58a4e7aa6cdbc73c4ad94392ef1" title="VmpEnterVmxMode" alt="" coords="148,81,287,108"/>
+<area shape="rect" id="node8" href="$vm_8cpp.html#acd66e87696d65f80aec224fabe8049d4" title="VmpSetupVmcs" alt="" coords="159,132,276,159"/>
+<area shape="rect" id="node3" href="$vm_8cpp.html#a59a15f91f00f1b51f12580d106d8fd03" title="VmpInitializeSharedData" alt="" coords="336,31,500,57"/>
+<area shape="rect" id="node4" href="$vm_8h.html#a147812b07dd4d8cf330b225c912280c7" title="Virtualizes all processors. " alt="" coords="548,31,659,57"/>
+<area shape="rect" id="node5" href="$driver_8cpp.html#a7475895c182f826798d611e99cb56494" title="DriverEntry" alt="" coords="769,5,854,32"/>
+<area shape="rect" id="node6" href="$powercallback_8cpp.html#acfb8bd6fe4a3254de2760ddbfa0deb48" title="PowerCallbackpCallbackRoutine" alt="" coords="707,56,916,83"/>
 </map>
