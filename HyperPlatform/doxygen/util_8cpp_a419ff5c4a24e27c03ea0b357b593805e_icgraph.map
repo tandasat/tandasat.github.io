@@ -1,5 +1,5 @@
 <map id="UtilPfnFromPa" name="UtilPfnFromPa">
-<area shape="rect" id="node2" href="$ept_8h.html#a21bd47144c33a9bec105e47f7d14d696" title="Builds EPT, allocates pre&#45;allocated enties, initializes and returns EptData. " alt="" coords="192,5,303,32"/>
+<area shape="rect" id="node2" href="$ept_8h.html#a21bd47144c33a9bec105e47f7d14d696" title="Builds EPT, allocates pre&#45;allocated entires, initializes and returns EptData. " alt="" coords="192,5,303,32"/>
 <area shape="rect" id="node4" href="$ept_8cpp.html#ad73339ea0a5a806924f1e703990c4a71" title="EptpInitTableEntry" alt="" coords="183,56,311,83"/>
 <area shape="rect" id="node5" href="$util_8cpp.html#a01aa39e4193b223c65cd2c2ab89784e6" title="UtilpBuildPhysicalMemory\lRanges" alt="" coords="160,107,335,149"/>
 <area shape="rect" id="node9" href="$util_8cpp.html#abe14cd7a226fc0626a6b3a45d04cda59" title="UtilPfnFromVa" alt="" coords="194,173,301,200"/>

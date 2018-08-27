@@ -1,0 +1,5 @@
+<map id="VmmpDumpGuestState" name="VmmpDumpGuestState">
+<area shape="rect" id="node2" href="$vmm_8cpp.html#ac526648f9f586d88be838cb842203952" title="VmmpHandleTripleFault" alt="" coords="229,5,389,32"/>
+<area shape="rect" id="node3" href="$vmm_8cpp.html#aea7bf3dfc2e08f551c951186a118bfc5" title="VmmpHandleUnexpectedExit" alt="" coords="213,56,405,83"/>
+<area shape="rect" id="node4" href="$vmm_8cpp.html#a9881adab41d9ad1cee62dc834a240d6a" title="VmmpHandleMonitorTrap" alt="" coords="225,107,393,133"/>
+</map>

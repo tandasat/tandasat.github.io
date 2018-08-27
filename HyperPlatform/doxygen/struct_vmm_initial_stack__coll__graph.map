@@ -5,5 +5,5 @@
 <area shape="rect" id="node5" href="$struct_ept_data.html" title="EptData" alt="" coords="339,109,408,136"/>
 <area shape="rect" id="node6" href="$union_ept_common_entry.html" title="A structure made up of mutual fields across all EPT entry types. " alt="" coords="237,5,363,32"/>
 <area shape="rect" id="node7" href="$union_ept_pointer.html" title="See: Extended&#45;Page&#45;Table Pointer (EPTP) " alt="" coords="407,5,489,32"/>
-<area shape="rect" id="node8" href="$struct_gp_registers_x86.html" title="Reprsents a stack layout after PUSHAD. " alt="" coords="319,213,433,240"/>
+<area shape="rect" id="node8" href="$struct_gp_registers_x86.html" title="Represents a stack layout after PUSHAD. " alt="" coords="319,213,433,240"/>
 </map>

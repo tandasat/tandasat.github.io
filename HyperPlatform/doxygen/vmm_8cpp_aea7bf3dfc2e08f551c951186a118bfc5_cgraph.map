@@ -1,4 +1,6 @@
 <map id="VmmpHandleUnexpectedExit" name="VmmpHandleUnexpectedExit">
-<area shape="rect" id="node2" href="$vmm_8cpp.html#a558ceb9b748edc1d0d0a881d98ebc62b" title="VmmpDumpGuestSelectors" alt="" coords="245,5,429,32"/>
-<area shape="rect" id="node3" href="$util_8cpp.html#a1e0beb2532d7c8ffe16e6733aa96ee66" title="UtilVmRead" alt="" coords="477,5,568,32"/>
+<area shape="rect" id="node2" href="$vmm_8cpp.html#ac0037db0b8b155f900e7fc74e58e3ede" title="VmmpDumpGuestState" alt="" coords="245,56,405,83"/>
+<area shape="rect" id="node3" href="$util_8cpp.html#a1e0beb2532d7c8ffe16e6733aa96ee66" title="UtilVmRead" alt="" coords="614,56,705,83"/>
+<area shape="rect" id="node4" href="$util_8cpp.html#ae5f3bed18bc64deebf3330745f89cd63" title="UtilVmRead64" alt="" coords="453,5,559,32"/>
+<area shape="rect" id="node5" href="$util_8h.html#a131ab25ba676523d82ffa34bfba7f79d" title="Tests if value is in between min and max. " alt="" coords="607,5,712,32"/>
 </map>

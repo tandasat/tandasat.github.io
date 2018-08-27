@@ -1,0 +1,6 @@
+<map id="HotplugCallbackpCallbackRoutine" name="HotplugCallbackpCallbackRoutine">
+<area shape="rect" id="node2" href="$vm_8cpp.html#a7866b2eaf8a5e8ba1f239b0672d4561f" title="Virtualizes the specified processor. " alt="" coords="227,31,363,57"/>
+<area shape="rect" id="node3" href="$util_8cpp.html#a9b23bcb54e9a8e6f92c33ffd0db0f9db" title="UtilVmCall" alt="" coords="418,5,501,32"/>
+<area shape="rect" id="node5" href="$vm_8cpp.html#a6002bb2760453dcd4a980a233f5f532c" title="VmpStartVm" alt="" coords="411,56,508,83"/>
+<area shape="rect" id="node4" href="$asm_8h.html#a242cf7f553b78ec66615d191dd2dc429" title="Executes VMCALL with the given hypercall number and a context. " alt="" coords="556,5,655,32"/>
+</map>

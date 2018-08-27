@@ -1,0 +1,5 @@
+<map id="VmHotplugCallback" name="VmHotplugCallback">
+<area shape="rect" id="node2" href="$util_8cpp.html#a9b23bcb54e9a8e6f92c33ffd0db0f9db" title="UtilVmCall" alt="" coords="197,5,279,32"/>
+<area shape="rect" id="node4" href="$vm_8cpp.html#a6002bb2760453dcd4a980a233f5f532c" title="VmpStartVm" alt="" coords="189,56,287,83"/>
+<area shape="rect" id="node3" href="$asm_8h.html#a242cf7f553b78ec66615d191dd2dc429" title="Executes VMCALL with the given hypercall number and a context. " alt="" coords="335,5,433,32"/>
+</map>

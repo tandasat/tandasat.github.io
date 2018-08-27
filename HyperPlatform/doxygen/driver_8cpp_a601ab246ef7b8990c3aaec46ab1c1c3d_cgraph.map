@@ -1,12 +1,14 @@
 <map id="DriverpDriverUnload" name="DriverpDriverUnload">
-<area shape="rect" id="node2" href="$vm_8cpp.html#a5361f5cbf7b7d5206f7f34148f36c897" title="De&#45;virtualize all processors. " alt="" coords="219,56,329,83"/>
-<area shape="rect" id="node6" href="$powercallback_8cpp.html#ad47f9ab60172d5e1be6549ca5cd291ac" title="PowerCallbackTermination" alt="" coords="187,107,361,133"/>
-<area shape="rect" id="node7" href="$util_8cpp.html#a9eec12475580085fab5c154f681d59a5" title="Frees all resources allocated for the sake of the Util funcions. " alt="" coords="220,157,328,184"/>
-<area shape="rect" id="node8" href="$performance_8cpp.html#a42f65af6ec5774ee2ac51c05c9ec89e4" title="Ends performance monitoring and outputs its results. " alt="" coords="218,208,330,235"/>
-<area shape="rect" id="node10" href="$log_8cpp.html#a96551bc40e7b6f61102ca34d3ed01132" title="Terminates the log system. Should be called from a DriverUnload routine. " alt="" coords="219,259,329,285"/>
-<area shape="rect" id="node3" href="$util_8cpp.html#a498c779c12e188b0ff8d4037ab6591ce" title="UtilForEachProcessor" alt="" coords="415,5,565,32"/>
-<area shape="rect" id="node4" href="$vm_8cpp.html#a6f835c6ea88fb7cb78d0b6baffd128e8" title="VmpStopVm" alt="" coords="442,56,538,83"/>
-<area shape="rect" id="node5" href="$vm_8cpp.html#a0ff1bbb93039a4d6f8b8f085a262b502" title="VmpIsVmmInstalled" alt="" coords="421,107,559,133"/>
-<area shape="rect" id="node9" href="$class_perf_collector.html#a51b2e62b26270d56013049142d1230a3" title="Destructor; prints out accumerated performance results. " alt="" coords="409,208,571,235"/>
-<area shape="rect" id="node11" href="$log_8cpp.html#ae3c1e8192b36243fbfbccce15748e10a" title="LogpFinalizeBufferInfo" alt="" coords="416,259,564,285"/>
+<area shape="rect" id="node2" href="$vm_8cpp.html#a5361f5cbf7b7d5206f7f34148f36c897" title="De&#45;virtualize all processors. " alt="" coords="223,56,333,83"/>
+<area shape="rect" id="node6" href="$hotplug__callback_8cpp.html#ac18ce704a5c456bf882acb4750cda218" title="HotplugCallbackTermination" alt="" coords="187,107,369,133"/>
+<area shape="rect" id="node7" href="$power__callback_8cpp.html#ad47f9ab60172d5e1be6549ca5cd291ac" title="PowerCallbackTermination" alt="" coords="191,157,365,184"/>
+<area shape="rect" id="node8" href="$util_8cpp.html#a9eec12475580085fab5c154f681d59a5" title="Frees all resources allocated for the sake of the Util functions. " alt="" coords="224,208,332,235"/>
+<area shape="rect" id="node9" href="$performance_8cpp.html#a42f65af6ec5774ee2ac51c05c9ec89e4" title="Ends performance monitoring and outputs its results. " alt="" coords="222,259,334,285"/>
+<area shape="rect" id="node11" href="$global__object_8cpp.html#a8c4c7043da4aa0be8b6aa5641959354a" title="Calls all destructors. " alt="" coords="196,309,360,336"/>
+<area shape="rect" id="node12" href="$log_8cpp.html#a96551bc40e7b6f61102ca34d3ed01132" title="Terminates the log system. Should be called from a DriverUnload routine. " alt="" coords="223,360,333,387"/>
+<area shape="rect" id="node3" href="$util_8cpp.html#a498c779c12e188b0ff8d4037ab6591ce" title="UtilForEachProcessor" alt="" coords="437,5,587,32"/>
+<area shape="rect" id="node4" href="$vm_8cpp.html#a6f835c6ea88fb7cb78d0b6baffd128e8" title="VmpStopVm" alt="" coords="464,56,560,83"/>
+<area shape="rect" id="node5" href="$vm_8cpp.html#a20c3213f2f3ce0938180748936996505" title="VmpIsHyperPlatformInstalled" alt="" coords="417,107,607,133"/>
+<area shape="rect" id="node10" href="$class_perf_collector.html#a51b2e62b26270d56013049142d1230a3" title="Destructor; prints out accumulated performance results. " alt="" coords="431,259,593,285"/>
+<area shape="rect" id="node13" href="$log_8cpp.html#ae3c1e8192b36243fbfbccce15748e10a" title="LogpFinalizeBufferInfo" alt="" coords="438,360,586,387"/>
 </map>

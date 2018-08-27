@@ -1,5 +1,5 @@
 <map id="VmTermination" name="VmTermination">
-<area shape="rect" id="node2" href="$util_8cpp.html#a498c779c12e188b0ff8d4037ab6591ce" title="UtilForEachProcessor" alt="" coords="163,5,312,32"/>
-<area shape="rect" id="node3" href="$vm_8cpp.html#a6f835c6ea88fb7cb78d0b6baffd128e8" title="VmpStopVm" alt="" coords="189,56,285,83"/>
-<area shape="rect" id="node4" href="$vm_8cpp.html#a0ff1bbb93039a4d6f8b8f085a262b502" title="VmpIsVmmInstalled" alt="" coords="168,107,307,133"/>
+<area shape="rect" id="node2" href="$util_8cpp.html#a498c779c12e188b0ff8d4037ab6591ce" title="UtilForEachProcessor" alt="" coords="183,5,332,32"/>
+<area shape="rect" id="node3" href="$vm_8cpp.html#a6f835c6ea88fb7cb78d0b6baffd128e8" title="VmpStopVm" alt="" coords="209,56,305,83"/>
+<area shape="rect" id="node4" href="$vm_8cpp.html#a20c3213f2f3ce0938180748936996505" title="VmpIsHyperPlatformInstalled" alt="" coords="163,107,352,133"/>
 </map>

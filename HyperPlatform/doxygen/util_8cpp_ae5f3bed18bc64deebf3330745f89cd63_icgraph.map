@@ -1,4 +1,9 @@
 <map id="UtilVmRead64" name="UtilVmRead64">
-<area shape="rect" id="node2" href="$ept_8cpp.html#a6adf0f9672ecc2605b2e73a3dea55468" title="EptHandleEptViolation" alt="" coords="159,5,311,32"/>
-<area shape="rect" id="node3" href="$vmm_8cpp.html#a572fdc29d1553bb115a734013c9d8df3" title="VmmpHandleEptViolation" alt="" coords="359,5,529,32"/>
+<area shape="rect" id="node2" href="$ept_8cpp.html#a6adf0f9672ecc2605b2e73a3dea55468" title="EptHandleEptViolation" alt="" coords="166,5,318,32"/>
+<area shape="rect" id="node4" href="$vmm_8cpp.html#a4e2648ac690734fd8b65292b3345fef1" title="VmmpHandleMsrAccess" alt="" coords="159,56,325,83"/>
+<area shape="rect" id="node5" href="$vmm_8cpp.html#ac0037db0b8b155f900e7fc74e58e3ede" title="VmmpDumpGuestState" alt="" coords="162,107,322,133"/>
+<area shape="rect" id="node3" href="$vmm_8cpp.html#a572fdc29d1553bb115a734013c9d8df3" title="VmmpHandleEptViolation" alt="" coords="384,5,555,32"/>
+<area shape="rect" id="node6" href="$vmm_8cpp.html#ac526648f9f586d88be838cb842203952" title="VmmpHandleTripleFault" alt="" coords="389,56,549,83"/>
+<area shape="rect" id="node7" href="$vmm_8cpp.html#aea7bf3dfc2e08f551c951186a118bfc5" title="VmmpHandleUnexpectedExit" alt="" coords="373,107,565,133"/>
+<area shape="rect" id="node8" href="$vmm_8cpp.html#a9881adab41d9ad1cee62dc834a240d6a" title="VmmpHandleMonitorTrap" alt="" coords="385,157,553,184"/>
 </map>

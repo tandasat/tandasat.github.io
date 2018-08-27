@@ -1,5 +1,5 @@
 <map id="UtilGetPhysicalMemoryRanges" name="UtilGetPhysicalMemoryRanges">
-<area shape="rect" id="node2" href="$ept_8h.html#a21bd47144c33a9bec105e47f7d14d696" title="Builds EPT, allocates pre&#45;allocated enties, initializes and returns EptData. " alt="" coords="273,5,383,32"/>
+<area shape="rect" id="node2" href="$ept_8h.html#a21bd47144c33a9bec105e47f7d14d696" title="Builds EPT, allocates pre&#45;allocated entires, initializes and returns EptData. " alt="" coords="273,5,383,32"/>
 <area shape="rect" id="node4" href="$ept_8cpp.html#ac6d2a4ee32680eee9215d16e92f66751" title="EptpIsDeviceMemory" alt="" coords="256,56,400,83"/>
 <area shape="rect" id="node3" href="$vm_8cpp.html#ac7b4db617eca1589809b0992b56a1ce9" title="VmpInitializeVm" alt="" coords="448,5,564,32"/>
 </map>

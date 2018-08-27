@@ -1,5 +1,6 @@
 <map id="UtilVmWrite64" name="UtilVmWrite64">
-<area shape="rect" id="node2" href="$util_8cpp.html#a15f26bbfcd972225444b7a4736cb365c" title="UtilLoadPdptes" alt="" coords="160,56,271,83"/>
-<area shape="rect" id="node3" href="$vm_8cpp.html#acd66e87696d65f80aec224fabe8049d4" title="VmpSetupVmcs" alt="" coords="339,5,456,32"/>
-<area shape="rect" id="node4" href="$vmm_8cpp.html#a8fb9289d967c49d8900b22df4dc1911a" title="VmmpHandleCrAccess" alt="" coords="319,56,476,83"/>
+<area shape="rect" id="node2" href="$util_8cpp.html#a15f26bbfcd972225444b7a4736cb365c" title="UtilLoadPdptes" alt="" coords="188,56,299,83"/>
+<area shape="rect" id="node3" href="$vm_8cpp.html#acd66e87696d65f80aec224fabe8049d4" title="VmpSetupVmcs" alt="" coords="395,5,512,32"/>
+<area shape="rect" id="node5" href="$vmm_8cpp.html#a4e2648ac690734fd8b65292b3345fef1" title="VmmpHandleMsrAccess" alt="" coords="160,107,327,133"/>
+<area shape="rect" id="node4" href="$vmm_8cpp.html#a8fb9289d967c49d8900b22df4dc1911a" title="VmmpHandleCrAccess" alt="" coords="375,56,532,83"/>
 </map>

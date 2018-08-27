@@ -1,9 +1,10 @@
 <map id="HyperPlatform/common.h" name="HyperPlatform/common.h">
-<area shape="rect" id="node2" href="$driver_8cpp.html" title="Implements an entry point of the driver. " alt="" coords="5,80,168,107"/>
-<area shape="rect" id="node3" href="$ept_8cpp.html" title="Implements EPT functions. " alt="" coords="193,80,343,107"/>
-<area shape="rect" id="node4" href="$performance_8cpp.html" title="Implements performance measurement functions. " alt="" coords="367,80,571,107"/>
-<area shape="rect" id="node5" href="$powercallback_8cpp.html" title="Implements power callback functions. " alt="" coords="595,80,810,107"/>
-<area shape="rect" id="node6" href="$util_8cpp.html" title="Implements primitive utility functions. " alt="" coords="834,80,985,107"/>
-<area shape="rect" id="node7" href="$vm_8cpp.html" title="Implements VMM initialization functions. " alt="" coords="1009,80,1159,107"/>
-<area shape="rect" id="node8" href="$vmm_8cpp.html" title="Implements VMM functions. " alt="" coords="1183,80,1343,107"/>
+<area shape="rect" id="node2" href="$driver_8cpp.html" title="Implements an entry point of the driver. " alt="" coords="5,87,168,114"/>
+<area shape="rect" id="node3" href="$ept_8cpp.html" title="Implements EPT functions. " alt="" coords="193,87,343,114"/>
+<area shape="rect" id="node4" href="$hotplug__callback_8cpp.html" title="Implements hot&#45;plug callback functions. " alt="" coords="367,80,518,121"/>
+<area shape="rect" id="node5" href="$performance_8cpp.html" title="Implements performance measurement functions. " alt="" coords="542,87,746,114"/>
+<area shape="rect" id="node6" href="$power__callback_8cpp.html" title="Implements power callback functions. " alt="" coords="770,80,913,121"/>
+<area shape="rect" id="node7" href="$util_8cpp.html" title="Implements primitive utility functions. " alt="" coords="937,87,1087,114"/>
+<area shape="rect" id="node8" href="$vm_8cpp.html" title="Implements VMM initialization functions. " alt="" coords="1112,87,1261,114"/>
+<area shape="rect" id="node9" href="$vmm_8cpp.html" title="Implements VMM functions. " alt="" coords="1285,87,1445,114"/>
 </map>

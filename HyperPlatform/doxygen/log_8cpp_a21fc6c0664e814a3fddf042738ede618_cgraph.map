@@ -2,8 +2,8 @@
 <area shape="rect" id="node2" href="$log_8cpp.html#a9fd7eae9e7ff190ffd52818025456000" title="LogpIsLogFileEnabled" alt="" coords="134,5,283,32"/>
 <area shape="rect" id="node3" href="$log_8cpp.html#ad77b785034a6129f6796abe93093bb4f" title="LogpIsLogFileActivated" alt="" coords="131,56,286,83"/>
 <area shape="rect" id="node4" href="$log_8cpp.html#a6fdd0ce9f0b08ceeeb8932480a103262" title="LogpFlushLogBuffer" alt="" coords="141,107,277,133"/>
-<area shape="rect" id="node5" href="$log_8cpp.html#a1e6140a2b3e053b1708e69e91e711c5c" title="LogpWriteMessageToFile" alt="" coords="124,157,293,184"/>
-<area shape="rect" id="node6" href="$log_8cpp.html#acbc0ceac6a76b499646aa586dea8a0f2" title="LogpSetPrintedBit" alt="" coords="145,208,272,235"/>
-<area shape="rect" id="node7" href="$log_8cpp.html#a07bf2145ca33bec2222fba83fd02ef5a" title="LogpBufferMessage" alt="" coords="141,259,277,285"/>
-<area shape="rect" id="node8" href="$log_8cpp.html#a09335c5001a0986eefdeeafa4a8eefa3" title="LogpDoDbgPrint" alt="" coords="151,309,267,336"/>
+<area shape="rect" id="node5" href="$log_8cpp.html#a8ea476efb623ff9c3640c12793c868da" title="LogpWriteMessageToFile" alt="" coords="124,157,293,184"/>
+<area shape="rect" id="node6" href="$log_8cpp.html#a4ceb4a69dc7b639834323ee00b383e60" title="LogpSetPrintedBit" alt="" coords="145,208,272,235"/>
+<area shape="rect" id="node7" href="$log_8cpp.html#a98246c776c57da3a7b08e37a25753e60" title="LogpBufferMessage" alt="" coords="141,259,277,285"/>
+<area shape="rect" id="node8" href="$log_8cpp.html#ac677121a56cf744f45f2c8f4ce98558f" title="LogpDoDbgPrint" alt="" coords="151,309,267,336"/>
 </map>

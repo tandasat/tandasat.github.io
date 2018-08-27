@@ -1,4 +1,6 @@
 <map id="VmmpHandleInvalidateTlbEntry" name="VmmpHandleInvalidateTlbEntry">
 <area shape="rect" id="node2" href="$util_8cpp.html#a1e0beb2532d7c8ffe16e6733aa96ee66" title="UtilVmRead" alt="" coords="305,5,396,32"/>
-<area shape="rect" id="node3" href="$vmm_8cpp.html#a74d575262c9085bf28b9de246129c17e" title="VmmpAdjustGuestInstruction\lPointer" alt="" coords="255,57,447,98"/>
+<area shape="rect" id="node3" href="$util_8cpp.html#a8a281f3a732421ac67ce7d1d75c41bd8" title="UtilInvvpidIndividualAddress" alt="" coords="261,56,440,83"/>
+<area shape="rect" id="node5" href="$vmm_8cpp.html#a68531465023cfb82b60f3d598cf79ac9" title="VmmpAdjustGuestInstruction\lPointer" alt="" coords="255,107,447,149"/>
+<area shape="rect" id="node4" href="$asm_8h.html#a45cb4a01575f5343c2439dab882588c8" title="Invalidate translations based on VPID. " alt="" coords="495,56,581,83"/>
 </map>

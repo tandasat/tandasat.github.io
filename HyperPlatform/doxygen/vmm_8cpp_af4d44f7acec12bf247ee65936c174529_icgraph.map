@@ -1,0 +1,5 @@
+<map id="VmmpGetKernelCr3" name="VmmpGetKernelCr3">
+<area shape="rect" id="node2" href="$vmm_8cpp.html#a44b3407560964424607947c1c40dca48" title="VmmpHandleGdtrOrIdtrAccess" alt="" coords="192,5,393,32"/>
+<area shape="rect" id="node3" href="$vmm_8cpp.html#a17c50a69ea016af36beac73fdf58bad2" title="VmmpHandleLdtrOrTrAccess" alt="" coords="197,56,388,83"/>
+<area shape="rect" id="node4" href="$vmm_8cpp.html#a5351a01a517cd3d3989a3acf52049ea5" title="VmmpIoWrapper" alt="" coords="233,107,352,133"/>
+</map>

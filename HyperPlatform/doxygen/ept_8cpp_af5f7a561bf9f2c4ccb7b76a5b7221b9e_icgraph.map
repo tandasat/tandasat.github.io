@@ -1,5 +1,5 @@
 <map id="EptpDestructTables" name="EptpDestructTables">
-<area shape="rect" id="node2" href="$ept_8h.html#a21bd47144c33a9bec105e47f7d14d696" title="Builds EPT, allocates pre&#45;allocated enties, initializes and returns EptData. " alt="" coords="202,5,313,32"/>
+<area shape="rect" id="node2" href="$ept_8h.html#a21bd47144c33a9bec105e47f7d14d696" title="Builds EPT, allocates pre&#45;allocated entires, initializes and returns EptData. " alt="" coords="202,5,313,32"/>
 <area shape="rect" id="node4" href="$ept_8cpp.html#a6157e432b60f71f2e0cc47c0940a382b" title="EptTermination" alt="" coords="203,56,312,83"/>
 <area shape="rect" id="node6" href="$ept_8cpp.html#a305794d584c40ceaad4e4944ae606fbc" title="EptpDestructTables" alt="" coords="189,107,325,133"/>
 <area shape="rect" id="node3" href="$vm_8cpp.html#ac7b4db617eca1589809b0992b56a1ce9" title="VmpInitializeVm" alt="" coords="396,5,512,32"/>

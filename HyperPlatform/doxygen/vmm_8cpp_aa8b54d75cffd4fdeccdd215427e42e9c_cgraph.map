@@ -1,5 +1,7 @@
 <map id="VmmpHandleVmCall" name="VmmpHandleVmCall">
-<area shape="rect" id="node2" href="$vmm_8cpp.html#a0eca5537d5026d727d1ce4a26cba0d3a" title="VmmpHandleVmCallTermination" alt="" coords="196,5,405,32"/>
-<area shape="rect" id="node3" href="$vmm_8cpp.html#a47b1d102f689c637453404c6267e38ea" title="VmmpIndicateSuccessfulVmcall" alt="" coords="196,56,405,83"/>
-<area shape="rect" id="node4" href="$vmm_8cpp.html#a7889383e3e67c7507cde12bd68c0edd3" title="VmmpHandleVmx" alt="" coords="237,107,364,133"/>
+<area shape="rect" id="node2" href="$vmm_8cpp.html#ae5d14ab301f761d4cdb8e40fe7484ff7" title="VmmpGetGuestCpl" alt="" coords="233,5,368,32"/>
+<area shape="rect" id="node4" href="$vmm_8cpp.html#af187580b52eefa6d20a9a8514c4d72a3" title="VmmpHandleVmCallTermination" alt="" coords="196,56,405,83"/>
+<area shape="rect" id="node5" href="$vmm_8cpp.html#adc69acc11bd49b7345a6b6be4ef1b84e" title="VmmpIndicateUnsuccessful\lVmcall" alt="" coords="209,107,392,149"/>
+<area shape="rect" id="node6" href="$vmm_8cpp.html#a47b1d102f689c637453404c6267e38ea" title="VmmpIndicateSuccessfulVmcall" alt="" coords="196,173,405,200"/>
+<area shape="rect" id="node3" href="$util_8cpp.html#a1e0beb2532d7c8ffe16e6733aa96ee66" title="UtilVmRead" alt="" coords="453,5,544,32"/>
 </map>

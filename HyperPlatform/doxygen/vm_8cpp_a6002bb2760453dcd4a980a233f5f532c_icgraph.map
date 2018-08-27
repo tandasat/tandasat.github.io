@@ -1,5 +1,7 @@
 <map id="VmpStartVm" name="VmpStartVm">
-<area shape="rect" id="node2" href="$vm_8h.html#a147812b07dd4d8cf330b225c912280c7" title="Virtualizes all processors. " alt="" coords="151,31,261,57"/>
-<area shape="rect" id="node3" href="$driver_8cpp.html#a7475895c182f826798d611e99cb56494" title="DriverEntry" alt="" coords="371,5,457,32"/>
-<area shape="rect" id="node4" href="$powercallback_8cpp.html#acfb8bd6fe4a3254de2760ddbfa0deb48" title="PowerCallbackpCallbackRoutine" alt="" coords="309,56,519,83"/>
+<area shape="rect" id="node2" href="$vm_8h.html#a147812b07dd4d8cf330b225c912280c7" title="Virtualizes all processors. " alt="" coords="163,56,274,83"/>
+<area shape="rect" id="node5" href="$vm_8h.html#a7866b2eaf8a5e8ba1f239b0672d4561f" title="Virtualizes the specified processor. " alt="" coords="151,111,287,137"/>
+<area shape="rect" id="node3" href="$driver_8cpp.html#a7475895c182f826798d611e99cb56494" title="DriverEntry" alt="" coords="397,5,482,32"/>
+<area shape="rect" id="node4" href="$power__callback_8cpp.html#acfb8bd6fe4a3254de2760ddbfa0deb48" title="PowerCallbackpCallbackRoutine" alt="" coords="335,56,544,83"/>
+<area shape="rect" id="node6" href="$hotplug__callback_8cpp.html#a9486eacf4b767d963dc7d8f215f1a52f" title="HotplugCallbackpCallback\lRoutine" alt="" coords="353,107,526,149"/>
 </map>

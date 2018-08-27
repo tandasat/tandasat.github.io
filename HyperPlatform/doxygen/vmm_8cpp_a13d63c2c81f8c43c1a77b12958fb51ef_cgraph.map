@@ -1,0 +1,5 @@
+<map id="VmmpAdjustGuestInstructionPointer" name="VmmpAdjustGuestInstructionPointer">
+<area shape="rect" id="node2" href="$util_8cpp.html#a1e0beb2532d7c8ffe16e6733aa96ee66" title="UtilVmRead" alt="" coords="277,5,368,32"/>
+<area shape="rect" id="node3" href="$util_8cpp.html#a47aa45a9e2a816d5cf54a0173d4e786f" title="UtilVmWrite" alt="" coords="277,56,369,83"/>
+<area shape="rect" id="node4" href="$vmm_8cpp.html#a4e23d549816f0c9fcb2fae2463c34490" title="VmmpInjectInterruption" alt="" coords="245,107,400,133"/>
+</map>

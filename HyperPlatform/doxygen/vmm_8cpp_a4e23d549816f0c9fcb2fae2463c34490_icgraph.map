@@ -1,0 +1,6 @@
+<map id="VmmpInjectInterruption" name="VmmpInjectInterruption">
+<area shape="rect" id="node2" href="$vmm_8cpp.html#af1e29840082977c2dcaf68b21e5a6aa0" title="VmmpHandleException" alt="" coords="225,5,383,32"/>
+<area shape="rect" id="node3" href="$vmm_8cpp.html#ab6c87b60d5c701263b10ea747019e06b" title="VmmpHandleDrAccess" alt="" coords="225,56,383,83"/>
+<area shape="rect" id="node4" href="$vmm_8cpp.html#a13d63c2c81f8c43c1a77b12958fb51ef" title="VmmpAdjustGuestInstruction\lPointer" alt="" coords="208,107,400,149"/>
+<area shape="rect" id="node5" href="$vmm_8cpp.html#a7cc8869ddbe62fb08050509136f6d017" title="VmmpIndicateUnsuccessful\lVmcall" alt="" coords="213,173,395,214"/>
+</map>

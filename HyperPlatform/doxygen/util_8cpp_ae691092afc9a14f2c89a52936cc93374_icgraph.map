@@ -1,0 +1,6 @@
+<map id="UtilInveptGlobal" name="UtilInveptGlobal">
+<area shape="rect" id="node2" href="$ept_8cpp.html#a6adf0f9672ecc2605b2e73a3dea55468" title="EptHandleEptViolation" alt="" coords="164,5,316,32"/>
+<area shape="rect" id="node4" href="$vm_8cpp.html#aacdcc58a4e7aa6cdbc73c4ad94392ef1" title="VmpEnterVmxMode" alt="" coords="171,56,309,83"/>
+<area shape="rect" id="node5" href="$vmm_8cpp.html#a0b5194dc665a7b443962c76e096cf9b6" title="VmmVmExitHandler" alt="" coords="170,107,310,133"/>
+<area shape="rect" id="node3" href="$vmm_8cpp.html#a572fdc29d1553bb115a734013c9d8df3" title="VmmpHandleEptViolation" alt="" coords="364,5,535,32"/>
+</map>

@@ -1,6 +1,6 @@
 <map id="GuestContext" name="GuestContext">
 <area shape="rect" id="node2" href="$union_flag_register.html" title="See: SYSTEM FLAGS AND FIELDS IN THE EFLAGS REGISTER. " alt="" coords="5,303,100,329"/>
-<area shape="rect" id="node3" href="$struct_gp_registers_x86.html" title="Reprsents a stack layout after PUSHAD. " alt="" coords="91,213,206,240"/>
+<area shape="rect" id="node3" href="$struct_gp_registers_x86.html" title="Represents a stack layout after PUSHAD. " alt="" coords="91,213,206,240"/>
 <area shape="rect" id="node4" href="$struct_vmm_initial_stack.html" title="VmmInitialStack" alt="" coords="223,303,341,329"/>
 <area shape="rect" id="node5" href="$struct_processor_data.html" title="Represents VMM related data associated with each processor. " alt="" coords="231,213,339,240"/>
 <area shape="rect" id="node6" href="$struct_vm_control_structure.html" title="See: Virtual&#45;Machine Control Structures &amp; FORMAT OF THE VMCS REGION. " alt="" coords="50,109,186,136"/>

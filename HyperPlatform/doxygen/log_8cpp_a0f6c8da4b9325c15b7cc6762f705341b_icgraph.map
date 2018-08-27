@@ -1,5 +1,6 @@
 <map id="LogpDbgBreak" name="LogpDbgBreak">
 <area shape="rect" id="node2" href="$log_8cpp.html#a46e04740d9d122fb61c015c6bada7d4b" title="LogpFinalizeBufferInfo" alt="" coords="171,5,319,32"/>
-<area shape="rect" id="node3" href="$log_8cpp.html#a0c305c64e574b630e244c48da8a249c5" title="LogpFlushLogBuffer" alt="" coords="177,56,313,83"/>
-<area shape="rect" id="node4" href="$log_8cpp.html#a375b35946b4e55c621dc0cb145504b06" title="LogpWriteMessageToFile" alt="" coords="160,107,329,133"/>
+<area shape="rect" id="node3" href="$log_8cpp.html#a32286793a1218a5495025b952a0ebf01" title="LogpPrint" alt="" coords="206,56,283,83"/>
+<area shape="rect" id="node4" href="$log_8cpp.html#a0c305c64e574b630e244c48da8a249c5" title="LogpFlushLogBuffer" alt="" coords="177,107,313,133"/>
+<area shape="rect" id="node5" href="$log_8cpp.html#a375b35946b4e55c621dc0cb145504b06" title="LogpWriteMessageToFile" alt="" coords="160,157,329,184"/>
 </map>

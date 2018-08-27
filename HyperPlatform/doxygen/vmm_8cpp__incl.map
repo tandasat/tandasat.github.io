@@ -6,6 +6,6 @@
 <area shape="rect" id="node11" href="$log_8h.html" title="Declares interfaces to logging functions. " alt="" coords="263,80,313,107"/>
 <area shape="rect" id="node12" href="$util_8h.html" title="Declares interfaces to utility functions. " alt="" coords="548,80,599,107"/>
 <area shape="rect" id="node13" href="$performance_8h.html" title="Declares interfaces to performance measurement functions. " alt="" coords="337,80,441,107"/>
-<area shape="rect" id="node6" href="$ia32__type_8h.html" title="Ddefines constants and structures defined by the x86&#45;64 archtecture. " alt="" coords="459,155,549,181"/>
-<area shape="rect" id="node14" href="$perf__counter_8h.html" title="Declares interfaces to performance mesurement primitives. " alt="" coords="331,155,435,181"/>
+<area shape="rect" id="node6" href="$ia32__type_8h.html" title="Defines constants and structures defined by the x86&#45;64 architecture. " alt="" coords="459,155,549,181"/>
+<area shape="rect" id="node14" href="$perf__counter_8h.html" title="Declares interfaces to performance measurement primitives. " alt="" coords="331,155,435,181"/>
 </map>

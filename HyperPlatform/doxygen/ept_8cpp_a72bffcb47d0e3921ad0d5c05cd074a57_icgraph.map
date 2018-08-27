@@ -1,5 +1,5 @@
 <map id="EptpFreeUnusedPreAllocatedEntries" name="EptpFreeUnusedPreAllocatedEntries">
-<area shape="rect" id="node2" href="$ept_8h.html#a21bd47144c33a9bec105e47f7d14d696" title="Builds EPT, allocates pre&#45;allocated enties, initializes and returns EptData. " alt="" coords="247,5,357,32"/>
+<area shape="rect" id="node2" href="$ept_8h.html#a21bd47144c33a9bec105e47f7d14d696" title="Builds EPT, allocates pre&#45;allocated entires, initializes and returns EptData. " alt="" coords="247,5,357,32"/>
 <area shape="rect" id="node4" href="$ept_8cpp.html#a6157e432b60f71f2e0cc47c0940a382b" title="EptTermination" alt="" coords="247,56,357,83"/>
 <area shape="rect" id="node3" href="$vm_8cpp.html#ac7b4db617eca1589809b0992b56a1ce9" title="VmpInitializeVm" alt="" coords="428,5,544,32"/>
 <area shape="rect" id="node5" href="$vm_8cpp.html#ae6ef522ccd1e92fe8a2651001460ee94" title="VmpFreeProcessorData" alt="" coords="405,56,567,83"/>

@@ -1,0 +1,5 @@
+<map id="EptpGetMemoryType" name="EptpGetMemoryType">
+<area shape="rect" id="node2" href="$ept_8h.html#a21bd47144c33a9bec105e47f7d14d696" title="Builds EPT, allocates pre&#45;allocated entires, initializes and returns EptData. " alt="" coords="207,5,318,32"/>
+<area shape="rect" id="node4" href="$ept_8cpp.html#ad73339ea0a5a806924f1e703990c4a71" title="EptpInitTableEntry" alt="" coords="199,56,327,83"/>
+<area shape="rect" id="node3" href="$vm_8cpp.html#ac7b4db617eca1589809b0992b56a1ce9" title="VmpInitializeVm" alt="" coords="375,5,491,32"/>
+</map>
