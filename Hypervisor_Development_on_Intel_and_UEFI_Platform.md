@@ -143,6 +143,11 @@ The schedule of the next public class can be found at [the top page](README.md).
 Registration and Contacts
 --------------------------
 
-For registration and further inquires, please reach out to us
-- [via email](mailto:tanda.sat@gmail.com?cc=bruce.dang@gmail.com&subject=%20Hypervisor%20Development%20for%20the%20Intel%20and%20UEFI%20Platform), or
-- DM to [@standa_t](https://twitter.com/standa_t) on Twitter
+For registration, please [send us email](mailto:tanda.sat@gmail.com?cc=bruce.dang@gmail.com&subject=%20Hypervisor%20Development%20for%20the%20Intel%20and%20UEFI%20Platform) with the following information:
+- Full name of the participant
+- Email address for further communication
+- Whether payment is by a company/employer's budget, or personal
+
+We will reply back to you for confirmation and further logistics.
+
+You can also reach out to DM me ([@standa_t](https://twitter.com/standa_t)) on Twitter for further questions.
