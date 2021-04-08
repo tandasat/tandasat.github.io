@@ -134,6 +134,12 @@ The host system can also be a cloud-provided machine. If the host machine cannot
 The students are expected to complete the setup instructions that will be sent by the instructor before the class.
 
 
+Dates and Timezone
+-------------------
+
+The schedule of the next public class can be found at [the top page](README.md).
+
+
 Registration and Contacts
 --------------------------
 
