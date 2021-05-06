@@ -5,9 +5,14 @@ Training
 ---------
 
 Our next public [Hypervisor Development for Intel and UEFI Platform](Hypervisor_Development_on_Intel_and_UEFI_Platform.md) is:
-- Date: August 23 - 27 (5 days)
-- Time: 8am - 4pm (PDT, GMT-7)
-- Format: Remote, Synchronous
+- **Fully booked** (Thank you!)
+    - Date: August 23 - 27 (5 days)
+    - Time: 8am - 4pm (PDT, GMT-7)
+    - Format: Remote, Synchronous
+
+If you are interested in a future public class, please [email and tell us](mailto:tanda.sat@gmail.com?cc=bruce.dang@gmail.com&subject=%20Hypervisor%20Development%20for%20the%20Intel%20and%20UEFI%20Platform) your interest and preferred timezone. We will schedule the next class as we hear enough interest.
+
+We also offer a private class with minimum 6 people. Please contact us to discuss further details.
 
 
 About Us
