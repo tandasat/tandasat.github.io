@@ -55,18 +55,24 @@ Outlines
     - Background: system boot stages, boot time vs runtime, physical vs virtual mode
     - Lab: using a runtime driver for monitoring OS activities
     - Lab: handling boot to runtime, and physical to virtual transitions
+    - Lab: Tracing guest page faults via exception interception and event injection
 5. Extended Page Tables (EPT)
-    - Background: address translation, memory types, EPT programming interface, and VM-exit
+    - Background: address translation, EPT programming interface, EPT induced VM-exits, memory types and caches
     - Lab: translating virtual address to physical address by hands
     - Lab: interpreting memory type configuration
     - Lab: enabling EPT and observing VM-exits
-    - Lab: debugging EPT issues
+    - Lab: tracing guest executing with EPT
 6. Multi-processors Support
     - Background: protocols, processor activity-state, application processors startup, and unrestricted guest
     - Lab: virtualizing all processors
     - Lab: emulating INIT-SIPI-SIPI
     - Lab: starting application processors
-7. Features and Fun
+7. Control Register Shadowing
+    - Background: control register guest/host mask, read shadow, effects and emulation of control register changes
+    - Lab: "owning" control registers
+    - Lab: emulating MOV-to-CR0
+    - Lab: booting Ubuntu
+8. Features and Fun
     - Lab: each student will select one of the self-paced exercises and work on it
 
 Contents may change in a way that does not impact the learning objectives.
@@ -79,7 +85,7 @@ Hypervisors are becoming more important in the area of cloud computing and secur
 
 This course provides students the skills and knowledge to develop their hypervisors using Intel VT-x. It is designed in a way such that everything is built from scratch. This emphasis allows students to better understand the building blocks and nuances behind a hypervisor, as well as expanding knowledge acquired in the course by themselves. Topics include UEFI firmware programming, VT-x initialization, debugging, nested page tables, and more. Students will develop a hypervisor that implements a variety of exit handlers and offering useful demo features at the end.
 
-This is a hand-on oriented class. We believe that the students can learn and retain concepts and skills the best by working with those by themselves and not by being taught; hence offering the maximum value to the students. With this philosophy, the class is designed for lab activities as the primary learning opportunities, and lectures are to explain backgrounds for the lab activities. We will spend more than 60% of the time with hands on.
+This is a hand-on oriented class. We believe that the students can learn and retain concepts and skills the best by working with those by themselves and not by being taught; hence offering the maximum value to the students. With this philosophy, the class is designed for lab activities as the primary learning opportunities, and lectures are to explain backgrounds for the lab activities. We will spend more than 50% of the time with hands on.
 
 ![Hypervisor_Development_on_Intel_and_UEFI_Platform.png](/Images/Hypervisor_Development_on_Intel_and_UEFI_Platform.png)
 
@@ -134,20 +140,10 @@ The host system can also be a cloud-provided machine. If the host machine cannot
 The students are expected to complete the setup instructions that will be sent by the instructor before the class.
 
 
-Dates and Timezone
--------------------
-
-The schedule of the next public class can be found at [the top page](README.md).
-
-
 Registration and Contacts
 --------------------------
 
-For registration, please [send us email](mailto:tanda.sat@gmail.com?cc=bruce.dang@gmail.com&subject=%20Hypervisor%20Development%20for%20the%20Intel%20and%20UEFI%20Platform) with the following information:
-- Full name of the participant
-- Email address for further communication
-- Whether payment is by a company/employer's budget, or personal
-
-We will reply back to you for confirmation and further logistics.
-
-You can also reach out to DM me ([@standa_t](https://twitter.com/standa_t)) on Twitter for further questions.
+- For the dates and timezone of the next public class, see [the top page](README.md).
+    - Currently, no public class is scheduled.
+- For receiving updates on future public classes, subscribe [our mailing list](https://groups.io/g/system-programming-lab) by sending empty email to [system-programming-lab+subscribe@groups.io](mailto:system-programming-lab+subscribe@groups.io?subject=Subscribe%20Request).
+- For further inquiries, reach out to [@standa_t](https://twitter.com/standa_t) on Twitter or [send us email](mailto:tanda.sat@gmail.com?cc=bruce.dang@gmail.com&subject=Hypervisor%20Development%20for%20the%20Intel%20and%20UEFI%20Platform). We also offer a private class with minimum 8 people. Please contact us to discuss further details.

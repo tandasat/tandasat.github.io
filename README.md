@@ -10,9 +10,9 @@ Our next public [Hypervisor Development for Intel and UEFI Platform](Hypervisor_
     - Time: 8am - 4pm (PDT, GMT-7)
     - Format: Remote, Synchronous
 
-If you are interested in a future public class, please [email and tell us](mailto:tanda.sat@gmail.com?cc=bruce.dang@gmail.com&subject=%20Hypervisor%20Development%20for%20the%20Intel%20and%20UEFI%20Platform) your interest and preferred timezone. We will schedule the next class as we hear enough interest.
+If you are interested in a future public class, subscribe [our mailing list](https://groups.io/g/system-programming-lab) by sending empty email to [system-programming-lab+subscribe@groups.io](mailto:system-programming-lab+subscribe@groups.io?subject=Subscribe%20Request).
 
-We also offer a private class with minimum 6 people. Please contact us to discuss further details.
+For further inquiries, reach out to [@standa_t](https://twitter.com/standa_t) on Twitter or [send us email](mailto:tanda.sat@gmail.com?cc=bruce.dang@gmail.com&subject=Hypervisor%20Development%20for%20the%20Intel%20and%20UEFI%20Platform). We also offer a private class with minimum 8 people. Please contact us to discuss further details.
 
 
 About Us
