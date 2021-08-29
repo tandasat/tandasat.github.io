@@ -128,12 +128,12 @@ The students are expected to have the following hardware and software:
     - VMware Workstation Pro or VMware Workstation Player 16
 - For Linux users
     - Ubuntu 20.04
-    - VMware Workstation Pro or VMware Workstation Player 16
+    - VMware Workstation Pro 16
 - As VMs, Windows 10 x64 build 19042 and Ubuntu 20.04
 
-The other configuration, such as another Linux distro may be workable but unsupported. The macOS host or other hypervisors such as KVM, Hyper-V, or VirtualBox cannot be used.
+The newer versions of the operating systems and other software is supported. Another Linux distro may be workable but unsupported. The macOS host or other hypervisors such as KVM, Hyper-V, or VirtualBox cannot be used.
 
-The host system can also be a cloud-provided machine. If the host machine cannot be arranged locally, we recommend the student to look into:
+The host system can also be a cloud-provided machine if the host machine cannot be arranged locally. We recommend the student to look into:
 - Scaleway's bare metal server [GP-BM1-S](https://www.scaleway.com/en/pricing) for a Linux host, and
 - Amazon's bare metal server [m5zn.metal](https://aws.amazon.com/ec2/pricing/on-demand/) for a Windows host
 

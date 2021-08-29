@@ -5,7 +5,7 @@ Training
 ---------
 
 Our next public [Hypervisor Development for Intel and UEFI Platform](Hypervisor_Development_on_Intel_and_UEFI_Platform.md) is:
-- **Fully booked** (Thank you!)
+- **Fully booked and finished** (Thank you!)
     - Date: August 23 - 27 (5 days)
     - Time: 8am - 4pm (PDT, GMT-7)
     - Format: Remote, Synchronous
