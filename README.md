@@ -5,10 +5,11 @@ Training
 ---------
 
 Our next public [Hypervisor Development for Intel and UEFI Platform](Hypervisor_Development_on_Intel_and_UEFI_Platform.md) is:
-- **Fully booked and finished** (Thank you!)
-    - Date: August 23 - 27 (5 days)
-    - Time: 8am - 4pm (PDT, GMT-7)
-    - Format: Remote, Synchronous
+- Available at OffensiveCon 2022
+    - Date: January 31 - February 3 (4 days)
+    - Time: 9am - 5pm (CET, GMT+1)
+    - Format: In-person
+    - The course contents are specialized for the in-person format and the interest of the conference attendees, and may include CET, VT-d, silicon debug feature, as well as stealth hooking etc. See [the course description at the conference site](https://www.offensivecon.org/trainings/2022/hypervisor-development-for-security-analysis.html) for more details.
 
 If you are interested in a future public class, subscribe [our mailing list](https://groups.io/g/system-programming-lab) by sending empty email to [system-programming-lab+subscribe@groups.io](mailto:system-programming-lab+subscribe@groups.io?subject=Subscribe%20Request).
 
