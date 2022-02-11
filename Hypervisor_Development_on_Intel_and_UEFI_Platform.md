@@ -26,6 +26,8 @@ Required:
 - Familiarity with the x86_64 architecture, such as privilege levels, interrupts, page tables, and system registers.
 - System programming experience, such as kernel-module development.
 
+Recommended pre-class learning materials will be introduced about a month before the class.
+
 
 Learning Objectives
 --------------------
@@ -85,7 +87,7 @@ Hypervisors are becoming more important in the area of cloud computing and secur
 
 This course provides students the skills and knowledge to develop their hypervisors using Intel VT-x. It is designed in a way such that everything is built from scratch. This emphasis allows students to better understand the building blocks and nuances behind a hypervisor, as well as expanding knowledge acquired in the course by themselves. Topics include UEFI firmware programming, VT-x initialization, debugging, nested page tables, and more. Students will develop a hypervisor that implements a variety of exit handlers and offering useful demo features at the end.
 
-This is a hand-on oriented class. We believe that the students can learn and retain concepts and skills the best by working with those by themselves and not by being taught; hence offering the maximum value to the students. With this philosophy, the class is designed for lab activities as the primary learning opportunities, and lectures are to explain backgrounds for the lab activities. We will spend more than 50% of the time with hands on.
+This is a hand-on oriented class. We believe that the students can learn and retain concepts and skills the best by working with those by themselves and not by being taught; hence offering the maximum value to the students. With this philosophy, the class is designed for lab activities as the primary learning opportunities, and lectures are to explain backgrounds for the lab activities. We will spend about the half of the time with hands on.
 
 ![Hypervisor_Development_on_Intel_and_UEFI_Platform.png](/Images/Hypervisor_Development_on_Intel_and_UEFI_Platform.png)
 
@@ -94,14 +96,14 @@ Pricing
 
 | Type       | Individual | Company  |
 |------------|------------|----------|
-| Early Bird | 1800 USD   | 3600 USD |
-| Standard   | 2000 USD   | 4000 USD |
+| Early Bird | 2400 USD   | 3600 USD |
+| Standard   | 2700 USD   | 4000 USD |
 
 All prices are per seat.
 
 - Individual vs Company: We price the class differently depending on whether it is paid by an individual.
-- Early Bird: We offer 10% discount if registration is done by 45 days before the first day of the class.
-- Repeater: We may offer a discount if the student took one of our classes previously. During registration, tell us when the student took the class.
+- Early Bird: We offer 10% discount if registration is done by 25 days before the first day of the class.
+- Repeater: We may offer a discount if the student took one of our classes previously. During registration, tell us the previous class was taken.
 
 
 Format and Package
