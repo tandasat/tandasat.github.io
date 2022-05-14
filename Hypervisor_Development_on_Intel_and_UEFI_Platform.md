@@ -4,12 +4,13 @@ Hypervisor Development for the Intel and UEFI Platform
 Overview
 ---------
 
-This course provides students the skills and knowledge to develop their pass-though hypervisors as UEFI modules using Intel VT-x. This is a hands-on heavy class and will spend more than 60% of the time with excesses.
+This course provides students the skills and knowledge to develop their thin hypervisors as UEFI modules using Intel VT-x. This is a hands-on heavy class and will spend about half of the time with excesses.
+
 
 Audiences
 ----------
 
-This class is geared towards software developers and others with an interest in expanding knowledge of Intel VT-x, the x86_64 system architecture, and/or UEFI.
+This class is geared towards software developers, security researchers and others with an interest in expanding knowledge of Intel VT-x, the x86_64 system architecture, and/or UEFI.
 
 
 Levels
@@ -24,58 +25,62 @@ Prerequisites
 Required:
 - Strong experience in C (or C++) programming.
 - Familiarity with the x86_64 architecture, such as privilege levels, interrupts, page tables, and system registers.
-- System programming experience, such as kernel-module development.
+- System programming experience, such as kernel-module development, is a plus but not a requirement.
 
-Recommended pre-class learning materials will be introduced about a month before the class.
+Recommended pre-class learning materials will be introduced about prior to the class.
 
 
 Learning Objectives
 --------------------
 
-At the end of the class, students will gain sufficient knowledge and skills to start developing their pass-through UEFI-based hypervisors. Knowledge-wise, this includes but not limited to the understanding of:
+At the end of the class, students will gain enough knowledge and skills to start developing their pass-through UEFI-based hypervisors. Knowledge-wise, this includes but not limited to the understanding of:
+
 - Key concepts of VT-x and programming interfaces
+- General UEFI-module development workflow and tools
 - Execution environment changes during OS boot and their influence on the hypervisor design
 - Subtle yet critical technologies such as memory types and caches
 - Application Processors (APs) start up, and emulation by a hypervisor
-- "Owning" control registers
-- UEFI-module development workflow and tools
-- The pros and cons of UEFI-based vs OS kernel module-based hypervisors
+- "Owning" control registers and challenges with it
+- Various application of hypervisors (for adding security, reverse engineering and fuzzing, for example)
 
 
 Outlines
 ---------
 
 1. UEFI and Hypervisors
-    - Background: why UEFI for hypervisors, differences from OS kernel drivers, EDK2
+    - Lectures: why UEFI for hypervisors, differences from OS kernel drivers, EDK2, introduction to high-level design options
     - Lab: setting up the lab environment
     - Lab: debugging firmware modules and logging output
+
 2. Basics of VT-x
-    - Background: processor modes, VMCS, "host" vs "guest", VM-exit and VM-entry
+    - Lectures: processor modes, VMCS, "host" vs "guest", VM-exit, VM-entry, and snapshot and "guest" for fuzzing hypervisor
     - Lab: configuring host and guest
-    - Lab: starting host and guest, monitoring system activities
+    - Lab: starting host and guest, monitoring CPUID execution
+
 3. OS Boot
-    - Background: system boot stages, boot time vs runtime, physical vs virtual mode
-    - Lab: using a runtime driver for monitoring OS activities
-    - Lab: handling boot to runtime, and physical to virtual transitions
-    - Lab: Tracing guest page faults via exception interception and event injection
-5. Extended Page Tables (EPT)
-    - Background: address translation, EPT programming interface, EPT induced VM-exits, memory types and caches
-    - Lab: translating virtual address to physical address by hands
-    - Lab: interpreting memory type configuration
-    - Lab: enabling EPT and observing VM-exits
-    - Lab: tracing guest executing with EPT
-6. Multi-processors Support
-    - Background: protocols, processor activity-state, application processors startup, and unrestricted guest
+    - Lectures: system boot phases, boot time vs runtime, physical vs virtual mode, and runtime drivers for monitoring OS activities
+    - Lab: controlling VM-exits with MSR bitmaps
+    - Lab: booting Windows by building host page tables, IDT and GDT
+    - Lab: tracing guest page faults with exception interception and event injection
+
+4. Extended Page Tables (EPT)
+    - Lectures: x64 address translation, EPT setup and activation, EPT induced VM-exits, memory types, caches, VPID, EPT-based hooking, VT-d (DMA remapping), and memory management for fuzzing hypervisor
+    - Lab: reviewing address translation mechanisms with and without EPT
+    - Lab: enabling EPT and tracing guest execution
+    - Lab: emulating memory types
+
+5. Multi-processors Support
+    - Lectures: multi-processor protocol, processor activity state, application processors startup, unrestricted guest and Hypervisor Top Level Functional Specification (TLFS)
     - Lab: virtualizing all processors
-    - Lab: emulating INIT-SIPI-SIPI
-    - Lab: starting application processors
-7. Control Register Shadowing
-    - Background: control register guest/host mask, read shadow, effects and emulation of control register changes
+    - Lab: booting multi-processor Windows by emulating INIT-SIPI-SIPI
+
+6. Control Register Shadowing
+    - Lectures: control register guest/host mask, read shadow, effects, and emulation of control register changes
     - Lab: "owning" control registers
-    - Lab: emulating MOV-to-CR0
-    - Lab: booting Ubuntu
-8. Features and Fun
-    - Lab: each student will select one of the self-paced exercises and work on it
+    - Lab: booting Ubuntu by properly emulating MOV-to-CRx
+
+7. References
+    - Hardware debuggers (DCI), single board computers, and relevant open source projects
 
 Contents may change in a way that does not impact the learning objectives.
 
@@ -83,13 +88,20 @@ Contents may change in a way that does not impact the learning objectives.
 Details
 --------
 
-Hypervisors are becoming more important in the area of cloud computing and security. There is an increasing interest in using hypervisors in the area of security engineering and analysis. How can hypervisors help protect against tampering of the guest OS or other software? How can it be used in malware analysis? What about cheats and anti-cheats in the games industry?
+A hypervisor is a critical component in both security and cloud computing. There is also an increasing interest in applying virtualization technologies in the area of security engineering and analysis. How can hypervisors be used to secure the existing systems? How to write custom hypervisors to perform reverse engineering and fuzzing more efficiently?
 
-This course provides students the skills and knowledge to develop their hypervisors using Intel VT-x. It is designed in a way such that everything is built from scratch. This emphasis allows students to better understand the building blocks and nuances behind a hypervisor, as well as expanding knowledge acquired in the course by themselves. Topics include UEFI firmware programming, VT-x initialization, debugging, nested page tables, and more. Students will develop a hypervisor that implements a variety of exit handlers and offering useful demo features at the end.
+In this class, the students will learn the foundations to answer those questions, that is, the basic skills and knowledge to develop hypervisors. The class is designed in a way such that everything is built from scratch and optimized for learning. This allows students to better understand the building blocks and expand the knowledge acquired in the course by themselves afterward. Topics include UEFI architecture and programming, VT-x/EPT configuration, debugging tools, comparison of hypervisor designs, application of the technologies, and more.
 
-This is a hand-on oriented class. We believe that the students can learn and retain concepts and skills the best by working with those by themselves and not by being taught; hence offering the maximum value to the students. With this philosophy, the class is designed for lab activities as the primary learning opportunities, and lectures are to explain backgrounds for the lab activities. We will spend about the half of the time with hands on.
+This is a hands-on-oriented class. We believe that the students can learn and retain concepts and skills the best by working with those concepts by themselves and not by being taught; hence gaining the greatest value. With this philosophy, the class is designed for lab activities as the primary learning opportunities, and lectures are to explain backgrounds and the motivations for those. We will spend about half of the time for hands-on.
+
+At the beginning of the class, students will receive skeleton implementations of our hypervisors and incrementally update them through the exercises with a clear understanding of motivations and design choices.
+
+At the end of the class, students will also receive a full version of our hypervisor. This includes implementation of advanced concepts, such as stealth-hooking hypercall, use of VT-d, guest hardening (like HyperGuard if you are familiar with it), host hardening through CET, SMAP, UMIP, etc, handling of uncommon events like microcode update, NMI, and so on. This version can be used to complement your understanding of advanced topics and as a reference to explore more topics as you wish.
+
+Additionally, a proof-of-concept implementation of taking and reverting to snapshots for fast full-system fuzzing will be shared as well.
 
 ![Hypervisor_Development_on_Intel_and_UEFI_Platform.png](/Images/Hypervisor_Development_on_Intel_and_UEFI_Platform.png)
+
 
 Pricing
 --------
@@ -101,9 +113,9 @@ Pricing
 
 All prices are per seat.
 
-- Individual vs Company: We price the class differently depending on whether it is paid by an individual.
+- Individual vs Company: We price the class differently depending on whether it is paid by your employer or yourself.
 - Early Bird: We offer 10% discount if registration is done by 25 days before the first day of the class.
-- Repeater: We may offer a discount if the student took one of our classes previously. During registration, tell us the previous class was taken.
+- Repeater: We may offer a discount if the student took one of our classes previously. Tell us when you took a previous class for receiving a coupon code before registration.
 
 
 Format and Package
@@ -115,7 +127,7 @@ Format:
 
 Package:
 - Material - Training materials (slides, sample code etc).
-- Support - 3 weeks of asynchronous consultation on Slack and email from the last day of the class.
+- Support - 3 weeks of asynchronous consultation on Slack and email from the last day of the class. Rights to request the latest slides and code for free.
 
 
 Hardware and Software Requirements
@@ -125,19 +137,19 @@ The students are expected to have the following hardware and software:
 
 - The host machine with the Intel processor, SSD, and 8GB+ RAM
 - For Windows users
-    - Windows 10 x64 build 19042 (a.k.a. 20H2) without Virtualization-base Security (VBS) enabled
+    - Windows 10 x64 build 19044 (a.k.a. 21H2) without Virtualization-base Security (VBS) enabled
     - Ubuntu 20.04 on WSL version 1
     - VMware Workstation Pro or VMware Workstation Player 16
 - For Linux users
     - Ubuntu 20.04
     - VMware Workstation Pro 16
-- As VMs, Windows 10 x64 build 19042 and Ubuntu 20.04
+- As VMs, Windows 10 x64 build 19044 and Ubuntu 20.04
 
-The newer versions of the operating systems and other software is supported. Another Linux distro may be workable but unsupported. The macOS host or other hypervisors such as KVM, Hyper-V, or VirtualBox cannot be used.
+The newer versions of the operating systems and other software are supported. Another Linux distro may be workable but unsupported. The macOS host or other hypervisors such as KVM, Hyper-V, or VirtualBox cannot be used.
 
-The host system can also be a cloud-provided machine if the host machine cannot be arranged locally. We recommend the student to look into:
-- Scaleway's bare metal server [GP-BM1-S](https://www.scaleway.com/en/pricing) for a Linux host, and
-- Amazon's bare metal server [m5zn.metal](https://aws.amazon.com/ec2/pricing/on-demand/) for a Windows host
+The host system can also be a cloud-provided machine if the host machine cannot be arranged locally. Those are confirmed to be usable:
+- Scaleway's Intel [Elastic Metal Servers](https://www.scaleway.com/en/pricing/#elastic-metal) for a Linux host, and
+- Amazon's Intel bare metal server [m5zn.metal](https://aws.amazon.com/ec2/pricing/on-demand/) for a Windows host
 
 The students are expected to complete the setup instructions that will be sent by the instructor before the class.
 
@@ -146,6 +158,5 @@ Registration and Contacts
 --------------------------
 
 - For the dates and timezone of the next public class, see [the top page](README.md).
-    - Currently, no public class is scheduled.
 - For receiving updates on future public classes, subscribe [our mailing list](https://groups.io/g/system-programming-lab) by sending empty email to [system-programming-lab+subscribe@groups.io](mailto:system-programming-lab+subscribe@groups.io?subject=Subscribe%20Request).
 - For further inquiries, reach out to [@standa_t](https://twitter.com/standa_t) on Twitter or [send us email](mailto:tanda.sat@gmail.com?cc=bruce.dang@gmail.com&subject=Hypervisor%20Development%20for%20the%20Intel%20and%20UEFI%20Platform). We also offer a private class with minimum 8 people. Please contact us to discuss further details.
