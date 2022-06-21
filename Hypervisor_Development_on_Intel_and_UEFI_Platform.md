@@ -116,6 +116,7 @@ All prices are per seat.
 - Individual vs Company: We price the class differently depending on whether it is paid by your employer or yourself.
 - Early Bird: We offer 10% discount if registration is done by 25 days before the first day of the class.
 - Repeater: We may offer a discount if the student took one of our classes previously. Tell us when you took a previous class for receiving a coupon code before registration.
+- Students: We may offer 50% discount for a full time students. Contact us before registration and payment.
 
 
 Format and Package
