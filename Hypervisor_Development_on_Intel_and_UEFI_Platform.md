@@ -138,14 +138,19 @@ The students are expected to have the following hardware and software:
 - The host machine with the Intel processor, SSD, and 8GB+ RAM
 - For Windows users
     - Windows 10 x64 build 19044 (a.k.a. 21H2) without Virtualization-base Security (VBS) enabled
-    - Ubuntu 20.04 on WSL version 1
+    - Ubuntu 20.04+ on WSL version 1
     - VMware Workstation Pro or VMware Workstation Player 16
 - For Linux users
-    - Ubuntu 20.04
+    - Ubuntu 20.04+
     - VMware Workstation Pro 16
-- As VMs, Windows 10 x64 build 19044 and Ubuntu 20.04
+- For macOS Users
+    - macOS 11+
+    - VMWare Fusion Pro 12 or VMWare Fusion Player 12
+    - Docker Desktop
+    - Homebrew
+- As VMs, Windows 10 x64 build 19044 and Ubuntu 22.04
 
-The newer versions of the operating systems and other software are supported. Another Linux distro may be workable but unsupported. The macOS host or other hypervisors such as KVM, Hyper-V, or VirtualBox cannot be used.
+The newer versions of the operating systems and other software are supported. Another Linux distro may be workable but unsupported. The other hypervisors such as KVM, Hyper-V, or VirtualBox cannot be used.
 
 The host system can also be a cloud-provided machine if the host machine cannot be arranged locally. Those are confirmed to be usable:
 - Scaleway's Intel [Elastic Metal Servers](https://www.scaleway.com/en/pricing/#elastic-metal) for a Linux host, and
