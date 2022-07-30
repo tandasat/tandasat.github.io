@@ -5,12 +5,6 @@ Training
 ---------
 
 Our next public [Hypervisor Development for Intel and UEFI Platform](Hypervisor_Development_on_Intel_and_UEFI_Platform.md) is:
-- available for
-    - Date: August 22 - 25 (4 days)
-    - Time: 8am - 4pm (PDT, GMT-7)
-    - Format: Remote
-    - **Register at [Regfox](https://systemprogramminglab.regfox.com/hypervisor-development-for-the-intel-and-uefi-platform-aug-22-25)**
-
 - available at Hexacon 2022 for
     - Date: October 10 - 13 (4 days)
     - Time: TBD (CET, GMT+1)
