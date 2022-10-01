@@ -54,6 +54,7 @@ Outlines
 
 2. Basics of VT-x
     - Lectures: processor modes, VMCS, "host" vs "guest", VM-exit, VM-entry, and snapshot and "guest" for fuzzing hypervisor
+    - Lab: setting up Bochs and debugging VMX instruction issues
     - Lab: configuring host and guest
     - Lab: starting host and guest, monitoring CPUID execution
 
@@ -64,10 +65,9 @@ Outlines
     - Lab: tracing guest page faults with exception interception and event injection
 
 4. Extended Page Tables (EPT)
-    - Lectures: x64 address translation, EPT setup and activation, EPT induced VM-exits, memory types, caches, VPID, EPT-based hooking, VT-d (DMA remapping), and memory management for fuzzing hypervisor
+    - Lectures: x64 address translation, EPT setup and activation, EPT induced VM-exits, memory types, caches, VPID, EPT-based hooking, VT-d (DMA remapping), and snapshot-based fuzzing hypervisor design
     - Lab: reviewing address translation mechanisms with and without EPT
     - Lab: enabling EPT and tracing guest execution
-    - Lab: emulating memory types
 
 5. Multi-processors Support
     - Lectures: multi-processor protocol, processor activity state, application processors startup, unrestricted guest and Hypervisor Top Level Functional Specification (TLFS)
@@ -79,7 +79,7 @@ Outlines
     - Lab: "owning" control registers
     - Lab: booting Ubuntu by properly emulating MOV-to-CRx
 
-7. References
+7. Demos and References
     - Hardware debuggers (DCI), single board computers, and relevant open source projects
 
 Contents may change in a way that does not impact the learning objectives.
@@ -140,18 +140,17 @@ The students are expected to have the following hardware and software:
 - For Windows users
     - Windows 10 x64 build 19044 (a.k.a. 21H2) without Virtualization-base Security (VBS) enabled
     - Ubuntu 20.04+ on WSL version 1
-    - VMware Workstation Pro or VMware Workstation Player 16
+    - VMware Workstation Pro 16 (Recommended) or VMware Workstation Player 16
 - For Linux users
     - Ubuntu 20.04+
     - VMware Workstation Pro 16
 - For macOS Users
     - macOS 11+
     - VMWare Fusion Pro 12 or VMWare Fusion Player 12
-    - Docker Desktop
-    - Homebrew
+    - Homebrew and git
 - As VMs, Windows 10 x64 build 19044 and Ubuntu 22.04
 
-The newer versions of the operating systems and other software are supported. Another Linux distro may be workable but unsupported. The other hypervisors such as KVM, Hyper-V, or VirtualBox cannot be used.
+The newer versions of the operating systems and other software are supported. Another Linux distro may be workable but unsupported. Other hypervisors such as KVM, Hyper-V, or VirtualBox cannot be used.
 
 The host system can also be a cloud-provided machine if the host machine cannot be arranged locally. Those are confirmed to be usable:
 - Scaleway's Intel [Elastic Metal Servers](https://www.scaleway.com/en/pricing/#elastic-metal) for a Linux host, and
@@ -165,4 +164,4 @@ Registration and Contacts
 
 - For the dates and timezone of the next public class, see [the top page](README.md).
 - For receiving updates on future public classes, subscribe [our mailing list](https://groups.io/g/system-programming-lab) by sending empty email to [system-programming-lab+subscribe@groups.io](mailto:system-programming-lab+subscribe@groups.io?subject=Subscribe%20Request).
-- For further inquiries, reach out to [@standa_t](https://twitter.com/standa_t) on Twitter or [send us email](mailto:tanda.sat@gmail.com?cc=bruce.dang@gmail.com&subject=Hypervisor%20Development%20for%20the%20Intel%20and%20UEFI%20Platform). We also offer a private class with minimum 8 people. Please contact us to discuss further details.
+- For further inquiries, reach out to [@standa_t](https://twitter.com/standa_t) on Twitter or [send us email](mailto:tanda.sat@gmail.com?cc=bruce.dang@gmail.com&subject=Hypervisor%20Development%20for%20the%20Intel%20and%20UEFI%20Platform). We also offer a private class with minimum 8 people in English and Japanese. Please contact us to discuss further details.

@@ -5,11 +5,7 @@ Training
 ---------
 
 Our next public [Hypervisor Development for Intel and UEFI Platform](Hypervisor_Development_on_Intel_and_UEFI_Platform.md) is:
-- available at Hexacon 2022 for
-    - Date: October 10 - 13 (4 days)
-    - Time: TBD (CET, GMT+1)
-    - Format: In-person (Paris, France)
-    - **Register at [Hexacon website](https://www.hexacon.fr/trainer/tanda/)**
+- NOT SCHEDULED
 
 If you are interested in a future public class, subscribe [our mailing list](https://groups.io/g/system-programming-lab) by sending empty email to [system-programming-lab+subscribe@groups.io](mailto:system-programming-lab+subscribe@groups.io?subject=Subscribe%20Request).
 
@@ -19,8 +15,6 @@ For further inquiries, reach out to [@standa_t](https://twitter.com/standa_t) on
 About Us
 ---------
 
-We offer system programming training classes by the two trainers.
+We offer system programming training classes.
 
 Satoshi Tanda is a system software engineer and a security researcher with more than a decade of experience. He devotes himself to developing and reverse engineering system software. For example, he authored [multiple](https://github.com/tandasat/HyperPlatform) [open source](https://github.com/tandasat/SimpleSvm) [hypervisors](https://github.com/tandasat/MiniVisorPkg) [for researchers](https://github.com/tandasat/MiniVisorPkg), and discovered an [SMM vulnerability](https://github.com/tandasat/SmmExploit).
-
-Bruce Dang is the co-instructor of the classes. At this time, he is unavailable for synchronous classes.
