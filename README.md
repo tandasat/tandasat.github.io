@@ -4,8 +4,12 @@ System Programming Lab
 Training
 ---------
 
-Our next public [Hypervisor Development for Intel and UEFI Platform](Hypervisor_Development_on_Intel_and_UEFI_Platform.md) is:
-- NOT SCHEDULED
+Our next public [Hypervisor Development Class](Hypervisor_Development_on_Intel_and_UEFI_Platform.md) is:
+- available at OffensiveCon 2023 for
+    - Date: May 15 - 18 (4 days)
+    - Time: TBD (CET, GMT+1)
+    - Format: In-person (Berlin, Germany)
+    - **Register at [OffensiveCon website](https://www.offensivecon.org/trainings/2023/hypervisor-development-for-security-analysis.html)**
 
 If you are interested in a future public class, subscribe [our mailing list](https://groups.io/g/system-programming-lab) by sending empty email to [system-programming-lab+subscribe@groups.io](mailto:system-programming-lab+subscribe@groups.io?subject=Subscribe%20Request).
 
