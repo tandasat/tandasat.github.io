@@ -1,0 +1,1476 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Hypervisor 101 in Rust</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="introduction/index.html"><strong aria-hidden="true">1.</strong> Introduction</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="introduction/prerequisites.html"><strong aria-hidden="true">1.1.</strong> Prerequisites</a></li><li class="chapter-item "><a href="introduction/the-goals-of-this-course.html"><strong aria-hidden="true">1.2.</strong> The goals of this course</a></li><li class="chapter-item "><a href="introduction/motivation.html"><strong aria-hidden="true">1.3.</strong> Motivation</a></li><li class="chapter-item "><a href="introduction/how-we-achieve-the-goals.html"><strong aria-hidden="true">1.4.</strong> How we achieve the goals</a></li><li class="chapter-item "><a href="introduction/what-you-learn.html"><strong aria-hidden="true">1.5.</strong> What you learn</a></li><li class="chapter-item "><a href="introduction/our-fuzzer-design.html"><strong aria-hidden="true">1.6.</strong> Our fuzzer design</a></li><li class="chapter-item "><a href="introduction/our-hypervisor-design.html"><strong aria-hidden="true">1.7.</strong> Our hypervisor design</a></li><li class="chapter-item "><a href="introduction/what-this-class-is-not.html"><strong aria-hidden="true">1.8.</strong> What this class is NOT</a></li><li class="chapter-item "><a href="introduction/demo-our-hypervisor-fuzzer.html"><strong aria-hidden="true">1.9.</strong> Demo: our hypervisor fuzzer</a></li><li class="chapter-item "><a href="introduction/why-hypervisor-for-fuzzing.html"><strong aria-hidden="true">1.10.</strong> Why hypervisor for fuzzing</a></li><li class="chapter-item "><a href="introduction/uefi-applications.html"><strong aria-hidden="true">1.11.</strong> UEFI applications</a></li><li class="chapter-item "><a href="introduction/rust.html"><strong aria-hidden="true">1.12.</strong> Rust🦀</a></li><li class="chapter-item "><a href="introduction/classification-of-hypervisors.html"><strong aria-hidden="true">1.13.</strong> Classification of hypervisors</a></li><li class="chapter-item "><a href="introduction/hypervisor-vs-host-vm-vs-guest.html"><strong aria-hidden="true">1.14.</strong> Hypervisor vs host, VM vs guest</a></li><li class="chapter-item "><a href="introduction/types-of-hypervisors.html"><strong aria-hidden="true">1.15.</strong> Types of hypervisors</a></li></ol></li><li class="chapter-item "><a href="hypervisor-setup-and-operation-cycle/index.html"><strong aria-hidden="true">2.</strong> Hypervisor setup and operation-cycle</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="hypervisor-setup-and-operation-cycle/hypervisor-setup-and-operation-cycle-1.html"><strong aria-hidden="true">2.1.</strong> Hypervisor setup and operation cycle</a></li><li class="chapter-item "><a href="hypervisor-setup-and-operation-cycle/1-enable-system-software-enables-hw-vt-and-becomes-a-hypervisor.html"><strong aria-hidden="true">2.2.</strong> (1) Enable: System software enables HW VT and becomes a hypervisor</a></li><li class="chapter-item "><a href="hypervisor-setup-and-operation-cycle/2-set-up-the-hypervisor-creates-and-sets-up-a-context-structure-representing-a-guest.html"><strong aria-hidden="true">2.3.</strong> (2) Set up: The hypervisor creates and sets up a "context structure" representing a guest</a></li><li class="chapter-item "><a href="hypervisor-setup-and-operation-cycle/3-switch-to-the-hypervisor-asks-the-processor-to-load-the-context-structure-into-hardware-registers-and-start-running-in-guest-mode.html"><strong aria-hidden="true">2.4.</strong> (3) Switch to: The hypervisor asks the processor to load the context structure into hardware-registers and start running in guest-mode</a></li><li class="chapter-item "><a href="hypervisor-setup-and-operation-cycle/4-return-from-the-processor-switches-back-to-the-host-mode-on-certain-events-in-the-guest-mode.html"><strong aria-hidden="true">2.5.</strong> (4) Return from: The processor switches back to the host-mode on certain events in the guest-mode</a></li><li class="chapter-item "><a href="hypervisor-setup-and-operation-cycle/5-handle-the-hypervisor-typically-emulates-the-event-and-does-4-repeating-the-process.html"><strong aria-hidden="true">2.6.</strong> (5) Handle: The hypervisor typically emulates the event and does (4), repeating the process</a></li><li class="chapter-item "><a href="hypervisor-setup-and-operation-cycle/our-goals-and-exercises-in-this-chapter.html"><strong aria-hidden="true">2.7.</strong> Our goals and exercises in this chapter</a></li><li class="chapter-item "><a href="hypervisor-setup-and-operation-cycle/testing-with-bochs.html"><strong aria-hidden="true">2.8.</strong> Testing with Bochs</a></li><li class="chapter-item "><a href="hypervisor-setup-and-operation-cycle/exercise-preparation-building-and-running-the-hypervisor-and-navigating-code.html"><strong aria-hidden="true">2.9.</strong> Exercise preparation: Building and running the hypervisor, and navigating code</a></li><li class="chapter-item "><a href="hypervisor-setup-and-operation-cycle/exercise-preparation-code-annotations-and-solutions.html"><strong aria-hidden="true">2.10.</strong> Exercise preparation: Code annotations and solutions</a></li><li class="chapter-item "><a href="hypervisor-setup-and-operation-cycle/e1-enabling-vmxsvm.html"><strong aria-hidden="true">2.11.</strong> E#1: Enabling VMX/SVM</a></li><li class="chapter-item "><a href="hypervisor-setup-and-operation-cycle/e2-settings-up-the-vmcsvmcb.html"><strong aria-hidden="true">2.12.</strong> E#2: Settings up the VMCS/VMCB</a></li><li class="chapter-item "><a href="hypervisor-setup-and-operation-cycle/e3-configuring-guest-state-in-the-vmcsvmcb.html"><strong aria-hidden="true">2.13.</strong> E#3: Configuring guest state in the VMCS/VMCB</a></li><li class="chapter-item "><a href="hypervisor-setup-and-operation-cycle/deeper-look-into-guest-mode-transition.html"><strong aria-hidden="true">2.14.</strong> Deeper look into guest-mode transition</a></li><li class="chapter-item "><a href="hypervisor-setup-and-operation-cycle/causes-of-vm-exits.html"><strong aria-hidden="true">2.15.</strong> Causes of VM exits</a></li><li class="chapter-item "><a href="hypervisor-setup-and-operation-cycle/another-hypervisor-design-deprivileging-current-execution-context.html"><strong aria-hidden="true">2.16.</strong> Another hypervisor design: Deprivileging current execution context</a></li></ol></li><li class="chapter-item "><a href="memory-virtualization/index.html"><strong aria-hidden="true">3.</strong> Memory virtualization</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="memory-virtualization/memory-virtualization-1.html"><strong aria-hidden="true">3.1.</strong> Memory virtualization</a></li><li class="chapter-item "><a href="memory-virtualization/terminologies.html"><strong aria-hidden="true">3.2.</strong> Terminologies</a></li><li class="chapter-item "><a href="memory-virtualization/x64-traditional-paging.html"><strong aria-hidden="true">3.3.</strong> x64 traditional paging</a></li><li class="chapter-item "><a href="memory-virtualization/nested-paging.html"><strong aria-hidden="true">3.4.</strong> Nested paging</a></li><li class="chapter-item "><a href="memory-virtualization/relation-to-hypervisor.html"><strong aria-hidden="true">3.5.</strong> Relation to hypervisor</a></li><li class="chapter-item "><a href="memory-virtualization/nested-page-fault.html"><strong aria-hidden="true">3.6.</strong> Nested page fault</a></li><li class="chapter-item "><a href="memory-virtualization/nested-paging-structure-entries.html"><strong aria-hidden="true">3.7.</strong> Nested paging structure entries</a></li><li class="chapter-item "><a href="memory-virtualization/10000-feet-view-comparison-of-traditional-and-nested-paging.html"><strong aria-hidden="true">3.8.</strong> 10000 feet-view comparison of traditional and nested paging</a></li><li class="chapter-item "><a href="memory-virtualization/our-goals-and-exercises-in-this-chapter.html"><strong aria-hidden="true">3.9.</strong> Our goals and exercises in this chapter</a></li><li class="chapter-item "><a href="memory-virtualization/e4-enabling-nested-paging.html"><strong aria-hidden="true">3.10.</strong> E#4 Enabling nested paging</a></li><li class="chapter-item "><a href="memory-virtualization/e5-building-nested-paging-structures-and-gpa---pa-translation.html"><strong aria-hidden="true">3.11.</strong> E#5 Building nested paging structures and GPA -&gt; PA translation</a></li><li class="chapter-item "><a href="memory-virtualization/e6-implement-copy-on-write-and-fast-memory-revert-mechanism.html"><strong aria-hidden="true">3.12.</strong> E#6 Implement copy-on-write and fast memory revert mechanism</a></li><li class="chapter-item "><a href="memory-virtualization/advanced-topics.html"><strong aria-hidden="true">3.13.</strong> Advanced topics</a></li></ol></li><li class="chapter-item "><a href="vm-introspection-for-fuzzing/index.html"><strong aria-hidden="true">4.</strong> VM introspection for fuzzing</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="vm-introspection-for-fuzzing/problem-1-unnecessary-code-execution.html"><strong aria-hidden="true">4.1.</strong> Problem 1: Unnecessary code execution</a></li><li class="chapter-item "><a href="vm-introspection-for-fuzzing/introduction-to-patching.html"><strong aria-hidden="true">4.2.</strong> Introduction to patching</a></li><li class="chapter-item "><a href="vm-introspection-for-fuzzing/our-design.html"><strong aria-hidden="true">4.3.</strong> Our Design</a></li><li class="chapter-item "><a href="vm-introspection-for-fuzzing/demo-end-marker.html"><strong aria-hidden="true">4.4.</strong> Demo: end marker</a></li><li class="chapter-item "><a href="vm-introspection-for-fuzzing/exception-interception.html"><strong aria-hidden="true">4.5.</strong> Exception interception</a></li><li class="chapter-item "><a href="vm-introspection-for-fuzzing/exception-handling.html"><strong aria-hidden="true">4.6.</strong> Exception handling</a></li><li class="chapter-item "><a href="vm-introspection-for-fuzzing/our-goals-and-exercises-in-this-chapter.html"><strong aria-hidden="true">4.7.</strong> Our goals and exercises in this chapter</a></li><li class="chapter-item "><a href="vm-introspection-for-fuzzing/e7-enabling-ud-exception-interception.html"><strong aria-hidden="true">4.8.</strong> E#7 Enabling #UD exception interception</a></li><li class="chapter-item "><a href="vm-introspection-for-fuzzing/problem-2-cannot-tell-efficacy-of-corpus-and-mutation.html"><strong aria-hidden="true">4.9.</strong> Problem 2: Cannot tell efficacy of corpus and mutation</a></li><li class="chapter-item "><a href="vm-introspection-for-fuzzing/basic-block-coverage-tracking-through-patches.html"><strong aria-hidden="true">4.10.</strong> Basic-block coverage tracking through patches</a></li><li class="chapter-item "><a href="vm-introspection-for-fuzzing/demo-coverage-tracking.html"><strong aria-hidden="true">4.11.</strong> Demo: coverage tracking</a></li><li class="chapter-item "><a href="vm-introspection-for-fuzzing/e8-enabling-bp-interception-and-coverage-tracking.html"><strong aria-hidden="true">4.12.</strong> E#8 Enabling #BP interception and coverage tracking</a></li><li class="chapter-item "><a href="vm-introspection-for-fuzzing/catching-possible-bugs.html"><strong aria-hidden="true">4.13.</strong> Catching possible bugs</a></li></ol></li><li class="chapter-item "><a href="conclusion/index.html"><strong aria-hidden="true">5.</strong> Conclusion</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="conclusion/wrap-up.html"><strong aria-hidden="true">5.1.</strong> Wrap up🎉</a></li><li class="chapter-item "><a href="conclusion/whats-next.html"><strong aria-hidden="true">5.2.</strong> What's next</a></li><li class="chapter-item "><a href="conclusion/resources.html"><strong aria-hidden="true">5.3.</strong> Resources</a></li><li class="chapter-item "><a href="conclusion/thank-you.html"><strong aria-hidden="true">5.4.</strong> Thank you!</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Hypervisor 101 in Rust</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="welcome-to-hypervisor-101-in-rust"><a class="header" href="#welcome-to-hypervisor-101-in-rust">Welcome to Hypervisor 101 in Rust</a></h1>
+<p>This is a day long course to quickly learn the inner working of hypervisors and techniques to write them for high-performance fuzzing.</p>
+<p>This course covers foundation of hardware-assisted virtualization technologies, such as VMCS/VMCB, guest-host world switches, EPT/NPT, as well as useful features and techniques such as exception interception for virtual machine introspection for fuzzing.</p>
+<p>The class is made up of lectures using the materials within this directory and hands-on exercises with source code under the <code>Hypervisor-101-in-Rust/hypervisor</code> directory. This lecture materials are written for the <code>gcc2023</code> branch; check out the branch before you start.</p>
+<pre><code class="language-shell">git checkout gcc2023
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h1>
+<ul>
+<li>Familiarity with x86_64 architecture
+<ul>
+<li>If not, review <a href="https://p.ost2.fyi/courses/course-v1:OpenSecurityTraining2+Arch2001_x86-64_OS_Internals+2021_v1/course/">OpenSecurityTraining2: Arch2001 Architecture 2001: x86-64 OS Internals</a></li>
+</ul>
+</li>
+<li>Rust experience is helpful but not required</li>
+<li>Download the following specs
+<ul>
+<li><a href="https://www.intel.com/sdm/">Intel 64 and IA-32 Architectures Software Developer’s Manual Volume 3</a></li>
+<li><a href="https://developer.amd.com/resources/developer-guides-manuals/">AMD64 Architecture Programmer’s Manual Volume 2: System Programming</a></li>
+<li>The material is based on
+<ul>
+<li>Intel: Revision 78 (December 2022)</li>
+<li>AMD Revision 3.40 (January 2023)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-goals-of-this-course"><a class="header" href="#the-goals-of-this-course">The goals of this course</a></h1>
+<ul>
+<li>Understand the low level implementation of the hardware-assisted virtualization technology on x86_64</li>
+<li>Familiarize techniques to apply the technology for high-performance fuzzing</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="motivation"><a class="header" href="#motivation">Motivation</a></h1>
+<ul>
+<li>Hypervisors are
+<ul>
+<li>Cool
+<ul>
+<li>Foundation of cloud-platforms: KVM (GCP), Hyper-V (Azure), Nitro Hypervisor (AWS), Oracle Cloud (Xen)</li>
+</ul>
+</li>
+<li>Interesting
+<ul>
+<li>Foundation of major security features: Virtualization Based Security, Secured-core PC (Platform Properties Assessment Module)</li>
+<li>Used in security research: <a href="https://github.com/matsu/bitvisor/tree/master/core">BitVisor</a>, <a href="https://github.com/intel/ikgt-core">Intel Kernel Guard Technology</a></li>
+</ul>
+</li>
+<li>Convenient
+<ul>
+<li>System-level isolation: VMware Workstation/Fusion, <a href="introduction/(https://github.com/projectacrn/acrn-hypervisor)">ACRN</a>, Nitro Hypervisor, <a href="https://www.qubes-os.org/">Qubes OS</a></li>
+<li>System-level inspection: <a href="https://github.com/AsahiLinux/m1n1">Asahi Linux m1n1 Hypervisor</a>, <a href="https://cuckoosandbox.org/">Cuckoo Sandbox</a>, <a href="https://github.com/hvmi">HVMI</a>, <a href="https://nyx-fuzz.com/">kAFL/Nyx</a>, <a href="https://github.com/cheat-engine/cheat-engine/">Cheat Engine DBVM</a>, <a href="https://en.wikipedia.org/wiki/Blue_Pill_(software)">Blue Pill</a>, antivirus-hypervisors (eg, Avast Premium Security)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Understanding of essentials are important for anything with it
+<ul>
+<li>Want to audit code?</li>
+<li>Want to customize them?</li>
+<li>Want to write your own ones?</li>
+<li>Want to join a team doing those?</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="how-we-achieve-the-goals"><a class="header" href="#how-we-achieve-the-goals">How we achieve the goals</a></h1>
+<blockquote>
+<p>What I cannot create, I do not understand -- Richard Feynman</p>
+</blockquote>
+<ul>
+<li>Writing a fuzzing hypervisor from the ground
+<ul>
+<li>Familiarizing yourselves with specifications</li>
+<li>Having references to relevant open source implementations</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="what-you-learn"><a class="header" href="#what-you-learn">What you learn</a></h1>
+<ul>
+<li>You will have a hypervisor that runs and fuzzes a target as a VM</li>
+<li>You will have a cross platform hypervisor development and debugging setup</li>
+<li>You will be able to extend implementation for your use cases</li>
+<li>You will be able to better navigate existing hypervisor code</li>
+<li>You will be prepared for writing your own custom hypervisors</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="our-fuzzer-design"><a class="header" href="#our-fuzzer-design">Our fuzzer design</a></h1>
+<ul>
+<li>Greybox fuzzing
+<ul>
+<li>Mutation-based</li>
+<li>Edge coverage guided</li>
+</ul>
+</li>
+<li>Snapshot-based</li>
+<li>Input: snapshot file, corpus files, patch file</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="our-hypervisor-design"><a class="header" href="#our-hypervisor-design">Our hypervisor design</a></h1>
+<ul>
+<li>Creates a VM from the snapshot</li>
+<li>Starts a fuzzing iteration with the VM, meaning:
+<ol>
+<li>injecting mutated input into the VM's memory,</li>
+<li>letting the VM run, and</li>
+<li>observing possible bugs in the VM</li>
+</ol>
+</li>
+<li>Reverts the VM at the end of each fuzzing iteration</li>
+<li>Runs as many VMs as the number of logical processors on the system</li>
+<li>Is a UEFI program in Rust</li>
+<li>Is tested on Bochs, VMware and select bare metal models</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="what-this-class-is-not"><a class="header" href="#what-this-class-is-not">What this class is NOT</a></h1>
+<ul>
+<li>Rust programming course</li>
+<li>Fuzzing course</li>
+<li>Learning usage or internals of any specific existing software</li>
+<li>Covering details that are not required for reading majority of provided code
+<ul>
+<li>Thus, some descriptions may be over-simplified and not even accurate.</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="demo-our-hypervisor-fuzzer"><a class="header" href="#demo-our-hypervisor-fuzzer">Demo: our hypervisor fuzzer</a></h1>
+<ul>
+<li>Will show the hypervisor running on VMware and fuzzing the target</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="why-hypervisor-for-fuzzing"><a class="header" href="#why-hypervisor-for-fuzzing">Why hypervisor for fuzzing</a></h1>
+<ul>
+<li>Advantages:
+<ul>
+<li>Fuzzing targets are not limited to user-mode</li>
+<li>Substantially faster than emulators</li>
+</ul>
+</li>
+<li>Examples
+<ul>
+<li>Customized hypervisors: <a href="https://github.com/intel/kernel-fuzzer-for-xen-project">KF/x</a> (Xen), <a href="https://nyx-fuzz.com/">kAFL/Nyx</a> (KVM), <a href="https://www.microsoft.com/en-us/research/publication/hyperfuzzer-an-efficient-hybrid-fuzzer-for-virtual-cpus/">HyperFuzzer</a> (Hyper-V)</li>
+<li>Using hypervisor API: <a href="https://github.com/0vercl0k/wtf">What The Fuzz</a>, <a href="https://github.com/quarkslab/rewind">Rewind</a>, <a href="https://github.com/Impalabs/hyperpom">Hyperpom</a></li>
+<li>Original hypervisors: <a href="https://github.com/gamozolabs/falkervisor_grilled_cheese">FalkVisor</a>, <a href="https://github.com/Cisco-Talos/Barbervisor">Barbervisor</a></li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="uefi-applications"><a class="header" href="#uefi-applications">UEFI applications</a></h1>
+<ul>
+<li>UEFI is a pre-OS environment, aka, BIOS</li>
+<li>In our execution phase (called &quot;DXE&quot;) is:
+<ul>
+<li>single threaded; no thread or process</li>
+<li>ring-0 and long-mode</li>
+<li>single flat address space</li>
+</ul>
+</li>
+<li>Why
+<ul>
+<li>Less waste of system resources</li>
+<li>OS agnostic deigns and dev environment</li>
+<li>No need to worry about compatibility with OS</li>
+<li>Easy to access hardware features</li>
+<li>Well documented API</li>
+<li>Why would we need an OS?</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="rust"><a class="header" href="#rust">Rust🦀</a></h1>
+<blockquote>
+<p>A language empowering everyone to build reliable and efficient software</p>
+</blockquote>
+<ul>
+<li>Why
+<ul>
+<li>Why not?</li>
+<li><strong>Absolutely</strong> more productive than C/C++ for writing UEFI programs
+<ul>
+<li>excellent ranges of libraries (core-library and crates)</li>
+<li>compiler enforced safe guards, preventing bugs</li>
+</ul>
+</li>
+<li>As a security minded engineer, you should stop writing new code in C/C++</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="classification-of-hypervisors"><a class="header" href="#classification-of-hypervisors">Classification of hypervisors</a></h1>
+<ul>
+<li>Software-based: Paravirtualization (Xen), binary-translation and emulation (old VMware)</li>
+<li>Hardware-assisted: Uses hardware assisted virtualization technology, HW VT, eg, VT-x and AMD-V (almost any hypervisors)</li>
+<li>vs. emulators/simulators
+<ul>
+<li>Emulators emulate everything</li>
+<li>Hypervisors run code on real processors (direct execution) plus minimal use of emulation techniques</li>
+<li>Many emulators now use HW VT to boost performance: QEMU + KVM, Android Emulator + <a href="https://github.com/intel/haxm">HAXM</a>, <a href="https://www.intel.com/content/www/us/en/developer/articles/technical/software-on-wind-river-simics-virtual-platforms-then-and-now.html">Simics + VMP</a></li>
+</ul>
+</li>
+<li>&quot;Hypervisor&quot; is most often interchangeable with &quot;VMM&quot;</li>
+<li>This class will explicitly talk about Hardware-assisted hypervisors</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="hypervisor-vs-host-vm-vs-guest"><a class="header" href="#hypervisor-vs-host-vm-vs-guest">Hypervisor vs host, VM vs guest</a></h1>
+<ul>
+<li>Those are interchangeable</li>
+<li>When HW VT is in use, a processor runs in one of two modes:
+<ul>
+<li>host-mode: the same as usual + a few HW VT related instructions are usable.
+<ul>
+<li>Intel: VMX root operation
+<blockquote>
+<p>24.3 INTRODUCTION TO VMX OPERATION</p>
+<p>(...) Processor behavior in VMX root operation is very much as it is outside VMX operation.</p>
+</blockquote>
+</li>
+<li>AMD: (even does not defined the term)</li>
+</ul>
+</li>
+<li>guest-mode: the restricted mode where some operations are intercepted by a hypervisor
+<ul>
+<li>Intel: VMX non-root operation
+<blockquote>
+<p>24.3 INTRODUCTION TO VMX OPERATION</p>
+<p>(...) Processor behavior in VMX non-root operation is restricted and modified to facilitate virtualization. Instead of their ordinary operation, certain instructions (...) and events cause VM exits to the VMM.</p>
+</blockquote>
+</li>
+<li>AMD: Guest-mode
+<blockquote>
+<p>15.2.2 Guest Mode</p>
+<p>This new processor mode is entered through the VMRUN instruction. When in guest-mode, the behavior of some x86 instructions changes to facilitate virtualization.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The execution context in the host-mode == hypervisor == host</li>
+<li>The execution context in the guest-mode == VM == guest
+<ul>
+<li>Intel: 📖24.2 VIRTUAL MACHINE ARCHITECTURE</li>
+<li>AMD: 📖15.1 The Virtual Machine Monitor</li>
+</ul>
+</li>
+<li>NB: those are based on the specs. In context of particular software/product architecture, those terms can be used with different definitions</li>
+<li>This &quot;mode&quot; is an orthogonal concept to the ring-level
+<ul>
+<li>For example, ring-0 guest-mode and ring-3 host-mode are possible and normal</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="types-of-hypervisors"><a class="header" href="#types-of-hypervisors">Types of hypervisors</a></h1>
+<ul>
+<li>Robert P. Goldberg coined VMM architecture types:
+<ul>
+<li>Type I or bare metal: The VMM runs on a bare machine.</li>
+<li>Type II or hosted: The VMM runs on an extended host, under the host operating system.</li>
+</ul>
+</li>
+<li>Can be understood as:
+<ul>
+<li>Type 1: No OS runs in the host-mode. <code>CPUID</code> instructions ran by your OS would be intercepted by a hypervisor.
+<ul>
+<li>Hyper-V, Xen: even &quot;admin OS&quot; runs in the guest-mode</li>
+<li>VMware ESXi, BitVisor: no &quot;admin OS&quot;</li>
+<li>CheatEngine, BluePill, antivirus-hypervisor: turns the current OS into guest-mode</li>
+</ul>
+</li>
+<li>Type 2: A general purpose OS runs in the host-mode. <code>CPUID</code> instructions ran by your OS would not be intercepted.
+<ul>
+<li>KVM, VirtualBox, VMware Workstation: works as a kernel extension. The host OS runs in the host-mode</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Our hypervisor is type-1 (no admin OS)</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="hypervisor-setup-and-operation-cycle"><a class="header" href="#hypervisor-setup-and-operation-cycle">Hypervisor setup and operation-cycle</a></h1>
+<p>This chapter explains how hypervisor sets up and runs a guest and introduces our first few hands-on exercises.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="hypervisor-setup-and-operation-cycle-1"><a class="header" href="#hypervisor-setup-and-operation-cycle-1">Hypervisor setup and operation cycle</a></h1>
+<ol>
+<li>Enable: System software enables HW VT and becomes a hypervisor</li>
+<li>Set up: The hypervisor creates and sets up a &quot;context structure&quot; representing a guest</li>
+<li>Switch to: The hypervisor asks the processor to load the context structure into hardware-registers and start running in guest-mode</li>
+<li>Return from: The processor switches back to the host-mode on certain events in the guest-mode</li>
+<li>Handle: The hypervisor typically emulates the event and does (4), repeating the process.</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="1-enable-system-software-enables-hw-vt-and-becomes-a-hypervisor"><a class="header" href="#1-enable-system-software-enables-hw-vt-and-becomes-a-hypervisor">(1) Enable: System software enables HW VT and becomes a hypervisor</a></h1>
+<ul>
+<li>
+<p>HW VT is implemented as an Instruction Set Architecture (ISA) extension</p>
+<ul>
+<li>Intel: Virtual Machine Extensions (VMX); branded as VT-x</li>
+<li>AMD: Secure Virtual Machine (SVM) extension; branded as AMD-V</li>
+</ul>
+</li>
+<li>
+<p>Steps to enter the host-mode from the traditional mode:</p>
+<ol>
+<li>Enable the feature (Intel: <code>CR4.VMXE</code>=1 / AMD: <code>IA32_EFER.SVME</code>=1)</li>
+<li>(Intel-only) Execute the <code>VMXON</code> instruction</li>
+</ol>
+</li>
+<li>
+<p>Platform specific mode names</p>
+<div class="table-wrapper"><table><thead><tr><th></th><th>Host-mode</th><th>Guest-mode</th></tr></thead><tbody>
+<tr><td>Intel</td><td>VMX root operation</td><td>VMX non-root operation</td></tr>
+<tr><td>AMD</td><td>(Not named)</td><td>Guest-mode</td></tr>
+</tbody></table>
+</div></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="2-set-up-the-hypervisor-creates-and-sets-up-a-context-structure-representing-a-guest"><a class="header" href="#2-set-up-the-hypervisor-creates-and-sets-up-a-context-structure-representing-a-guest">(2) Set up: The hypervisor creates and sets up a &quot;context structure&quot; representing a guest</a></h1>
+<ul>
+<li>Each guest is represented by a 4KB structure
+<ul>
+<li>Intel: virtual-machine control structure (VMCS)</li>
+<li>AMD: virtual machine control block (VMCB)</li>
+</ul>
+</li>
+<li>It contains fields describing:
+<ul>
+<li>Guest configurations such as register values</li>
+<li>Behaviour of HW VT such as what instructions to intercept</li>
+<li>More details later</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="3-switch-to-the-hypervisor-asks-the-processor-to-load-the-context-structure-into-hardware-registers-and-start-running-in-guest-mode"><a class="header" href="#3-switch-to-the-hypervisor-asks-the-processor-to-load-the-context-structure-into-hardware-registers-and-start-running-in-guest-mode">(3) Switch to: The hypervisor asks the processor to load the context structure into hardware-registers and start running in guest-mode</a></h1>
+<ul>
+<li>Execution of a special instruction triggers switching to the guest-mode
+<ul>
+<li>Intel: <code>VMLAUNCH</code> or <code>VMRESUME</code></li>
+<li>AMD: <code>VMRUN</code></li>
+</ul>
+</li>
+<li>Successful execution of it:
+<ol>
+<li>saves current register values into memory</li>
+<li>loads register values from the context structure, including <code>RIP</code></li>
+<li>changes the processor mode to the guest-mode</li>
+<li>starts execution</li>
+</ol>
+</li>
+<li>This host-to-guest-mode transition is called:
+<ul>
+<li>Intel: VM-entry 📖CHAPTER 27 VM ENTRIES</li>
+<li>AMD: World switch to guest 📖 15.5.1 Basic Operation</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="4-return-from-the-processor-switches-back-to-the-host-mode-on-certain-events-in-the-guest-mode"><a class="header" href="#4-return-from-the-processor-switches-back-to-the-host-mode-on-certain-events-in-the-guest-mode">(4) Return from: The processor switches back to the host-mode on certain events in the guest-mode</a></h1>
+<ul>
+<li>Certain events are intercepted by the hypervisor</li>
+<li>On that event, the processor:
+<ol>
+<li>saves the current register values into the context structure</li>
+<li>loads the previously saved register values from memory</li>
+<li>changes the processor mode to the host-mode</li>
+<li>starts execution</li>
+</ol>
+</li>
+<li>This guest-to-host-mode transition is called:
+<ul>
+<li>Intel: VM-exit 📖CHAPTER 28 VM EXITS</li>
+<li>AMD: #VMEXIT 📖15.6 #VMEXIT</li>
+<li>We call it as &quot;VM exit&quot;</li>
+</ul>
+</li>
+<li>Note that guest uses actual registers and actually runs instructions on a processor.
+<ul>
+<li>There is no &quot;virtual register&quot; or &quot;virtual processor&quot; in a strict senses.</li>
+<li>HW VT is a mechanism to perform world switches.
+<ul>
+<li>Akin to task/process context switching
+<ul>
+<li>VMCS/VMCB = &quot;task/process&quot; struct</li>
+<li><code>VMLAUNCH</code>/<code>VMRESUME</code>/<code>VMRUN</code> = context switch to a task</li>
+<li>VM-exit/#VMEXIT = preempting the task</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="5-handle-the-hypervisor-typically-emulates-the-event-and-does-4-repeating-the-process"><a class="header" href="#5-handle-the-hypervisor-typically-emulates-the-event-and-does-4-repeating-the-process">(5) Handle: The hypervisor typically emulates the event and does (4), repeating the process</a></h1>
+<ul>
+<li>Hypervisor determines the cause of VM exit from the context structure
+<ul>
+<li>Intel: Exit reason field 📖28.2 RECORDING VM-EXIT INFORMATION AND UPDATING VM-ENTRY CONTROL FIELDS</li>
+<li>AMD: EXITCODE field 📖15.6 #VMEXIT</li>
+</ul>
+</li>
+<li>Hypervisor emulates the event on behalf of the guest
+<ul>
+<li>eg, for <code>CPUID</code>
+<ol>
+<li>inspects guest's <code>EAX</code> and <code>ECX</code> as input</li>
+<li>updates guest's <code>EAX</code>, <code>EBX</code>, <code>ECX</code>, <code>EDX</code> as output</li>
+<li>updates guest's <code>RIP</code></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Hypervisor switches to guest with <code>VMRESUME</code>/<code>VMRUN</code></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="our-goals-and-exercises-in-this-chapter"><a class="header" href="#our-goals-and-exercises-in-this-chapter">Our goals and exercises in this chapter</a></h1>
+<ul>
+<li>E#1: Enable HW VT</li>
+<li>E#2: Configure behaviour of HW VT</li>
+<li>E#3: Set up guest state based on a snapshot file</li>
+<li>Start the guest</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="testing-with-bochs"><a class="header" href="#testing-with-bochs">Testing with Bochs</a></h1>
+<ul>
+<li><a href="https://github.com/bochs-emu/Bochs">Bochs</a> is a cross-platform open-source x86_64 PC emulator
+<ul>
+<li><strong>Extremely</strong> helpful in an early-phase of hypervisor development</li>
+<li>Capable of emulating both VMX and SVM, even on ARM-based systems</li>
+<li>Most importantly, you can debug failure of an instruction
+<ul>
+<li>for example, error log on the failure of <code>VMLAUNCH</code>
+<pre><code class="language-log">[CPU0  ]e| VMFAIL: VMCS host state invalid CR0 0x00000000
+</code></pre>
+</li>
+</ul>
+</li>
+<li>Built-in debugger
+<ul>
+<li>GUI (Windows-only)
+<img src="hypervisor-setup-and-operation-cycle/Bochs_debugger_gui.png" alt="" /></li>
+<li>CLI
+<pre><code class="language-log">h|help - show list of debugger commands
+h|help command - show short command description
+-*- Debugger control -*-
+    help, q|quit|exit, set, instrument, show, trace, trace-reg,
+    trace-mem, u|disasm, ldsym, slist, addlyt, remlyt, lyt, source
+-*- Execution control -*-
+    c|cont|continue, s|step, p|n|next, modebp, vmexitbp
+-*- Breakpoint management -*-
+    vb|vbreak, lb|lbreak, pb|pbreak|b|break, sb, sba, blist,
+    bpe, bpd, d|del|delete, watch, unwatch
+-*- CPU and memory contents -*-
+    x, xp, setpmem, writemem, loadmem, crc, info, deref,
+    r|reg|regs|registers, fp|fpu, mmx, sse, sreg, dreg, creg,
+    page, set, ptime, print-stack, bt, print-string, ?|calc
+-*- Working with bochs param tree -*-
+    show &quot;param&quot;, restore
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Good idea to start with Bochs, then VMware. Last but not least, bare metal</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="exercise-preparation-building-and-running-the-hypervisor-and-navigating-code"><a class="header" href="#exercise-preparation-building-and-running-the-hypervisor-and-navigating-code">Exercise preparation: Building and running the hypervisor, and navigating code</a></h1>
+<ul>
+<li>You should choose a platform to work on: Intel or AMD.
+<ul>
+<li>Intel: Use the <code>rust: cargo xtask bochs-intel</code> task</li>
+<li>AMD: Use the <code>rust: cargo xtask bochs-amd</code> task</li>
+</ul>
+</li>
+<li>We assume you are able to:
+<ul>
+<li>jump to definitions with F12 on VSCode</li>
+<li>build the hypervisor</li>
+<li>run it on Bochs. Output should look like this:
+<pre><code class="language-log">INFO: Starting the hypervisor on CPU#0
+...
+ERROR: panicked at 'not yet implemented: E#1-1', hypervisor/src/hardware_vt/svm.rs:49:9
+</code></pre>
+</li>
+<li>If not, follow the instructions in <a href="https://github.com/tandasat/Hypervisor-101-in-Rust/blob/main/BUILDING.md">BUILDING</a></li>
+</ul>
+</li>
+<li>Primary code flow for the exercises in this chapter
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// main.rs
+efi_main() {
+    start_hypervisor_on_all_processors() {
+        start_hypervisor()
+    }
+}
+
+//hypervisor.rs
+start_hypervisor() {
+    vm.vt.enable()                      // E#1: Enable HW VT
+    vm.vt.initialize()                  // E#2: Configure behaviour of HW VT
+    start_vm() {
+        vm.vt.revert_registers()        // E#3: Set up guest state based on a snapshot file
+        loop {
+            // Runs the guest until VM exit
+            exit_reason = vm.vt.run()
+
+            // ... (Handles the VM exit)
+        }
+    }
+}
+<span class="boring">}</span></code></pre></pre>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="exercise-preparation-code-annotations-and-solutions"><a class="header" href="#exercise-preparation-code-annotations-and-solutions">Exercise preparation: Code annotations and solutions</a></h1>
+<ul>
+<li>All exercises can be found by searching <code>E#</code> under the <code>hypervisor</code> directory.
+<ul>
+<li>One exercise may require updates in multiple locations. For example, <code>E#1-1</code> and <code>E#1-2</code> are a single exercise, and you must complete both to observe an expected result.</li>
+<li>Some exercises are in both <code>vmx.rs</code> and <code>svm.rs</code> files. Based on your preference of the platform, you can chose one and ignore the other in this case.</li>
+</ul>
+</li>
+<li>A solution of each exercise will be pushed to the github repo as a commit.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="e1-enabling-vmxsvm"><a class="header" href="#e1-enabling-vmxsvm">E#1: Enabling VMX/SVM</a></h1>
+<ul>
+<li>Intel: Enable VMX by <code>CR4.VMXE</code>=1. Then, enter VMX root operation with the <code>VMXON</code> instruction.</li>
+<li>AMD: Enable SVM by <code>IA32_EFER.SVME</code>=1</li>
+<li>Expected result: panic at E#2.
+<pre><code class="language-log">INFO: Starting the hypervisor on CPU#0
+...
+ERROR: panicked at 'not yet implemented: E#2-1', hypervisor/src/hardware_vt/svm.rs:73:9
+</code></pre>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="e2-settings-up-the-vmcsvmcb"><a class="header" href="#e2-settings-up-the-vmcsvmcb">E#2: Settings up the VMCS/VMCB</a></h1>
+<ul>
+<li>Intel:
+<ul>
+<li>VMCS is already allocated as <code>self.vmcs_region</code></li>
+<li>VMCS is read and written only through the <code>VMREAD</code>/<code>VMWRITE</code> instructions</li>
+<li>The layout of VMCS is undefined. Instead, <code>VMREAD</code>/<code>VMWRITE</code> take &quot;encoding&quot; (ie, field ID) to specify which field to access
+<ul>
+<li>📖APPENDIX B FIELD ENCODING IN VMCS</li>
+</ul>
+</li>
+<li>VMCS needs to be &quot;clear&quot;, &quot;active&quot; and &quot;current&quot; to be accessed with <code>VMREAD</code>/<code>VMWRITE</code>
+<ul>
+<li>(E#2-1, 2-2) Use <code>VMCLEAR</code> and <code>VMPTRLD</code> to put a VMCS into this state</li>
+</ul>
+</li>
+<li>VMCS contains host state fields.
+<ul>
+<li>On VM-exit, processor state is updated based on the host state fields</li>
+<li>(E#2-3) Program them with current register values</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>AMD:
+<ul>
+<li>VMCB is already allocated as <code>self.vmcb</code></li>
+<li>VMCB is read and written through usual memory access.</li>
+<li>The layout of VMCB is defined.
+<ul>
+<li>📖Appendix B Layout of VMCB</li>
+</ul>
+</li>
+<li>VMCB does NOT contain host state fields.
+<ul>
+<li>Instead, another 4KB memory block, called host state area, is used to save host state on <code>VMRUN</code></li>
+<li>On #VMEXIT, processor state is updated based on the host state area</li>
+<li>(E#2-1) Write the address of the area to the <code>VM_HSAVE_PA</code> MSR. The host state area is allocated as <code>self.host_state</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Expected result: panic at E#3.
+<pre><code class="language-log">INFO: Entering the fuzzing loop🐇
+ERROR: panicked at 'not yet implemented: E#3-1', hypervisor/src/hardware_vt/svm.rs:176:9
+</code></pre>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="e3-configuring-guest-state-in-the-vmcsvmcb"><a class="header" href="#e3-configuring-guest-state-in-the-vmcsvmcb">E#3: Configuring guest state in the VMCS/VMCB</a></h1>
+<ul>
+<li>Guest state is managed by:
+<ul>
+<li>Intel: guest state fields in VMCS</li>
+<li>AMD: state save area in VMCB</li>
+</ul>
+</li>
+<li>(E#3-1) Configure a guest based on the snapshot</li>
+<li>Some registers are not updated as part of world switch by hardware
+<ul>
+<li>General purpose registers (GPRs) are examples</li>
+<li>(E#3-2) Initialize guest GPRs. They need to be manually saved and loaded by software</li>
+</ul>
+</li>
+<li>Expected output: &quot;physical address not available&quot; error
+<ul>
+<li>Intel
+<pre><code class="language-log">[CPU0  ]i| | RIP=000000000dd24e73 (000000000dd24e73)
+...
+(0).[707060553] ??? (physical address not available)
+...
+ERROR: panicked at '🐛 Non continuable VM exit 0x2', hypervisor\src\hypervisor.rs:126:17
+</code></pre>
+</li>
+<li>AMD
+<pre><code class="language-log">[CPU0  ]i| | RIP=000000000dd24e73 (000000000dd24e73)
+...
+[CPU0  ]p| &gt;&gt;PANIC&lt;&lt; exception(): 3rd (14) exception with no resolution
+[CPU0  ]e| WARNING: Any simulation after this point is completely bogus !
+(0).[698607907] ??? (physical address not available)
+...
+(after pressing the enter key)
+...
+ERROR: panicked at '🐛 Non continuable VM exit 0x7f', hypervisor\src\hypervisor.rs:126:17
+</code></pre>
+</li>
+</ul>
+</li>
+<li>🎉Notice that we <strong>did</strong> receive VM exit, meaning we <strong>successfully</strong> switched to guest-mode</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="deeper-look-into-guest-mode-transition"><a class="header" href="#deeper-look-into-guest-mode-transition">Deeper look into guest-mode transition</a></h1>
+<ul>
+<li>
+<p>Switching to the guest-mode</p>
+<ul>
+<li>Intel
+<ul>
+<li><code>VMLAUNCH</code> - used for first transition with the VMCS</li>
+<li><code>VMRESUME</code> - used for subsequent transitions</li>
+</ul>
+</li>
+<li>AMD: <code>VMRUN</code></li>
+</ul>
+</li>
+<li>
+<p>Our implementation:</p>
+<div class="table-wrapper"><table><thead><tr><th></th><th>AMD: <code>run_vm_svm()</code></th><th>Intel: <code>run_vm_vmx()</code></th></tr></thead><tbody>
+<tr><td>1</td><td>Save host GPRs into stack</td><td>Save host GPRs into stack</td></tr>
+<tr><td>2</td><td>Load guest GPRs from memory</td><td>Load guest GPRs from memory</td></tr>
+<tr><td>3</td><td><code>VMRUN</code></td><td>if launched { <code>VMRESUME</code> } else { set up host <code>RIP</code> and <code>RSP</code>, then <code>VMLAUNCH</code> }</td></tr>
+<tr><td>4</td><td>Save guest GPRs into memory</td><td>Save guest GPRs into memory</td></tr>
+<tr><td>5</td><td>Load host GPRs from stack</td><td>Load host GPRs from stack</td></tr>
+</tbody></table>
+</div></li>
+<li>
+<p>Contents of the GPRs are manually switched, because the <code>VMRUN</code>, <code>VMLAUNCH</code>, <code>VMRESUME</code> instructions do not do it</p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="causes-of-vm-exits"><a class="header" href="#causes-of-vm-exits">Causes of VM exits</a></h1>
+<ul>
+<li>Intel: 📖Table C-1. Basic Exit Reasons
+<ul>
+<li>Many of these are optional, but some are always enabled, eg, <code>CPUID</code> VM-exit</li>
+<li>📖26.1 INSTRUCTIONS THAT CAUSE VM EXITS</li>
+<li>📖26.2 OTHER CAUSES OF VM EXITS</li>
+</ul>
+</li>
+<li>AMD: 📖Appendix C SVM Intercept Exit Codes
+<ul>
+<li>All except <code>VMEXIT_INVALID</code> are optional</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="another-hypervisor-design-deprivileging-current-execution-context"><a class="header" href="#another-hypervisor-design-deprivileging-current-execution-context">Another hypervisor design: Deprivileging current execution context</a></h1>
+<ul>
+<li>We start a guest as a completely separate execution context</li>
+<li>Alternatively, a hypervisor can also start a guest based on the current execution context by capturing current register values and setting them into the guest state fields
+<ul>
+<li>This way, an OS runs on the guest-mode, and a hypervisor intercepts OS's operations</li>
+<li>Type-1 hypervisors do this</li>
+<li>Common for hypervisors that intend to deeply interact with the OS, eg, as a hypervisor debugger, rootkit, or security enhancement</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="memory-virtualization"><a class="header" href="#memory-virtualization">Memory virtualization</a></h1>
+<p>This chapter looks into hardware features to virtualize memory access from a guest, namely, nested paging.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="memory-virtualization-1"><a class="header" href="#memory-virtualization-1">Memory virtualization</a></h1>
+<ul>
+<li>We saw
+<blockquote>
+<p>physical address not available</p>
+</blockquote>
+</li>
+<li>Memory is not virtualized for the guest</li>
+<li>When the guest translates VA to PA using the guest <code>CR3</code>
+<ul>
+<li>as-is
+<ul>
+<li>the translated PA is used to access physical memory</li>
+<li>the guest could read and write any memory (including hypervisor's or other guests' memory)</li>
+<li>In our case, a PA the guest attempted to access was not available</li>
+</ul>
+</li>
+<li>with memory virtualization:
+<ul>
+<li>the translated PA is again translated using hypervisor managed mapping</li>
+<li>the hypervisor can prevent guest from accessing hypervisor's or other guests' memory</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="terminologies"><a class="header" href="#terminologies">Terminologies</a></h1>
+<ul>
+<li>In this material:</li>
+<li>Nested paging - the address translation mechanism used during the guest-mode when...
+<ul>
+<li>Intel: EPT is enabled</li>
+<li>AMD: Nested paging (also referred to as Rapid Virtualization Indexing, RVI) is enabled</li>
+<li>Nested paging is also referred to as second level address translation (SLAT)</li>
+</ul>
+</li>
+<li>Nested paging structures(s) - the data structures describing translation with nested paging
+<ul>
+<li>Intel: Extended page table(s)</li>
+<li>AMD: Nested page tables(s)</li>
+</ul>
+</li>
+<li>Nested page fault - translation fault at the nested paging level
+<ul>
+<li>Intel: EPT violation</li>
+<li>AMD: #VMEXIT(NPF)</li>
+</ul>
+</li>
+<li>(Nested) paging structure entry - an entry of any of (nested) paging structures.
+<ul>
+<li>Do not be confused with a &quot;(nested) page table entry&quot; which is &quot;an entry of the (nested) page table&quot; specifically</li>
+</ul>
+</li>
+<li>Virtual address (VA) - same as &quot;linear address&quot; in the Intel manual</li>
+<li>Physical address (PA) - an effective address to be sent to the memory controller for memory access. Same as &quot;system physical address&quot; in the AMD manual</li>
+<li>Guest physical address (GPA) - an intermediate form of an address used when nested paging is enabled (more on later)</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="x64-traditional-paging"><a class="header" href="#x64-traditional-paging">x64 traditional paging</a></h1>
+<ul>
+<li>VA -&gt; PA translation</li>
+<li>When a processor needs to access a given VA, <code>va</code>, the processor does the following to translate it to a PA:
+<ol>
+<li>Locates the top level paging structure, PML4, from the value in the <code>CR3</code> register</li>
+<li>Indexes the PML4 using <code>va[47:39]</code> as an index</li>
+<li>Locates the next level paging structure, PDPT, from the indexed PML4 entry</li>
+<li>Indexes the PDPT using <code>va[38:30]</code> as an index</li>
+<li>Locates the next level paging structure, PD, from the indexed PDPT entry</li>
+<li>Indexes the PD using <code>va[29:21]</code> as an index</li>
+<li>Locates the next level paging structure, PT, from the indexed PD entry</li>
+<li>Indexes the PT using <code>va[20:12]</code> as an index</li>
+<li>Finds out a page frame to translate to, from the indexed PT entry</li>
+<li>Combines the page frame and <code>va[11:0]</code>, resulting in a PA</li>
+</ol>
+</li>
+<li>In pseudo code, it looks like this:
+<pre><code class="language-python"># Translate VA to PA
+def translate_va(va):
+    i4, i3, i2, i1, page_offset = get_indexes(va)
+    pml4 = cr3()
+    pdpt = pml4[i4]
+    pd = pdpt[i3]
+    pt = pd[i2]
+    page_frame = pt[i1]
+    return page_frame | page_offset
+
+# Get indexes and a page offset from the given address
+def get_indexes(address):
+    i4 = (address &gt;&gt; 39) &amp; 0b111_111_111
+    i3 = (address &gt;&gt; 30) &amp; 0b111_111_111
+    i2 = (address &gt;&gt; 21) &amp; 0b111_111_111
+    i1 = (address &gt;&gt; 12) &amp; 0b111_111_111
+    page_offset = address &amp; 0b111_111_111_111
+    return i4, i3, i2, i1, page_offset
+</code></pre>
+</li>
+<li>Intel: 📖Figure 4-8. Linear-Address Translation to a 4-KByte Page using 4-Level Paging</li>
+<li>AMD: 📖Figure 5-17. 4-Kbyte Page Translation-Long Mode 4-Level Paging</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="nested-paging"><a class="header" href="#nested-paging">Nested paging</a></h1>
+<ul>
+<li>VA -&gt; GPA -&gt; PA translation</li>
+<li>When a processor needs to access a given VA, the processor does the following to translate it to a PA, <strong>if</strong> nested paging is enabled and the processor is in the guest-mode:</li>
+</ul>
+<ol>
+<li>Performs all of the 10 steps in the previous page, using a guest <code>CR3</code> register</li>
+<li>Treats the resulted value as GPA, instead of PA</li>
+<li>Locates the top level nested paging structure, nested PML4, from the value in an EPT pointer (Intel) or nCR3 (AMD)</li>
+<li>Indexes the nested PML4 using <code>GPA[47:39]</code> as an index</li>
+<li>Locates the next level nested paging structure, nested PDPT, from the indexed nested PML4 entry</li>
+<li>Indexes the nested PDPT using <code>GPA[38:30]</code> as an index</li>
+<li>Locates the next level nested paging structure, nested PD, from the indexed nested PDPT entry</li>
+<li>Indexes the nested PD using <code>GPA[29:21]</code> as an index</li>
+<li>Locates the next level nested paging structure, nested PT, from the indexed nested PD entry</li>
+<li>Indexes the nested PT using <code>GPA[20:12]</code> as an index</li>
+<li>Finds out a page frame to translate to, from the indexed nested PT entry</li>
+<li>Combines the page frame and <code>GPA[11:0]</code>, resulting in a PA</li>
+</ol>
+<ul>
+<li>In pseudo code, it would look like this:
+<pre><code class="language-python"># Translate VA to PA with nested paging
+def translate_va_during_guest_mode(va):
+    gpa = translate_va(va)    # may raise #PF
+    return translate_gpa(gpa) # may cause VM exit
+
+# Translate VA to (G)PA
+def translate_va(va):
+    # Omitted. See the previous page
+
+# Translate GPA to PA
+def translate_gpa(gpa):
+    i4, i3, i2, i1, page_offset = get_indexes(gpa)
+    nested_pml4 = read_vmcs(EPT_POINTER) if intel else VMCB.ControlArea.nCR3
+    nested_pdpt = nested_pml4[i4]
+    nested_pd = nested_pdpt[i3]
+    nested_pt = nested_pd[i2]
+    page_frame = nested_pt[i1]
+    return page_frame | page_offset
+
+# Get indexes and a page offset from the given address
+def get_indexes(address):
+    # Omitted. See the previous page
+</code></pre>
+</li>
+<li>Intel: 📖29.3.2 EPT Translation Mechanism</li>
+<li>AMD: 📖15.25.5 Nested Table Walk</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="relation-to-hypervisor"><a class="header" href="#relation-to-hypervisor">Relation to hypervisor</a></h1>
+<ul>
+<li>Nested paging applies only when the processor is in the guest-mode
+<ul>
+<li>After VM exit, hypervisor runs under traditional paging using the current (host) <code>CR3</code></li>
+</ul>
+</li>
+<li>Nested paging is two-phased
+<ul>
+<li>First translation (VA -&gt; GPA) is done exclusively based on guest controlled data (<code>CR3</code> and paging structures in guest accessible memory)
+<ul>
+<li>Failure in this phase results in #PF, which is handled exclusively by the guest using guest IDT</li>
+</ul>
+</li>
+<li>Second translation (GPA -&gt; PA) is done exclusively based on hypervisor controlled data (EPT pointer/nCR3 and nested paging structures in guest inaccessible memory)
+<ul>
+<li>Failure in this phase results in VM exit, which is handled exclusively by the hypervisor</li>
+</ul>
+</li>
+<li>AMD: 📖15.25.6 Nested versus Guest Page Faults, Fault Ordering</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="nested-page-fault"><a class="header" href="#nested-page-fault">Nested page fault</a></h1>
+<ul>
+<li>
+<p>Translation failure with nested paging structures causes VM exit</p>
+<ul>
+<li>Intel: EPT violation (and few more 📖29.3.3 EPT-Induced VM Exits)</li>
+<li>AMD: #VMEXIT(NPF)</li>
+</ul>
+</li>
+<li>
+<p>Few read-only fields are updated with the details of a failure</p>
+<div class="table-wrapper"><table><thead><tr><th></th><th>Fault reasons</th><th>GPA tried to translate</th><th>VA tried to translate</th></tr></thead><tbody>
+<tr><td>Intel</td><td>Exit qualification</td><td>Guest-physical address</td><td>Guest linear address</td></tr>
+<tr><td>AMD</td><td>EXITINFO1</td><td>EXITINFO2</td><td>Not Available</td></tr>
+</tbody></table>
+</div>
+<ul>
+<li>Intel: 📖Table 28-7. Exit Qualification for EPT Violations</li>
+<li>AMD: 📖15.25.6 Nested versus Guest Page Faults, Fault Ordering</li>
+</ul>
+</li>
+<li>
+<p>Typical actions by a hypervisor</p>
+<ul>
+<li>update nested paging structure(s) and let the guest retry the same operation
+<ul>
+<li>may require TLB invalidation, like an OS has to when it changes paging structures</li>
+</ul>
+</li>
+<li>inject an exception to the guest to prevent access</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="nested-paging-structure-entries"><a class="header" href="#nested-paging-structure-entries">Nested paging structure entries</a></h1>
+<ul>
+<li>Comparable to the traditional paging structure entries
+<ul>
+<li>bit[11:0] = flags including page permissions</li>
+<li>bit[N:12] = either a PA of the next nested paging structure, or a page frame to translate to</li>
+</ul>
+</li>
+<li>Intel: Similar to traditional paging structure entries but different
+<ul>
+<li>📖Figure 29-1. Formats of EPTP and EPT Paging-Structure Entries</li>
+<li>taking 4KB translation as an example
+<ul>
+<li>📖Table 29-1. Format of an EPT PML4 Entry (PML4E) that References an EPT Page-Directory-Pointer Table</li>
+<li>📖Table 29-3. Format of an EPT Page-Directory-Pointer-Table Entry (PDPTE) that References an EPT Page Directory</li>
+<li>📖Table 29-5. Format of an EPT Page-Directory Entry (PDE) that References an EPT Page Table</li>
+<li>📖Table 29-6. Format of an EPT Page-Table Entry that Maps a 4-KByte Page</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>AMD: <em>Exactly</em> the same as traditional paging structure entries
+<ul>
+<li>taking 4KB translation as an example
+<ul>
+<li>📖Figure 5-20. 4-Kbyte PML4E-Long Mode</li>
+<li>📖Figure 5-21. 4-Kbyte PDPE-Long Mode</li>
+<li>📖Figure 5-22. 4-Kbyte PDE-Long Mode</li>
+<li>📖Figure 5-23. 4-Kbyte PTE-Long Mode</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="10000-feet-view-comparison-of-traditional-and-nested-paging"><a class="header" href="#10000-feet-view-comparison-of-traditional-and-nested-paging">10000 feet-view comparison of traditional and nested paging</a></h1>
+<div class="table-wrapper"><table><thead><tr><th></th><th>Traditional paging</th><th>Intel nested paging</th><th>AMD nested paging</th></tr></thead><tbody>
+<tr><td>Translation for</td><td>VA -&gt; PA (or GPA)</td><td>GPA -&gt; PA</td><td>GPA -&gt; PA</td></tr>
+<tr><td>Typically owned and handled by</td><td>OS (or guest OS)</td><td>Hypervisor</td><td>Hypervisor</td></tr>
+<tr><td>Pointer to the PML4</td><td>CR3</td><td>EPT pointer</td><td>nCR3</td></tr>
+<tr><td>Translation failure</td><td>#PF</td><td>EPT violation VM-exit</td><td>#VMEXIT(NPF)</td></tr>
+<tr><td>Paging structures compared with traditional ones</td><td>(N/A)</td><td>Similar</td><td>Identical</td></tr>
+<tr><td>Bit[11:0] of a paging structure entry is</td><td>Flags</td><td>Flags</td><td>Flags</td></tr>
+<tr><td>Bit[N:12] of a paging structure entry contains</td><td>Page frame</td><td>Page frame</td><td>Page frame</td></tr>
+<tr><td>Levels of tables for 4KB translation</td><td>4</td><td>4</td><td>4</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="our-goals-and-exercises-in-this-chapter-1"><a class="header" href="#our-goals-and-exercises-in-this-chapter-1">Our goals and exercises in this chapter</a></h1>
+<ul>
+<li>E#4: Enable nested paging with empty nested paging structures</li>
+<li>Build up nested paging structures on nested page fault as required, which includes:
+<ul>
+<li>Handling and normalizing EPT violation and #VMEXIT(NPF)</li>
+<li>Resolving a PA of a snapshot-backed-page that maps the GPA that caused fault</li>
+<li>E#5: Building nested paging structures for GPA -&gt; PA translation</li>
+</ul>
+</li>
+<li>E#6: Implement copy-on-write and fast memory revert mechanism</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="e4-enabling-nested-paging"><a class="header" href="#e4-enabling-nested-paging">E#4 Enabling nested paging</a></h1>
+<ul>
+<li>Intel:
+<ul>
+<li>Set bit[1] of the secondary processor-based VM-execution controls.</li>
+<li>Set the EPT pointer VMCS to point EPT PML4.</li>
+<li>📖Table 25-7. Definitions of Secondary Processor-Based VM-Execution Controls</li>
+<li>📖25.6.11 Extended-Page-Table Pointer (EPTP)</li>
+</ul>
+</li>
+<li>AMD:
+<ul>
+<li>Set bit[0] of offset 0x90 (NP_ENABLE bit).</li>
+<li>Set the N_CR3 field (offset 0xb8) to point nested PML4.</li>
+<li>📖15.25.3 Enabling Nested Paging</li>
+</ul>
+</li>
+<li>Expected output: should see normalized VM exit due to <code>missing_translation: true</code>
+<pre><code class="language-log">TRACE: NestedPageFaultQualification { rip: dd24e73, gpa: ff77000, missing_translation: true, write_access: true }
+ERROR: panicked at 'not yet implemented: E#5-1', hypervisor\src\hypervisor.rs:172:9
+</code></pre>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="e5-building-nested-paging-structures-and-gpa---pa-translation"><a class="header" href="#e5-building-nested-paging-structures-and-gpa---pa-translation">E#5 Building nested paging structures and GPA -&gt; PA translation</a></h1>
+<ul>
+<li><code>handle_nested_page_fault()</code> is called on nested page fault with details of the fault</li>
+<li><code>resolve_pa_for_gpa()</code> returns a PA to translate to, for the given GPA</li>
+<li><code>build_translation()</code> should update nested paging structures to translate given GPA to PA
+<ul>
+<li>Essentially, walking nested paging structures as processors do and updating entries needed for completing translation</li>
+</ul>
+</li>
+<li>Expected output: It kind of works! Should see repeating fuzzing iterations🤩
+<pre><code class="language-log">TRACE: NestedPageFaultQualification { rip: efe1d20, gpa: efe41b8, missing_translation: true, write_access: false }
+...
+Console output disabled. Enable the `stdout_stats_report` feature if desired.
+INFO: HH:MM:SS,     Run#, Dirty Page#, New BB#, Total TSC, Guest TSC, VM-exit#,
+INFO: 08:15:34,        1,           0,       0, 1017837505,   7957016,      443,
+...
+INFO: 08:16:41,        3,           0,       0, 200828781, 200817997,      133,
+DEBUG: Hang detected : &quot;input_3.png&quot; #2 (bit 1 at offset 0 bytes)
+INFO: 08:17:32,        4,           0,       0, 200821817, 200811033,      133,
+DEBUG: Hang detected : &quot;input_3.png&quot; #3 (bit 2 at offset 0 bytes)
+INFO: 08:18:22,        5,           0,       0, 200829433, 200818649,      133,
+DEBUG: Hang detected : &quot;input_3.png&quot; #4 (bit 3 at offset 0 bytes)
+INFO: 08:19:12,        6,           0,       0, 200833797, 200817997,      133,
+DEBUG: Hang detected : &quot;input_3.png&quot; #5 (bit 4 at offset 0 bytes)
+</code></pre>
+<ul>
+<li>Intel: the 2nd iteration may show
+<pre><code class="language-log">ERROR: 🐈 Unhandled VM exit 0xa
+</code></pre>
+</li>
+<li>But something is not right. Each run causes <code>Hang detected</code> and is extremely slow</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="e6-implement-copy-on-write-and-fast-memory-revert-mechanism"><a class="header" href="#e6-implement-copy-on-write-and-fast-memory-revert-mechanism">E#6 Implement copy-on-write and fast memory revert mechanism</a></h1>
+<ul>
+<li>Problem 1: Memory modified by a previous iteration remains modified for a next iteration
+<ul>
+<li>The hypervisor needs to revert memory, not just registers</li>
+</ul>
+</li>
+<li>Problem 2: Memory modified by one guest is also visible from other guests, because snapshot-backed memory is shared
+<ul>
+<li>The hypervisor needs to isolate an effect of memory modification to the current guest</li>
+</ul>
+</li>
+<li>Solution: Copy-on-write with nested paging
+<ul>
+<li>(E#6-1) Initially set all pages non-writable through nested paging</li>
+<li>(E#6-2) On nested page fault due to write-access
+<ol>
+<li>change translation to point to non-shared physical address (called &quot;dirty page&quot;),</li>
+<li>make it writable,</li>
+<li>keep track of those modified nested paging structure entries, and</li>
+<li>copy contents of original memory into the dirty page</li>
+</ol>
+</li>
+<li>At the end of each fuzzing iteration, revert the all modified nested paging structure entries</li>
+</ul>
+</li>
+<li>Before triggering copy-on-write
+<pre><code>[CPU#0] -&gt; [NPSs#0] --\
+                       +- Read-only ---------&gt; [Shared memory backed by snapshot]
+[CPU#1] -&gt; [NPSs#1] --/
+</code></pre>
+</li>
+<li>After triggering copy-on-write
+<pre><code>[CPU#0] -&gt; [NPSs#0] ----- Readable/Writable --&gt; [Private memory]
+                       +- Read-only ----------&gt; [Shared memory backed by snapshot]
+[CPU#1] -&gt; [NPSs#1] --/
+</code></pre>
+</li>
+<li>Expected result: No more <code>Hang detected</code>, and <code>Dirty Page#</code> starts showing numbers🔥
+<pre><code class="language-log">INFO: HH:MM:SS,     Run#, Dirty Page#, New BB#, Total TSC, Guest TSC, VM-exit#,
+INFO: 09:31:09,        1,         131,       0, 916693934,   7982832,      455,
+...
+INFO: 09:32:22,      297,          30,       0,    803898,    450754,       41,
+INFO: 09:32:25,      298,         131,       0,   8902656,   7919091,      329,
+</code></pre>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="advanced-topics"><a class="header" href="#advanced-topics">Advanced topics</a></h1>
+<ul>
+<li>Cache management (ie, TLB invalidation)</li>
+<li>Memory types and virtualizing them</li>
+<li>Advanced features: MBEC/GMET, HALT, DMA protection</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="vm-introspection-for-fuzzing"><a class="header" href="#vm-introspection-for-fuzzing">VM introspection for fuzzing</a></h1>
+<p>This chapter explores useful features and techniques for virtual machine introspection for fuzzing.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="problem-1-unnecessary-code-execution"><a class="header" href="#problem-1-unnecessary-code-execution">Problem 1: Unnecessary code execution</a></h1>
+<ul>
+<li>The guest continues to run even after the target function finishes</li>
+<li>Our snapshot is taken immediately after the call to <code>egDecodeAny()</code> as below
+<ul>
+<li>No reason to run <code>FreePool()</code> and the subsequent code</li>
+</ul>
+<pre><code class="language-c">EG_IMAGE* egLoadImage(EFI_FILE* BaseDir, CHAR16 *FileName, BOOLEAN WantAlpha)
+{
+  // ...
+  egLoadFile(BaseDir, FileName, &amp;FileData, &amp;FileDataLength)
+  newImage = egDecodeAny(FileData, FileDataLength, 128, WantAlpha);
+  FreePool(FileData);
+  return newImage;
+}
+</code></pre>
+</li>
+<li>Can we abort the guest when <code>egDecodeAny()</code> returns?</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="introduction-to-patching"><a class="header" href="#introduction-to-patching">Introduction to patching</a></h1>
+<ul>
+<li>There may not be any VM exit on return, but we can replace code with something that can cause VM exit
+<ul>
+<li>For example, code can be replaced with the <code>UD</code> instruction, which causes #UD, which can be intercepted as VM exit</li>
+</ul>
+</li>
+<li>The hypervisor can modify memory when paging it in from the snapshot</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="our-design"><a class="header" href="#our-design">Our Design</a></h1>
+<ul>
+<li>Prepare a patch file, which contains &quot;where&quot; and &quot;with what byte(s) to replace&quot;
+<ul>
+<li>In our case, the patch file describes a patch for the return address of <code>egDecodeAny()</code> with the <code>UD</code> instruction</li>
+</ul>
+</li>
+<li>When starting the hypervisor, an user specifies the patch file through a command line parameter</li>
+<li>On nested page fault, the hypervisor applies the patch if a page being paged-in is listed in the patch file</li>
+<li>The guest will execute the modified code</li>
+<li>The hypervisor intercepts #UD as VM exit using exception interception (more on later)</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="demo-end-marker"><a class="header" href="#demo-end-marker">Demo: end marker</a></h1>
+<ul>
+<li>Will show:
+<ol>
+<li>The patch file <code>tests/samples/snapshot_patch_end_marker.json</code></li>
+<li>The patch location with a disassembler</li>
+<li>Updating <code>tests/startup.nsh</code> to supply the patch file</li>
+<li>Running the hypervisor and comparing speed</li>
+</ol>
+<ul>
+<li>One fuzzing iteration completes about x3 faster in some cases</li>
+<li>Before the change
+<pre><code class="language-log">INFO: 12:58:06,        2,          30,       0,  28944596,    421124,       43,
+...
+INFO: 12:58:35,      302,         131,       0,   8229261,   7333745,      206,
+</code></pre>
+</li>
+<li>After the change
+<pre><code class="language-log">INFO: 13:13:30,        2,           6,       0,     98006,      1634,        7,
+...
+INFO: 13:13:40,      302,         128,       0,   8163017,   7315310,      200,
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="exception-interception"><a class="header" href="#exception-interception">Exception interception</a></h1>
+<ul>
+<li>By default, exception happens within the guest-mode is processed entirely within the guest
+<ul>
+<li>Delivered through current (guest) IDT</li>
+<li>Processed by the guest OS</li>
+</ul>
+</li>
+<li>A hypervisor can optionally intercept them as VM exits
+<ul>
+<li>Intel: Exception Bitmap VMCS 📖25.6.3 Exception Bitmap</li>
+<li>AMD: Intercept exception vectors (offset 0x8) 📖15.12 Exception Intercepts</li>
+</ul>
+</li>
+<li>To enable, set the bits that correspond to exception numbers you want to intercept, eg set <code>1 &lt;&lt; 0xe</code> to intercept #PF (0xe)</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="exception-handling"><a class="header" href="#exception-handling">Exception handling</a></h1>
+<ul>
+<li>
+<p>On VM exit, read-only fields in VMCS/VMCB are updated with details of exception</p>
+<div class="table-wrapper"><table><thead><tr><th></th><th>Exception Number</th><th>Error Code (if exists)</th></tr></thead><tbody>
+<tr><td>Intel</td><td>VM-exit interruption information</td><td>VM-exit interruption error code</td></tr>
+<tr><td>AMD</td><td>EXITCODE</td><td>EXITINFO1</td></tr>
+</tbody></table>
+</div>
+<ul>
+<li>Intel: 📖25.9.2 Information for VM Exits Due to Vectored Events</li>
+<li>AMD: 📖15.12 Exception Intercepts</li>
+</ul>
+</li>
+<li>
+<p>The hypervisor can inject exception to deliver what would have been delivered to the guest</p>
+<ul>
+<li>Intel: 📖27.6 EVENT INJECTION</li>
+<li>AMD: 📖15.20 Event Injection</li>
+</ul>
+</li>
+<li>
+<p>In our case, we will abort the current fuzzing iteration and revering the guest state</p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="our-goals-and-exercises-in-this-chapter-2"><a class="header" href="#our-goals-and-exercises-in-this-chapter-2">Our goals and exercises in this chapter</a></h1>
+<ul>
+<li>E#7 Enabling #UD interception for performance improvement</li>
+<li>E#8 Enabling #BP interception for coverage tracking</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="e7-enabling-ud-exception-interception"><a class="header" href="#e7-enabling-ud-exception-interception">E#7 Enabling #UD exception interception</a></h1>
+<ul>
+<li>Change <code>tests/startup.nsh</code> to use <code>snapshot_patch_end_marker.json</code></li>
+<li>Expected result: Each iteration shows <code>Reached the end marker</code> (and completes faster).</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="problem-2-cannot-tell-efficacy-of-corpus-and-mutation"><a class="header" href="#problem-2-cannot-tell-efficacy-of-corpus-and-mutation">Problem 2: Cannot tell efficacy of corpus and mutation</a></h1>
+<ul>
+<li>Did we discover new execution path? No, no feedback at all.</li>
+<li>Did we find a bug? No, no signal at all.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="basic-block-coverage-tracking-through-patches"><a class="header" href="#basic-block-coverage-tracking-through-patches">Basic-block coverage tracking through patches</a></h1>
+<ul>
+<li>Idea
+<ul>
+<li>Patch the beginning of every basic block of a target and trigger VM exit when a guest executes them</li>
+<li>When such VM exit occurs, remove the patch (replace a byte with an original byte) so that future execution does not cause VM exit</li>
+<li>VM exit due to the patch == execution of a new basic block == good input</li>
+</ul>
+</li>
+<li>Implemented in a variety of fuzzers, eg, <a href="https://github.com/gamozolabs/mesos">mesos</a>, <a href="https://googleprojectzero.blogspot.com/2020/04/fuzzing-imageio.html">ImageIO</a>, <a href="https://github.com/googleprojectzero/Hyntrospect">Hyntrospect</a>, <a href="https://github.com/0vercl0k/wtf">what the fuzz</a>, <a href="https://github.com/intel/kernel-fuzzer-for-xen-project">KF/x</a></li>
+<li>Some of other ideas explained in the <a href="https://www.youtube.com/watch?v=4nz-7ktdU_k">Putting the Hype in Hypervisor</a> talk
+<ul>
+<li>Intel Processor Trace</li>
+<li>Branch single stepping</li>
+<li>Interrupt/timer based sampling</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="demo-coverage-tracking"><a class="header" href="#demo-coverage-tracking">Demo: coverage tracking</a></h1>
+<ul>
+<li>Will show:
+<ul>
+<li>Basic blocks in a disassembler</li>
+<li>Generating a patch file using an IDA Python <code>tests/ida_generate_patch.py</code></li>
+<li>Gathering coverage info from output</li>
+<li>Visualizing coverage using an IDA Python <code>tests/ida_highlight_coverage.py</code>
+<img src="vm-introspection-for-fuzzing/../tests/ida_coverage.png" alt="" /></li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="e8-enabling-bp-interception-and-coverage-tracking"><a class="header" href="#e8-enabling-bp-interception-and-coverage-tracking">E#8 Enabling #BP interception and coverage tracking</a></h1>
+<ul>
+<li>Change <code>tests/startup.nsh</code> to use <code>snapshot_patch.json</code></li>
+<li>Expected result: <code>New BB#</code> starts showing numbers. <code>COVERAGE:</code> appears in the log.
+<pre><code class="language-log">INFO: HH:MM:SS,     Run#, Dirty Page#, New BB#, Total TSC, Guest TSC, VM-exit#,
+...
+INFO: 14:37:36,        2,           6,       8,   5361191,      3170,       15,
+INFO: COVERAGE: [dd2d8df, dd26544, dd24ea8, dd25cea, dd25cf4, dd25d0f, dd25d08, dd25f78]
+TRACE: Reached the end marker
+DEBUG: Adding a new input file &quot;input_3.png_1&quot;. Remaining 3
+</code></pre>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="catching-possible-bugs"><a class="header" href="#catching-possible-bugs">Catching possible bugs</a></h1>
+<ul>
+<li>Types of indicators of bugs and detection of them:
+<ul>
+<li>Invalid memory access -&gt; #PF interception and nested page fault</li>
+<li>Use of a non-canonical form memory address -&gt; #GP interception</li>
+<li>Valid but bogus code execution -&gt; #UD and #BP interception</li>
+<li>Dead loop -&gt; Timer expiration</li>
+</ul>
+</li>
+<li>Exploration of those ideas are left for readers
+<ul>
+<li>The author has not discovered non-dead-loop bugs</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h1>
+<p>This chapter wraps up the course and shows pointers to the next possible areas to explore.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="wrap-up"><a class="header" href="#wrap-up">Wrap up🎉</a></h1>
+<ul>
+<li>We implemented a type-1 fuzzing hypervisor</li>
+<li>We learned
+<ul>
+<li>how hypervisor sets up and starts a guest, and handles events from it</li>
+<li>how hypervisor virtualizes physical memory for the guest</li>
+<li>how hypervisor can inspect guest's behaviour to track execution coverage and catch possible bugs</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="whats-next"><a class="header" href="#whats-next">What's next</a></h1>
+<ul>
+<li>Study state-of-the-art research paper about fuzzing</li>
+<li>Find bugs in firmware and kernel modules by extending the implementation</li>
+<li>Write a hypervisor from scratch to solidify the understanding of the details</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="resources"><a class="header" href="#resources">Resources</a></h1>
+<ul>
+<li>Recommended bare metal (with serial ports)
+<ul>
+<li>Intel: <a href="https://simplynuc.com/product/nuc11tnhi3-full/">NUC11TNHi3 Full with 9-pin to DE-9P</a></li>
+<li>AMD: <a href="https://simplynuc.com/product/llm1v6sq/">LLM1v6SQ</a></li>
+</ul>
+</li>
+<li>Hypervisors
+<ul>
+<li>Smaller projects:
+<ul>
+<li><a href="https://github.com/projectacrn/acrn-hypervisor">ACRN Embedded Hypervisor</a> (Intel + Nesting)</li>
+<li><a href="https://github.com/matsu/bitvisor/tree/master/core">BitVisor</a> (AMD/Intel + Nesting)</li>
+<li><a href="https://github.com/ionescu007/SimpleVisor">SimpleVisor</a> (Intel, Windows-centric)</li>
+<li><a href="https://github.com/tandasat/SimpleSvm">SimpleSvm</a> (AMD, Windows-centric)</li>
+</ul>
+</li>
+<li>As a fuzzer: See <a href="conclusion/../introduction/why-hypervisor-for-fuzzing.html">Introduction</a></li>
+<li>Tutorials (Windows-centric):
+<ul>
+<li><a href="https://revers.engineering/7-days-to-virtualization-a-series-on-hypervisor-development/">5 Days To Virtualization: A Series On Hypervisor Development</a></li>
+<li><a href="https://github.com/SinaKarvandi/Hypervisor-From-Scratch">Hypervisor From Scratch</a></li>
+</ul>
+</li>
+<li>Book: <a href="https://play.google.com/store/books/details/Edouard_Bugnion_Hardware_and_Software_Support_for?id=c4ZyEAAAQBAJ">Hardware and Software Support for Virtualization</a></li>
+<li><a href="https://tandasat.github.io/">4-days course I offer</a>👋</li>
+</ul>
+</li>
+<li>x86-64: <a href="https://p.ost2.fyi/courses/course-v1:OpenSecurityTraining2+Arch2001_x86-64_OS_Internals+2021_v1/course/">OpenSecurityTraining2: x86-64 OS Internals</a></li>
+<li>UEFI
+<ul>
+<li><a href="https://p.ost2.fyi/courses/course-v1:OpenSecurityTraining2+4021_Intro_UEFI+2022_v1/course/">OpenSecurityTraining2: Introductory UEFI</a></li>
+<li><a href="https://github.com/tianocore-training/Tianocore_Training_Contents/wiki">Tianocore Training Contents Wiki</a></li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="thank-you"><a class="header" href="#thank-you">Thank you!</a></h1>
+<p>Thank you for taking the Hypervisor 101 in Rust course!</p>
+<p>Please reach out to the author on <a href="https://github.com/tandasat/Hypervisor-101-in-Rust/discussions">GitHub</a> if you have ideas to improve the course, or hit the ⭐ button if you enjoyed it.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </body>
+</html>
