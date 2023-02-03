@@ -4,7 +4,7 @@
 
 In this workshop, you will learn the basics of how VT-x by carefully analyzing and debugging source code of a minimalistic hypervisor on Windows. After this workshop, you will understand how to turn on/off virtualization from ring-0 code, trap execution of certain instructions in the system, and more importantly, learn how to extend what you studied by yourself.
 
-## Caveats 
+## Caveats
 
 **This workshop is a hands-on style**. You are must bring a laptop and complete set up instructions as specified below **prior to the workshop**:
 
