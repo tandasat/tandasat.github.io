@@ -148,8 +148,9 @@
                         <h1 id="welcome-to-hypervisor-101-in-rust"><a class="header" href="#welcome-to-hypervisor-101-in-rust">Welcome to Hypervisor 101 in Rust</a></h1>
 <p>This is a day long course to quickly learn the inner working of hypervisors and techniques to write them for high-performance fuzzing.</p>
 <p>This course covers foundation of hardware-assisted virtualization technologies, such as VMCS/VMCB, guest-host world switches, EPT/NPT, as well as useful features and techniques such as exception interception for virtual machine introspection for fuzzing.</p>
-<p>The class is made up of lectures using the materials within this directory and hands-on exercises with source code under the <code>Hypervisor-101-in-Rust/hypervisor</code> directory. This lecture materials are written for the <code>gcc2023</code> branch; check out the branch before you start.</p>
-<pre><code class="language-shell">git checkout gcc2023
+<p>The class is made up of lectures using the materials within this directory and hands-on exercises with source code under the <code>Hypervisor-101-in-Rust/hypervisor</code> directory.</p>
+<p>This lecture materials are written for the <code>gcc2023</code> branch; check out the starting point of the branch before you start.</p>
+<pre><code class="language-shell">git checkout e4c948ce1ed2afcdbd63d18f7b0f115d73d91bfc
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h1>
 <ul>
@@ -258,7 +259,11 @@
 <div style="break-before: page; page-break-before: always;"></div><h1 id="what-this-class-is-not"><a class="header" href="#what-this-class-is-not">What this class is NOT</a></h1>
 <ul>
 <li>Rust programming course</li>
-<li>Fuzzing course</li>
+<li>Fuzzing course
+<ul>
+<li>The <a href="https://discord.com/invite/QxxTBCw">Awesome Fuzzing</a> discord server is a good place to seek suggestion if interested</li>
+</ul>
+</li>
 <li>Learning usage or internals of any specific existing software</li>
 <li>Covering details that are not required for reading majority of provided code
 <ul>
@@ -289,7 +294,7 @@
 <div style="break-before: page; page-break-before: always;"></div><h1 id="uefi-applications"><a class="header" href="#uefi-applications">UEFI applications</a></h1>
 <ul>
 <li>UEFI is a pre-OS environment, aka, BIOS</li>
-<li>In our execution phase (called &quot;DXE&quot;) is:
+<li>Our execution phase (called &quot;DXE&quot;) is:
 <ul>
 <li>single threaded; no thread or process</li>
 <li>ring-0 and long-mode</li>
@@ -1173,7 +1178,7 @@ INFO: 09:32:25,      298,         131,       0,   8902656,   7919091,      329,
 <ul>
 <li>Cache management (ie, TLB invalidation)</li>
 <li>Memory types and virtualizing them</li>
-<li>Advanced features: MBEC/GMET, HALT, DMA protection</li>
+<li>Advanced features: MBEC/GMET, HLAT, DMA protection</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="vm-introspection-for-fuzzing"><a class="header" href="#vm-introspection-for-fuzzing">VM introspection for fuzzing</a></h1>
 <p>This chapter explores useful features and techniques for virtual machine introspection for fuzzing.</p>
