@@ -32,6 +32,7 @@
 
     </head>
     <body>
+    <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "../";
@@ -69,10 +70,12 @@
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -144,11 +147,7 @@
                         <h1 id="what-this-class-is-not"><a class="header" href="#what-this-class-is-not">What this class is NOT</a></h1>
 <ul>
 <li>Rust programming course</li>
-<li>Fuzzing course
-<ul>
-<li>The <a href="https://discord.com/invite/QxxTBCw">Awesome Fuzzing</a> discord server is a good place to seek suggestion if interested</li>
-</ul>
-</li>
+<li>Fuzzing course</li>
 <li>Learning usage or internals of any specific existing software</li>
 <li>Covering details that are not required for reading majority of provided code
 <ul>
@@ -221,5 +220,6 @@
         <!-- Custom JS scripts -->
 
 
+    </div>
     </body>
 </html>
