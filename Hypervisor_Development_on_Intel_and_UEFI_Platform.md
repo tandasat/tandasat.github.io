@@ -27,7 +27,7 @@ Required:
 - Familiarity with the x86_64 architecture, such as privilege levels, interrupts, page tables, and system registers.
 - System programming experience, such as kernel-module development, is a plus but not a requirement.
 
-Recommended pre-class learning materials will be introduced about prior to the class.
+Recommended pre-class learning materials will be introduced about 2 weeks prior to the class.
 
 
 Learning Objectives
