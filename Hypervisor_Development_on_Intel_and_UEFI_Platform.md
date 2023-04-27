@@ -136,7 +136,7 @@ Hardware and Software Requirements
 
 The students are expected to have the following hardware and software:
 
-- The host machines with the Intel processors, SSD, 8GB+ RAM and 30GB+ of free storage space
+- The host machines with the Intel processors, SSD, 8GB+ RAM and 50GB+ of free storage space
 - For Windows users
     - Windows 10 x64 build 19044 (a.k.a. 21H2) without Virtualization-base Security (VBS) enabled
     - Ubuntu 20.04+ on WSL version 1
