@@ -4,7 +4,7 @@ Hypervisor Development for Security Researchers
 Overview
 ---------
 
-This course provides students the skills and knowledge to develop their thin hypervisors as UEFI modules using Intel VT-x. This is a hands-on heavy class and will spend about 40% of the time with excesses.
+This course helps students gain the skills and knowledge to develop light-weight hypervisors as UEFI modules using Intel VT-x. This is a hands-on heavy class and will spend about 40% of the time with excesses.
 
 
 Audiences
@@ -33,41 +33,41 @@ Recommended pre-class learning materials will be introduced about 3 weeks prior 
 Learning Objectives
 --------------------
 
-At the end of the class, students will gain enough knowledge and skills to start developing their pass-through UEFI-based hypervisors. Knowledge-wise, this includes but not limited to the understanding of:
+At the end of the class, students will gain enough knowledge and skills to start developing their pass-through hypervisors. Knowledge-wise, this includes but not limited to the understanding of:
 
 - Key concepts of VT-x and programming interfaces
-- General UEFI-module development workflow and tools
-- Execution environment changes during OS boot and their influence on the hypervisor design
-- Subtle yet critical technologies such as memory types and caches
-- Application Processors (APs) start up, and emulation by a hypervisor
-- "Owning" control registers and challenges with it
-- Various application of hypervisors (for adding security, reverse engineering and fuzzing, for example)
+- Various applications of hypervisors in the real world and how they are implemented, examples include:
+  - System hardening, such as HVCI and KDP on Windows
+  - System-level fuzzing, such as What The Fuzz
+  - System-level inspection and rootkit, such as antivirus-hypervisors
+- Early OS boot activities and handling of them as a hypervisor
+- Subtle yet complex concepts such as control register access, memory types, caches invalidation, and emulation of those
+- Basic UEFI-module development workflow, tools and techniques
 
 
 Outlines
 ---------
 
-1. UEFI and Hypervisors
-    - Lectures: why UEFI for hypervisors, differences from OS kernel drivers, EDK2, introduction to high-level design options
-    - Lab: setting up the lab environment
-    - Lab: debugging firmware modules and logging output
+1. Hypervisor and UEFI
+    - Lectures: what hypervisors can be used for, UEFI module-based hypervisors, comparison with kernel module-based hypervisors, and UEFI/EDK2
 
-2. Basics of VT-x
-    - Lectures: processor modes, VMCS, "host" vs "guest", VM-exit, VM-entry, and snapshot and "guest" for fuzzing hypervisor
-    - Lab: setting up Bochs and debugging VMX instruction issues
-    - Lab: configuring host and guest
-    - Lab: starting host and guest, monitoring CPUID execution
+2. VT-x Basics
+    - Lectures: processor modes, VMCS, "host" vs "guest", VM-exit, VM-entry, and high-level design options
+    - Lab: source-level debugging with VMware
+    - Lab: configuring and starting host and guest, monitoring CPUID execution
+    - Lab: troubleshooting VMX instruction errors with Bochs
 
 3. OS Boot
     - Lectures: system boot phases, boot time vs runtime, physical vs virtual mode, and runtime drivers for monitoring OS activities
     - Lab: controlling VM-exits with MSR bitmaps
-    - Lab: booting Windows by building host page tables, IDT and GDT
+    - Lab: booting Windows by building host page tables
     - Lab: tracing guest page faults with exception interception and event injection
 
 4. Extended Page Tables (EPT)
-    - Lectures: x64 address translation, EPT setup and activation, EPT induced VM-exits, memory types, caches, VPID, EPT-based hooking, VT-d (DMA remapping), and snapshot-based fuzzing hypervisor design
-    - Lab: reviewing address translation mechanisms with and without EPT
-    - Lab: enabling EPT and tracing guest execution
+    - Lectures: traditional x64 address translation vs EPT-enabled translation, EPT setup and activation, EPT induced VM-exits
+    - Lab: building and enabling pass-through EPT
+    - Lab: tracing guest execution with EPT
+    - Advanced lectures: memory types emulation, caches invalidation, VPID, stealth hooking with EPT, MBEC, VT-rp (HLAT), VT-d (DMA remapping), and snapshot-based fuzzing hypervisors
 
 5. Multi-processors Support
     - Lectures: multi-processor protocol, processor activity state, application processors startup, unrestricted guest and Hypervisor Top Level Functional Specification (TLFS)
@@ -75,8 +75,7 @@ Outlines
     - Lab: booting multi-processor Windows by emulating INIT-SIPI-SIPI
 
 6. Control Register Shadowing
-    - Lectures: control register guest/host mask, read shadow, effects, and emulation of control register changes
-    - Lab: "owning" control registers
+    - Lectures: control register guest/host mask, read shadow VMCS, and complexities with emulation of control register access
     - Lab: booting Ubuntu by properly emulating MOV-to-CRx
 
 7. Demos and References
@@ -90,15 +89,15 @@ Details
 
 A hypervisor is a critical component in both security and cloud computing. There is also an increasing interest in applying virtualization technologies in the area of security engineering and analysis. How can hypervisors be used to secure the existing systems? How to write custom hypervisors to perform reverse engineering and fuzzing more efficiently?
 
-In this class, the students will learn the foundations to answer those questions, that is, the basic skills and knowledge to develop hypervisors. The class is designed in a way such that everything is built from scratch and optimized for learning. This allows students to better understand the building blocks and expand the knowledge acquired in the course by themselves afterward. Topics include UEFI architecture and programming, VT-x/EPT configuration, debugging tools, comparison of hypervisor designs, application of the technologies, and more.
+In this class, the students will have the answers to those questions through developing simple hypervisors together. The class is designed in a way such that everything is built from scratch and optimized for learning. This allows students to better understand the building blocks of real-world applied use of virtualization technologies and expand the knowledge for their interests afterward. Topics include UEFI architecture and programming, VT-x/EPT configuration, comparison of hypervisor designs, application of the technologies, debugging tools and techniques, and more.
 
-This is a hands-on-oriented class. We believe that the students can learn and retain concepts and skills the best by working with those concepts by themselves and not by being taught; hence gaining the greatest value. With this philosophy, the class is designed for lab activities as the primary learning opportunities, and lectures are to explain backgrounds and the motivations for those. We will spend about 40% of the time for hands-on.
+This is a hands-on-oriented class. We believe that the students can learn and retain knowledge best by tackling concrete challenges and not by being taught. With this philosophy, the class is designed for lab activities as the primary learning opportunities, and lectures are to explain theories behind them. We will spend about 40% of the time on hands-on exercises.
 
-At the beginning of the class, students will receive skeleton implementations of our hypervisors and incrementally update them through the exercises with a clear understanding of motivations and design choices.
+At the beginning of the class, each student will receive a skeleton implementation of hypervisor and incrementally update it through a series of exercises with an understanding of design choices.
 
-At the end of the class, students will also receive a full version of our hypervisor. This includes implementation of advanced concepts, such as stealth-hooking hypercall, use of VT-d, guest hardening (like HyperGuard if you are familiar with it), host hardening through CET, SMAP, UMIP, etc, handling of uncommon events like microcode update, NMI, and so on. This version can be used to complement your understanding of advanced topics and as a reference to explore more topics as you wish.
+As we learn concepts, we will discuss various applications of virtualization technologies and their implementations throughout the class. This includes snapshot-based system-level fuzzing, performant system hardening with MBEC and HLAT (VT-rp), eg, HyperGuard, HVCI and KDP on Windows, dynamic analysis with stealth-hooking, and SMM security reporting (PPAM).
 
-Additionally, a proof-of-concept implementation of taking and reverting to snapshots for fast full-system fuzzing will be shared as well.
+Near the end of the class, students will also receive a full version of our hypervisor. This includes implementation of advanced concepts, such as stealth-hooking hypercall, use of VT-d (DMA protection), guest hardening, host hardening with CET, SMAP and UMIP, handling of uncommon events like microcode update, NMI and MTRR updates. This version can be used to complement your understanding of advanced topics and as a reference to explore more topics as you wish.
 
 ![Hypervisor_Development_for_Security_Researchers.png](/Images/Hypervisor_Development_for_Security_Researchers.png)
 
