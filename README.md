@@ -5,10 +5,10 @@ Training
 ---------
 
 Our next public [Hypervisor Development Class](Hypervisor_Development_for_Security_Researchers.md) is:
-- _Planned to be_
-    - Date: November (4 days)
-    - Time: 8am - 4pm (Pacific Time)
-    - Format: Remote (Zoom or similar)
+- Date: November 13, 14, 20 and 21 (4 days) via Zoom
+  - The class is split into 2 Monday-Tuesday to allow students review contents in between.
+- Time: 8am - 4pm (PST/GMT-8) / 4pm - 1am (CET/GMT+2)
+- Format: Remote (Zoom or similar)
 
 If you are interested in a future public class, subscribe [our mailing list](https://groups.io/g/system-programming-lab) by sending empty email to [system-programming-lab+subscribe@groups.io](mailto:system-programming-lab+subscribe@groups.io?subject=Subscribe%20Request).
 
