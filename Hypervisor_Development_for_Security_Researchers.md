@@ -4,7 +4,7 @@ Hypervisor Development for Security Researchers
 Overview
 ---------
 
-This course provides students the skills and knowledge to develop their thin hypervisors as UEFI modules using Intel VT-x. This is a hands-on heavy class and will spend about half of the time with excesses.
+This course provides students the skills and knowledge to develop their thin hypervisors as UEFI modules using Intel VT-x. This is a hands-on heavy class and will spend about 40% of the time with excesses.
 
 
 Audiences
@@ -27,7 +27,7 @@ Required:
 - Familiarity with the x86_64 architecture, such as privilege levels, interrupts, page tables, and system registers.
 - System programming experience, such as kernel-module development, is a plus but not a requirement.
 
-Recommended pre-class learning materials will be introduced about 2 weeks prior to the class.
+Recommended pre-class learning materials will be introduced about 3 weeks prior to the class.
 
 
 Learning Objectives
@@ -92,7 +92,7 @@ A hypervisor is a critical component in both security and cloud computing. There
 
 In this class, the students will learn the foundations to answer those questions, that is, the basic skills and knowledge to develop hypervisors. The class is designed in a way such that everything is built from scratch and optimized for learning. This allows students to better understand the building blocks and expand the knowledge acquired in the course by themselves afterward. Topics include UEFI architecture and programming, VT-x/EPT configuration, debugging tools, comparison of hypervisor designs, application of the technologies, and more.
 
-This is a hands-on-oriented class. We believe that the students can learn and retain concepts and skills the best by working with those concepts by themselves and not by being taught; hence gaining the greatest value. With this philosophy, the class is designed for lab activities as the primary learning opportunities, and lectures are to explain backgrounds and the motivations for those. We will spend about half of the time for hands-on.
+This is a hands-on-oriented class. We believe that the students can learn and retain concepts and skills the best by working with those concepts by themselves and not by being taught; hence gaining the greatest value. With this philosophy, the class is designed for lab activities as the primary learning opportunities, and lectures are to explain backgrounds and the motivations for those. We will spend about 40% of the time for hands-on.
 
 At the beginning of the class, students will receive skeleton implementations of our hypervisors and incrementally update them through the exercises with a clear understanding of motivations and design choices.
 
@@ -122,11 +122,11 @@ Format and Package
 -------------------
 
 Format:
-- Remote - The training is offered remotely through Zoom.
-- Synchronous - The training is offered live.
+- The training is offered remotely through Zoom.
+- Recording will be uploaded shortly after end of each day for review.
 
 Package:
-- Material - Training materials (slides, sample code etc).
+- Material - Training materials (slides, sample code etc) will be shared.
 - Support - 3 weeks of asynchronous consultation on Slack and email from the last day of the class. Rights to request the latest slides and code for free.
 
 
@@ -137,19 +137,18 @@ The students are expected to have the following hardware and software:
 
 - The host machines with the Intel processors, SSD, 8GB+ RAM and 50GB+ of free storage space
 - For Windows users
-    - Windows 10 x64 build 19044 (a.k.a. 21H2) without Virtualization-base Security (VBS) enabled
-    - Ubuntu 20.04+ on WSL version 1
-    - VMware Workstation Pro 16 (Recommended) or VMware Workstation Player 16
+    - Windows 10 build 22621 (a.k.a. 22H2)+ without Virtualization-base Security (VBS) enabled
+    - Ubuntu 22.04+ on WSL version 1
+    - VMware Workstation Pro (Recommended) or VMware Workstation Player 17
 - For Linux users
-    - Ubuntu 20.04+
-    - VMware Workstation Pro 16
+    - Ubuntu 22.04+
+    - VMware Workstation Pro 17
 - For macOS Users
     - macOS 11+
     - VMWare Fusion Pro 12 or VMWare Fusion Player 12
     - Homebrew and git
-- As VMs, Windows 10 x64 build 19044 and Ubuntu 22.04
 
-The newer versions of the operating systems and other software are supported. Another Linux distro may be workable but unsupported. Other hypervisors such as KVM, Hyper-V, or VirtualBox cannot be used.
+The newer versions of the operating systems and other software are supported. Older versions of software and another Linux distro may be workable but not adequately tested. Other hypervisors such as KVM, Hyper-V, or VirtualBox cannot be used.
 
 The host system can also be a cloud-provided machine if the host machine cannot be arranged locally. Those are confirmed to be usable:
 - Scaleway's Intel [Elastic Metal Servers](https://www.scaleway.com/en/pricing/#elastic-metal) for a Linux host, and
@@ -163,4 +162,4 @@ Registration and Contacts
 
 - For the dates and timezone of the next public class, see [the top page](README.md).
 - For receiving updates on future public classes, subscribe [our mailing list](https://groups.io/g/system-programming-lab) by sending empty email to [system-programming-lab+subscribe@groups.io](mailto:system-programming-lab+subscribe@groups.io?subject=Subscribe%20Request).
-- For further inquiries, reach out to [@standa_t](https://twitter.com/standa_t) on Twitter or [send us email](mailto:tanda.sat@gmail.com?cc=bruce.dang@gmail.com&subject=Hypervisor%20Development%20for%20the%20Intel%20and%20UEFI%20Platform). We also offer a private class with minimum 8 people in English and Japanese. Please contact us to discuss further details.
+- For further inquiries, reach out to [@standa_t](https://twitter.com/standa_t) on Twitter or [send us email](mailto:tanda.sat@gmail.com?subject=Hypervisor%20Development%20for%20Security%20Researchers). We also offer a private class with minimum 8 people. Please contact us to discuss further details.
