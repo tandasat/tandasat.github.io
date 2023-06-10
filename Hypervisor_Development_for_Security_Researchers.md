@@ -1,5 +1,5 @@
-Hypervisor Development for the Intel and UEFI Platform
-=======================================================
+Hypervisor Development for Security Researchers
+================================================
 
 Overview
 ---------
@@ -100,7 +100,7 @@ At the end of the class, students will also receive a full version of our hyperv
 
 Additionally, a proof-of-concept implementation of taking and reverting to snapshots for fast full-system fuzzing will be shared as well.
 
-![Hypervisor_Development_on_Intel_and_UEFI_Platform.png](/Images/Hypervisor_Development_on_Intel_and_UEFI_Platform.png)
+![Hypervisor_Development_for_Security_Researchers.png](/Images/Hypervisor_Development_for_Security_Researchers.png)
 
 
 Pricing

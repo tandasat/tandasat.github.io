@@ -4,7 +4,7 @@ System Programming Lab
 Training
 ---------
 
-Our next public [Hypervisor Development Class](Hypervisor_Development_on_Intel_and_UEFI_Platform.md) is:
+Our next public [Hypervisor Development Class](Hypervisor_Development_for_Security_Researchers.md) is:
 - _Planned to be_
     - Date: November (4 days)
     - Time: 8am - 4pm (Pacific Time)
@@ -12,7 +12,7 @@ Our next public [Hypervisor Development Class](Hypervisor_Development_on_Intel_a
 
 If you are interested in a future public class, subscribe [our mailing list](https://groups.io/g/system-programming-lab) by sending empty email to [system-programming-lab+subscribe@groups.io](mailto:system-programming-lab+subscribe@groups.io?subject=Subscribe%20Request).
 
-For further inquiries, reach out to [@standa_t](https://twitter.com/standa_t) on Twitter or [send us email](mailto:tanda.sat@gmail.com?cc=bruce.dang@gmail.com&subject=Hypervisor%20Development%20for%20the%20Intel%20and%20UEFI%20Platform). We also offer a private class with minimum 8 people. Please contact us to discuss further details.
+For further inquiries, reach out to [@standa_t](https://twitter.com/standa_t) on Twitter or [send us email](mailto:tanda.sat@gmail.com?subject=Hypervisor%20Development%20for%20Security%20Researchers). We also offer a private class with minimum 8 people. Please contact us to discuss further details.
 
 
 About Us
