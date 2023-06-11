@@ -9,10 +9,9 @@ Our next public [Hypervisor Development Class](Hypervisor_Development_for_Securi
   - The class is split into 2 Monday-Tuesday to allow students review contents in between.
 - Time: 8am - 4pm (PST/GMT-8) / 4pm - 1am (CET/GMT+2)
 - Format: Remote (Zoom or similar)
+- **Register at [RegFox](https://systemprogramminglab.regfox.com/hypervisor-development-for-security-researchers-nov-2023)!**
 
-If you are interested in a future public class, subscribe [our mailing list](https://groups.io/g/system-programming-lab) by sending empty email to [system-programming-lab+subscribe@groups.io](mailto:system-programming-lab+subscribe@groups.io?subject=Subscribe%20Request).
-
-For further inquiries, reach out to [@standa_t](https://twitter.com/standa_t) on Twitter or [send us email](mailto:tanda.sat@gmail.com?subject=Hypervisor%20Development%20for%20Security%20Researchers). We also offer a private class with minimum 8 people. Please contact us to discuss further details.
+If you want to subscribe future class schedule announcements, subscribe [our mailing list](https://groups.io/g/system-programming-lab) by sending empty email to [system-programming-lab+subscribe@groups.io](mailto:system-programming-lab+subscribe@groups.io?subject=Subscribe%20Request). For further inquiries, reach out to [@standa_t](https://twitter.com/standa_t) on Twitter or [send us email](mailto:tanda.sat@gmail.com?subject=Hypervisor%20Development%20for%20Security%20Researchers). We also offer a private class with minimum 8 people. Please contact us to discuss further details.
 
 
 About Us
