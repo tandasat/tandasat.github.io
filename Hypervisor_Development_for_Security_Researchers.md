@@ -1,6 +1,20 @@
 Hypervisor Development for Security Researchers
 ================================================
 
+- [Hypervisor Development for Security Researchers](#hypervisor-development-for-security-researchers)
+  - [Overview](#overview)
+  - [Audiences](#audiences)
+  - [Level](#level)
+  - [Prerequisites](#prerequisites)
+  - [Learning Objectives](#learning-objectives)
+  - [Outline](#outline)
+  - [Details](#details)
+  - [Pricing](#pricing)
+  - [Format and Package](#format-and-package)
+  - [Hardware and Software Requirements](#hardware-and-software-requirements)
+  - [Registration and Contacts](#registration-and-contacts)
+
+
 Overview
 ---------
 
@@ -13,8 +27,8 @@ Audiences
 This class is geared towards software developers, security researchers and others with an interest in expanding knowledge of Intel VT-x, the x86_64 system architecture, and/or UEFI.
 
 
-Levels
--------
+Level
+------
 
 - Intermediate to advanced
 
@@ -45,8 +59,8 @@ At the end of the class, students will gain enough knowledge and skills to start
 - Basic UEFI-module development workflow, tools and techniques
 
 
-Outlines
----------
+Outline
+--------
 
 1. Hypervisor and UEFI
     - Lectures: what hypervisors can be used for, UEFI module-based hypervisors, comparison with kernel module-based hypervisors, and UEFI/EDK2
@@ -114,7 +128,7 @@ All prices are per seat.
 
 - Early Bird: We offer 10% discount if registration is done by 60 days before the first day of the class.
 - Individual vs Company: We price the class differently depending on whether it is paid by your employer or yourself.
-- Students: We may offer 50% discount for a full-time students. Contact us before registration and payment.
+- Students: We may offer 50% discount for full-time students. Contact us before registration and payment.
 
 
 Format and Package
