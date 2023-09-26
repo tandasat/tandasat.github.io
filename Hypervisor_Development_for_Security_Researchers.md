@@ -1,7 +1,7 @@
-Hypervisor Development for Security Researchers
-================================================
+Hypervisor Development for Security Researchers on Intel Platform
+==================================================================
 
-- [Hypervisor Development for Security Researchers](#hypervisor-development-for-security-researchers)
+- [Hypervisor Development for Security Researchers on Intel Platform](#hypervisor-development-for-security-researchers-on-intel-platform)
   - [Overview](#overview)
   - [Audiences](#audiences)
   - [Level](#level)

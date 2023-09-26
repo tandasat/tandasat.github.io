@@ -4,7 +4,7 @@ System Programming Lab
 Training
 ---------
 
-Our next public [Hypervisor Development Class](Hypervisor_Development_for_Security_Researchers.md) is:
+Our next public [Hypervisor Development Class on Intel Platform](Hypervisor_Development_for_Security_Researchers.md) is:
 - Date: November 27-28 and December 4-5 (4 days)
   - The class is split into 2 Monday-Tuesday to allow students review contents in between.
 - Time: 8am - 4pm (PST/GMT-8) / 4pm - 1am (CET/GMT+2)
