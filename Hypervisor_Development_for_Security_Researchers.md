@@ -81,7 +81,7 @@ Outline
     - Lectures: traditional x64 address translation vs EPT-enabled translation, EPT setup and activation, EPT induced VM-exits
     - Lab: building and enabling pass-through EPT
     - Lab: tracing guest execution with EPT
-    - Advanced lectures: memory types emulation, caches invalidation, VPID, stealth hooking with EPT, MBEC, VT-rp (HLAT), VT-d (DMA remapping), and snapshot-based fuzzing hypervisors
+    - Advanced lectures: memory types emulation, caches invalidation, VPID, stealth hooking with EPT, MBEC, VT-rp (HLAT), device virtualization and VT-d (IOMMU/DMA remapping)
 
 5. Multi-processors Support
     - Lectures: multi-processor protocol, processor activity state, application processors startup, unrestricted guest and Hypervisor Top Level Functional Specification (TLFS)
@@ -93,7 +93,7 @@ Outline
     - Lab: booting Ubuntu by properly emulating MOV-to-CRx
 
 7. Demos and References
-    - Hardware debuggers (DCI), single board computers, and relevant open source projects
+    - Nested virtualization (software-based, VMCS shadowing, enlightened VMCS, EPT virtualization strategies), snapshot-based fuzzing hypervisors, PPAM, hardware debuggers (DCI), single board computers, and relevant open source projects
 
 Contents may change in a way that does not impact the learning objectives.
 
