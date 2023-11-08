@@ -1,17 +1,17 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js light">
+<html lang="en" class="light" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Hypervisor 101 in Rust</title>
-        <meta name="robots" content="noindex" />
+        <meta name="robots" content="noindex">
 
 
         <!-- Custom HTML head -->
         
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff">
 
         <link rel="icon" href="favicon.svg">
         <link rel="shortcut icon" href="favicon.png">
@@ -32,7 +32,7 @@
         <!-- Custom theme stylesheets -->
 
     </head>
-    <body>
+    <body class="sidebar-visible no-js">
     <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
@@ -62,24 +62,29 @@
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
-            html.classList.remove('no-js')
             html.classList.remove('light')
             html.classList.add(theme);
-            html.classList.add('js');
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
         </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var html = document.querySelector('html');
+            var body = document.querySelector('body');
             var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
             } else {
                 sidebar = 'hidden';
             }
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
@@ -89,15 +94,37 @@
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
                                 <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
+                <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
+                        </label>
                         <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
                         </button>
@@ -149,8 +176,8 @@
 <p>This is a day long course to quickly learn the inner working of hypervisors and techniques to write them for high-performance fuzzing.</p>
 <p>This course covers foundation of hardware-assisted virtualization technologies, such as VMCS/VMCB, guest-host world switches, EPT/NPT, as well as useful features and techniques such as exception interception for virtual machine introspection for fuzzing.</p>
 <p>The class is made up of lectures using the materials within this directory and hands-on exercises with source code under the <code>Hypervisor-101-in-Rust/hypervisor</code> directory.</p>
-<p>This lecture materials are written for the <code>gcc2023</code> branch; check out the starting point of the branch before you start.</p>
-<pre><code class="language-shell">git checkout e4c948ce1ed2afcdbd63d18f7b0f115d73d91bfc
+<p>This lecture materials are written for the <code>gcc2023</code> branch, which notionally have incomplete code for step-by-step exercises. Check out the starting point of the branch as below to go over hands-on exercises before you start.</p>
+<pre><code class="language-shell">git checkout b17a59dd634a7b0c2b9a6d493fc9b0ff22dcfce5
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h1>
 <ul>
@@ -195,7 +222,7 @@
 </li>
 <li>Convenient
 <ul>
-<li>System-level isolation: VMware Workstation/Fusion, <a href="introduction/(https://github.com/projectacrn/acrn-hypervisor)">ACRN</a>, Nitro Hypervisor, <a href="https://www.qubes-os.org/">Qubes OS</a></li>
+<li>System-level isolation: VMware Workstation/Fusion, <a href="https://github.com/projectacrn/acrn-hypervisor">ACRN</a>, Nitro Hypervisor, <a href="https://www.qubes-os.org/">Qubes OS</a></li>
 <li>System-level inspection: <a href="https://github.com/AsahiLinux/m1n1">Asahi Linux m1n1 Hypervisor</a>, <a href="https://cuckoosandbox.org/">Cuckoo Sandbox</a>, <a href="https://github.com/hvmi">HVMI</a>, <a href="https://nyx-fuzz.com/">kAFL/Nyx</a>, <a href="https://github.com/cheat-engine/cheat-engine/">Cheat Engine DBVM</a>, <a href="https://en.wikipedia.org/wiki/Blue_Pill_(software)">Blue Pill</a>, antivirus-hypervisors (eg, Avast Premium Security)</li>
 </ul>
 </li>
@@ -336,8 +363,8 @@
 <li>Hardware-assisted: Uses hardware assisted virtualization technology, HW VT, eg, VT-x and AMD-V (almost any hypervisors)</li>
 <li>vs. emulators/simulators
 <ul>
-<li>Emulators emulate everything</li>
 <li>Hypervisors run code on real processors (direct execution) plus minimal use of emulation techniques</li>
+<li>Emulators emulate everything; thus, slower</li>
 <li>Many emulators now use HW VT to boost performance: QEMU + KVM, Android Emulator + <a href="https://github.com/intel/haxm">HAXM</a>, <a href="https://www.intel.com/content/www/us/en/developer/articles/technical/software-on-wind-river-simics-virtual-platforms-then-and-now.html">Simics + VMP</a></li>
 </ul>
 </li>
@@ -853,7 +880,7 @@ ERROR: panicked at '🐛 Non continuable VM exit 0x7f', hypervisor\src\hyperviso
 <li>Nested paging is also referred to as second level address translation (SLAT)</li>
 </ul>
 </li>
-<li>Nested paging structures(s) - the data structures describing translation with nested paging
+<li>Nested paging structures - the data structures describing translation with nested paging
 <ul>
 <li>Intel: Extended page table(s)</li>
 <li>AMD: Nested page tables(s)</li>
@@ -918,8 +945,7 @@ def get_indexes(address):
 <div style="break-before: page; page-break-before: always;"></div><h1 id="nested-paging"><a class="header" href="#nested-paging">Nested paging</a></h1>
 <ul>
 <li>VA -&gt; GPA -&gt; PA translation</li>
-<li>When a processor needs to access a given VA, the processor does the following to translate it to a PA, <strong>if</strong> nested paging is enabled and the processor is in the guest-mode:</li>
-</ul>
+<li>When a processor needs to access a given VA, the processor does the following to translate it to a PA, <strong>if</strong> nested paging is enabled and the processor is in the guest-mode:
 <ol>
 <li>Performs all of the 10 steps in the previous page, using a guest <code>CR3</code> register</li>
 <li>Treats the resulted value as GPA, instead of PA</li>
@@ -934,7 +960,7 @@ def get_indexes(address):
 <li>Finds out a page frame to translate to, from the indexed nested PT entry</li>
 <li>Combines the page frame and <code>GPA[11:0]</code>, resulting in a PA</li>
 </ol>
-<ul>
+</li>
 <li>In pseudo code, it would look like this:
 <pre><code class="language-python"># Translate VA to PA with nested paging
 def translate_va_during_guest_mode(va):
