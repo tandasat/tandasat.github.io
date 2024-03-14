@@ -138,7 +138,7 @@ Package:
   - Recording will be available shortly after the end of each day.
 - Support
   - 3 weeks of asynchronous consultation on Slack and email from the last day of the class.
-  - The Indefinite right to request the latest slides and code for no additional cost.
+  - The indefinite right to request the latest slides and code for no additional cost.
 
 📝 It is perfectly fine to start learning yourself earlier, skip live sessions, watch recordings, and ask questions asynchronously at your own pace by taking advantage of the package. One of past students did this and successfully developed his hypervisor from scratch! The trainer is here for you to learn in any reasonable style that works for both of us.
 
