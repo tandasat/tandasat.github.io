@@ -3,12 +3,10 @@
 ## Training
 
 Our next public [Hypervisor Development Class on the Intel Platform](Hypervisor_Development_for_Security_Researchers.md) is:
-- Date: June 3-6 and 10-13 (8 days, 4 hours for each day)
-  - The class is split into 2 Monday-to-Thursday sessions to allow you to digest contents.
-- Time: 8am - 12pm (PDT/UTC-7)
-- Format: Remote (Zoom)
-- ~~Register at [RegFox](https://systemprogramminglab.regfox.com/hypervisor-development-for-security-researchers-june-2024)!~~
-  - SOLD OUT! Thank you for your interest and support.
+- Date: September 30 - October 3 (4 days) <!-- - Time: 8am - 12pm (PDT/UTC-7) -->
+- Format: In-person, at Hexacon in Paris
+- Checkout details and register at the [Hexacon page](https://www.hexacon.fr/trainer/tanda/)!
+  - The tickets will be available for purchase at the beginning of May.
 
 If you want to receive future class schedule announcements, subscribe to [our mailing list](https://groups.io/g/system-programming-lab) by sending an empty email to [system-programming-lab+subscribe@groups.io](mailto:system-programming-lab+subscribe@groups.io?subject=Subscribe%20Request).
 
