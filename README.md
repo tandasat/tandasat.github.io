@@ -14,7 +14,7 @@ If you want to receive future class schedule announcements, subscribe to [our ma
 
 For further inquiries, contact us in any of the following ways:
 - [Email](mailto:tanda.sat@gmail.com?subject=Hypervisor%20Development%20for%20Security%20Researchers)
-- DM me on [Mastdon](https://infosec.exchange/@satoshi_tanda), [X (Twitter)](https://twitter.com/standa_t), or `tandasat` on Discord
+- DM me on [Mastdon](https://infosec.exchange/@satoshi_tanda), [X](https://x.com/standa_t), or `tandasat` on Discord
 
 We also offer a private class with a minimum of 8 people. Please contact us to discuss further details.
 

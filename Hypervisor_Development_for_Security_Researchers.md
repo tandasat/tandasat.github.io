@@ -157,4 +157,4 @@ You will receive setup instructions 2-3 weeks before the class and must complete
 
 - For the dates of the next public class, see [the top page](README.md).
 - To receive updates on future public classes, subscribe to [our mailing list](https://groups.io/g/system-programming-lab) by sending an empty email to [system-programming-lab+subscribe@groups.io](mailto:system-programming-lab+subscribe@groups.io?subject=Subscribe%20Request).
-- For further inquiries, reach out to [@standa_t](https://twitter.com/standa_t) on X (Twitter) or [send us an email](mailto:tanda.sat@gmail.com?subject=Hypervisor%20Development%20for%20Security%20Researchers). e also offer a private class with a minimum of 8 people. Please contact us to discuss further details.
+- For further inquiries, reach out to [@standa_t](https://x.com/standa_t) on X or [send us an email](mailto:tanda.sat@gmail.com?subject=Hypervisor%20Development%20for%20Security%20Researchers). e also offer a private class with a minimum of 8 people. Please contact us to discuss further details.
