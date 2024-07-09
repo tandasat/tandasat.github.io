@@ -1,6 +1,6 @@
 # System Programming Lab
 
-## Training
+## Our Training
 
 Our next public [Hypervisor Development class](Hypervisor_Development_for_Security_Researchers.md) is:
 - Date: September 30 - October 3 (4 days) <!-- - Time: 8am - 12pm (PDT/UTC-7) -->
@@ -10,7 +10,7 @@ Our next public [Hypervisor Development class](Hypervisor_Development_for_Securi
 If you want to receive future class schedule announcements, subscribe to [our mailing list](https://groups.io/g/system-programming-lab) by sending an empty email to [system-programming-lab+subscribe@groups.io](mailto:system-programming-lab+subscribe@groups.io?subject=Subscribe%20Request).
 
 
-## Contact
+## Contact Us
 
 For further inquiries, contact us in any of the following ways:
 - [Email](mailto:tanda.sat@gmail.com?subject=Hypervisor%20Development%20for%20Security%20Researchers)

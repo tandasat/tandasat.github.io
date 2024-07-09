@@ -20,7 +20,7 @@ We achieve this by developing lightweight, UEFI module-based hypervisors using I
 
 The class is hands-on oriented; we will spend 30-40% of the time with excesses.
 
-⏰Concerned about the timezone? No worries. You will receive materials beforehand and a recording after each day and are encouraged to ask questions even before and after the period of the class. See [Format and Package](#format-and-package) for more details.
+📝 Concerned about the timezone? No worries. You will receive materials beforehand and a recording after each day and are encouraged to ask questions even before and after the period of the class. See [Format and Package](#format-and-package) for more details.
 
 
 ## Target Audience
@@ -100,12 +100,14 @@ You will also receive two additional hypervisor implementations for reference:
 
 ## Pricing
 
+📝 This information is for remote offerings.
+
 | Type       | Individual | Company  |
 | ---------- | ---------- | -------- |
 | Early Bird | 2970 USD   | 3780 USD |
 | Standard   | 3300 USD   | 4200 USD |
 
-All prices are per seat.
+All prices are per seat. Including tax.
 
 - Early Bird: We offer a 10% discount if registration is made 60 days before the first day of the class.
 - Individual vs Company: We price the class differently depending on whether it is paid by your employer or yourself.
@@ -116,11 +118,12 @@ All prices are per seat.
 ## Format and Package
 
 Format:
-- The training is offered remotely through Zoom.
+- The course is offered in either the remote or in-person format, in live sessions.
+  - No pre-recorded course is offered.
 
 Package:
 - Material
-  - Training materials (slides and sample code) will be shared 2-3 weeks before the class.
+  - Course materials (slides and sample code) will be shared 2-3 weeks before the class.
   - Recording will be available shortly after the end of each day.
 - Support
   - 3 weeks of asynchronous consultation on Slack and email from the last day of the class.
@@ -146,7 +149,7 @@ You need to have the following hardware and software:
     - VMWare Fusion Pro 13
     - Homebrew and git
 
-⚠️ An Intel processor-based machine is required.
+📝 An Intel processor-based machine is required.
 
 Newer operating systems and software are supported. Older software and another Linux distro may be workable but not tested. Other hypervisors, such as KVM, Hyper-V, or VirtualBox, cannot be used. If the host machine cannot be arranged locally, it can also be a cloud-provided machine. Contact the trainer for suggestions if you need a cloud-provided machine.
 
