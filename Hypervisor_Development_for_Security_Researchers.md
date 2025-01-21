@@ -16,7 +16,7 @@
 
 This class teaches you how hypervisors and hardware-assisted virtualization technologies work. You can use this knowledge to build your hacking hypervisors for research and to study, customize, and break existing hypervisors.
 
-We achieve this by developing lightweight, UEFI module-based hypervisors using Intel VT-x and analyzing various advanced hypervisor applications, such as fuzzing and system hardening. The knowledge we acquire applies to kernel module (driver)- based hypervisors and AMD processors.
+We achieve this by developing lightweight, UEFI module-based hypervisors using Intel VT-x and analyzing various advanced hypervisor applications, such as fuzzing and system hardening. The knowledge we acquire applies to kernel module (driver)-based hypervisors and AMD processors.
 
 The class is hands-on oriented; we will spend 30-40% of the time with excesses.
 
@@ -31,9 +31,9 @@ Software developers, security researchers, and anyone interested in expanding th
 ## Prerequisites
 
 Required:
-- Fluency in C (or C++) programming.
+- Fluency in C or Rust.
 - Familiarity with the x86_64 architecture, such as privilege levels, interrupts, page tables, and system registers at the concept level.
-- System programming experience, such as kernel-module development, is a plus but not a requirement.
+- Experience in system programming, such as kernel-module development, is a plus but not a requirement.
 
 You will receive links to recommended pre-class learning materials 2-3 weeks before the class.
 
@@ -91,7 +91,7 @@ As we learn foundations, we will analyze various applications and their implemen
 
 You will also receive two additional hypervisor implementations for reference:
 
-- The minimalistic one in Rust🦀 It supports Intel and AMD processors and compiles into a UEFI module and Windows driver. This is an excellent reference for those when you review the “must do” parts and rebuild your hypervisor from scratch for AMD or as a Windows driver or simply prefer the language.
+- The cross-platform version in Rust🦀 This version supports Intel and AMD processors and compiles into a UEFI module and Windows driver. This is an excellent reference for when you review the "must do" parts and rebuild your hypervisor from scratch for AMD or as a Windows driver, or simply prefer the Rust programming language.
 
 - The full version of our hypervisor. This includes the implementation of advanced concepts, such as stealth-hooking hypercall, use of VT-d (DMA protection), guest hardening, host hardening with CET, SMAP, and UMIP, and handling of uncommon events like microcode update, NMI, and MTRR updates. This version can complement your understanding of advanced topics and be a reference to explore more as you wish.
 
@@ -138,16 +138,15 @@ You need to have the following hardware and software:
 
 - The host machines with the Intel processors, SSD, 8GB+ RAM and 50GB+ of free storage space
 - For Windows users
-    - Windows 10 or 11 without Virtualization-base Security (VBS)
+    - Windows 11 without Virtualization-base Security (VBS)
     - Ubuntu 22.04+ on WSL version 1
-    - VMware Workstation Pro (Recommended) or VMware Workstation Player 17
+    - VMware Workstation Pro 17
 - For Linux users
     - Ubuntu 22.04+
     - VMware Workstation Pro 17
 - For macOS users
-    - macOS 14
+    - macOS 15
     - VMWare Fusion Pro 13
-    - Homebrew and git
 
 📝 An Intel processor-based machine is required.
 
@@ -160,4 +159,4 @@ You will receive setup instructions 2-3 weeks before the class and must complete
 
 - For the dates of the next public class, see [the top page](README.md).
 - To receive updates on future public classes, subscribe to [our mailing list](https://groups.io/g/system-programming-lab) by sending an empty email to [system-programming-lab+subscribe@groups.io](mailto:system-programming-lab+subscribe@groups.io?subject=Subscribe%20Request).
-- For further inquiries, reach out to [@standa_t](https://x.com/standa_t) on X or [send us an email](mailto:tanda.sat@gmail.com?subject=Hypervisor%20Development%20for%20Security%20Researchers). e also offer a private class with a minimum of 8 people. Please contact us to discuss further details.
+- For further inquiries, contact us: [email](mailto:tanda.sat@gmail.com?subject=Hypervisor%20Development%20for%20Security%20Researchers), [X](https://x.com/standa_t), [Mastdon](https://infosec.exchange/@satoshi_tanda), [Bluesky](https://satoshi-tanda.bsky.social/).
