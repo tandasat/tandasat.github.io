@@ -16,7 +16,7 @@
 
 This class teaches you how hypervisors and hardware-assisted virtualization technologies work. You can use this knowledge to build your hacking hypervisors for research and to study, customize, and break existing hypervisors.
 
-We achieve this by developing lightweight, UEFI module-based hypervisors using Intel VT-x and analyzing various advanced hypervisor applications, such as fuzzing and system hardening. The knowledge we acquire applies to kernel module (driver)-based hypervisors and AMD processors.
+We achieve this by developing lightweight, UEFI module-based hypervisors using Intel VT-x and analyzing various advanced hypervisor applications, such as fuzzing and system hardening. The knowledge we acquire can be applied to kernel module-based hypervisors and AMD processors.
 
 The class is hands-on oriented; we will spend 30-40% of the time with excesses.
 
@@ -31,9 +31,10 @@ Software developers, security researchers, and anyone interested in expanding th
 ## Prerequisites
 
 Required:
-- Fluency in C or Rust.
+- Fluency in C or Rust🦀
 - Familiarity with the x86_64 architecture, such as privilege levels, interrupts, page tables, and system registers at the concept level.
 - Experience in system programming, such as kernel-module development, is a plus but not a requirement.
+- Familiarity with UEFI is NOT needed.
 
 You will receive links to recommended pre-class learning materials 2-3 weeks before the class.
 
@@ -44,7 +45,7 @@ You will receive links to recommended pre-class learning materials 2-3 weeks bef
     - Lectures: various use of hypervisors, UEFI module-based hypervisors, comparison with kernel module-based hypervisors, and UEFI/EDK2
 
 2. VT-x Basics
-    - Lectures: processor modes, VMCS, host vs.guest, VM-exit, VM-entry, high-level design options, tools and techniques to diagnose bugs, and the trick of navigating specifications
+    - Lectures: processor modes, VMCS, host vs. guest, VM-exit/-entry, high-level design options, tools and techniques to diagnose bugs, and how to navigate specifications
     - Lab: source-level debugging with VMware
     - Lab: configuring and starting host and guest, monitoring CPUID execution
     - Lab: troubleshooting VMX instruction errors with Bochs
@@ -60,7 +61,7 @@ You will receive links to recommended pre-class learning materials 2-3 weeks bef
     - Lectures: traditional x64 address translation vs EPT-enabled translation, EPT setup and activation, EPT-induced VM-exits
     - Lab: building and enabling pass-through EPT
     - Lab: tracing guest execution with EPT
-    - Advanced lectures and demos: memory types emulation, caches invalidation, VPID, stealth hooking with EPT, MBEC, VT-rp (HLAT), device virtualization and VT-d (IOMMU/DMA remapping)
+    - Advanced lectures and demos: VPID, caches invalidation, stealth hooking with EPT, Snapshot-based fuzzing hypervisors, memory types emulation, device virtualization and VT-d (IOMMU/DMA remapping)
 
 5. Multi-processors Support
     - Lectures: multi-processor protocol, processor activity state, application processors startup, unrestricted guest, Hypervisor Top Level Functional Specification (TLFS), and enlightenment
@@ -72,7 +73,7 @@ You will receive links to recommended pre-class learning materials 2-3 weeks bef
     - Lab: booting Ubuntu by properly emulating MOV-to-CRx
 
 7. Additional Demos and Resources
-    - Snapshot-based fuzzing hypervisors, hardware debuggers (DCI), nested virtualization techniques (software-based, VMCS shadowing, enlightened VMCS, EPT virtualization strategies), Intel TXT and PPAM, and helpful open source projects
+    - MBEC, VT-rp (HLAT), nested virtualization techniques (software-based, VMCS shadowing, enlightened VMCS, EPT virtualization strategies), Intel TXT and PPAM, hardware debuggers (DCI), and helpful open source projects
 
 Contents may change in a way that does not impact the learning objectives.
 
@@ -83,13 +84,13 @@ Virtualization technologies are critical components in software security and ana
 
 This class will teach you the foundation to answer those questions by developing simple hypervisors together! The class is designed so everything is built from scratch and optimized for learning. This allows you to understand the building blocks of real-world applications of virtualization technologies and expand the knowledge for your interests afterward.
 
-This class is hands-on-oriented. We believe that we can learn and retain knowledge best by tackling concrete challenges rather than being taught. With this philosophy, the class is designed with lab activities as the primary learning opportunities and lectures to explain the theories behind them. We will spend 30-40% of the time on hands-on exercises.
+This class is hands-on oriented. We believe that we can learn and retain knowledge best by tackling concrete challenges rather than being taught. With this philosophy, the class is designed with lab activities as the primary learning opportunities and lectures to explain the theories behind them. We will spend 30-40% of the time on hands-on exercises.
 
 At the beginning of the class, you will receive a skeleton implementation of a hypervisor and incrementally update it through a series of exercises. We will also discuss other design options to understand their pros and cons.
 
-As we learn foundations, we will analyze various applications and their implementations. This includes snapshot-based system-level fuzzing, performant system hardening with MBEC and HLAT (VT-rp), HyperGuard, HVCI, and KDP on Windows, dynamic analysis with stealth hooking, and SMM security reporting with Intel TXT (PPAM).
+As we learn foundations, we will analyze various applications and their implementations. This includes snapshot-based system-level fuzzing, performant system hardening with MBEC and HLAT (VT-rp), HVCI, and KDP on Windows, dynamic analysis with stealth hooking, and SMM security reporting with Intel TXT (PPAM).
 
-You will also receive two additional hypervisor implementations for reference:
+You will also be introduced to two additional hypervisor implementations as references:
 
 - The cross-platform version in Rust🦀 This version supports Intel and AMD processors and compiles into a UEFI module and Windows driver. This is an excellent reference for when you review the "must do" parts and rebuild your hypervisor from scratch for AMD or as a Windows driver, or simply prefer the Rust programming language.
 
@@ -138,7 +139,7 @@ You need to have the following hardware and software:
 
 - The host machines with the Intel processors, SSD, 8GB+ RAM and 50GB+ of free storage space
 - For Windows users
-    - Windows 11 without Virtualization-base Security (VBS)
+    - Windows 11 without Virtualization-based Security (VBS)
     - Ubuntu 22.04+ on WSL version 1
     - VMware Workstation Pro 17
 - For Linux users
