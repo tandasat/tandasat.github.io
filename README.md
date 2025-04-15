@@ -3,20 +3,20 @@
 ## Our Training
 
 Our next public [Hypervisor Development class](Hypervisor_Development_for_Security_Researchers.md) is:
-- Date: May 12-13 and 19-20 (4 days)
-  - The class is split into 2 Monday-and-Tuesday sessions.
-- Time: 8am - 4pm (PDT/UTC-7)
-- Format: Remote (Zoom)
-- **Register at [RegFox](https://systemprogramminglab.regfox.com/hypervisor-development-for-security-researchers-may-2025)!**
+
+| Venue                    | Date                         | Time                   | Register at                                                                                                |
+| ------------------------ | ---------------------------- | ---------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Remote                   | May 12-13 and 19-20 (4 days) | 8am - 4pm (PDT/UTC-7)  | [RegFox](https://systemprogramminglab.regfox.com/hypervisor-development-for-security-researchers-may-2025) |
+| Hexacon in Paris, France | Oct 6-9 (4 days)             | 9am - 5pm (CEST/UTC+2) | [Confrence page](https://www.hexacon.fr/trainer/tanda/)                                                    |
 
 If you want to receive future class schedule announcements, subscribe to [our mailing list](https://groups.io/g/system-programming-lab) by sending an empty email to [system-programming-lab+subscribe@groups.io](mailto:system-programming-lab+subscribe@groups.io?subject=Subscribe%20Request).
 
 
 ## Contact Us
 
-For further inquiries, contact us: [email](mailto:tanda.sat@gmail.com?subject=Hypervisor%20Development%20for%20Security%20Researchers), [X](https://x.com/standa_t), [Mastdon](https://infosec.exchange/@satoshi_tanda), [Bluesky](https://satoshi-tanda.bsky.social/).
+For further inquiries, contact me: [email](mailto:tanda.sat@gmail.com?subject=Hypervisor%20Development%20for%20Security%20Researchers), [X](https://x.com/standa_t), [Mastdon](https://infosec.exchange/@satoshi_tanda), [Bluesky](https://satoshi-tanda.bsky.social/).
 
-We also offer a private class with a minimum of 8 people. Please contact us to discuss further details.
+We also offer a private class with a minimum of 8 people. Please contact me to discuss further details.
 
 
 ## About the Trainer
