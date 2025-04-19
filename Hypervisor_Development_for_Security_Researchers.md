@@ -36,7 +36,7 @@ Required:
 - Experience in system programming, such as kernel-module development, is a plus but not a requirement.
 - Familiarity with UEFI is NOT needed.
 
-You will receive links to recommended pre-class learning materials 2-3 weeks before the class.
+You will receive links to recommended pre-class learning materials 3 weeks before the class.
 
 
 ## Outline
@@ -113,7 +113,7 @@ All prices are per seat. Including tax.
 - Early Bird: We offer a 10% discount if registration is made 60 days before the first day of the class.
 - Individual vs Company: We price the class differently depending on whether it is paid by your employer or yourself.
 - We may offer a 50% discount for full-time, unemployed school students. Contact us before registration and payment.
-- We refund 100% (minus any fees incurred by our payment platform and your bank) on cancellation notified 14 days before the first day of the class. Cancellation within 14 days is not refundable.
+- To cancel registration, send email to the trainer. We refund 100% (minus any fees incurred by our payment platform and your bank) on cancellation notified 21 calender-days before the first day of the class. Cancellation within 21 calender-days is not refundable.
 
 
 ## Format and Package
@@ -124,7 +124,7 @@ Format:
 
 Package:
 - Material
-  - Course materials (slides and sample code) will be shared 2-3 weeks before the class.
+  - Course materials (slides and sample code) will be shared 3 weeks before the class.
   - Recording will be available shortly after the end of each day.
 - Support
   - 3 weeks of asynchronous consultation on Slack and email from the last day of the class.
@@ -153,7 +153,7 @@ You need to have the following hardware and software:
 
 Newer operating systems and software are supported. Older software and another Linux distro may be workable but not tested. Other hypervisors, such as KVM, Hyper-V, or VirtualBox, cannot be used. If the host machine cannot be arranged locally, it can also be a cloud-provided machine. Contact the trainer for suggestions if you need a cloud-provided machine.
 
-You will receive setup instructions 2-3 weeks before the class and must complete them before the class.
+You will receive setup instructions 3 weeks before the class and must complete them before the class.
 
 
 ## Registration and Contacts
