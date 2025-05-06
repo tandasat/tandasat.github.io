@@ -3,11 +3,10 @@
 ## Our Training
 
 Our next public [Hypervisor Development class](Hypervisor_Development_for_Security_Researchers.md) is:
-
-| Venue                    | Date                         | Time                   | Register at                                                                                                |
-| ------------------------ | ---------------------------- | ---------------------- | ---------------------------------------------------------------------------------------------------------- |
-| Remote                   | May 12-13 and 19-20 (4 days) | 8am - 4pm (PDT/UTC-7)  | [RegFox](https://systemprogramminglab.regfox.com/hypervisor-development-for-security-researchers-may-2025) |
-| Hexacon in Paris, France | Oct 6-9 (4 days)             | 9am - 5pm (CEST/UTC+2) | [Confrence page](https://www.hexacon.fr/trainer/tanda/)                                                    |
+- Date: Oct 6 - 9 (4 days)
+- Time: 9am - 5pm (CEST/UTC+2)
+- Format: In-person
+- **Register at the [confrence page](https://www.hexacon.fr/trainer/tanda/)!**
 
 If you want to receive future class schedule announcements, subscribe to [our mailing list](https://groups.io/g/system-programming-lab) by sending an empty email to [system-programming-lab+subscribe@groups.io](mailto:system-programming-lab+subscribe@groups.io?subject=Subscribe%20Request).
 
