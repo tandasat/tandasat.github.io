@@ -2,11 +2,7 @@
 
 ## Our Training
 
-Our next public [Hypervisor Development class](Hypervisor_Development_for_Security_Researchers.md) is:
-- Date: Oct 6 - 9 (4 days)
-- Time: 9am - 5pm (CEST/UTC+2)
-- Format: In-person
-- **Register at the [confrence page](https://www.hexacon.fr/trainer/tanda/)!**
+Our next public is in the first half of 2026 (dates to be announced).
 
 If you want to receive future class schedule announcements, subscribe to [our mailing list](https://groups.io/g/system-programming-lab) by sending an empty email to [system-programming-lab+subscribe@groups.io](mailto:system-programming-lab+subscribe@groups.io?subject=Subscribe%20Request).
 
