@@ -140,10 +140,10 @@ You need to have the following hardware and software:
 - The host machines with the Intel processors, SSD, 8GB+ RAM and 50GB+ of free storage space
 - For Windows users
     - Windows 11 without Virtualization-based Security (VBS)
-    - Ubuntu 22.04+ on WSL version 1
+    - Ubuntu 24.04+ on WSL version 1
     - VMware Workstation Pro 17
 - For Linux users
-    - Ubuntu 22.04+
+    - Ubuntu 24.04+
     - VMware Workstation Pro 17
 - For macOS users
     - macOS 15
