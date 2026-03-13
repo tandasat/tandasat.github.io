@@ -2,14 +2,14 @@
 
 ## Our Training
 
-Our next public is in the first half of 2026 (dates to be announced).
+Our next public [Hypervisor Development class](Hypervisor_Development_for_Security_Researchers.md) will be in the second half of 2026 (dates to be announced).
 
 If you want to receive future class schedule announcements, subscribe to [our mailing list](https://groups.io/g/system-programming-lab) by sending an empty email to [system-programming-lab+subscribe@groups.io](mailto:system-programming-lab+subscribe@groups.io?subject=Subscribe%20Request).
 
 
 ## Contact Us
 
-For further inquiries, contact me: [email](mailto:tanda.sat@gmail.com?subject=Hypervisor%20Development%20for%20Security%20Researchers), [X](https://x.com/standa_t), [Mastdon](https://infosec.exchange/@satoshi_tanda), [Bluesky](https://satoshi-tanda.bsky.social/).
+For further inquiries, contact me at: [email](mailto:tanda.sat@gmail.com?subject=Hypervisor%20Development%20for%20Security%20Researchers), [LinkedIn](https://www.linkedin.com/in/satoshitanda/), [X](https://x.com/standa_t), [Mastdon](https://infosec.exchange/@satoshi_tanda), or [Bluesky](https://satoshi-tanda.bsky.social/).
 
 We also offer a private class with a minimum of 8 people. Please contact me to discuss further details.
 
