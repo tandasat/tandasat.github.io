@@ -73,7 +73,7 @@ You will receive links to recommended pre-class learning materials 3 weeks befor
     - Lab: booting Ubuntu by properly emulating MOV-to-CRx
 
 7. Additional Demos and Resources
-    - MBEC, VT-rp (HLAT), nested virtualization techniques (software-based, VMCS shadowing, enlightened VMCS, EPT virtualization strategies), Intel TXT and PPAM, hardware debuggers (DCI), and helpful open source projects
+    - MBEC, VT-rp (HLAT), nested virtualization techniques (software-based, VMCS shadowing, enlightened VMCS, EPT virtualization strategies), Intel TXT and PPAM and helpful open source projects
 
 Contents may change in a way that does not impact the learning objectives.
 
